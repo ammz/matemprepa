@@ -1,0 +1,284 @@
+\startcomponent c_radicales
+\project project_matemprepa
+% \product prod_algebra_intermedia
+
+
+\margindata[youtube]{\from[AI1A]}
+\startchapter[title={Radicales}]
+
+\startdefinicion
+  \startitemizer
+    \startitem
+      Sea $a \in \naturalnumbers^+ \cup \{0\}$ y sea $n \in \naturalnumbers$ par. \obj{La enésima raíz principal de $a$} es aquel número $r \in \mathbb{R^+} \cup \{0\}$ de modo que $r^n = a$.
+    \stopitem
+    \startitem
+      Sea $a \in \reals$ y $n \in\naturalnumbers$, impar, $n \geq 3$. \obj{La enésima raíz principal de $a$} es aquel número $r \in \reals$ de manera que $r^n = a$.
+    \stopitem
+  \stopitemizer
+\stopdefinicion
+
+En cualquiera de los dos casos representamos a la enésima raíz principal de $a$ con el símbolo $\sqrt[n]{a}$. En éste, al signo $\sqrt{\phantom{x}}$ se le llama \obj{un radical}, al número $a$ se le llama \obj{el radicando} y al número $n$ se le llama \obj{el índice del radical} y se dice que da el \obj{orden} de éste. Si $n=2$, no se escribe, esto es, $\sqrt[2]{a} \equiv \sqrt{a}$.
+
+En el caso de una raíz de orden par hay dos raíces, una positiva y otra negativa, de las cuales es la positiva la que es la principal. 
+
+\margindata[youtube]{\from[AI1B]}
+La situación anterior no ocurre si el índice de un radical es impar. Habrá una sola enésima raíz impar principal positiva, si el radicando es positivo, y una enésima raíz impar negativa, si el radicando es negativo.
+
+\startobservacion
+  Si $n$ es par, la enésima raíz principal de un número $a \in \reals \cup \{0\}$ se representará como $\sqrt[n]{a}$. Si quisiéramos la negativa escribiremos $-\sqrt[n]{a}$; y si quisieramos ambas escribiremos $\pm\sqrt[n]{a}$.
+\stopobservacion
+
+\startteorema
+  Sean $x,y \in \reals$ y $n \in \naturalnumbers$, de modo que $\sqrt[n]{x}$ y $\sqrt[n]{y}$ están definidas \footnote {Esto supone que si el índice $n$ es par, $x$ e $y$ tienen que ser positivos o cero. Si $n$ fuera impar $x$ e $y$ pueden ser cualquier número $\reals$}. Entonces:
+  \startitemizer
+    \startitem
+      $\left(\sqrt[n]{x}\right)^n = x$
+    \stopitem
+    \startitem
+      $\sqrt[n]{y^n} = y$, si $n$ es impar.
+    \stopitem
+  \stopitemizer
+\stopteorema
+
+\startdemo
+  $(i)$ Sea $r = \sqrt[n]{x}$. Entonces, por definición de enésima raíz principal, $r^n = x$. Si sustituimos por $r$ en esta última igualdad, obtenemos que $(\sqrt[n]{x})^n = x$.
+
+  $(ii)$ Sea $y = \sqrt[n]{a}$. Entonces, por definición de la enésima raíz principal, $y^n = a$. Entonces, si sustituimos por $a$, en la primera de estas dos igualdades, $y = \sqrt[n]{y^n}$, que puede reescribirse, según la ley simétrica de la igualdad, $\sqrt[n]{y^n} = y$. Observe que $\sqrt[n]{a}$ está definida ya que, por hipótesis, $n$ es impar.
+\stopdemo
+
+\margindata[youtube][method=top]{\from[AI2A]}
+\startteorema 
+  Sea $x \in \reals$ y $n \in \naturalnumbers$ par. Entonces $\sqrt[n]{x^n} = |x|$.
+\stopteorema
+
+\startdemo
+  Si $x \geq 0$, entonces $|x| = x$. Luego, por sustitución $|x|^n = x^n$. Sabemos, del álgebra elemental, que $|x| \in \mathbb{R^+} \cup \{0\},\, \forall\, x \in \reals$. En consecuencia, por definición de enésima raíz principal par, $\sqrt[n]{x^n} = |x|$.
+
+  Si $x < 0$, entonces, por definición de valor absoluto, $|x| = -x$. Luego,
+  
+  \startformula \startalign
+    \NC |x|^n \NC= (-x)^n = \underbrace{(-x)(-x)(-x) \dots (-x)}_{n-\text{factores}} \NR
+    \NC \NC = \underbrace{(-x)(-x)(-x)(-x) \dots (-x)}_{2m-\text{factores, } m \in \naturalnumbers} \NR
+    \NC \NC = \underbrace{[(-x)(-x)][(-x)(-x)] \dots [(-x)(-x)]}_{m-\text{factores } [(-x)(-x)]} \NR
+    \NC \NC = \underbrace{[x^2][x^2] \dots [x^2]}_{m-\text{factores}} = [x^2]^m = x^{2m} = x^n.\NR
+  \stopalign \stopformula
+
+  $\therefore |x|^n = x^n$, por la ley transitiva de la igualdad.
+
+  Recordamos, otra vez, que $|x| \in \mathbb{R^+} \cup \{0\}$. En consecuencia, por la definición de enésima raíz principal par, $\sqrt[n]{x^n} = |x|$.
+\stopdemo
+
+
+\startteorema {Propiedades de los radicales}
+\margindata[youtube]{\from[AI2B]}
+  Sean $x, y \in \reals$ y $m, n \in \naturalnumbers, m, n \geq 2$, de manera que las siguientes raíces están definidas. Entonces:
+  \startitemizer
+    \startitem
+      $\sqrt[n]{x y} = \sqrt[n]{x}\, \sqrt[n]{y}$
+    \stopitem
+    \startitem
+      $\sqrt[n]{\dfrac{x}{y}} = \dfrac{\sqrt[n]{x}}{\sqrt[n]{y}}$, si $y \neq 0$
+    \stopitem
+    \startitem
+      \obj{(radicales compuestos)} $\sqrt[mn]{x} = \sqrt[m]{\sqrt[n]{x}} = \sqrt[n]{\sqrt[m]{x}}$
+    \stopitem
+  \stopitemizer
+\stopteorema
+
+\startdemop
+  $(i)$ Bastará ver que $\left(\sqrt[n]{x} \sqrt[n]{y}\right)^n = xy$.
+
+  \startformula
+    \left(\sqrt[n]{x} \sqrt[n]{y}\right)^n = \left(\sqrt[n]{x}\right)^n \left(\sqrt[n]{y}\right)^n = xy
+  \stopformula
+
+  $\therefore \left(\sqrt[n]{x} \sqrt[n]{y}\right)^n = xy$
+
+  La prueba de $(ii)$ queda pendiente.
+
+  $(iii)$ Bastará ver que $\left(\sqrt[m]{\sqrt[n]{x}}\right)^{mn} = x$
+
+  \startformula
+    \left(\sqrt[m]{\sqrt[n]{x}}\right)^m = \sqrt[n]{x}
+  \stopformula
+  
+  \startformula
+    \left\[\left(\sqrt[m]{\sqrt[n]{x}}\right)^m\right\]^n = (\sqrt[n]{x})^n
+  \stopformula
+
+  $\therefore \left(\sqrt[m]{\sqrt[n]{x}}\right)^{mn} = x$
+\stopdemop
+
+
+\startdefinicion
+\margindata[youtube]{\from[AI4A]}
+  Sean $b \in \reals$ y $n \in \naturalnumbers$. Entonces $b^{\frac{1}{n}} = \sqrt[n]{b}$, siempre que $\sqrt[n]{b}$ esté definida.
+\stopdefinicion
+
+\startdefinicion
+  Sean $b \in \reals$ y $m, n \in \naturalnumbers$. Entonces $b^{\frac{m}{n}} = \sqrt[n]{b^m} = \left(\sqrt[n]{b}\right)^m$, siempre que estén definidas.
+\stopdefinicion
+
+
+\startejemplo
+\margindata[youtube][method=top]{\from[AI4B]}
+  \ini{Demuestre que si $x \in \reals$ y $m, n \in \rationals^+$, entonces $(x^m)^n = x^{mn}$.}
+
+  \startdemoejem
+    Sean $m = \frac{p}{q}$ y $n = \frac{r}{s}$, donde $p, q, r, s \in \naturalnumbers$.  Luego, $(x^m)^n
+    = (x^{\frac{p}{q}})^{\frac{r}{s}}
+    = \sqrt[s]{\left(x^{\frac{p}{q}}\right)^r}
+    = \sqrt[s]{\left(\sqrt[q]{x^p}\right)^r}
+    = \sqrt[s]{\sqrt[q]{\left(x^p\right)^r}}
+    = \sqrt[s]{\sqrt[q]{x^{pr}}}
+    = \sqrt[q]{\sqrt[s]{x^{pr}}}
+    =  \sqrt[qs]{x^{pr}}
+    = x^{\frac{pr}{qs}}
+    = x^{\frac{p}{q}\cdot\frac{r}{s}}
+    = x^{mn}$. Luego, por la ley transitiva de la igualdad, $(x^m)^n = x^{mn}$.
+  \stopdemoejem
+
+\stopejemplo
+
+\startejemplos
+  \margindata[youtube][method=top]{\from[AI5A]}
+  Simplifique
+
+  \startitemejem
+    \startitem
+      $\ini{\big(q^7r^{12}\big)^{1/3}} = $
+    \stopitem
+  \stopitemejem
+
+\stopejemplos
+
+\startteorema {de reducción de índices} 
+\margindata[youtube][method=top]{\from[AI6B]}
+  Sean $x \in \reals$ y $m, n, r \in \naturalnumbers$. Entonces $\sqrt[nr]{x^{mr}} = \sqrt[n]{x^m}$, siempre que esta raíz esté definida.
+\stopteorema
+
+\startdemo
+  $\sqrt[nr]{x^{mr}} = x^{\frac{mr}{nr}} = x^{\frac{m}{n}} = \sqrt[n]{x^m}$. En consecuencia, debido a la ley transitiva de la igualdad, $\sqrt[nr]{x^{mr}} = \sqrt[n]{x^m}$
+\stopdemo
+
+\startsection[title={Operaciones con radicales}] \margindata[youtube]{\from[AI7A]}
+
+  Note que en una combinación de términos con radicales, procederemos como en una combinación de términos semejantes donde ahora los términos semejantes estarán determinados por aquéllos que contengan radicales iguales (con el misno radicando y el mismo índice).
+  
+  \margindata[youtube]{\from[AI8A]}
+  Decimos que \obj{racionalizamos el denominador de una fracción común} si eliminamos cualquier radical que haya en éste. 
+
+  Esta técnica se basa en los teoremas que nos indican cuánto es $\left(\sqrt[n]{x}\right)^n$ y $\sqrt[n]{x^n}$.
+\stopsection
+
+
+\startdefinicion 
+\margindata[youtube]{\from[AI9A]}
+  Una expresión algebraica en cualquiera de las formas:
+
+  \startformula
+    a\sqrt{x} + b \quad\text{o}\quad a + b\sqrt{y} \quad\text{o}\quad a\sqrt{x} + b\sqrt{y}
+  \stopformula
+
+  se llama {\obj un binomio surdo de orden 2} (o {\obj de segundo orden}).
+\stopdefinicion
+
+\startobservacion
+  Vea que un binomio surdo de orden 2 contiene una raíz cuadrada en, al menos, uno de sus términos.
+\stopobservacion
+
+\margindata[youtube]{\from[AI9B]}
+\startejemplos
+  \startplaceformula
+    \startejerformula
+      \startalign
+        \NC \ini{\frac{\sqrt{x} + y\sqrt{z}}{3\sqrt{x} - 2y\sqrt{z}}}
+        \NC = \frac{\sqrt{x} + y\sqrt{z}}{3\sqrt{x} - 2y\sqrt{z}} \cdot \frac{3\sqrt{x} + 2y\sqrt{z}}{3\sqrt{x} - 2y\sqrt{z}} \NR[+]
+        
+        \NC \NC = \frac{3\sqrt{x^2} +5y\sqrt{xz} +2y^2\sqrt{z^2}}{9x -4y^21z} = \frac{3|x| + 5y\sqrt{xz} + 2y^2|z|}{9x -4y^2z} \NR
+
+        \NC \NC = \frac{3x + 5y\sqrt{xz} +2y^2z}{9x -4y^2z} \NR
+      \stopalign
+    \stopejerformula
+  \stopplaceformula
+
+  \startplaceformula
+    \startejerformula
+      \startalign
+        \NC \ini{\frac{15}{\sqrt{10}-\sqrt{5}}}
+        \NC = \frac{15}{\sqrt{10} -\sqrt{5}} \cdot \frac{\sqrt{10}+\sqrt{5}}{\sqrt{10} +\sqrt{5}} = \frac{15\big(\sqrt{10} +\sqrt{5}\big)}{10 - 5}  \NR[+]
+
+        \NC \NC = \frac{15\big(\sqrt{10} +\sqrt{5}\big)}{5} = \sqrt{10} + 3\sqrt{5}\NR
+      \stopalign
+    \stopejerformula
+  \stopplaceformula
+
+  \startplaceformula
+    \startejerformula
+      \startalign
+        \NC \ini{\frac{\sqrt{3 - 2x}}{\sqrt{2 + x}}}
+        \NC = \frac{\sqrt{3 - 2x}}{\sqrt{2 + x}} \cdot \frac{\sqrt{2 + x}}{\sqrt{2 + x}} = \frac{\sqrt{(3 -2x)(2 + x)}}{2 + x} = \frac{\sqrt{6 -x -2x^2}}{2 + x}\NR[+]
+      \stopalign
+    \stopejerformula
+  \stopplaceformula
+
+  \startplaceformula
+    \startejerformula
+      \startalign
+        \NC \ini{\frac{3}{\sqrt{3} + 1 - \sqrt{5}}}
+        \NC = \frac{3}{\big(\sqrt{3} + 1\big) - \sqrt{5}} \cdot \frac{\big(\sqrt{3} + 1\big) + \sqrt{5}}{\big(\sqrt{3} + 1\big) + \sqrt{5}} \NR[+]
+
+        \NC \NC = \frac{3\Big[\big(\sqrt{3} + 1\big) + \sqrt{5}\Big]}{\big(\sqrt{3} + 1\big)^2 - 5} = \frac{3\big[\sqrt{3} + 1 + \sqrt{5}\big]}{3 + 2\sqrt{3} + 1 - 5}\NR
+
+        \NC \NC = \frac{3\sqrt{3} + 3 + 3\sqrt{5}}{2\sqrt{3} - 1} \cdot \frac{2\sqrt{3} + 1}{2\sqrt{3} + 1} \NR
+
+        \NC \NC = \frac{21 + 9\sqrt{3} + 6\sqrt{15} + 3\sqrt{5}}{11}\NR
+      \stopalign
+    \stopejerformula
+  \stopplaceformula
+\stopejemplos
+
+\startsection[title={Resumen}]
+
+  \startformula
+    \color[blue]{\left(\sqrt[n]{x}\right)^n} = x
+  \stopformula
+
+  \startformula
+    \color[blue]{\sqrt[n]{x^n}} = \startcases[distance=1em]
+      \NC x,   \NC $n$ inpar \NR
+      \NC |x|, \NC $n$ par   \NR
+    \stopcases
+  \stopformula
+
+  \startformula
+    \color[blue]{\sqrt[n]{xy}} = \sqrt[n]{x} \sqrt[n]{y}
+  \stopformula
+
+  \startformula
+    \color[blue]{\sqrt[n]{\frac{x}{y}}} = \frac{\sqrt[n]{x}}{\sqrt[n]{y}},\quad y \neq 0
+  \stopformula
+
+  \startformula
+    \color[blue]{\sqrt[mn]{x}} = \sqrt[m]{\sqrt[n]{x}} = \sqrt[n]{\sqrt[m]{x}}
+  \stopformula
+
+  \startformula
+    \color[blue]{b^{\frac{1}{n}}} = \sqrt[n]{b}
+  \stopformula
+
+  \startformula
+    \color[blue]{b^{\frac{m}{n}}} = \sqrt[n]{b^m} = \left(\sqrt[n]{b}\right)^m
+  \stopformula
+  
+  \startformula
+    \color[blue]{|a|} = \startcases 
+      \NC a,  \MC a \geq 0 \NR
+      \NC -a, \MC a < 0    \NR
+    \stopcases
+  \stopformula
+\stopsection
+
+\stopchapter
+
+\stopcomponent

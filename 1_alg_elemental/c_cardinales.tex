@@ -1,0 +1,853 @@
+\startcomponent c_cardinales
+
+\project project_matemprepa
+  
+  \margindata[youtube][method=top]{\from[AE26B]}
+  \startchapter[title={Conjunto de los números cardinales}]
+
+    \startdefinicion
+      \margindata[comentario]{Recordemos que la cardinalidad de un conjunto es el número de elementos que hay en un conjunto.}
+
+      Sea $A$ y $B$ dos conjuntos con $A \cap B = \emptyset$. Suponga que $\#A = a$ y $\#B = b$. La \obj{suma de $a$ y $b$}, denotada con el símbolo $a + b$ y leída \quotation{a más b}, se define como $a + b = \#(A \cup B) = \#A + \#B$.
+
+      A los operandos de la suma, $a$ y $b$ se les llaman \obj{los sumandos} y al valor final o resultado de $a + b$ se llama \obj{el total}.
+    \stopdefinicion
+
+
+    \startaxioma
+      \margindata[comentario]{Aceptamos que es una operación binaria sin discusión, ya que al estar uniendo conjuntos de cosas y el primer conjunto tiene una cardinalidad que es un número natural y el segundo también, al contarlos sale un conjunto que también tiene una cardinaliad que es un numero natural.}
+
+      La suma de dos números naturales es una operación binaria determinada por la siguiente tabla:
+
+      \blank
+      \setupTABLE[c][align=middle, width=1.7em]
+      \setupTABLE[r][first][topframe=off]
+      \setupTABLE[r][last][bottomframe=off]
+      \setupTABLE[c][first,last][leftframe=off,rightframe=off]
+
+      \startcenteraligned
+        \bTABLE
+        \bTR \bTD $+$ \eTD \bTD  1 \eTD \bTD  2  \eTD \bTD  3  \eTD \bTD  4  \eTD \bTD  5  \eTD \bTD  6  \eTD \bTD  7  \eTD \bTD  8  \eTD \bTD  9  \eTD\eTR
+        \bTR \bTD  1  \eTD \bTD  2 \eTD \bTD  3  \eTD \bTD  4  \eTD \bTD  5  \eTD \bTD  6  \eTD \bTD  7  \eTD \bTD  8  \eTD \bTD  9  \eTD \bTD 10  \eTD\eTR
+        \bTR \bTD  2  \eTD \bTD  3 \eTD \bTD  4  \eTD \bTD  5  \eTD \bTD  6  \eTD \bTD  7  \eTD \bTD  8  \eTD \bTD  9  \eTD \bTD 10  \eTD \bTD 11  \eTD\eTR
+        \bTR \bTD  3  \eTD \bTD  4 \eTD \bTD  5  \eTD \bTD  6  \eTD \bTD  7  \eTD \bTD  8  \eTD \bTD  9  \eTD \bTD 10  \eTD \bTD 11  \eTD \bTD 12  \eTD\eTR
+        \bTR \bTD  4  \eTD \bTD  5 \eTD \bTD  6  \eTD \bTD  7  \eTD \bTD  8  \eTD \bTD  9  \eTD \bTD 10  \eTD \bTD 11  \eTD \bTD 12  \eTD \bTD 13  \eTD\eTR
+        \bTR \bTD  5  \eTD \bTD  6 \eTD \bTD  7  \eTD \bTD  8  \eTD \bTD  9  \eTD \bTD 10  \eTD \bTD 11  \eTD \bTD 12  \eTD \bTD 13  \eTD \bTD 14  \eTD\eTR
+        \bTR \bTD  6  \eTD \bTD  7 \eTD \bTD  8  \eTD \bTD  9  \eTD \bTD 10  \eTD \bTD 11  \eTD \bTD 12  \eTD \bTD 13  \eTD \bTD 14  \eTD \bTD 15  \eTD\eTR
+        \bTR \bTD  7  \eTD \bTD  8 \eTD \bTD  9  \eTD \bTD 10  \eTD \bTD 11  \eTD \bTD 12  \eTD \bTD 13  \eTD \bTD 14  \eTD \bTD 15  \eTD \bTD 16  \eTD\eTR
+        \bTR \bTD  8  \eTD \bTD  9 \eTD \bTD 10  \eTD \bTD 11  \eTD \bTD 12  \eTD \bTD 13  \eTD \bTD 14  \eTD \bTD 15  \eTD \bTD 16  \eTD \bTD 17  \eTD\eTR
+        \bTR \bTD  9  \eTD \bTD 10 \eTD \bTD 11  \eTD \bTD 12  \eTD \bTD 13  \eTD \bTD 14  \eTD \bTD 15  \eTD \bTD 16  \eTD \bTD 17  \eTD \bTD 18  \eTD\eTR
+        \eTABLE
+      \stopcenteraligned
+    \stopaxioma
+
+    \margindata[youtube]{\from[AE27A]}
+    Recordemos que la definición de la suma establece que si tenemos dos conjuntos disjuntos, $A \cap B = \emptyset$, entonces $a + b = \#(A \cup B) = \#A + \#B$.
+
+    Nos preguntamos, ¿por qué tienen que ser disjuntos los conjuntos?
+
+    Supongamos los conjuntos $A = \{1,2,3,a\}$ y $B = \{4,5,b\}$ donde $\#A = 4$y $\#B = 3$. Además, $A \cap B = \emptyset$, $\#A + \#B = 4 + 3 = 7$ y $A \cup B = \{1,2,3,a,4,5,b\}$.
+    En este caso, todo se ha comportado como esperamos.
+
+    Sin embargo, si tomamos los conjuntos $C = \{1,2,a,b,c\}, D = \{2,b,3,d\}$ vemos que $C \cap D = \{2,b\} \neq \emptyset$ y $C \cup D = \{1,2,a,b,c,3,d\}$. Ahora vemos que $\#C = 5$ y $\#D = 4$ y, por tanto, $5 + 4 = 9$. No obstante, $\#(C \cup D) = 7$.
+
+    \startteorema
+      La suma de números naturales es una operación conmutativa y asociativa.
+    \stopteorema
+
+    \startdemo
+      Primero queremos ver que $a + b = b + a$.
+
+      Tomamos dos conjuntos $A$ y $B$ con $A \cap B = \emptyset$, y que $a = \#A$ y $b = \#B$. Entonces
+      \margindata[comentario]{
+        \startitemize
+          \startitem
+            $a + b = \#(A \cup B) = \#A + \#B$
+          \stopitem
+          \startitem
+            $A \cup B = B \cup A$
+          \stopitem
+          \startitem
+            $\#A = a,\; \#B = b$
+          \stopitem
+        \stopitemize}
+      \startformula
+        \startalign[distance=5em,grid=no,align=left]
+          \NC a + b \NC = \#(A \cup B) \NR % \Comment por la definición de suma \NR
+          \NC       \NC = \#(B \cup A) \NR % \Comment  \NR
+          \NC       \NC = \#B + \#A    \NR % \Comment por la definición de suma \NR
+          \NC       \NC = b + a        \NR % \Comment por la ley de sustitución de la igualdad \NR
+        \stopalign
+      \stopformula
+      En segundo lugar, queremos ver que $(a + b) + c = a + (b + c)$.
+
+      Tomamos $C$, un conjunto con $\#C = c$, de modo que $(A \cup B) \cap C = \emptyset = A \cap (B \cup C) = B \cap C$.
+
+      \margindata[youtube]{\from[AE27B]}
+      \margindata[comentario]{$A \cap B = \emptyset --> a + b = \#(A \cup B) = \#A + \#B$}
+      Entonces tenemos que
+      \startformula
+        \startalign
+          \NC \#\left[(A \cup B) \cup C \right] \NC = \#(A \cup B) + \#C  \NR
+          \NC                                   \NC = (\#A + \#B) + \#C  \NR
+          \NC                                   \NC = (a + b) + c        \NR
+          \NC \#\left[A \cup (B \cup C) \right] \NC = \#A + \#(B \cup C) \NR
+          \NC                                   \NC = \#A + (\#B + \#C)  \NR
+          \NC                                   \NC = a + (b + c)        \NR
+        \stopalign
+
+      \stopformula
+
+      \margindata[comentario]{$(A \cup B) \cup C = A \cup (B \cup C)$}
+      Por tanto, $\#\left[(A \cup B) \cup C\right] = \#\left[A \cup (B \cup C)\right]$
+
+      \startformula
+        \therefore (a + b) + c = a + (b + c)
+      \stopformula
+    \stopdemo
+
+
+    \startobservacion
+      \margindata[comentario]{Aunque en este curso no vamos demostrarlo.}
+      Las leyes conmutativas y asociativas generales son aplicables.
+    \stopobservacion
+
+    Supongamos que tenemos que sumar varios 1. Aplicando la ley asociativa de forma repetida obtenemos
+
+    \startformula
+      \underbrace{(1 + 1) + 1 + \cdots + 1}_{\text{n sumandos}} = (2 + 1) + 1 + \cdots + 1 = (3 + 1) + 1 + \cdots + 1 = \cdots = n
+    \stopformula
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{2 + 3 + 5 + 1 + 4} = (2 + 3) + (5 + 1) + 4 = 5 + 6 + 4 = 5 + (6 + 4) = 5 + 10 = 15$ (aplicando la ley asociativa general)  
+        \stopitem
+        \startitem
+          $\ini{2 + 3 + 5 + 1 + 4} = 3 + 1 + 4 + 2 + 5 = (3 + 1) + 4 + (2 + 5) = 4 + 4 + 7 = (4 + 4) + 7 = 8 + 7 = 15$ (aplicando las leyes conmutativa y asociativa generales)
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+
+    \startdefinicion
+      \margindata[youtube]{\from[AE28A]}
+      Sean $x,y \in \naturalnumbers$. Entonces \obj{la multipliación de $x$ con $y$}, representada por cualquiera de los símbolos $x \times y \equiv xy \equiv x \cdot y \equiv x(y) \equiv (x)y \equiv (x)(y)$, y leído \quotation{x por y}, \quotation{x multiplicado por y}, se define como
+      \startformula
+        xy = \underbrace{y + y + y + \cdots + y}_{x - sumandos}
+      \stopformula
+      Los operandos $x$ e $y$ se llaman \obj{los factores}, mientras que al resultado se le llama \obj{el producto}. También decimos que \obj{$xy$ es un múltiplo de sus factores $x$ e $y$}.
+    \stopdefinicion
+
+    \startobservacion
+      La multiplicación es una forma corta de sumandos iguales.
+    \stopobservacion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+        $\ini{(5)(3)} = \underbrace{3 + 3 + 3 + 3 + 3}_{5\; sumandos}$
+        \stopitem
+        \startitem
+          $\ini{6 \cdot 90} = \underbrace{90 + 90 + 90 + 90 + 90 + 90}_{6\; sumandos}$
+        \stopitem
+        \startitem
+          $\ini{6 + 6 + 6} = 3 \times 6$
+        \stopitem
+        \startitem
+          $\ini{2 + 2} = 2(2)$
+        \stopitem
+        \startitem
+          $\ini{7 + 7 + 7 + 7} = 4(7)$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      La multiplicación de números naturales es una operación binaria cuyos resultados están dados por la tabla:
+
+      \blank
+      \setupTABLE[c][align=middle, width=2em]
+      \setupTABLE[r][first][topframe=off]
+      \setupTABLE[r][last][bottomframe=off]
+      \setupTABLE[c][first,last][leftframe=off,rightframe=off]
+
+      \startcenteraligned
+        \bTABLE
+        \bTR \bTD $\times$ \eTD \bTD 1  \eTD \bTD  2  \eTD \bTD  3  \eTD \bTD  4  \eTD \bTD  5  \eTD \bTD  6  \eTD \bTD  7  \eTD \bTD  8  \eTD \bTD  9  \eTD\eTR
+
+        \bTR \bTD  1  \eTD \bTD  1  \eTD \bTD 2   \eTD \bTD 3   \eTD \bTD 4   \eTD \bTD 5  \eTD \bTD 6   \eTD \bTD 7   \eTD \bTD 8   \eTD \bTD 9  \eTD\eTR
+        \bTR \bTD  2  \eTD \bTD  2  \eTD \bTD 4   \eTD \bTD 6   \eTD \bTD 8   \eTD \bTD 10 \eTD \bTD 12  \eTD \bTD 14  \eTD \bTD 16  \eTD \bTD 18  \eTD\eTR
+        \bTR \bTD  3  \eTD \bTD  3  \eTD \bTD 6   \eTD \bTD 9   \eTD \bTD 12  \eTD \bTD 15 \eTD \bTD 18  \eTD \bTD 21  \eTD \bTD 24  \eTD \bTD 27  \eTD\eTR
+        \bTR \bTD  4  \eTD \bTD  4  \eTD \bTD 8   \eTD \bTD 12  \eTD \bTD 16  \eTD \bTD 20 \eTD \bTD 24  \eTD \bTD 28  \eTD \bTD 32  \eTD \bTD 36  \eTD\eTR
+        \bTR \bTD  5  \eTD \bTD  5  \eTD \bTD 10  \eTD \bTD 15  \eTD \bTD 20  \eTD \bTD 25 \eTD \bTD 30  \eTD \bTD 35  \eTD \bTD 40  \eTD \bTD 45  \eTD\eTR
+        \bTR \bTD  6  \eTD \bTD  6  \eTD \bTD 12  \eTD \bTD 18  \eTD \bTD 24  \eTD \bTD 30 \eTD \bTD 36  \eTD \bTD 42  \eTD \bTD 48  \eTD \bTD 54  \eTD\eTR
+        \bTR \bTD  7  \eTD \bTD  7  \eTD \bTD 15  \eTD \bTD 21  \eTD \bTD 28  \eTD \bTD 35 \eTD \bTD 42  \eTD \bTD 49  \eTD \bTD 56  \eTD \bTD 63  \eTD\eTR
+        \bTR \bTD  8  \eTD \bTD  8  \eTD \bTD 16  \eTD \bTD 24  \eTD \bTD 32  \eTD \bTD 40 \eTD \bTD 48  \eTD \bTD 56  \eTD \bTD 64  \eTD \bTD 72  \eTD\eTR
+        \bTR \bTD  9  \eTD \bTD  9  \eTD \bTD 18  \eTD \bTD 27  \eTD \bTD 36  \eTD \bTD 45 \eTD \bTD 54  \eTD \bTD 63  \eTD \bTD 72  \eTD \bTD 81  \eTD\eTR
+        \eTABLE
+      \stopcenteraligned
+    \stopteorema
+
+    \startdemo
+      Como la multiplicación es un tipo de suma y aceptamos que la suma es una operación binaria la multiplicación también lo será.
+    \stopdemo
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{3 \cdot 4} = (4 + 4) + 4 = 8 + 4 = 12$
+        \stopitem
+        \startitem
+          $\ini{6(2)} = (2 + 2) + (2 + 2) + (2 + 2) = 12$
+        \stopitem
+        \startitem
+          $\ini{(5)(3)} = (3 + 3) + (3 + 3) + 3 = (6 + 6) + 3 = 12 + 3 = 15$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      \margindata[youtube]{\from[AE28B]}
+      El número 1 es un elemento identidad o neutro de la multiplicacion de los números naturales.
+    \stopteorema
+
+    \startdemo
+      Tenemos que ver que $n \cdot 1 = 1 \cdot n = n$.
+
+      \margindata[comentario]{Definición de multiplicación:\par$xy = \underbrace{y+y+y+\cdots+y}_{\text{x sumandos}}$}
+      Por definición de la multipliación,
+
+      \startformula
+        1 \cdot n = \underbrace{n}_{\text{1 sumando}} = n
+      \stopformula
+
+      También por la definición de multiplicación,
+
+      \startformula
+        n \cdot 1 = \underbrace{1 = 1 + 1 + 1 + 1+ \cdots + 1}_{\text{n sumandos}}  = n\qquad \text{ (visto previamente)}.
+      \stopformula
+      \startformula
+        \therefore 1 \cdot n = n \cdot 1 = n
+      \stopformula
+    \stopdemo
+
+    \startteorema
+      La multiplicación de números naturales es distributiva por la izquierda sobre la suma de números naturales.
+    \stopteorema
+
+    \startdemo
+      \margindata[comentario]{Propiedad distributiva por la izquierda\par$x \ast (y \circ z) = (x \ast y) \circ (x \ast z)$}
+      Tenemos que probar que $n(a+b) = na + nb$, donde $n,a,b \in \naturalnumbers$. Entonces, como $a + b \in \naturalnumbers$ (lo vimos en un axioma anterior), y por la definición de multiplicación,
+
+      \margindata[comentario]{
+        \startitemize
+          \startitem
+            Definición de multiplicación:\par$xy = \underbrace{y+y+y+\cdots+y}_{\text{x sumandos}}$
+          \stopitem
+          \startitem
+            ley asociativa general
+          \stopitem
+          \startitem
+            ley conmutativa general
+          \stopitem
+      \stopitemize
+      }
+      \startformula
+        \startalign
+          \NC n(a+b) \NC = \underbrace{(a+b)+(a+b)+ \cdots +(a+b)}_{\text{n sumandos}}                                          \NR
+          \NC        \NC = a+b+a+b+ \cdots +a+b                                                                                 \NR
+          \NC        \NC = a+a+ \cdots +a+b+b+ \cdots +b                                                                        \NR
+          \NC        \NC =\underbrace{(a+a+ \cdots +a)}_{\text{n sumandos}} + \underbrace{(b+b+ \cdots +b)}_{\text{n sumandos}} \NR
+          \NC        \NC = n \cdot a + n \cdot b                                                                                \NR
+        \stopalign
+      \stopformula
+
+      \startformula
+        \therefore n(a+b)=na + nb
+      \stopformula
+    \stopdemo
+
+    \startteorema
+      \margindata[youtube]{\from[AE29A]}
+      La multiplicación de números naturales es una operación conmutativa.
+    \stopteorema
+
+    \startdemo
+      Sean $n,a \in \naturalnumbers$. Tenemos que ver que $na = an$.
+      \margindata[comentario]{Propiedad conmutativa\par$x \ast y = y \ast x$}
+
+      Pero,
+      \margindata[comentario]{
+        \startitemize
+          \startitem
+          1 es elemento identidad de la multiplicación en $\naturalnumbers$\par$x\cdot 1 = 1\cdot x = x$
+        \stopitem
+        \startitem
+          $(\times)$ es distributiva por la izquierda resepecto a $(+)$\par$n(a+b)=na + nb$
+        \stopitem
+        \stopitemize
+      }
+      \startformula
+         \startalign
+          \NC n \cdot a \NC = \underbrace{a+a+a+ \cdots + a}_{\text{n sumandos}}     \NR
+          \NC           \NC = a \cdot 1 + a \cdot 1 + a \cdot 1 + \cdots + a \cdot 1 \NR
+          \NC           \NC = a (\underbrace{1+1+1+ \cdots +1}_{\text{n sumandos}})  \NR
+          \NC           \NC = a(n) \equiv a \cdot n                                  \NR
+        \stopalign
+      \stopformula
+
+      \startformula
+        \therefore n \cdot a = a \cdot n
+      \stopformula
+    \stopdemo
+
+    \startteorema
+      La multiplicación de números naturales es distributiva por la derecha sobre la suma de números naturales.
+    \stopteorema
+
+    \startdemo
+      \margindata[comentario]{Propiedad distributiva por la derecha\par$(x \circ y) \ast z = (x \ast z) \circ (y \ast z)$}
+      Sean $n,a,b \in \naturalnumbers$, queremos ver que $(a+b)n = an + bn$.
+
+      Pero,
+      \margindata[comentario]{
+        \startitemize
+          \startitem
+            conmutatividad ($\times$)
+          \stopitem
+          \startitem
+            distributividad por la izqda ($\times$) sobre ($+$)
+          \stopitem
+          \startitem
+            conmutatividad ($+$)
+          \stopitem
+        \stopitemize
+      }
+      \startformula
+        \startalign
+          \NC (a+b)n   \NC = n(a+b)  \NR
+          \NC          \NC = na + nb \NR
+          \NC          \NC = an + bn \NR
+        \stopalign
+      \stopformula
+      \startformula
+        \therefore (a+b)n = an + bn.
+      \stopformula
+    \stopdemo
+
+    \startcorolario
+      La multiplicación de números naturales es distributiva sobre la suma de números naturales.
+    \stopcorolario
+
+    \startdemo
+      Ya hemos demostrado que la multiplicación de números naturales es distributiva por la izquierda y por la derecha. Luego, concluimos que es distributiva.
+    \stopdemo
+
+    \startteorema
+      La multiplicación de números naturales es una operación asociativa.
+    \stopteorema
+
+    \startdemo
+      Sean $n,a,b \in \naturalnumbers$, queremos ver que $n(ab) = (na)b$.
+
+      Pero,
+      \startformula
+        \startalign
+          \NC n(ab) \NC = \underbrace{(ab) + (ab) + \cdots + (ab)}_{\text{n sumandos}} \NR
+          \NC       \NC = (\underbrace{a+a+ \cdots +a}_{\text{n sumandos}})b \NR
+          \NC       \NC = (na)b
+        \stopalign
+      \stopformula
+      \startformula
+        \therefore n(ab) = (na)b
+      \stopformula
+    \stopdemo
+
+    \startteorema
+      \margindata[youtube]{\from[AE29B]}
+      El número natural 1 es el único elemento identidad o neutro para la multiplicación de números naturales.
+    \stopteorema
+
+    \startdemo
+      \margindata[comentario]{1 es elemento identidad de la multiplicación en $\naturalnumbers$\par$x\cdot 1 = 1\cdot x = x$}
+      Supondremos que existe un $e \in \naturalnumbers$, diferente de 1, pero que tiene la misma propiedad que el 1, y vemos que $e = 1$.
+
+      Como estamos suponiendo que $e$ tiene la misma propiedad que el 1, entonces $\forall x \in \naturalnumbers$,
+      \placeformula[t4-8-1]
+      \startformula
+        ex = xe = x
+      \stopformula
+      Pero (\ref[number][t4-8-1]) será cierto si $x = 1$. Sustituyendo por $x$ en esa igualdad, tenemos que
+      \startformula
+        e\cdot 1 = 1 \cdot e = 1
+      \stopformula
+      Es decir que,
+      \startformula
+        1 \cdot e = 1
+      \stopformula
+      \margindata[comentario]{$x = y --> y = x$}
+      lo que equivale a decir, por la ley simétrica de la igualdad, que
+      \placeformula[t4-8-2]
+      \startformula
+        1 = 1 \cdot e
+      \stopformula
+      Pero, como 1 es un elemento identidad para la multiplicación en $\naturalnumbers$, tenemos que
+      \placeformula[t4-8-3]
+      \startformula
+        1 \cdot e = e
+      \stopformula
+      Luego, por (\ref[number][t4-8-2]), (\ref[number][t4-8-3]) y la ley transitiva de la igualdad, $1 = e$, que equivale a decir que $e = 1$.
+    \stopdemo
+
+    \startejemplos
+      \startplaceformula
+        \startejerformula
+          \startalign[n=3]
+            \NC   \NC \ini{2(3+1)} \NC = 2\cdot 3 + 2 \cdot 1 = 6 + 2 = 8 \NR[+]
+            \NC = \NC 2(4)  \NC\NR
+            \NC = \NC 8     \NC\NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \ini{2 \cdot 3 (4)(2)} = (2 \cdot 3)\left[(4)(2)\right] = 6(8)= 48
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \startalign[n=3]
+            \NC   \NC \ini{(1 + 3 + 2) 2} \NC = 1 \cdot 2 + 3 \cdot 2 + 2 \cdot 2 \NR[+]
+            \NC = \NC (6)2                \NC = 2 + 6 + 4 \NR
+            \NC = \NC 12                  \NC = 12
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \text{Justifique las siguientes afirmaciones:}
+        \stopejerformula
+      \stopplaceformula
+
+      \starttabulate[|w(3em)r|p|p|]
+        \NC \ini (a) \NC \ini $(2+x)y = (x+2)y$ \NC ley conmutativa de ($+$)\NC\NR
+        \NC \ini (b) \NC \ini $(3x)(y+z) = 3\left[x(y+z)\right]$ \NC ley asociativa de ($\times$)\NC\NR
+        \NC \ini (c) \NC \ini $2 + x \in \naturalnumbers$\NC ley de clausura de ($+$) \margindata[youtube]{\from[AE30A]}\NC\NR
+        \NC \ini (d) \NC \ini $3x+2x = (3+2)x$ \NC ley distributiva de ($\times$) sobre ($+$) por la derecha \NC\NR
+        \NC \ini (e) \NC \ini $(x+y)(2a+3b) =(x+y)2a + (x+y)3b $ \NC ley distributiva de ($\times$) sobre ($+$) por la izquierda\NC\NR
+      \stoptabulate
+
+    \stopejemplos
+
+    \startdefinicion
+      Sean $a,b,x \in \naturalnumbers$. \obj{La resta de $a$ con $b$}, representada con el símbolo $a - b$ y leída \quotation{a menos b} o \quotation{a disminuido por b} o \quotation{b restado de a} o \quotation{a a le restamos b} o \quotation{b sustraido de a}, se define como $a - b = x$ ssi $a = x + b = b + x$.
+
+      Al operando $a$ le llamamos \obj{el minuendo}, al $b$ le llamamos \obj{el sustraendo} y al resultado $x$ le llamamos \obj{la diferencia}.
+    \stopdefinicion
+
+
+    \startobservacion
+      $a - b = x$ ssi $a = x + b = b + x$ ssi $a - x = b$. Luego, observamos que la resta es la operación inversa de la suma.
+    \stopobservacion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          ${5-3} = 2$, pues $5 = 2 + 3$ 
+        \stopitem
+        \startitem
+          $8 - 3 = 5$, pues $8 = 3 + 5$
+        \stopitem
+        \startitem
+          $10 - 4 = 6$, pues $10 = 4 + 6$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \margindata[youtube]{\from[AE30B]}
+    \startdiscusion{Nuevo numeral, el cero}
+      Si tenemos un conjunto $G = \{\alpha,\beta,\gamma,\delta\}$, con $\#G = 4$, al que le sustraemos los cuatro elementos, obtenemos otro conjunto $G_1 = \{\} = \emptyset$, ¿cuál será la cardinalidad de $G_1$?  Hasta ahora representamos la cardinalidad con numerales del conjunto $\naturalnumbers = \{1,2,3,4,\dots\}$, pero ahora no tenemos un numeral para representar al conjunto nulo.
+
+      Es decir $\#G_1 = x = 4 - 4 \nin \naturalnumbers;\; 4 - 4 = x,\; 4 = x + 4 = 4 + x $.
+
+      Inventamos un nuevo numeral para representar esta cantidad: $0$, llamado el cero.
+
+      Luego, $\#G_1 = \#\{\} = \#\emptyset = 0$.
+    \stopdiscusion
+
+    \startdiscusion{Sistema de numeración indo-arábigo}
+      \startformula
+        10 \text{ Digitos}: \overbrace{0}^{\text{origen árabe}}, \underbrace{1, 2, 3, 4, 5, 6, 7, 8, 9}_{\text{origen indú}}
+      \stopformula
+    \stopdiscusion
+     
+    \startdefinicion
+      $\mathbb{W} = \naturalnumbers \cup \{0\} = \{0,1,2,3,4,\dots\}$ es \obj{el conjunto de los números cardinales}.
+    \stopdefinicion
+
+    \startobservacion
+      \startitemize[n,unpacked]
+        \startitem
+          Si $\#A = a$, como $\#\emptyset = 0$ y siendo $(A \cap \emptyset) = \emptyset$, entonces
+          \startformula
+            \startalign
+              \NC a + 0 \NC = \#(A \cup \emptyset) = \#A = a \;\text{ y}\NR
+              \NC 0 + a \NC = \#(\emptyset \cup A) = \#A = a\NR
+            \stopalign
+          \stopformula
+            $\therefore$ 0 es el elemento identidad o neutro de la suma de los números cardinales.
+        \stopitem
+
+        \startitem
+          Se puede demostrar que el número 0 es el único elemento identidad o neutro de la suma de números cardinales
+        \stopitem
+        \startitem
+          $\naturalnumbers \subseteq \blackboard{W}$, por lo que todas las propiedades que rigen en $\naturalnumbers$ son heredadas por $\blackboard{W}$.
+        \stopitem
+      \stopitemize
+    \stopobservacion
+
+    \startteorema
+      $\forall a,b \in \blackboard{W}$,
+      \startitemizer
+        \startitem
+          $a \cdot b = b \cdot a = a --> b = 1$
+        \stopitem
+        \startitem
+          $a+b = b+a = a --> b = 0$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+    \startdemo
+      Por el momento no demostramos este teorema.
+    \stopdemo
+
+
+    \startteorema{otras propiedades de la relación de la igualdad}
+    \margindata[youtube]{\from[AE31A]}
+      Sean $a,b,c \in \blackboard{W}$. Entonces
+      \startitemizer
+        \startitem
+          (ley de la suma) $\qquad a = b --> a + c = b + c \land c + a = c + b$
+        \stopitem
+        \startitem
+          (ley de la resta) $\qquad a = b --> a - c = b - c$
+        \stopitem
+        \startitem
+          (ley de multiplicación) $\qquad a = b --> ac = bc \land ca = cb$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      {\sl i)} Por la ley reflexiva de la igualdad $a + c = a + c$. Como, por hipótesis, $a = b$, podemos sustituir $a$ en el lado derecho de la igualdad anterior, obteniendo que $a + c = b + c$.
+      
+      {\sl ii)} y {\sl iii)} se demuestran de la misma forma. 
+    \stopdemop
+
+    \startteorema{propiedad multiplicativa del cero}
+      Sea $a \in \blackboard{W}$. Entonces $a \cdot 0 = 0 \cdot a = 0$
+    \stopteorema
+
+    \startdemo
+      Sabemos que como 0 es el elemento identidad de la suma, $0 + 0 = 0$. Entonces, por la parte $iii)$ del teorema anterior (ley de la multiplicación),  $a(0 + 0) = a \cdot 0$. Pero, por la ley distributiva de la multiplicación sobre la suma de los números cardinales, la igualdad anterior se convierte en $a \cdot 0 + a \cdot 0 = a \cdot 0$.
+      
+      \margindata[comentario]{Unicidad del elemento identidad ($+$)\par$a + b = b + a = a --> b = 0$}
+      Luego, por el teorema de la unicidad del elemento identidad de la suma, $a \cdot 0 = 0$. Claro, como la multiplicación es conmutativa, $0 \cdot a = 0$.
+    \stopdemo
+
+    \startdefinicion
+    \margindata[youtube]{\from[AE31B]}
+    Sean $a,b,x \in \blackboard{W}$, $b \neq 0$. \obj{La división de a con b}, denotada por cualquiera de los símbolos $a \div b \equiv \frac{a}{b} \equiv a/b \equiv b\overline{\smash{}{)a}}$, y leído \quotation{a (dividido) entre b} o \quotation{a sobre b}, se define como $a \div b = x$ ssi $a = xb = bx$.
+      
+    LLamamos al operando $a$, \obj{el dividendo}, al operando $b$, \obj{el divisor}, y al resultado $x$, \obj{el cociente}.
+    \stopdefinicion
+
+    \startobservacion
+       $a \div b = x\,$ ssi $\,a = xb = bx\;$ ssi $\,a \div x = b$ (si $x \neq 0$), podemos decir que la división es la operación inversa de la multiplicación.
+    \stopobservacion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\frac{16}{2} = 8$, ya que $16 = 8\cdot 2$
+        \stopitem
+        \startitem
+          $24 \div 8 = 3$, ya que $24 = 8(3)$
+        \stopitem
+        \startitem
+          $35/7 = 5$, ya que $35 = 5 \times 7$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      Sea $a \in \blackboard{W}$. Entonces,
+      \startitemizer
+        \startitem
+          (la división de iguales) $\qquad \dfrac{a}{a} = 1$, siempre que $a \neq 0$
+        \stopitem
+        \startitem
+          (división entre 1) $\qquad \dfrac{a}{1} = a$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+
+      \startitemizep
+        \startitem
+          $i)\;$ Como por hipótesis $a \neq 0$, la división $\dfrac{a}{a}$ está definida. Luego, si $\dfrac{a}{a} = x$, por definición de división, $a = xa = ax$.
+          \margindata[comentario]{Unicidad del elemento identidad ($\times$)\par$ab = ba = a --> b = 1$}
+          Por el teorema de la unicidad del elemento identidad de la multiplicación, tenemos que $x = 1$. Por lo tanto, $\dfrac{a}{a} = 1$, al sustituir 1 por $x$.
+        \stopitem
+
+      $ii)\;$ Se demuestra de forma parecida. 
+    \stopitemizep
+    \stopdemop
+
+    \startejemplos
+      Justifique
+      \startitemejem
+        \startitem
+          $3 = y + 8 --> 3 - 2 = (y + 8) - 2, \qquad$ ley de resta de la igualdad
+        \stopitem
+        \startitem
+          $(y + 5) + x = x --> y + 5 = 0, \qquad$ $a + b = b + a = a --> b = 0$
+        \stopitem
+        \startitem
+          $3x + 0 = 3x, \qquad$ existencia del elemento identidad de (+)
+        \stopitem
+        \margindata[youtube]{\from[AE32A]}
+        \startitem
+          $0(3x + 2y - 6) = 0, \qquad$ propiedad multiplicativa del 0
+        \stopitem
+        \startitem
+          $\dfrac{y-1}{y-1} = 1, \text{ si } y - 1 \neq 0, \qquad$ división de iguales
+        \stopitem
+        \startitem
+          $\dfrac{3x - 6y + 1}{1} = 3x - 6y + 1, \qquad$ división entre 1
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+    
+    \startdefinicion
+      Sean $a \in \blackboard{W}$ y $n \in \naturalnumbers$. \obj{La operación de exponenciación}, representada con el símbolo $a^n$, y leída \quotation{a (elevada) a la (potencia) n} o \quotation{a a la enésima potencia}, se define como $a^n = \underbrace{a \cdot a \cdot a \cdot \cdots \cdot a}_{\text{n factores}}$.
+
+      Al operando $a$ se le llama \obj{la base}, al operando $n$ se le llama \obj{el exponente} y al resultado $a \cdot a \cdot a \cdot \cdots \cdot a$ se le llama \obj{la (enésima) potencia (de a)}. Si $n = 1$, no se escribe; esto es, $a^1 = a$.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $2^4 = 2 \cdot 2 \cdot 2 \cdot 2 = 16$
+        \stopitem
+        \startitem
+          $0^2 = 0 \cdot 0 = 0$
+        \stopitem
+        \startitem
+          $1^3 = 1 \times 1 \times 1 = 1$
+        \stopitem
+        \startitem
+          $3^4 = (3)(3)(3)(3) = 81$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startobservacion
+      La exponenciación es una forma corta de multiplicación de factores iguales.
+    \stopobservacion
+
+    \margindata[youtube]{\from[AE32B]}
+    \startdiscusion{Orden o jerarquía de operaciones}
+      \startitemize[n]
+        \startitem
+          exponenciaciones al ir de izquierda a derecha
+        \stopitem
+        \startitem
+          multiplicaciones y divisiones al ir de izquierda a derecha
+        \stopitem
+        \startitem
+          sumas y restas al ir de izquierda a derecha
+        \stopitem
+      \stopitemize
+    \stopdiscusion
+
+
+    \startejemplos
+      Evalue
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{7 - 3 \times 2 + 2^3} \NR[+]
+            \NC = \NC 7 - 3 \times 2 + 8         \NR
+            \NC = \NC 7 - 6 + 8                  \NR
+            \NC = \NC 9                          \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{3^2 + \dfrac{6}{3} -5} \NR[+]
+            \NC = \NC 9 + \dfrac{6}{3} -5        \NR
+            \NC = \NC 9 + 2 - 5                  \NR
+            \NC = \NC 6                          \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{5 \times 2 - \frac{14}{7} - 2^3} \NR[+]
+            \NC = \NC 5 \times 2 - \frac{14}{7} - 8         \NR
+            \NC = \NC 10 - 2 - 8                             \NR
+            \NC = \NC 0                          \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{12 \div 2 - 4 + 1^4 + 3^2} \NR[+]
+            \NC = \NC 12 \div 2 - 4 + 1 + 9           \NR
+            \NC = \NC 6 - 4 + 1 + 9                   \NR
+            \NC = \NC 12                              \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+    \stopejemplos
+
+
+    \startdiscusion{Signos de agrupación}
+      Si un problema o expresión con varias operaciones contiene signos de agrupación, estos indican qué vamos a evaluar primero o pueden indicar multiplicación.
+
+      Dentro de cada signo de agrupación, que serán evaluados en orden al ir de izquierda a derecha en la operación que estemos evaluando, se respeta el orden o jerarquía.
+    \stopdiscusion
+
+    \startejemplos
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{2 + \left[5 (1+2) - 2^3\right] + 7} \NR[+]
+            \NC = \NC 2 + \left[5 (3) - 2^3\right] + 7         \NR
+            \NC = \NC 2 + \left[5 (3) - 8\right] + 7           \NR
+            \NC = \NC 2 + [15 - 8] + 7                         \NR
+            \NC = \NC 2 + 7 + 7                                \NR
+            \NC = \NC 16                                       \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \margindata[youtube]{\from[AE33A]}
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{3^2 - 2(3^2 - 5) +\left(\dfrac{16}{8}\right)^2} \NR[+]
+            \NC = \NC 3^2 - 2(9 - 5) +2^2 \NR
+            \NC = \NC 3^2 - 2(4) + 2^2 \NR
+            \NC = \NC 9 - 2(4) + 4 \NR
+            \NC = \NC 9 - 8 + 4 \NR
+            \NC = \NC 5 \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{3 + 2 \times 2^2 - \left[\dfrac{12}{4} + 2(6 -2^2)\right] + \dfrac{15}{3}} \NR[+]
+            \NC = \NC 3 + 2 \times 2^2 - \left[\dfrac{12}{4} + 2(6 -4)\right] + \dfrac{15}{3} \NR
+            \NC = \NC 3 + 2 \times 2^2 - \left[\dfrac{12}{4} + 2(2)\right] + \dfrac{15}{3} \NR
+            \NC = \NC 3 + 2 \times 2^2 - [3 + 4] + \dfrac{15}{3} \NR
+            \NC = \NC 3 + 2 \times 2^2 - 7 + \dfrac{15}{3} \NR
+            \NC = \NC 3 + 2 \times 4 - 7 + \dfrac{15}{3} \NR
+            \NC = \NC 3 + 8 - 7 + 5 \NR
+            \NC = \NC 9 \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{2 \cdot 3^2 + 2 -\left[3 + \dfrac{154}{154} + (3^2 - 8)\right] + 3 \times 2 - \dfrac{18}{6} -9} \NR[+]
+            \NC = \NC 2 \cdot 3^2 + 2 -\left[3 + \dfrac{154}{154} + (9 -8)\right] + 3 \times 2 - \dfrac{18}{6} -9 \NR
+            \NC = \NC 2 \cdot 3^2 + 2 -\left[3 + \dfrac{154}{154} + 1\right] + 3 \times 2 - \dfrac{18}{6} -9 \NR
+            \NC = \NC 2 \cdot 3^2 + 2 - [3 + 1 + 1] + 3 \times 2 - \dfrac{18}{6} -9 \NR
+            \NC = \NC 2 \cdot 3^2 + 2 - 5 + 3 \times 2 - \dfrac{18}{6} -9 \NR
+            \NC = \NC 2 \cdot 9 + 2 - 5 + 3 \times 2 - \dfrac{18}{6} -9 \NR
+            \NC = \NC 18 + 2 - 5 + 6 - 3 - 9 \NR
+            \NC = \NC 9 \NR
+          \stopalign
+        \stopejerformula
+      \stopplaceformula
+
+    \stopejemplos
+
+    \startsection[title={Conteo por conjuntos}]
+      \startejemplos
+      \startitemejem
+        \startitem
+          En un comité de diez personas se organizan dos subcomités. En uno de ellos hay cuatro miembros y en el otro cinco. Si dos de estas personas pertenecen a amos comités, ¿cuántas personas en el comité orginal no pertenecen a los subcomités?
+
+          \margindata[youtube]{\from[AE33B]}
+          \startitemize
+          \item $U --> $ comité orginal
+          \item $A --> $ uno de los subcomités
+          \item $B --> $ el segundo subcomité
+          \stopitemize
+
+          \startcenteraligned
+            \externalfigure[comite1][maxheight=3cm]
+          \stopcenteraligned
+        \stopitem
+
+        \startitem
+          En cierto curso de estudiantes de 45 estudiantes son distribuidos en tres grupos, de modo que vayan practicando un deporte, mientras el resto se mantiene estudiando teoría de dichos deportes. Estos grupos son doce estudiantes que practicarán beisbol, nueve que practicarán baloncesto y doce más que practicarán voleibol. Entre estos últimos se asigna un estudiante a practicar baloncesto también. ¿Cuántos estudiantes se mantuvieron estudiando teoría del deporte por el momento?
+
+          \startitemize
+          \item $U -->$ estudiantes en el curso
+          \item $P -->$ estudiantes en beisbol
+          \item $B -->$ estudiantes en baloncesto
+          \item $V -->$ estudiantes en voleibol
+          \stopitemize
+
+          \startcenteraligned
+            \externalfigure[comite2][maxheight=3cm]
+          \stopcenteraligned
+          
+          Hay doce estudiantes que se mantendrán estudiando la teoría de estos deportes.
+
+        \stopitem
+
+        \margindata[youtube]{\from[AE34A]}
+        \startitem
+          En cierta escuela hay 226 graduados algunos de los cuales están tomando los curso de álgebra, biología e historia. Hay 74 que toman álgebra, 63 que toman biología y 55 que toman historia. De éstos, 28 toman álgebra y biología., 35 toman álgebra e historia, y 19 cursan biología e historia. Finalmene, hay diez de estos estudiantes que están tomando los tres cursos. ¿Cuántos graduandos no están tomando ninguno de estos cursos?
+
+          \startitemize
+          \item $U -->$ graduandos
+          \item $A -->$ tomando álgebra
+          \item $B -->$ tomando biología
+          \item $H -->$ tomando historia
+          \stopitemize
+
+          \startcenteraligned
+            \externalfigure[comite3][maxheight=3cm]
+          \stopcenteraligned
+
+          Hay 106 graduandos en esa escuela que no están tomando ninguno de los tres cursos.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+    \stopsection
+
+  \stopchapter
+\stopcomponent

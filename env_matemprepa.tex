@@ -1,0 +1,424 @@
+
+\project matemprepa
+
+% \usepath[{1_alg_elemental,2_geometria,3_alg_intermedia,4_alg_avanzada,5_precalculo}]
+
+\definefontfamily [mainface] [rm] [Cambria]
+\definefontfamily [mainface] [ss] [Calibri]
+\definefontfamily [mainface] [tt] [Consolas]
+\definefontfamily [mainface] [mm] [Cambria Math]
+
+\definefontfamily [office] [serif] [Times]
+\definefontfamily [office] [sans]  [Arial] 
+\definefontfamily [office] [mono]  [Courier]
+\definefontfamily [office] [math]  [TeX Gyre Termes Math]
+
+\definefontfamily [dejavu] [serif] [DejaVu Serif]
+\definefontfamily [dejavu] [sans]  [DejaVu Sans]
+\definefontfamily [dejavu] [mono]  [DejaVu Sans Mono]
+\definefontfamily [dejavu] [math]  [XITS Math] [scale=1.1]
+
+
+\setupbodyfont[10pt,office]
+
+% \setupbodyfont[11pt,xits]
+% \setupbodyfont[11pt, stixtwo]
+
+\definesymbol [vartriangle] [\textormathchar{"25B5}]
+
+\mainlanguage[es]
+% \setuplabeltext[es][%
+  % table=Tabla ,
+  % figure=Gráfico ,
+  % ]
+
+
+\setupcolors[state=start]
+\definecolor [fondo]     [r=0.95,g=0.95,b=0.95]
+\definecolor [fondoejem] [r=0.98,g=0.97,b=0.93]
+\definecolor [azulon]    [r=0.21,g=0.67,b=0.85]
+\definecolor [ejemcolor] [darkred]
+\definecolor [color_def] [azulon]
+\definecolor [color_teo] [r=0.81,g=0.58,b=0.15]% anarajando
+
+\definehighlight [obj][
+  style=bolditalic]
+\definehighlight [ini][color=ejemcolor]
+
+\setuplayout[%
+  backspace=23mm,
+  width=120mm,
+  % leftmargindistance=3cm,
+  leftmargin=0em,
+  % leftedge=0em,
+  rightmargin=50mm,
+  % rightedgedistance=2cm,
+  topspace=15mm,
+  header=20mm,
+  footer=0mm,
+  height=260mm,
+]
+
+\setupwhitespace[medium]
+
+\setupreferenceformat[in][style=\it,color=red]
+\definereferenceformat[ineq][%
+  left=(,
+  right=),
+]
+
+\setuppagenumbering[alternative=doublesided, location=,]
+\setupheader[after={\vskip 4pt \hrule}]
+\setupheader[text][after=]
+\setupheader[margin][after=]
+
+
+\define[2]\MyChapterCommand%
+       {\framed[%
+           frame=off,
+           bottomframe=off,
+           topframe=off,
+           top=\vss,
+           bottom=\vss,
+           height=3cm,
+           % width= \dimexpr(\textwidth-3cm)\relax,
+           width=\textwidth,
+           align={stretch,nothyphenated,flushright},
+           strut=no]
+         {\headtext{chapter}#2}
+         \quad
+         \framed[%
+           top=\vss,
+           bottom=\vss,
+           height=3cm,
+           width=3cm]
+                {\switchtobodyfont[32pt]#1}
+       }
+
+\setuphead[chapter][%
+   command=\MyChapterCommand,
+   style=\ss\bfd,
+   header=empty,
+   after={\blank[10*big]}]
+
+
+% \setuphead[chapter][alternative=margin]
+% \definebodyfont[10pt,11pt,12pt][rm][tfe=Serif at 48pt]
+
+% \setuplabeltext [es] [chapter=Tema~]
+
+% \define[2]\Tema
+%   {\framed[frame=off]{\framed[frame=on,height=2.5cm,width=2.5cm]{#1}\\#2\par}}
+
+% \setuphead [chapter] [command=\Tema, numberstyle=\tfe]
+
+\definefont [Fseccion] [SansBold sa 1.2]
+
+\setuphead[section][%
+  color=red,
+  style=\Fseccion,
+  % textstyle=\bf,
+]
+
+
+\setupitemgroup[itemize][%
+  option={joinedup,intro},
+]
+
+\defineitemgroup[itemizer]
+\setupitemgroup[itemizer][%
+  placestopper=no,
+  option={r,intro,joinedup,unpacked},
+  style=\sl,
+  right=),
+  leftmargin=.7em,
+  distance=.5em,
+  after=,
+]
+
+\defineitemgroup[itemizep][itemizer][%
+  option={r,intro,joinedup,intext,unpacked},
+  leftmargin=0pt,
+  distance=0pt,
+]
+
+\defineitemgroup[itemejem]
+\setupitemgroup[itemejem:1][%
+  option={intro},
+  symbol=n,
+  color=ejemcolor,
+  placestopper=no,
+  left=(,
+  right=),
+  distance=.7em,
+  after={\blank[small]},
+]
+
+\startuseMPgraphic{mp:axiomframe}
+  begingroup;
+    for i=1 upto nofmultipars :
+      % Draw the surrounding box
+      path p;
+      p := ( llcorner multipars[i]
+             -- lrcorner multipars[i]
+             -- urcorner multipars[i]
+             -- ulcorner multipars[i]
+             -- cycle )
+             enlarged (0pt,0pt) ;
+      fill p withcolor boxfillcolor ;
+      linecap := butt;
+      draw (p cutbefore point 3 of p cutafter point 4 of p)
+            withpen pencircle scaled .5pt
+            withcolor boxlinecolor ;
+    endfor ;
+  endgroup;
+\stopuseMPgraphic
+
+% \startuseMPgraphic{mp:marco}
+%   begingroup;
+%     for i=1 upto nofmultipars :
+%       % Draw the surrounding box
+%       path p;
+%       p := ( llcorner multipars[i]
+%              -- lrcorner multipars[i]
+%              -- urcorner multipars[i]
+%              -- ulcorner multipars[i]
+%              -- cycle )
+%              enlarged (0pt,0pt) ;
+%       % fill p withcolor boxfillcolor ;
+%       linecap := butt;
+%       draw (p)
+%             withpen pencircle scaled .5pt
+%             withcolor boxlinecolor ;
+%     endfor ;
+%   endgroup;
+% \stopuseMPgraphic
+
+\definetextbackground[trecuadro][%
+  % mp=mp:marco,
+  background=none,
+  before=, after=,
+  framecolor=red,
+  location=always,
+  topoffset=3pt,
+  leftoffset=13pt,
+  rightoffset=10pt,
+  bottomoffset=3pt,
+  before={\startpostponingnotes\blank[2*big]\vbox\bgroup},
+  after={\egroup\blank[2*big]\stoppostponingnotes},
+]
+
+\definetextbackground[tfondo][trecuadro][%
+  mp=mp:axiomframe,
+  backgroundcolor=fondo,
+  before=, after=,
+  framecolor=lightgray,
+  before={\startpostponingnotes\blank[2*big]},
+  after={\blank[2*big]\stoppostponingnotes},
+]
+
+\definetextbackground [tbteor]  [trecuadro] [framecolor=color_teo]
+\definetextbackground [tbdemo]  [tfondo]    [framecolor=color_teo, backgroundcolor=white]
+\definetextbackground [tbdefi]  [trecuadro] [framecolor=color_def]
+\definetextbackground [tbejem]  [tfondo]    [backgroundcolor=fondoejem]
+\definetextbackground [tbobser] [tfondo]   
+
+
+\defineframed[frecuadro][%
+  toffset=3pt,
+  loffset=13pt,
+  roffset=10pt,
+  boffset=3pt,
+  before={\startpostponingnotes\blank[2*big]},
+  after={\blank[2*big]\stoppostponingnotes},
+]
+
+
+\defineframed [fdefi] [frecuadro] [framecolor=color_def]
+
+
+\setupenumerations [%
+  alternative=serried,
+  before=,after=,
+  distance=.7em,
+  width=broad,
+  headstyle=normal,
+  titlestyle=slanted,
+  way=bytext,
+  conversion=numbers,
+]
+
+\definecounter[definicion][way=bytext]
+\defineenumeration[definicion][%
+  text=DEFINICIÓN ,
+  counter=definicion,
+  align=flushleft,
+  headstyle={\ss\tx\bf},
+  headcolor=color_def,
+  distance=1em,
+  title=yes,
+  titlecolor=black,
+  titlestyle={\rm\bia}, % head y title están relacionados
+  titledistance=.7em,
+  style=italic,
+  before={\starttbdefi},
+  after={\stoptbdefi},
+]
+
+\definecounter[axioma][way=bytext]
+\defineenumeration[axioma][definicion][%
+  text=AXIOMA ,
+  counter=axioma,
+]
+
+\defineenumeration[axiomaextra][axioma][%
+  number=no,      
+]
+
+\definecounter[teorema][way=bytext]
+\defineenumeration [teorema][definicion][%
+  text=TEOREMA ,%Space after Theorem is deliberate
+  right=:,
+  counter=teorema,
+  headcolor=color_teo,
+  before={\starttbteor},
+  after={\stoptbteor\blank[none]},
+]
+
+\defineenumeration[lema][teorema][%
+  text=LEMA ,
+  number=no,
+]       
+
+\defineenumeration[corolario][lema][%
+  text=COROLARIO ,
+]
+
+\defineenumeration [demo] [%
+  text=PRUEBA: ,
+  before={\blank[none]\starttbdemo},
+  after={\blank[none]\stoptbdemo},
+  inbetween={\blank[medium]},
+  number=no,
+  headstyle={\ss\tx\bf},
+  headcolor=color_teo,
+  distance=1em,
+  title=no, %this is the default
+  style=normal,
+  closesymbol={\color[color_teo]{\mathematics{\square}}},
+]
+
+\defineenumeration [demop][demo][%
+  alternative=top,
+  % distance=2cm,
+  closesymbol=,
+]
+
+\defineenumeration [demoejem][demo][%
+  before=, after=,
+  % before={\blank[none]\starttbejem},
+  % after={\stoptbejem\blank[none]},
+]
+
+\defineenumeration [observacion][definicion] [%
+  alternative=serried,
+  text=OBSERVACIÓN: ,
+  headcolor=black,
+  color=darkgray,
+  style=normal,
+  number=no,
+  before={\starttbobser},
+  after={\stoptbobser},
+]
+
+\defineenumeration [ejemplo] [%
+  style={\switchtobodyfont[9pt]},
+  text=Ejemplo: ,
+  number=no,
+  headstyle=\ss\tx,
+  color=darkgray,
+  before={\blank[big]%
+    \resetcounter[formula]\starttbejem},
+  after={\resetcounter[formula]\stoptbejem},
+]
+
+\defineenumeration [ejemplos][ejemplo] [%
+  text=Ejemplos: ,
+]
+
+\definedescription [discusion] [%
+  headstyle=\ss,
+  headcolor=darkred,
+  alternative=top,
+  % command={\hskip-1cm},
+  before={\blank[2*big]},
+  after={\blank[2*big]},
+]
+
+\definedescription [descripcion] [%
+  headstyle=\ss\bf,
+  width=.4\textwidth,
+  before={\blank[2*big]},
+  after={\blank[2*big]},
+]
+
+\setupformulas[prefix=no]
+\defineformula[ejer] [%
+  location=left,
+  prefix=no,
+  align=flushleft,
+  distance=1em,
+  numbercolor=ejemcolor,
+  spaceafter=small,
+]
+
+\defineparagraphs [TwoColumns] [%
+  n=2,
+  rule=on,
+  distance=.5cm,
+]
+
+% \define\PlaceFootnote
+%   {\inoutermargin{\vtop{\placelocalnotes[footnote][before=,after=]}}}
+
+% \setupnote [footnote][%
+%   location=text,
+%   bodyfont=small,
+%   align={nothyphenated,right},
+%   next=\PlaceFootnote,
+% ]
+
+\setupnotation[footnote][%
+  alternative=serried,
+]
+
+\setupexternalfigures[directory=img]
+
+% Una explicación para cada paso de la ecuación
+\definemathalignment
+  [doaligncomments]
+  [m=3,distance=3em plus 1 fil]
+
+\def\startaligncomments#1\stopaligncomments{%
+   \def\Comment##1\NR{\NC\NC\text{##1}\dodoubleempty\doComment}
+   %\qquad is for some space between the comment and the number
+   \def\doComment[##1][##2]{%
+    \iffirstargument \qquad \fi
+    \NR[##1][##2]\NC\NC}
+   \startdoaligncomments
+   \NC\NC#1\stopdoaligncomments}
+
+\definemathframed[graymath] [%
+  frame=off,
+  location=mathematics,
+  background=color,
+  backgroundcolor=lightgray,
+   backgroundoffset=2pt,
+]
+
+\definemathfence[abs][bar][command=yes]
+
+
+% \showframe
+% \showlayout
+\stopenvironment

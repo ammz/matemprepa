@@ -1,0 +1,2019 @@
+
+\startcomponent c_racionales_reales
+
+\project project_matemprepa
+
+\youtube{\from[AE48A]}
+\startchapter[title={Los conjuntos de los números racionales, los irracionales y los reales}, marking={Conjuntos de números racionales, irracionales y reales}]
+  
+  \startsection[title={Otra forma de interpretar la división}]
+    \startformula[align=right]
+      3 \times 5 = 5 + 5 + 5 = \#(\hl \cup \hl \cup \hl)
+    \stopformula
+    \startformula[align=right]
+      3 \times 5 = 5 \times 3 =  3 + 3 + 3 + 3 + 3 = \#(\hl \cup \hl \cup \hl \cup \hl \cup \hl)
+    \stopformula
+
+    Sabemos, por la definición de división que si $3 \times 5 = 5 \times 3 = 15$, entonces $\dfrac{15}{3} = 5$ y $\dfrac{15}{5} = 3$.
+
+    Luego, podemos interpretar la división $\dfrac{x}{y}$, donde $x,y \in \naturalnumbers$, como la búsqueda de la cardinalidad igual que tendrían $y$ conjuntos entre los que se van a distribuir $x$ elementos.
+
+    Así, $\dfrac{15}{3} = 5$ y $\dfrac{15}{5} = 3$.
+
+    \youtube{\from[AE48B]}
+    \startdefinicion
+      $\rationals = \left\{\dfrac{a}{b} \mid a, b \in \naturalnumbers, \, b \neq 0 \right\}$, es \obj{el conjunto de números racionales}.
+    \stopdefinicion
+
+    Sabemos que $\dfrac{a}{1} = a \in \integers$. Luego, cualquier número entero lo podemos escribir en forma de un número racional. Así, que todos los enteros están en los racionales.
+
+    \startformula
+      \naturalnumbers \subseteq \mathbb{W} \subseteq \integers \subseteq \rationals
+    \stopformula
+    
+    Luego, las propiedades de los naturales pasan por herencia a los racionales. Esto lo aceptamos sin discusión.
+
+    \youtube{\from[AE49A]}
+    Tenemos que
+
+    \startformula
+      n \left(\dfrac{1}{n}\right) = \dfrac{1}{n} \cdot n = \underbrace{\dfrac{1}{n} + \dfrac{1}{n} + \dfrac{1}{n} + \cdots + \dfrac{1}{n}}_{\text{n sumandos}} = 1
+    \stopformula
+
+    \startaxioma
+      Para todo $n \in \naturalnumbers, \, \exists\, \dfrac{1}{n} \in \rationals$ tal que $n \left(\dfrac{1}{n}\right) = \dfrac{1}{n} \cdot n = 1.$
+
+      Llamamos a $\dfrac{1}{n}$, \obj{el inverso multiplicativo (o con respecto a la operación de multiplicación) o el recíproco de $n$}. Denotamos $\dfrac{1}{n} \equiv n^{-1}$
+    \stopaxioma
+
+    \startdefinicion
+      Sean $m \in \integers$ y $\dfrac{1}{n} \in \rationals, \, n \neq 0$. Entonces, $m \left(\dfrac{1}{n}\right) = \left(\dfrac{1}{n}\right) m = \dfrac{m}{n}$.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{2\left(\dfrac{1}{5}\right)} = \dfrac{2}{5}$
+        \stopitem
+        \startitem
+          $\ini{\left(\dfrac{1}{6}\right)(-7)} = \dfrac{-7}{6}$
+        \stopitem
+        \startitem
+          $\ini{5\left(\dfrac{1}{-3}\right)} = \dfrac{5}{-3}$
+        \stopitem
+        \startitem
+          $\ini{\left(\dfrac{1}{-7}\right)(-4)} = \dfrac{-4}{-7}$
+        \stopitem
+        \startitem
+          $\ini{\left(\dfrac{1}{8}\right)(-8)} = \left(\dfrac{1}{8}\right)(8)(-1) = 1(-1) = -1$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      Para todo $\dfrac{a}{b} \in \rationals, \, a,b \neq 0$ existe su recíproco.
+    \stopteorema
+    
+    \comentario{$\dfrac{m}{n} = m\left(\dfrac{1}{n}\right)$}
+    \startdemo
+      (Prueba de existencia por construcción) Supongamos que $x$ es el recíproco $\dfrac{a}{b}$. Entonces,
+
+      \startformula
+        \startalign
+          \NC x \cdot \dfrac{a}{b} = \dfrac{a}{b} \cdot x \NC = 1 \NR
+          \NC a \left(\dfrac{1}{b}\right) x \NC = 1 \NR
+          \NC a^{-1} a \left(\dfrac{1}{b}\right) x \NC = a^{-1} \cdot 1 \NR
+          \NC 1 \cdot \left(\dfrac{1}{b}\right) x \NC = \left(\dfrac{1}{a}\right) \NR
+          \NC \dfrac{1}{b} \cdot x \NC = \dfrac{1}{a} \NR
+          \NC \left(b \cdot \dfrac{1}{b}\right) x \NC = b \cdot \dfrac{1}{a} \NR
+          \NC 1 \cdot x \NC = \dfrac{b}{a} \NR
+          \NC x \NC = \dfrac{b}{a}
+        \stopalign
+      \stopformula
+    \stopdemo
+
+    \startobservacion
+      \startitemize
+        \startitem
+          Vemos que el recíproco racional $\frac{a}{b}$ se obtiene \quotation{virando} éste.
+        \stopitem
+        \startitem
+          Para cualquier $r \in \rationals$, su recíproco será representado por el símbolo $r^{-1}$.
+        \stopitem
+      \stopitemize
+    \stopobservacion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{\left(\dfrac{2}{5}\right)^{-1}} = \dfrac{5}{2}$
+        \stopitem
+        \startitem
+          $\ini{\left(\dfrac{-3}{7}\right)^{-1}} = \dfrac{7}{-3}$
+        \stopitem
+        \startitem
+          $\ini{\left(\dfrac{-13}{-9}\right)^{-1}} = \dfrac{-9}{-13}$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      Sea $x \in \rationals, \,x \neq 0$. Entonces, $x^{-1}$ es único.
+    \stopteorema
+
+    \startdemo
+      (Prueba de unicidad) Suponemos que existe $e \in \rationals$ que tiene la misma propiedad que $x^{-1}$. Esto es, que
+      \startformula
+        x \cdot e = e \cdot x = 1
+      \stopformula
+      Queremos ver que $e = x^{-1}$
+
+      Consideremos la igualdad
+      \startformula
+        \startalign
+          \NC x \cdot e =\NC 1 \NR
+          \NC x^{-1} \cdot x \cdot e =\NC x^{-1} \cdot 1 \NR
+          \NC \left(x^{-1} \cdot x\right) e =\NC x^{-1} \cdot 1 \NR
+          \NC \left(x^{-1} \cdot x\right) e =\NC x^{-1} \NR
+          \NC 1 \cdot e =\NC x^{-1} \NR
+          \NC e =\NC x^{-1} \NR
+        \stopalign
+      \stopformula
+    \stopdemo
+
+    \youtube{\from[AE50A]}
+    \startteorema
+      Sean $a,b \in \rationals, \, a,b \neq 0$. Entonces
+      \startitemizer
+        \startitem
+          $ab = ba = a --> b = 1$
+        \stopitem
+        \startitem
+          $ab = ba = 1 --> a = b^{-1} \,\land\, b = a^{-1}$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $i)\quad$ Tenemos que $ab = ba$ por la ley conmutativa de la multiplicación.
+
+      \startformula
+        \startalign
+          \NC a \cdot b \NC = a \NR
+          \NC a^{-1} \cdot a \cdot b \NC = a^{-1} \cdot a \NR
+          \NC \left(a^{-1} \cdot a\right)  b \NC = 1 \NR
+          \NC 1 \cdot  b \NC = 1 \NR
+          \NC b \NC = 1 \NR
+        \stopalign
+      \stopformula
+
+      Igualmente
+      
+      \startformula
+        \startalign
+          \NC b \cdot a \NC = a \NR
+          \NC b \cdot a \cdot a^{-1}  \NC = a \cdot a^{-1} \NR
+          \NC b \left(a \cdot a^{-1}\right) \NC = 1 \NR
+          \NC b \cdot  1 \NC = 1 \NR
+          \NC b \NC = 1 \NR
+        \stopalign
+      \stopformula
+
+      $ii)\quad$
+
+      \startformula
+        \startalign
+          \NC a \cdot b \NC = 1 \NR
+          \NC a^{-1} \cdot a \cdot b \NC = a^{-1} \cdot 1 \NR
+          \NC \left(a^{-1} \cdot a\right) b \NC = a^{-1} \NR
+          \NC 1 \cdot  b \NC = a^{-1} \NR
+          \NC b \NC = a^{-1} \NR
+        \stopalign
+      \stopformula
+
+      También
+      
+      \startformula
+        \startalign
+          \NC a \cdot b \NC = 1 \NR
+          \NC a \cdot b \cdot b^{-1} \NC = 1\cdot b^{-1} \NR
+          \NC a \left(b \cdot b^{-1} \right) \NC = b^{-1} \NR
+          \NC a \cdot 1 \NC = b^{-1} \NR
+          \NC a \NC = b^{-1} \NR
+        \stopalign
+      \stopformula
+
+      Queda pendiente el caso para $ba = 1$.
+    \stopdemop
+
+    \comentario{Esta es una forma de establecer la unicidad del inverso aditivo y del multiplicativo}
+    \startteorema
+      Sean $a,b \in \rationals$. Entonces
+      \startitemizer
+        \startitem
+          $a = b --> -a = -b$
+        \stopitem
+        \startitem
+          Si $a,b \neq 0, \, a = b --> a^{1} = b^{-1}$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $i)\quad$
+      \startformula
+        \startalign
+          \NC a =\NC b \NR
+          \NC (-1)a =\NC (-1)b \NR
+          \NC -a =\NC -b \NR
+        \stopalign
+      \stopformula
+
+      $ii)\quad$
+      \startformula
+        \startalign
+          \NC a =\NC b \NR
+          \NC a \cdot a^{-1} \cdot b^{-1} =\NC b \cdot a^{-1} \cdot b^{-1} \NR
+          \NC \left(a \cdot a^{-1}\right) b^{-1} =\NC b \cdot  a^{-1} \cdot  b^{-1} \NR
+          \NC \left(a \cdot a^{-1}\right) b^{-1} =\NC \left(b \cdot  b^{-1}\right) a^{-1} \NR
+          \NC 1 \cdot b^{-1} =\NC 1 \cdot a^{-1} \NR
+          \NC b^{-1} =\NC a^{-1} \NR
+          \NC a^{-1} =\NC b^{-1} \NR
+        \stopalign
+      \stopformula
+    \stopdemop
+
+    \startdefinicion
+      Un número racional escrito en la forma $\dfrac{a}{b} (b \neq 0)$ se llama \obj{una fracción común}, y se puede leer \quotation{a,b-avos}. Al número dividendo $a$ le llamamos \obj{el numerador} mientras que al número divisor $b$ le llamamos \obj{el denominador}. Si $\abs{a} \geq \abs{b}$ decimos que $\frac{a}{b}$ es \obj{una fracción commún impropia}; si $\abs{a} \leq \abs{b}$ decimos que $\frac{a}{b}$ es \obj{una fracción commún propia}.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{\dfrac{2}{5}}$ se puede leer \quotation{dos quintos} o \quotation{dos, cinco-avos}; como $\abs{2} \leq \abs{5}$, esta es una fracción común propia.
+        \stopitem
+        \startitem
+          $\ini{\dfrac{-21}{18}}$ se leerá \quotation{negativo veintiún dieciocho-avos}; como $\abs{-21} \geq \abs{18}$, esta es una fracción común impropia.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \youtube{\from[AE50B]}
+    \startteorema{la equivalencia de la división}
+      Sean $a,b \in \rationals, \, b \neq 0$. Entonces $a \div b = a \cdot b^{-1}$.
+    \stopteorema
+
+    \startdemo
+      Sabemos que $a \div b \equiv \frac{a}{b}$. Llamemos
+      \placeformula
+      \startformula
+        \frac{a}{b} = x
+      \stopformula
+
+      \comentario{$x \div y = z$ ssi $x = zy = yz$}
+      Entonces, por definición de la división,
+
+      \startformula
+        a = bx = xb
+      \stopformula
+
+      Luego, por la ley de multiplicación de la igualdad,
+      \startformula
+        \startalign
+          \NC ab^{-1} \NC = xbb^{-1} \NR
+          \NC ab^{-1} \NC = x \left( bb^{-1} \right) \NR
+          \NC ab^{-1} \NC = x \cdot 1 \NR
+          \NC ab^{-1} \NC = x \NR
+          \NC x       \NC = ab^{-1} \NR
+          \NC \frac{a}{b} \equiv a \div b \NC = ab^{-1}, \text{sustituyendo lo que dice (1).} \NR
+        \stopalign
+      \stopformula
+    \stopdemo
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{2 \div (-8)} = 2 (-8)^{-1}$
+        \stopitem
+        \startitem
+          $\ini{\dfrac{-25}{3}} = -25\cdot 3{-1}$
+        \stopitem
+        \startitem
+          $\ini{-1/(-6)} = -1 (-6)^{-1}$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      \comentario{
+        Este teorema se parece a:\par
+        $-(-a) = a$\par
+        $-(a+b) = -a + (-b)$
+      }
+      Sean $a,b \in \rationals$ con $a,b \neq 0$. Entonces:
+      \startitemizer
+        \startitem
+          $\left(a^{-1}\right)^{-1} = a$
+        \stopitem
+        \startitem
+          $(ab)^{-1} = a^{-1}b^{-1}$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \comentario{$ab = 1 --> a = b^{-1} \land b = a^{-1}$}
+    \startdemop
+      $i)\quad$ Sabemos que $a \cdot a^{-1} = 1$. Luego, por un teorema anterior, $a = \left(a^{-1}\right)^{-1}$, lo que se puede escrbir como $\left(a^{-1}\right)^{-1} = a$.
+
+      $ii)\quad$ Bastará ver que $(ab) (a^{-1}b^{-1})= 1$. Pero, esta igualdad se transforma:
+      \startformula
+        \startalign
+          \NC aba^{-1}b^{-1} \NC = 1 \NR
+          \NC aa^{-1}bb^{-1} \NC = 1 \NR
+          \NC \left(aa^{-1}\right)\left(bb^{-1}\right) \NC = 1 \NR
+          \NC 1 \cdot 1 \NC = 1 \NR
+          \NC 1 \NC = 1 \NR
+        \stopalign
+      \stopformula
+    \stopdemop
+
+    \startteorema
+      Sean $a,b \in \rationals$. Entonces $ab = 0 <--> a = 0 \lor b = 0$.
+    \stopteorema
+
+    \youtube{\from[AE51A]}
+    \startdemo
+      $-->\quad$ Por hipótesis $ab = 0$. Si $a = 0$ (lo cual puede ocurrir debido a la ley de tricotomía), acabamos. Si $a \neq 0$, existe $a^{-1}$ y, por la ley de multiplicación de la igualdad,
+      \startformula
+        \startalign
+          \NC a^{-1}ab \NC = a^{-1} \cdot 0 \NR
+          \NC \left(a^{-1}a\right)b \NC = 0 \NR
+          \NC 1 \cdot b \NC = 0 \NR
+          \NC b \NC = 0 \NR
+        \stopalign
+      \stopformula
+
+      Así mismo podemos ver que si $b \neq 0$, entonces, $a = 0$.
+
+      $<--\quad$ Por hipótesis, $a = 0 \lor b = 0$. Si $a = 0$ por sustitución
+      \startformula
+        ab = 0 \cdot b = 0
+      \stopformula
+
+      Es decir, que $ab = 0$ (debido a la ley transitiva de la igualdad). Igualmente, podemos ver que si $b = 0$, entonces $ab = 0$, también.
+    \stopdemo
+
+    \startteorema
+      $0^{-1}$ no existe.
+    \stopteorema
+
+    \startdemo{(por contradicción)}
+      Supongamos que $0^{-1}$ existe. Entonces,
+      \startformula
+        0 \cdot 0^{-1} = 0^{-1} \cdot 0 = 1,
+      \stopformula
+      lo que contradice la propiedad multiplicativa del cero.
+    \stopdemo
+
+    \startteorema
+      Si $x \in \rationals$, con $x > 0$, entonces $x^{-1} > 0$.
+    \stopteorema
+
+    \startdemo{(por contradicción)}
+      Supongamos que $x^{-1} < 0$. Como, por hipótesis $x > 0$, si aplicamos la ley de multiplicación positiva a la desigualdad $x^{-1} < 0$, obtenemos:
+      \startformula
+        \startalign
+          \NC x \cdot x^{-1} \NC < x \cdot 0 \NR
+          \NC 1 \NC <  0\NR
+        \stopalign
+      \stopformula
+
+      Contradicción ya que $1 > 0$.
+    \stopdemo
+
+    \youtube{\from[AE51B]}
+    \startteorema
+      Sean $a,b,c,d,k \in \naturalnumbers,\, b,d,k \neq 0$. Entonces
+
+      \startitemizer
+        \startitem
+          (igualdad de fracciones) $\quad\dfrac{a}{b} = \dfrac{c}{d} <--> ad = bc$
+        \stopitem
+        \startitem
+          (principio fundamental de fracciones, pff) $\quad\dfrac{ka}{kb} = \dfrac{ak}{bk} = \dfrac{a}{b}$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $i)\quad -->\quad$
+      \startformula
+        \startalign
+          \NC \dfrac{a}{b} \NC = \dfrac{c}{d} \NR
+          \NC ab^{-1} \NC = cd^{-1} \NR
+          \NC ab^{-1}bd \NC = cd^{-1}bd \NR
+          \NC a\left(b^{-1}b\right)d \NC = bcd^{-1}d \NR
+          \NC a \cdot 1 \cdot d \NC = bc\left(d^{-1}d\right) \NR
+          \NC ad \NC = bc\cdot 1 \NR
+          \NC ad \NC = bc \NR
+        \stopalign
+      \stopformula
+
+      $i)\quad <--\quad$
+      \startformula
+        \startalign
+          \NC ad\NC = bc \NR
+          \NC adb^{-1}d^{-1}\NC = bcb^{-1}d^{-1} \NR
+          \NC add^{-1}b^{-1}\NC = bb^{-1}cd^{-1} \NR
+          \NC a\left(dd^{-1}\right)b^{-1}\NC = \left(bb^{-1}\right)cd^{-1} \NR
+          \NC a\cdot 1 \cdot b^{-1}\NC = 1 \cdot c \cdot d^{-1}\NR
+          \NC a b^{-1}\NC = c d^{-1}\NR
+          \NC \dfrac{a}{b} \NC = \dfrac{c}{d} \NR
+        \stopalign
+      \stopformula
+
+      $ii)\quad$  $\dfrac{ka}{kb} = \dfrac{ak}{bk}\quad$ por la ley conmutativa de la multiplicación en $\integers$.
+
+      \startformula
+        \dfrac{ka}{kb} = \dfrac{a}{b} <--> (ka)b = (kb)a,
+      \stopformula
+
+      debido al teorema en $i)$. Pero podemos transformar esta igualdad como:
+      \startformula
+        \startalign
+          \NC kab  \NC = kba  \NR
+          \NC kab  \NC = kab.\comentario{Por la ley conmutativa de la multiplicación} \NR
+        \stopalign
+      \stopformula
+    \stopdemop
+
+    \startejemplo
+      \ini{Verifique si las siguientes igualdades son ciertas o falsas}
+      \startitemejem
+        \startitem
+          $\dfrac{2}{5} = \dfrac{10}{25}$ \,\, Cierto, ya que $2 \cdot 25 = 50 = 5 \cdot 10 $
+        \stopitem
+        \startitem
+          $\dfrac{-3}{8} = \dfrac{12}{-32}$ \,\, Cierto, ya que $-3 (-32) = 96 = 8 \cdot 12 $
+        \stopitem
+        \startitem
+          $\dfrac{6}{5} = \dfrac{81}{75}$ \,\, Falso, ya que $6 \cdot 75 = 450 \neq 405 = 5 \cdot 81$
+        \stopitem
+      \stopitemejem
+    \stopejemplo
+
+    \youtube{\from[AE52A]}
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{Escriba las siguientes fracciones de dos formas:}
+          \startitemize[a,columns,joinedup][color=ejemcolor,stopper=)]
+            \startitem
+              $\ini{\dfrac{3}{8}} = \dfrac{3 \cdot 6}{8 \cdot 6} = \dfrac{18}{48}$ \par
+              $\ini{\dfrac{3}{8}} = \dfrac{3 \cdot 10}{8 \cdot 10} = \dfrac{30}{80}$ 
+            \stopitem
+            \startitem
+              $\ini{\dfrac{-1}{7}} = \dfrac{-1 \cdot 3}{7 \cdot 3} = \dfrac{-3}{21}$ \par
+              $\ini{\dfrac{-1}{7}} = \dfrac{-1 \cdot (-4)}{7 \cdot (-4)} = \dfrac{4}{-28}$ 
+            \stopitem
+          \stopitemize
+        \stopitem
+        \startitem
+          \ini{Escriba la fracción dada con el nuevo numerador o denominador indicado:}
+          \startitemize[a,horizontal][color=ejemcolor,stopper=)]
+            \startitem
+              $\ini{\dfrac{1}{2} = \dfrac{?}{8}} = \dfrac{4}{8}$ 
+            \stopitem
+            \startitem
+              $\ini{\dfrac{7}{-5} = \dfrac{?}{15}} = \dfrac{-21}{15}$
+            \stopitem
+            \startitem
+              $\ini{\dfrac{3}{8} = \dfrac{-27}{?}} = \dfrac{-27}{-72}$
+            \stopitem
+          \stopitemize
+        \stopitem
+        \startitem
+          \comentario{
+            \startitemize
+              \startitem
+                $a \cdot b = 1 --> a = b^{-1} \land b = a^{-1}$\par
+              \stopitem
+              \startitem
+                $ab = 0 <--> a = 0 \lor b = 0$\par
+              \stopitem
+              \startitem
+                Principio fundamental de fracciones: $\dfrac{ka}{kb} = \dfrac{ak}{bk} = \dfrac{a}{b}$
+              \stopitem
+            \stopitemize}
+          \ini{Justifique:}
+          \startitemize[a][color=ejemcolor,stopper=)]
+            \startitem
+              $\ini{3\left(x - z^3\right) = 1} --> 3 = \left(x - z^3\right)^{-1} \land x - z^3 = 3^{-1}$
+            \stopitem
+            \startitem
+              $\ini{(x + 1)\left(x - \dfrac{3}{2}\right) = 0} --> x + 1 = 0 \land x - \dfrac{3}{2} = 0$
+            \stopitem
+            \startitem
+              $\ini{\dfrac{2x}{3y} = \dfrac{6x\left(y^3 + 5\right)}{9y\left(y^3 + 5\right)}} -->\,$ pff
+            \stopitem
+            \startitem
+              $\ini{5 \cdot 5^{-1} = 1} --> \quad$ el producto de un número por su recíproco da como resultado el elemento identidad de la multiplicación, 1.
+            \stopitem
+          \stopitemize
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+  \stopsection
+
+  \youtube{\from[AE52B]}
+  \startsection[title={Divisibilidad y factorización prima}]    
+
+    \startdefinicion
+      Sean $a,b \in \mathbb{W}$. Decimos que \ini{a divide $a$ (o es divisor de) $b$} ssi $a$ es un factor de $b$. Esto es, ssi $\exists \, c \in \mathbb{W}$ de modo que $ac$ (o $ca$) $= b$. En este caso, también decimos que \ini{$b$ es divisible entre (o es un múltiplo de) $a$}. (Observe que la misma relación que existe entre $a$ y $b$, existe entre $c$ y $b$). Denotamos esto con el símbolo $a\mid b$ y lo negamos con el símbolo $a \nmid b$. Si un número $a$ divide a los números $b$ y $d$, escribimos $a \mid b,d$ o $a \mid d,b$; si los números $a$ y $b$ son divisores del número $d$, escribimos $a,b \mid d$ o $b,a \mid d$.
+    \stopdefinicion
+
+    \startejemplo
+      Como $24 = 8 \cdot 3$, entonces 8 y 3 dividen o son divisores de 24. Por otro lado, 24 será múltiplo de o divisible entre 8 y 3. Abreviamos esto con los símbolos $8,3 \mid 24$ o $3,8 \mid 24$.
+    \stopejemplo
+
+    \startteorema
+      Sea $x \in \mathbb{W}$. Entonces
+      \startitemizer
+        \startitem
+          $1 \mid x$
+        \stopitem
+        \startitem
+          $x \mid x$
+        \stopitem
+        \startitem
+          $x \mid 0$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $iii)\quad$ Como $\exists \, 0 \in \mathbb{W}$, de modo que, debido a la propiedad multiplicativa del cero (0), $x \cdot 0 = 0$. Entoces $x \mid 0$.
+
+      $i)$ y $ii)\quad$ Quedan como ejercicios.
+    \stopdemop
+
+    \startdefinicion
+      Un número $p \in \naturalnumbers, \, p \neq 1$, se llama \ini{un número primo} ssi los únicos factores (divisores) de $p$ son $p$ y 1. Si $p \in \naturalnumbers, \, p \neq 1$, no es primo, se dice que es \ini{un número compuesto}.
+    \stopdefinicion
+    
+    \startejemplos
+      \startitemejem
+        \startitem
+          Los naturales 2, 3 y 5 son números primos.
+        \stopitem
+        \startitem
+          Los números 4, 6, 15, 39 y 60 son números compuestos.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startsubsection[title={Reglas de divisibilidad}]
+
+
+      Reglas que sirven para ver si un número es divisible entre primos.
+
+
+      \startteorema{Reglas de divisibilidad}
+      \youtube{\from[AE53A]}
+        Sea $x \in \naturalnumbers$. Entonces
+        \startitemizer
+          \startitem
+            $x$ es divisible entre 2 si el dígito en la posición de las unidades del numeral que lo representa es 0, 2, 4, 6 u 8;
+          \stopitem
+          \startitem
+            $x$ es divisible entre 3 si la suma de los dígitos del numeral que lo representa es divisible entre 3;
+          \stopitem
+          \startitem
+            $x$ es divisible entre 5 si el dígito en la posición de las unidades del numeral que lo representa es 0 ó 5.
+          \stopitem
+        \stopitemizer
+      \stopteorema
+      No lo podemos demostrar todavía.
+
+      
+      \startejemplos
+        \ini{Considere el número $351.378$.}
+        \startitemejem
+          \startitem
+            es divisible entre 2, pues su último dígito es 8. ($2 \cdot 175.689$)
+          \stopitem
+          \startitem
+            es divisible entre 3, pues la suma de los numerales de los dígitos es 27 y éste es divisible entre 3. ($3 \cdot 117.126$)
+          \stopitem
+          \startitem
+            no es divisible entre 5, ya que el último dígito ni es 0 ni es 5.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startdefinicion
+        Un número natural se llama \ini{un número par} ssi es divisible entre 2. De lo contrario, se llama \ini{un número impar}.
+      \stopdefinicion
+
+      \startteorema{fundamental de la aritmética, TFAr}
+        Cualquier número natural mayor que 1 se puede expresar com una multiplicación de potencias de números primos de forma única excepto, tal vez, por el orden de los factores.
+      \stopteorema
+
+      No lo podemos demostrar todavía.
+
+      \startdefinicion
+        Un número natural escrito como una multiplicación de potencias de números primos se dice que está \ini{factorizado primamente} (o que \ini{tiene una factorización prima)} o \ini{está factorizado completamente}.
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem[columns]
+          \startitem
+            $12 = 2^2 \cdot 3$
+          \stopitem
+          \startitem
+            $16 = 2^4$
+          \stopitem
+          \startitem
+            $24 = 2^3 \cdot 3$
+          \stopitem
+          \startitem
+            $18 = 2 \cdot 9 = 2 \cdot 3^2$ 
+          \stopitem
+          \startitem
+            $72 = 2^3 \cdot 9 = 2^3 \cdot 3^2$ 
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AE53B]}
+      \startejemplos
+        \ini{Factorice primamente o completamente.}
+        \startitemejem[columns]
+          \startitem
+            $\ini{30} = 2 \cdot 3 \cdot 5$ 
+          \stopitem
+          \startitem
+            $\ini{24} = 2^3 \cdot 3$ 
+          \stopitem
+          \startitem
+            $\ini{100} = 2^2 \cdot 5^2$
+          \stopitem
+          \startitem
+            $\ini{72} = 2^3 \cdot 3^2$
+          \stopitem
+          \startitem
+            $\ini{125} = 5^3$
+          \stopitem
+          \startitem
+            $\ini{360} = 2^3 \cdot 3^2 \cdot 5$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+
+      \startteorema{de Euclides}
+        \youtube{\from[AE54A]}
+        Hay un número infinito de números primos.
+      \stopteorema
+
+      \startejemplos
+        \ini{Determine los factores de los siguientes números naturales}
+        \startitemejem
+          \startitem
+            $\ini{42} = 1, 2, 3, 7, 6, 14, 21, 42 \;(2 \cdot 3 \cdot 7)$
+          \stopitem
+          \startitem
+            $\ini{56} = 1, 2, 7, 4, 14, 8, 28, 56 \;(2^3 \cdot 7)$
+          \stopitem
+          \startitem
+            $\ini{78} = 1, 2, 3, 13, 6, 26, 39, 78 \;(2 \cdot 3 \cdot 13)$
+          \stopitem
+          \startitem
+            $\ini{340} = 1, 2, 5, 17, 4, 10, 34, 85, 20, 68, 170, 340 \;(2^2 \cdot 5 \cdot 17) $
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubsection
+
+    \youtube[]{\from[AE54B]}
+    \startsubsection[title={Reducción a términos menores o simplificación de fracciones comunes}]
+      \startejemplos
+        \ini{Reduzca a términos menores o simplifique las siguientes fracciones comunes.}
+        \startitemejem
+          \startitem
+            $\ini{\dfrac{6}{12}} = \dfrac{2 \cdot 3}{2 \cdot 2 \cdot 3} = \dfrac{1}{2}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{42}{-24}} = \dfrac{2 \cdot 3 \cdot 7}{- 2 \cdot 2 \cdot 2 \cdot 3} = \dfrac{7}{-4}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{-40}{65}} = \dfrac{- 2 \cdot 2 \cdot 2 \cdot 5}{5 \cdot 13} = \dfrac{-8}{13}$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startdefinicion
+        Sean $a_1, a_2, \dots, a_n \in \naturalnumbers,\; n$ números naturales
+        \startitemizer
+          \startitem
+            \ini{el máximo común divisor}, abreviado m.c.d. de $a_1, a_2, \dots, a_n$, y representado con el símbolo $(a_1, a_2, \dots, a_n)$, es el número natual mayor que divide a cada uno de los $n$ números naturales $a_1, a_2, \dots, a_n$.
+          \stopitem
+          \startitem
+            \ini{el mínimo común múltiplo}, abreviado m.c.m. de $a_1, a_2, \dots, a_n$, y representado con el símbolo $[a_1, a_2, \dots, a_n]$, es el número natural menor que es divisible entre los $n$ números naturales $a_1, a_2, \dots, a_n$.
+          \stopitem
+        \stopitemizer
+      \stopdefinicion
+
+      \youtube[]{\from[AE55A]}
+      \startejemplos
+        \startitemejem
+          \startitem
+            Los divisores de 24 son: 1, 2, 3, 4, 6, 8, 12 y 24. Los divisores de 42 son: 1, 2, 4, 6, 7, 14, 21 y 42. Los factores comunes están en el conjunto $\{1, 2, 3, 4, 6, 8, 12, 24\} \cap \{1, 2, 3, 6, 7, 14, 21, 42\} = \{1, 2, 3, 6\}$
+            \startformula
+              \therefore \, (24, 42) = 6 <- \text{el m.c.d}
+            \stopformula
+          \stopitem
+          \startitem
+            Los múltiplos de 10 son: 10, 20, 30, 40, 50, $\dots$. \\
+            Los múltiplos de 4 son 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, $\dots$.\\ Los múltiplos de 8 son 8, 16, 24, 32, 40, 48, 56, 64, 72, $\dots$.\\
+            Los múltiplos de 10, 4 y 8 son:\\
+            $\{$10, 20, 30, 40, 50, $\dots\} \cap \{$4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, $\dots\} \cap \{$8, 16, 24, 32, 40, 48, 56, 64, 72, $\dots\} = \{$40, 80, 120, 160, 200, $\dots\}$.
+            \startformula
+              \therefore \, [10, 4, 8] = 40 <- \text{el m.c.m}
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startteorema
+        Sean $a_1, a_2, \dots, a_n \in \naturalnumbers$. Si $a_1, a_2, \dots, a_n$ están factorizados primamente, entonces,
+        \startitemizer
+          \startitem
+            $(a_1, a_2, \dots, a_n)$ es el producto de todos los factores primos que aparecen en común en (todas) esas factorizaciones, elevados a las potencias más bajas a las que aparecen elevados en ellas.
+          \stopitem
+          \startitem
+            $[a_1, a_2, \dots, a_n]$ es el producto de todos los factores primos que hayan aparecido en esas factorizaciones elevados a las potencias más altas a las que aparezcan elevados esos números primos en esas factorizaciones.
+          \stopitem
+        \stopitemizer
+      \stopteorema
+
+      \youtube[]{\from[AE55B]}
+      \startejemplos
+        \startitemejem[columns]
+          \startitem
+            $\ini{(24, 36)} = 2^2 \cdot 3 = 12$
+
+            $24 = 2^3 \cdot 3$\\
+            $36 = 2^2 \cdot 3^2$\\
+            \starttable[|r|l|r|l|]
+              \NC 24 \VL 2 \NC 36 \VL 2 \NC\AR
+              \NC 12 \VL 2 \NC 18 \VL 2 \NC\AR
+              \NC  6 \VL 2 \NC  9 \VL 3 \NC\AR
+              \NC  3 \VL 3 \NC  3 \VL 3 \NC\AR
+              \NC  1 \VL   \NC  1 \VL   \NC\AR
+            \stoptable     
+          \stopitem
+
+          \startitem
+            $\ini{(40, 56)} = 2^3 = 8$
+
+            $40 = 2^3 \cdot 5$\\
+            $72 = 2^3 \cdot 3^2$\\
+            \starttable[|r|l|r|l|]
+              \NC 40 \VL 2 \NC 72 \VL 2 \NC\AR
+              \NC 20 \VL 2 \NC 36 \VL 2 \NC\AR
+              \NC 10 \VL 2 \NC 18 \VL 2 \NC\AR
+              \NC  5 \VL 5 \NC  9 \VL 3 \NC\AR
+              \NC  1 \VL   \NC  3 \VL 3 \NC\AR
+              \NC    \NC   \NC  1 \VL   \NC\AR
+            \stoptable     
+          \stopitem
+        \stopitemejem
+
+        \blank[3*big]
+
+        \startitemejem[continue,columns]
+          \startitem
+            $\ini{(72, 28, 42)} = 2$
+
+            $72 = 2^3 \cdot 3^2$\\
+            $28 = 2^2 \cdot 7$\\
+            $42 = 2 \cdot 3 \cdot 7$\\
+            \starttable[|r|l|r|l|r|l|]
+              \NC 72 \VL 2 \NC 28 \VL 2 \NC 42 \VL 2\NC\AR
+              \NC 36 \VL 2 \NC 14 \VL 2 \NC 21 \VL 3\NC\AR
+              \NC 18 \VL 2 \NC  7 \VL 7 \NC  7 \VL 7\NC\AR
+              \NC  9 \VL 3 \NC  1 \VL   \NC  1 \NC  \NC\AR
+              \NC  3 \VL 3 \NC    \NC   \NC    \NC  \NC\AR
+              \NC  1 \VL   \NC    \NC   \NC    \NC  \NC\AR
+            \stoptable     
+          \stopitem
+
+          \startitem
+            $\ini{(600, 430)} = 2 \cdot 5 = 10$
+
+            $600 = 2^3 \cdot 5$\\
+            $430 = 2^3 \cdot 3^2$\\
+            \starttable[|r|l|r|l|]
+              \NC 600 \VL 2 \NC 430 \VL 2  \NC\AR
+              \NC 300 \VL 2 \NC 215 \VL 5  \NC\AR
+              \NC 150 \VL 2 \NC  43 \VL 43 \NC\AR
+              \NC  75 \VL 5 \NC   1 \VL    \NC\AR
+              \NC  25 \VL 5 \NC     \NC    \NC\AR
+              \NC   5 \VL 5 \NC     \NC    \NC\AR
+              \NC   1 \VL   \NC     \NC    \NC\AR
+            \stoptable     
+          \stopitem
+        \stopitemejem          
+
+      \stopejemplos
+
+      \youtube[]{\from[AE56A]}
+      \startejemplos
+        \startitemejem[columns]
+          \startitem
+            $\ini{(90, 360, 3150)} = 2 \cdot 3^2 \cdot 5 = 90$
+
+            $90 = 2 \cdot 3^2 \cdot 5$\\
+            $360 = 2^3 \cdot 3^2 \cdot 5$\\
+            $3150 = 2 \cdot 3^3 \cdot 5 \cdot 7$\\
+            \starttable[|r|l|r|l|r|l|]
+              \NC 90 \VL 2 \NC 360 \VL 2 \NC 3150 \VL 2 \NC\AR
+              \NC 45 \VL 3 \NC 180 \VL 2 \NC 1575 \VL 3 \NC\AR
+              \NC 15 \VL 3 \NC  90 \VL 2 \NC  525 \VL 3 \NC\AR
+              \NC  5 \VL 5 \NC  45 \VL 3 \NC  175 \VL 3 \NC\AR
+              \NC  1 \VL   \NC  15 \VL 3 \NC   35 \VL 5 \NC\AR
+              \NC   \NC    \NC   5 \VL 5 \NC    7 \VL 7 \NC\AR
+              \NC   \NC    \NC   1 \VL   \NC    1 \VL   \NC\AR
+            \stoptable     
+          \stopitem
+
+          \startitem
+            $\ini{[26, 13]} = 2 \cdot 13 = 26 $
+
+            $26 = 2 \cdot 13$\\
+            $13 = 13 \cdot 1$\\
+            \starttable[|r|l|r|l|]
+              \NC 26 \VL 2  \NC 13 \VL 13 \NC\AR
+              \NC 13 \VL 13 \NC  1 \VL    \NC\AR
+              \NC  1 \VL    \NC    \NC    \NC\AR
+            \stoptable     
+          \stopitem
+        \stopitemejem
+
+        \youtube[method=top]{\from[AE56B]}
+        \startitemejem[continue,columns]
+          \startitem
+            $\ini{[12, 15]} = 2^2 \cdot 3  \cdot 5 = 60$
+
+            $26 = 2 \cdot 12$\\
+            $15 = 13 \cdot 15$\\
+            \starttable[|r|l|r|l|]
+              \NC 12 \VL 2 \NC 15 \VL 3 \NC\AR
+              \NC  6 \VL 2 \NC  5 \VL 5 \NC\AR
+              \NC  3 \VL 3 \NC  1 \VL   \NC\AR
+              \NC  1 \VL   \NC    \NC   \NC\AR
+              \NC    \NC   \NC    \NC   \NC\AR
+            \stoptable     
+          \stopitem
+
+
+
+          \startitem
+            $\ini{[5, 14, 15, 18]} = 2 \cdot 3^2 \cdot 5 \cdot 7 = 630$
+
+            $5 = 5 \cdot 1$; $14 = 2 \cdot 7$\\
+            $15 = 3 \cdot 5$; $18 = 2 \cdot 3^2$\\
+            \starttable[|r|l|r|l|r|l|]
+              \NC 5  \VL 5 \NC 15 \VL 3 \NC 18 \VL 2 \NC\AR
+              \NC 1  \VL   \NC  5 \VL 5 \NC  9 \VL 3 \NC\AR
+              \NC    \NC   \NC  1 \VL   \NC  3 \VL 3 \NC\AR
+              \NC 14 \VL 2 \NC    \NC   \NC  1 \VL   \NC\AR
+              \NC  7 \VL 7 \NC    \NC   \NC    \NC   \NC\AR
+              \NC  1 \VL   \NC    \NC   \NC    \NC   \NC\AR
+            \stoptable     
+          \stopitem
+        \stopitemejem          
+
+        \startitemejem
+          \startitem
+            $\ini{[20, 24]} = 2^3 \cdot 3  \cdot 5 = 120 $
+
+            $20 = 2^2 \cdot 5$\\
+            $24 = 2^3 \cdot 3$\\
+            \starttable[|r|l|r|l|]
+              \NC 20 \VL 2 \NC 24 \VL 2 \NC\AR
+              \NC 10 \VL 2 \NC 12 \VL 2 \NC\AR
+              \NC  5 \VL 5 \NC  6 \VL 2 \NC\AR
+              \NC  1 \NC   \NC  3 \VL 3 \NC\AR
+              \NC    \NC   \NC  1 \VL   \NC\AR
+            \stoptable     
+          \stopitem
+
+          \startitem
+            $\ini{[72, 54]} = 2^3 \cdot 3^3 = 216 $
+
+            $72 = 2^3 \cdot 3^2$\\
+            $54 = 2 \cdot 3^3$\\
+            \starttable[|r|l|r|l|]
+              \NC 72 \VL 2 \NC 54 \VL 2 \NC\AR
+              \NC 36 \VL 2 \NC 27 \VL 3 \NC\AR
+              \NC 18 \VL 2 \NC  9 \VL 3 \NC\AR
+              \NC  9 \VL 3 \NC  3 \VL 3 \NC\AR
+              \NC  3 \VL 3 \NC  1 \VL   \NC\AR
+              \NC  1 \VL   \NC    \NC   \NC\AR
+            \stoptable     
+          \stopitem
+          
+        \stopitemejem          
+
+      \stopejemplos
+
+      \startdefinicion
+        Sean $a, b \in \naturalnumbers$. Decimos que $a$ y $b$ son \obj{relativamente primos} ssi $\underbrace{(a,b)}_{\text{m.c.d}} = 1$
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            3 y 5 son relativamente primos ya que $(3, 5) = 1$.
+          \stopitem
+          \startitem
+            6 y 11 son relativamente primos ya que $(6, 11) = 1$.
+          \stopitem
+          \startitem
+            35 y 12 son relativamente primos ya que $(35, 12) = 1$.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startteorema
+        Sean $a,b \in \naturalnumbers$, $a$ y $b$ primos. Entonces, $(a,b) = 1$.\comentario{Es decir, son relativamente primos.}
+      \stopteorema
+
+      \startdemo
+        La factorización es estos números al ser primos será $a = a \cdot 1$ y $b = a \cdot 1$.
+
+        \startformula
+          \therefore \, (a,b) = 1
+        \stopformula
+
+      \stopdemo
+
+
+      \startteorema
+      \youtube[]{\from[AE57A]}
+        Sea ${a_1, a_2, \dots ,a_n}$ un conjunto de $n$ números naturales. Entonces,
+        \startitemizer
+          \startitem
+            Si para toda pareja de elementos $a_r, a_s \in {a_1, a_2, \dots ,a_n}$ ocurre que $(a_r, a_s) = 1$, entonces $[a_1, a_2, \dots , a_n] = a_1, a_2, \dots , a_n$.
+          \stopitem
+          \startitem
+            Si para algún $i = 1, 2, \dots, n$, ocurre que $a_i | a_1, a_2, \dots , a_n$, entonces $(a_1, a_2, \dots , a_n) = a_i$.
+          \stopitem
+          \startitem
+            Si para algún $j = 1, 2, \dots, n$, ocurre que $a_1, a_2, \dots , a_n | a_j$, entonces $[a_1, a_2, \dots , a_n] = a_j$.
+          \stopitem
+        \stopitemizer
+      \stopteorema
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{[7, 8, 15]}.
+
+            Observamos que $(7,8) = 1$, $(7,15) = 1$ y $(8, 15) = 1$. O sea, que toda pareja de elementos de ${7, 8, 15}$ son relativamente primos, por la primera parte del teorema anterior $[7, 8, 15] = 7 \cdot 8 \cdot 15 = 840$.
+          \stopitem
+          \startitem
+            Como $12 \mid 24, 12, 72, 48$, entonces según {\sl ii)} del teorema anterior, $(24, 12, 72, 48) = 12$.
+          \stopitem
+          \startitem
+            \ini{[2, 6, 60, 4, 5]}.
+
+            Como $2, 6, 4, 5 \mid 60$, por la parte {\sl iii)} del teorema anterior $[2, 6, 60, 4, 5] = 60$.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startteorema{operaciones con números racionales}
+        Sean $a,b,c,d \in \integers$. Entonces
+        \startitemizer
+          \startitem
+            \obj{(suma)} $\quad\dfrac{a}{c}+\dfrac{b}{c} = \dfrac{a + b}{c}, \quad$ si $c \neq 0$
+          \stopitem
+          \startitem
+            \obj{(resta)} $\quad\dfrac{a}{c}-\dfrac{b}{c} = \dfrac{a - b}{c}, \quad$ si $c \neq 0$
+          \stopitem
+          \startitem
+            \obj{(multiplicación)} $\quad\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{a \cdot c}{b \cdot d}, \quad$ si $b,d \neq 0$
+          \stopitem
+          \startitem
+            \obj{(división)} $\quad\dfrac{a}{b} \div \dfrac{c}{d} = \dfrac{a}{b} \cdot \dfrac{d}{c}, \quad$ si $b,c \neq 0$
+          \stopitem
+        \stopitemizer
+      \stopteorema
+
+      \startdemop
+        \startitemizep
+          \startitem
+            $\dfrac{a}{c}+\dfrac{b}{c} = a c^{-1} + b c^{-1} = (a + b)c^{-1}= \dfrac{a+b}{c}$ \comentario{$\dfrac{x}{y}=xy^{-1}, y \neq 0$}
+          \stopitem
+          \startitem
+            $\dfrac{a}{c}-\dfrac{b}{c} = a c^{-1} - b c^{-1} = (a - b)c^{-1}= \dfrac{a-b}{c}$
+          \stopitem
+          \startitem
+            $\dfrac{a}{b} \cdot \dfrac{c}{d} = (a b^{-1}) (c d^{-1}) = ab^{-1}cd^{-1} = acb^{-1}d^{-1} = (ac)(b^{-1}d^{-1}) = (ac)(bd)^{-1} = \dfrac{a}{b} \cdot \dfrac{d}{c}$ \comentario{$(xy)^{-1} = x^{-1}y^{-1}$ si $xy \neq 0$}
+          \stopitem
+          \startitem
+            $\dfrac{a}{b} \div \dfrac{c}{d} = \dfrac{a}{b} \cdot \bigg(\dfrac{c}{d}\bigg)^{-1} = \dfrac{a}{b} \cdot \dfrac{d}{c}$ \comentario{$\bigg(\dfrac{x}{y}\bigg)^{-1} = \dfrac{y}{x}$}
+          \stopitem
+        \stopitemizep
+      \stopdemop
+
+      \startejemplos
+          \startitemejem
+            \startitem
+              $\ini{\dfrac{2}{7} + \dfrac{3}{7}} = \dfrac{2+3}{7} = \dfrac{5}{7}$
+            \stopitem
+            \startitem
+              $\ini{\dfrac{6}{5} - \dfrac{9}{5}} = \dfrac{6-9}{5} = \dfrac{6 + (-9)}{5} = \dfrac{-3}{5}$
+            \stopitem
+            \youtube{\from[AE57B]}
+            \startitem
+              $\ini{\dfrac{3}{8} + \dfrac{-1}{8}} = \dfrac{3+(-1)}{8} = \dfrac{2}{8} = \dfrac{1}{4}$
+            \stopitem
+            \startitem
+              $\ini{\dfrac{5}{7} - \dfrac{-2}{7}} = \dfrac{5-(-2)}{7} = \dfrac{5+2+1}{7} = \dfrac{8}{7}$
+            \stopitem
+            \startitem
+              $\ini{\dfrac{19}{4} + \dfrac{-7}{4}- \dfrac{10}{4}} = \dfrac{19+(-7)+(-10)}{4} = \dfrac{2}{4} = \dfrac{1}{2}$            
+            \stopitem
+          \stopitemejem
+      \stopejemplos
+
+
+      \startdefinicion
+        \youtube{\from[AE58A]}
+        Dos fracciones comunes se llaman \obj{fracciones homogéneas} ssi tienen el mismo denominador; se llaman \obj{fracciones heterogéneas} ssi tienen diferente denominadores.
+      \stopdefinicion
+
+      \startobservacion
+        Sólo podemos sumar y restar fracciones homogéneas.
+      \stopobservacion
+
+
+      \startejemplos
+        \comentario{Principio fundamental de fracciones:\\ $\dfrac{ka}{kb} = \dfrac{kb}{ka} = \dfrac{a}{b}$}
+        \startitemejem
+          \startitem
+            $\ini{\dfrac{3}{5} + \dfrac{-2}{3} - 4} = \dfrac{3}{5} + \dfrac{-2}{3} - \dfrac{4}{1} = \dfrac{8}{15} + \dfrac{-10}{15} - \dfrac{60}{15} = \dfrac{9+(-10)+(-60)}{15} = \dfrac{-61}{15}$
+
+            Hemos transformado estas fracciones comunes heterogéneas en homogéneas buscando el m.c.m. de entre sus denominadores. Esto convertirá estas tres fracciones en fracciones homogéneas y entonces se podrán sumar. En este caso, como $(5, 3) = 1; (5,1) = 1; (3,1) = 1$, entonces $[5,3,1] = 15$
+          \stopitem
+          \startitem
+            \youtube{\from[AE58B]}
+            \comentario{$[4,6,1,9]= 2^2 \cdot 3^2 = 36$}
+            $\ini{\dfrac{3}{4} - \dfrac{1}{6} -2 + \dfrac{2}{9}} = \dfrac{3}{4} - \dfrac{1}{6} \dfrac{-2}{1} + \dfrac{2}{9} = \dfrac{27}{36} - \dfrac{6}{36} - \dfrac{72}{36}  + \dfrac{8}{36} = \dfrac{27+(-6)+(-72)+8}{36} = \dfrac{35+(-78)}{36} = \dfrac{-43}{36}$
+          \stopitem
+          \startitem
+            \comentario{$[8,5,10,18]= 2^3 \cdot 3^2 \cdot 5 = 360$}
+            $\ini{\dfrac{7}{8}+\dfrac{-3}{5}-\dfrac{9}{30}-\dfrac{-1}{18}} = \dfrac{7}{8}+\dfrac{-3}{5}-\dfrac{3}{10}-\dfrac{-1}{18} = \dfrac{7(45)+(-3)72+(-3)36-(-20)}{360} = \dfrac{315 + (-216) + (-108) +20}{360} = \dfrac{335+(-324)}{360} = \dfrac{11}{360}$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AE59A]}
+      \startejemplos
+        \startitemejem
+          \startitem
+            $\ini{\dfrac{3}{7} \times \dfrac{-2}{7}} = \dfrac{3(-2)}{49} = \dfrac{-6}{49}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{-12}{7} \div \dfrac{-3}{-11}} = \dfrac{-12}{7} \dfrac{-11}{-3} = \dfrac{-12(-11)}{7(-3)} = \dfrac{132}{-21} = \dfrac{2 \cdot 2 \cdot 3 \cdot 11}{-3 \cdot 7} = \dfrac{44}{-7}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{12}{14} \cdot \dfrac{7}{15} \cdot \dfrac{-2}{42}} = \dfrac{2 \cdot 2 \cdot 3}{2 \cdot 7} \cdot \dfrac{7}{3 \cdot 5} \cdot \dfrac{-2}{2 \cdot 2 \cdot 7} = \dfrac{-2}{105}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{2}{8} \div \dfrac{30}{12} \cdot \dfrac{5}{24}} = \dfrac{2}{8} \cdot \dfrac{12}{30} \cdot \dfrac{5}{24} = \dfrac{1}{48}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{3}{5} \div \big(\dfrac{2}{9} \cdot \dfrac{21}{10}\big)} = \dfrac{3}{5} \div \big(\dfrac{7}{15}\big) = \dfrac{3}{5} \cdot \dfrac{15}{7}= \dfrac{9}{7}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{2}{5} \cdot \dfrac{-1}{3} - 6 \div \dfrac{2}{8}} = \dfrac{-2}{15} - \dfrac{24}{1} = \dfrac{-2}{15} - \dfrac{15(24)}{15} = \dfrac{-2+(-15(24))}{15} = \dfrac{-2+(-360)}{15} = \dfrac{362}{15}$
+          \stopitem
+          \startitem
+            $\ini{6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[-2 + \bigg(\dfrac{4}{-3}\bigg)^2 - \bigg(\dfrac{-5}{4}\dfrac{1}{3} -2\bigg)\bigg]\Bigg\} + \dfrac{-1}{5}}$
+            
+              \startejerformula
+                \startalign
+                  \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[-2 + \bigg(\dfrac{4}{-3}\bigg)^2 - \bigg(\dfrac{-5}{12} \dfrac{-2}{1}\bigg)\bigg]\Bigg\} + \dfrac{-1}{5} \NR
+                  \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[-2 + \bigg(\dfrac{4}{-3}\bigg)^2 - \bigg(\dfrac{-5}{12} \dfrac{-24}{12}\bigg)\bigg]\Bigg\} + \dfrac{-1}{5} \NR
+                  \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[-2 + \bigg(\dfrac{4}{-3}\bigg)^2 - \bigg(\dfrac{-5+(-24)}{12}\bigg)\bigg]\Bigg\} + \dfrac{-1}{5} \NR
+                  \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[-2 + \bigg(\dfrac{4}{-3}\bigg)^2 - \dfrac{-29}{12}\bigg]\Bigg\} + \dfrac{-1}{5} \NR
+                  \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[\dfrac{-2}{1} + \dfrac{16}{9} - \dfrac{-29}{12}\bigg]\Bigg\} + \dfrac{-1}{5} \NR
+                  \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[\dfrac{-72}{36} + \dfrac{64}{36} - \dfrac{-87}{36}\bigg]\Bigg\} + \dfrac{-1}{5} = 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[\dfrac{-72+64+87}{36}\bigg]\Bigg\} + \dfrac{-1}{5} \NR
+                  \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[\dfrac{79}{36}\bigg]\Bigg\} + \dfrac{-1}{5} = 6 \div \big\{\dfrac{2}{5} + \dfrac{-79}{60} \big\} + \dfrac{-1}{5} = 6 \div \big\{\dfrac{24}{60} + \dfrac{-79}{60} \big\} + \dfrac{-1}{5} \NR
+                  \NC = \NC 6 \div \big\{\dfrac{24+(-79)}{60} \big\} + \dfrac{-1}{5} = 6 \div \big\{\dfrac{-55}{60} \big\} + \dfrac{-1}{5} = 6 \div \dfrac{-11}{12} + \dfrac{-1}{5}\NR
+                  \NC = \NC 6 \cdot \dfrac{12}{-11} + \dfrac{-1}{5} = \dfrac{72}{-11} + \dfrac{-1}{5} = \dfrac{72 \cdot 5}{-11 \cdot 5} + \dfrac{-1(-11)}{-11 \cdot 5} = \dfrac{360 + 11}{-55} = \dfrac{371}{-55}\NR
+                \stopalign
+              \stopejerformula
+            
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+
+      \startteorema{de signos de una fracción}
+      \youtube{\from[AE60A]}
+        Sean $a,b \in \integers$, $b \neq 0$. Entonces,
+        \startformula
+          \dfrac{a}{b} = - \dfrac{-a}{b} = - \dfrac{a}{-b} = \dfrac{-a}{-b}
+        \stopformula
+      \stopteorema
+
+      \startdemo
+        Primer paso
+        \startformula
+          \dfrac{a}{b} = 1 \cdot \dfrac{a}{b} = -(-1)\dfrac{a}{b} = - \dfrac{-1}{1}\cdot\dfrac{a}{b} = - \dfrac{(-1)a}{1\cdot b} = - \dfrac{-a}{b}
+        \stopformula
+        Los otros pasos se dejan como ejercicio.
+      \stopdemo
+
+      \startejemplos
+        \ini{Escriba las siguientes fracciones de tres formas diferentes, según el teorema de signos de una fracción:}
+        \startitemejem[columns]
+          \startitem
+            $\ini{\dfrac{2}{5}} = - \dfrac{-2}{5} = - \dfrac{2}{-5} = \dfrac{-2}{-5}$
+          \stopitem
+          \startitem
+            $\ini{-\dfrac{1}{3}} = \dfrac{-1}{3} = \dfrac{1}{-3} = - \dfrac{-1}{-3}$
+          \stopitem
+        \stopitemejem
+
+        \startitemejem[continue,columns]
+          \startitem
+            $\ini{-\dfrac{4}{-9}} = \dfrac{-4}{-9} = \dfrac{4}{9} = - \dfrac{-4}{9}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{-4}{-9}} = - \dfrac{4}{-9} = - \dfrac{-4}{9} = \dfrac{4}{9}$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startejemplos
+        \ini{Justifique las siguientes afirmaciones:}
+        \startitemejem
+          \startitem
+            $\ini{\dfrac{3}{2y}-\dfrac{5x^2}{2y} = \dfrac{3-5x^2}{2y}}\quad$ por resta de fracciones
+          \stopitem
+          \startitem
+            $\ini{\dfrac{-2xy}{3z^2}\cdot\dfrac{5x}{7z} = \dfrac{(-2xy)5x}{3z^27z}}\quad$ por la multiplicación de fracciones
+          \stopitem
+          \startitem
+            $\ini{\dfrac{-5xy}{2z^2} = \dfrac{5xy}{-2z^2}}\quad$ por el teorema de cambio de signos de una fracción (cambio 3)
+          \stopitem
+          \youtube{\from[AE60B]}
+          \startitem
+            $\ini{-\dfrac{-4}{5y^4} = \dfrac{4}{5y^4}}\quad$ por el teorema de cambio de signos de una fracción (cambio 1)
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubsection
+
+    \startdefinicion
+      Sea $a \in \integers$ y $\dfrac{b}{c}$ una fracción donde $c > 0$. Entonces $a + \dfrac{b}{c} \equiv a\frac{b}{c}$ se llama un \obj{número mixto}.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{1\frac{2}{5} \equiv 1 + \dfrac{2}{5}}$ es un mixto
+        \stopitem
+        \startitem
+          $\ini{-2\frac{1}{6} = -\left(2 + \dfrac{1}{6}\right) = -2 + \left(-\dfrac{1}{6}\right)}$ es un mixto
+        \stopitem
+        \startitem
+          $\ini{4\frac{5}{3}}$ no es un mixto porque la fracción $\dfrac{5}{3}$ es impropia.
+
+          Ahora bien, podemos expresar $\dfrac{5}{3}$ como un mixto:
+          \startalign[center]
+            $\dfrac{5}{3} = \dfrac{3+2}{3} = \dfrac{3}{3} + \dfrac{2}{3} = 1 + \dfrac{1}{3}$
+          \stopalign
+
+          luego,
+
+          \startalign[center]
+            $4\frac{5}{3} = 4 + 1 + \dfrac{2}{3} = (4 + 1) + \dfrac{2}{3} = 5\frac{2}{3}$
+          \stopalign
+
+          y éste sí es un mixto.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    Consideremos el mixto $a\frac{b}{c}$. Entonces
+    \startalign[center]
+      $a\frac{b}{c} \equiv a + \dfrac{b}{c} = \dfrac{a}{1} + \dfrac{b}{c} = \dfrac{ca}{c} + \dfrac{b}{c} = \dfrac{ca + b}{c}$
+    \stopalign
+
+    O sea, podemos cambiar un mixto a una fracción impropia multiplicando el denominador por la parte entera del mixto y sumándole a ésto el numerador de la fracción propia y escribiendo este resultado sobre el denominador ne la fracción del mixto.
+
+    \startejemplos
+      Cambie los siguientes mixtos a fracción impropia
+      \startitemejem
+        \startitem
+         $\ini{3\frac{2}{3}} = \dfrac{17}{5} \quad --> \quad 3\frac{2}{5}$ 
+        \stopitem
+        \startitem
+          $\ini{-2\frac{1}{6}} = - \dfrac{13}{6} \quad --> \quad -2\frac{1}{6}$
+        \stopitem
+        \startitem
+          $\ini{3\frac{5}{8}} = \dfrac{29}{8} \quad --> \quad 3\frac{5}{8}$
+        \stopitem
+        \startitem
+          $\ini{5+\dfrac{2}{-3}} = \dfrac{5}{1} + \dfrac{2}{-3} = \dfrac{5}{1} + \dfrac{-2}{3} = \dfrac{15}{3} + \dfrac{-2}{3} = \dfrac{13}{3} \quad --> \quad 4\frac{1}{3}$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startdefinicion
+      \youtube{\from[AE61A]}
+      Una \obj{fracción común compleja} es aquella que contiene fracciones comunes en su numerador o en su denominador (o en ambos). Una fracción común que no es compleja se llama \obj{simple}.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{-\dfrac{1}{2}}\,$ es una fracción simple.
+        \stopitem
+        \startitem
+          $\ini{\dfrac{8}{6}}\,$ es una fracción simple que no está simplificada.
+        \stopitem
+        \startitem
+          $\ini{\dfrac{\dfrac{2}{3}}{-8}}\,$ es una fracción compleja.
+        \stopitem
+        \startitem
+          $\ini{\dfrac{3+5}{\dfrac{1}{3}\left(-2\frac{1}{7}\right)}}\,$ es una fracción compleja.
+        \stopitem
+        \startitem
+          $\ini{\dfrac{-\dfrac{2}{5} + 6}{3 \div \dfrac{-7}{3}}}\,$ es una fracción compleja.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    Se puede transformar cualquier fracción compleja en una simple mediante la utilización de uno de dos métodos.
+
+    \startdiscusion{Método I}
+      Aplicando el pff. multiplicamos el numerador y el denominador de la fracción compleja por el m.d.c. de las fracciones que contiene.
+    \stopdiscusion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{\dfrac{\dfrac{2}{5} + 3}{6}} = \dfrac{\left(\dfrac{2}{5} + 3\right) \cdot 5}{(6) \cdot 5} = \dfrac{2 + 15}{30} = \dfrac{17}{30}$
+        \stopitem
+        \startitem
+          $\ini{\dfrac{-\dfrac{2}{7} + 2}{5 - \dfrac{1}{2}}} = \dfrac{\left(-\dfrac{2}{7} + 2\right)14}{\left(5 - \dfrac{1}{2}\right)14} = \dfrac{-4+28}{70-7} = \dfrac{24}{63} = \dfrac{8}{21}$
+        \stopitem
+        \startitem
+          $\ini{\dfrac{\dfrac{3}{7} \div \dfrac{6}{35}}{\dfrac{2}{3} - \dfrac{1}{2}}} = \dfrac{\dfrac{3}{7}\cdot\dfrac{35}{6}}{\dfrac{2}{5} - \dfrac{1}{2}} = \dfrac{\left(\dfrac{5}{2}\right)10}{\left(\dfrac{2}{5} - \dfrac{1}{2}\right)10} = \dfrac{25}{4-5} = \dfrac{25}{-1} = -25$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \youtube{\from[AE61B]}
+    \startdiscusion{Método II}
+      Simplificamos por separado el numerador y el denominador de la fracción compleja dada. Entonces efectuamos la división del numerador entre el denominador así simplificados.
+    \stopdiscusion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{\dfrac{\dfrac{2}{3} - 5\frac{1}{4}}{\dfrac{14}{4}}} = \dfrac{\dfrac{2}{3} - \dfrac{21}{4}}{\dfrac{7}{2}} = \dfrac{\dfrac{8}{12} - \dfrac{63}{12}}{\dfrac{7}{2}} = \dfrac{\dfrac{8+(-68)}{12}}{\dfrac{7}{2}} = -\dfrac{55}{12} \div \dfrac{7}{2} = -\dfrac{55}{12} \cdot \dfrac{2}{7} = -\dfrac{55}{42} $
+        \stopitem
+        \startitem
+          $\ini{\dfrac{\dfrac{5}{-8} \cdot \dfrac{6}{25}}{\dfrac{3}{20} + 3}} = \dfrac{-\dfrac{3}{20}}{\dfrac{63}{20}} = \dfrac{-3}{20} \div \dfrac{63}{20}= \dfrac{-3}{20}\cdot\dfrac{20}{63} = \dfrac{-1}{21}$
+        \stopitem
+        \startitem
+          $\ini{\dfrac{\dfrac{6}{7} \div \dfrac{21}{2}}{2-8}} = \dfrac{\dfrac{6}{7} \cdot \dfrac{2}{21}}{2+(-8)} = \dfrac{\dfrac{4}{49}}{-6} = \dfrac{4}{49} \div (-6) = \dfrac{4}{49} \cdot \dfrac{1}{-6} = \dfrac{2}{-147}$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startejemplo
+      \youtube{\from[AE62A]}
+      \ini{Transforme la siguiente fracción compleja en una simple por ambos métodos.}
+      $\ini{\dfrac{2+\dfrac{\dfrac{1}{2} - 3\frac{1}{8}}{2-8}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2}}$
+
+      Método I $= \dfrac{2 + \dfrac{\dfrac{1}{2} - \dfrac{25}{8}}{2-8}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{\left(\dfrac{1}{2} - \dfrac{25}{8}\right)8}{(2-8)8}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{4-25}{16-64}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} =$\\$ \dfrac{2 + \dfrac{-21}{-48}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{7}{-16}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{7}{16}}{\dfrac{4}{5} \cdot \dfrac{10}{3} + \left(\dfrac{-11}{2}\right)^2} = \dfrac{2 + \dfrac{7}{16}}{\dfrac{4}{5} \cdot \dfrac{10}{3}+ \dfrac{121}{4}} = \dfrac{2 + \dfrac{7}{16}}{\dfrac{8}{3} + \dfrac{121}{4}} = \dfrac{\left(2 + \dfrac{7}{16}\right)48}{\left(\dfrac{8}{3} + \dfrac{121}{4}\right)48} = \dfrac{96+21}{128+1452} = \dfrac{117}{1580}$
+
+      \youtube{\from[AE62B]}
+      Método II $=\dfrac{2 + \dfrac{\dfrac{1}{2} - \dfrac{25}{8}}{-6}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{\dfrac{4}{8} - \dfrac{25}{8}}{-6}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{\dfrac{4+(-25)}{8}}{-6}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} =$\\$ \dfrac{2 + \dfrac{\dfrac{-21}{8}}{-6}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{-21}{8} \cdot \dfrac{1}{-6}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{2 + \dfrac{7}{16}}{\dfrac{4}{5} \cdot 3\frac{1}{3} + \left(-5\frac{1}{2}\right)^2} = \dfrac{\dfrac{32}{16} + \dfrac{7}{16}}{\dfrac{4}{5} \cdot \dfrac{10}{3} + \left(\dfrac{-11}{2}\right)^2} = \dfrac{\dfrac{39}{16}}{\dfrac{8}{3} + \dfrac{121}{4}} = \dfrac{\dfrac{39}{16}}{\dfrac{32}{12} + \dfrac{363}{12}}= \dfrac{\dfrac{39}{16}}{\dfrac{395}{12}} = \dfrac{39}{16} \cdot \dfrac{12}{395} = \dfrac{117}{1580}$
+
+    \stopejemplo
+  \stopsection
+
+  \startsection[title={Orden en $\rationals$}]
+    
+    \startobservacion
+      \youtube{\from[AE63A]}
+      En una recta numérica cuanto más a la izquierda se localice un número entero, menor es y viceversa.
+    \stopobservacion
+
+    \startteorema
+      Sean $a,b,c \in \naturalnumbers$, $c > 0$. Entonces
+      \startitemizer
+        \startitem
+          $\dfrac{a}{b} > \dfrac{b}{c} \quad <--> \quad a > b$
+        \stopitem
+        \startitem
+          $\dfrac{a}{b} < \dfrac{b}{c} \quad <--> \quad a < b$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $ii)\quad -->\quad$ Por hipótesis $\dfrac{a}{c} < \dfrac{b}{c}$ y $c > 0$. Luego, por la ley de multiplicación positiva de las desigualdades
+      \startformula
+        c \dfrac{a}{c} < c \dfrac{b}{c}
+      \stopformula
+      \startformula
+        \dfrac{c}{1}\cdot\dfrac{a}{c} < \dfrac{c}{1}\cdot\dfrac{b}{c}
+      \stopformula
+      \startformula
+        a < b
+      \stopformula
+
+
+      $\quad\quad <-- \quad$ Por hipótesis $a < b$ y $c > 0$. Por un teorema anterior, $c^{-1} > 0$. Entonces, por la ley de multiplicación positiva de las desigualdades
+      \comentario{$\dfrac{x}{y} = xy^{-1}$}
+      \startformula
+        ac^{-1} < b c^{-1}
+      \stopformula
+      \startformula
+        \dfrac{a}{c} < \dfrac{b}{c}
+      \stopformula
+    \stopsection
+
+    El apartado {\sl i)} se resuelve de manera similar.
+  \stopdemop
+
+  \startejemplos
+    \ini{Compare las siguientes fracciones:}
+    \startitemejem
+      \startitem
+        $\ini{\dfrac{2}{5}, \dfrac{3}{5}} \quad\quad \dfrac{2}{5} < \dfrac{3}{5}$, pues $2 < 3$.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{-6}{7}, \dfrac{-4}{7}} \quad\quad \dfrac{-6}{7} < \dfrac{-4}{7}$, pues $-6 < \- -4$.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{2}{11}, \dfrac{-6}{11}} \quad\quad \dfrac{2}{11} > \dfrac{-6}{11}$, pues $2 > -6$.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{1}{5}, \dfrac{3}{8}} \quad$ las transformamos en fracciones homogéneas $\quad\dfrac{8}{40}, \dfrac{15}{40} \quad\quad \dfrac{8}{40}< \dfrac{15}{40},\;$ entonces $\dfrac{1}{5} < \dfrac{3}{8}$.
+      \stopitem
+
+    \stopitemejem
+  \stopejemplos
+
+  \startejemplos
+    \youtube{\from[AE63B]}
+    \startitemejem
+      \startitem
+        \ini{Compare las siguientes fracciones}
+        \startitemizer[a]
+          \startitem
+            $\ini{\dfrac{-2}{3}, -\dfrac{5}{4}} \quad --> \quad -\dfrac{8}{12}, -\dfrac{15}{12}; \quad -\dfrac{8}{12} > -\dfrac{15}{12}$ entonces $-\dfrac{2}{3} > - \dfrac{5}{4}$
+          \stopitem
+          \startitem
+            $\ini{\dfrac{1}{-9}, \dfrac{2}{-5}} \quad --> \quad -\dfrac{5}{45}, -\dfrac{18}{45}; \quad -\dfrac{5}{45} > -\dfrac{18}{45}$ entonces $\dfrac{1}{-9} > \dfrac{2}{-5}$
+          \stopitem
+        \stopitemizer
+      \stopitem
+      \startitem
+        \ini{Escriba los siguientes conjuntos de números de forma ascendente (de mayor a menor)}.
+        \startitemizer[a]
+          \startitem
+            $\ini{\left\{\dfrac{3}{5}, \dfrac{6}{11}, \dfrac{21}{16}, \dfrac{-3}{8}\right\}}$ Tenemos que $\dfrac{-3}{8}$ es el menor al ser un número negativo.
+
+            5, 11, 16 son relativamente primos por parejas. Luego, m.c.m = $5 \cdot 11 \cdot 6 = 880$.
+
+            $\dfrac{3}{5} = \dfrac{3(176)}{880} = \dfrac{528}{880}; \quad \dfrac{6}{11} = \dfrac{6(80)}{880} = \dfrac{480}{880}; \quad \dfrac{21}{16} = \dfrac{21(55)}{880} = \dfrac{1150}{880}$
+
+            Luego, en orden ascendente el conjunto es: $\left\{ \dfrac{-3}{8}, \dfrac{6}{11}, \dfrac{3}{5}, \dfrac{21}{16} \right\}$
+          \stopitem
+          \startitem
+            $\ini{\left\{-\dfrac{16}{5}, 2, -1, \dfrac{1}{12}, \dfrac{-7}{8}\right\}}$
+
+            $\dfrac{-16}{5}, -1, \dfrac{-7}{8}\quad --> \quad \dfrac{-128}{40}, \dfrac{-40}{40}, \dfrac{-35}{40} \quad --> \quad \dfrac{-16}{5}, -1, \dfrac{-7}{8}$
+
+            $2, \dfrac{1}{7}, \dfrac{1}{12} \quad --> \quad \dfrac{2(84)}{84} = \dfrac{168}{84}; \quad \dfrac{12}{84}; \quad \dfrac{7}{84} \quad --> \quad \dfrac{1}{12}, \dfrac{1}{7}, 2$
+
+            Luego, el conjunto ordenado sería $\left\{ \dfrac{-16}{3}, -1, \dfrac{-7}{8}, \dfrac{1}{12}, \dfrac{1}{7}, 2 \right\}$
+          \stopitem
+        \stopitemizer
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \startteorema
+    \youtube{\from[AE64A]}
+    Sean $a,b,c,d \in \integers, \;\; c,d \neq 0$. Entonces,
+    \startitemizer
+      \startitem
+        $\dfrac{a}{c} > \dfrac{b}{d} \quad <--> \quad ad > cb$
+      \stopitem
+      \startitem
+        $\dfrac{a}{c} < \dfrac{b}{d} \quad <--> \quad ad < cb$
+      \stopitem
+    \stopitemizer
+  \stopteorema
+
+  \startdemop
+    $ii)\quad -->\quad$ Por hipótesis $\dfrac{a}{c} > \dfrac{b}{d}$ y $c,d \neq 0$. Por un teorema anterior $cd > 0$. Luego, por la ley de multiplicación positiva de las desigualdades.
+    \startformula
+      cd \cdot \dfrac{a}{c} > cd \cdot \dfrac{b}{d}
+    \stopformula
+    \startformula
+      \dfrac{cd}{1}\cdot\dfrac{a}{c} > \dfrac{cd}{1}\cdot\dfrac{b}{d}
+    \stopformula
+    \startformula
+      da > cb
+    \stopformula
+    \startformula
+      ad > cb
+    \stopformula
+
+    $\quad\quad <--\quad$ Por hipótesis $ad > cb$ y $c,d \neq 0$. Luego, por teoremas previos, $cd > 0$ y $(cd)^{-1} = \dfrac{1}{cd}$. Entonces, por la ley de multiplicación positiva de las desigualdades
+    \startformula
+      ad \cdot \dfrac{1}{cd} > cb\cdot\dfrac{1}{cd}
+    \stopformula
+    \startformula
+      \dfrac{ad}{1} \cdot \dfrac{1}{cd} > \dfrac{cb}{1} \cdot \dfrac{1}{cd}
+    \stopformula
+    \startformula
+      \dfrac{a}{c} > \dfrac{b}{d}
+    \stopformula
+
+    El caso {\sl ii)} se demuestra de forma parecida.
+  \stopdemop  
+
+  \startejemplos
+    Decida si las siguientes desigualdades son ciertas o falsas:
+    \startitemejem
+      \startitem
+        $\ini{\dfrac{12}{7} < \dfrac{13}{8}} \quad 12(8) < 7(13) --> 96 \nless 91$ Luego es falsa.
+      \stopitem
+      \startitem
+        $\ini{-\dfrac{3}{8} > \dfrac{2}{7}} \quad$. Es falsa, ya que todo número positivo es mayor que un negativo.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{2}{-5} > \dfrac{16}{-9}} \quad \dfrac{-2}{5} > \dfrac{-16}{9} \quad (-2)9 > 5(-16 --> -18 > -80)$. Es cierta.
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \youtube{\from[AE64B]}
+  \startsubsection[title={Localización de números racionales en la recta numérica}]
+    \startejemplo
+      \ini{Determinar el punto que le corresponde al número $\dfrac{1}{3}$ en la recta numérica}
+
+      \comentario{Interpretamos $\dfrac{1}{3}$ como el largo unitario repartido en tres largos.\\
+      \externalfigure[recta_racional_1.png][width=5cm]}
+
+      Como $\dfrac{1}{3} = 0 + \dfrac{1}{3}$, sospechamos que $0 < \dfrac{1}{3} < 1$. Lo verificamos a continuación:
+      \startformula
+        \dfrac{0}{1} < \dfrac{1}{3} \; --> \; 3 \cdot 0 < 1 --> 0 < 1 \quad\quad \dfrac{1}{3} < 1 \; --> \; 1 \cdot 1 < 1 \cdot 3 --> 1 < 3
+      \stopformula
+
+      Luego, el punto que le corresponderá a $\dfrac{1}{3}$ estará a la derecha del que le corresponda al 0 y a la izquierda del que le corresponda al 1.
+
+      Como $0 + 1 = 1$, entonces $0 + \dfrac{1}{3} = \dfrac{1}{3}$, el punto A.
+
+    \stopejemplo
+
+    \startejemplos
+      \ini{Determine el punto que le corresponde a los siguientes números en la recta numérica}
+
+      \startitemejem
+        \startitem
+          $\ini{-\dfrac{3}{4}}$
+
+          Como  $-\dfrac{3}{4} = 0 + \left( -\dfrac{3}{4}\right)$, sospechamos que $-1 < -\dfrac{3}{4} < 0$. Lo verificamos
+          \comentario{\externalfigure[recta_racional_2.png][width=5cm]}
+          \startformula
+            \dfrac{-1}{1} < \dfrac{-3}{4} \; --> \; (-1)4 < 1(-3) --> -4 < -3 \quad\quad -\dfrac{3}{4} < 0 --> (-3)1 < 4 \cdot 0 --> -3 < 0.
+          \stopformula
+        \stopitem
+        \startitem
+          $\ini{3 + \dfrac{3}{5}}$
+          \startformula
+            \externalfigure[recta_racional_3.png][width=5cm]
+          \stopformula
+        \stopitem
+        \startitem
+          $\ini{-\dfrac{9}{4}} = -2\frac{1}{4}$
+          \startformula
+            \externalfigure[recta_racional_4.png][width=5cm]
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startdefinicion
+      Un conjunto $X$ con un orden parcial $R$ definido en él se llama \obj{denso} ssi para todos $x,y \in X$ con $x \mathbin{R} y$, existe $z \in X$ con $c \mathbin{R} z \mathbin{R} y$.
+    \stopdefinicion
+    
+    \startejemplos
+      En $\integers$ se demuestra que $\geq$ y $\leq$ son órdenes parciales. Pero $\integers$ no es denso, pues para $n, n+1 \in \integers$, no existe $k \in \integers$ con $n < k < n+1$.
+
+      Vemos que puede existir $k \in \rationals$, con $k \in \integers$ con $n < k < n+1$.
+    \stopejemplos
+
+    \startteorema
+      Sean $a,b \in \rationals$, con $a \leq b$. Entonces, $a \leq \dfrac{a+b}{2} \leq b$.
+    \stopteorema
+
+    \startdemo
+      Por hipótesis $a \leq b$. Luego, por la ley de suma y la ley de multiplicación positiva de las desigualdades
+
+      \startformula
+        a + a  \leq a + b
+      \stopformula
+      \startformula
+        2a \leq a + b
+      \stopformula
+      \startformula
+        \dfrac{1}{2}(2a) \leq \dfrac{1}{2}(a + b)
+      \stopformula
+      \startplaceformula
+        \startformula
+          a \leq \dfrac{a + b}{2}
+        \stopformula
+      \stopplaceformula
+
+      Por hipótesis, nuevamente, $a \leq b$. Entonces,
+      \startformula
+        a + b \leq b + b
+      \stopformula
+      \startformula
+        a + b \leq 2b
+      \stopformula
+      \startformula
+        \dfrac{1}{2}(a + b) \leq \dfrac{1}{2}(2b)
+      \stopformula
+      \startplaceformula
+        \startformula
+          \dfrac{a + b}{2} \leq b
+        \stopformula
+      \stopplaceformula
+
+      Por (1) y (2) concluimos que $a \leq \dfrac{a + b}{2} \leq b$.
+    \stopdemo
+
+    \startcorolario
+      $\rationals$ es denso bajo cualquiera de los órdenes parciales $\geq$ o $\leq$.
+    \stopcorolario
+
+    \startejemplos
+      Busque un número racinal entre las siguientes parejas de racionales.
+
+      \startitemejem
+        \startitem
+          $\ini{2 \text{ y } \dfrac{7}{3}}\quad \dfrac{2 + \dfrac{7}{2}}{2} = \dfrac{\left(2 + \dfrac{7}{3}\right)3}{2 \cdot 3} = \dfrac{6 + 7}{6} = \dfrac{13}{6} \quad --> \quad 2 \leq \dfrac{13}{6} \leq \dfrac{7}{3}$
+
+          Podemos verificarlo,
+          \startformula
+            \dfrac{2}{1} \leq \dfrac{13}{6} --> 2(6) \leq 1(13) --> 12 \leq 13 \quad\quad \dfrac{13}{6}3 \leq \dfrac{7}{3} --> 3(13) \leq 6(7) --> 39 \leq 42
+          \stopformula
+        \stopitem
+        \startitem
+          $\ini{-\dfrac{3}{4} \text{ y } \dfrac{1}{6}} \quad \dfrac{-\dfrac{3}{4} + \dfrac{1}{6}}{2} = \dfrac{\left( -\dfrac{3}{4} + \dfrac{1}{6}\right)12}{2 \cdot 12} = \dfrac{-9 + 2}{24} = -\dfrac{7}{24} \quad --> \quad -\dfrac{3}{4} \leq -\dfrac{7}{24} \leq \dfrac{1}{6}$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+
+    \startejemplo
+      \youtube{\from[AE65B]}
+      \ini{Determine dos números racionales entre -4 y $-\dfrac{5}{6}$}.
+
+      Primer racional
+
+      \startformula
+        \dfrac{-4 + \left(-\dfrac{5}{6}\right)}{2} = \dfrac{\left(-4-\dfrac{5}{6}\right)}{2 \cdot 6} = \dfrac{-24-5}{12} = \dfrac{-29}{12}\quad --> \quad -4 \leq -\dfrac{29}{12} \leq -\dfrac{5}{6}
+      \stopformula
+    \stopejemplo
+
+    Segundo racional
+
+    \startformula
+      -4 \leq -\dfrac{29}{12} \leq -\dfrac{5}{6}\quad --> \quad \dfrac{-4 + \left(-\dfrac{29}{12}\right)}{2} = \dfrac{-48-29}{2} = \dfrac{-77}{2}
+    \stopformula
+
+    Por lo tanto, tendremos
+    \startformula
+      4 \leq \graymath{-\dfrac{77}{2} \leq -\dfrac{29}{12}} \leq -\dfrac{5}{6}
+    \stopformula
+
+  \stopsubsection
+
+  \startsubsection[title={Cambio de fracción común a fracción decimal}]
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{-\dfrac{1}{2}} = - 0,5\quad$ Resto es 0.
+        \stopitem
+        \startitem
+          $\ini{6\frac{5}{8}} = \dfrac{53}{8} = 6,625\quad$ Resto es 0. 
+        \stopitem
+        \startitem
+          $\ini{-38\frac{13}{20}} = -\left(38 + \underbrace{\dfrac{13}{20}}_{\text{Resto 0}}\right) = - (38 + 0,65) = -38,65$
+        \stopitem
+        \startitem
+          $\ini{\dfrac{1}{3}} = 0,3333\dots\quad$ Periódico
+        \stopitem
+        \startitem
+          $\ini{\dfrac{24}{7}} = 3,\underbrace{128571}\underbrace{128571}\dots$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+  \stopsubsection
+
+  \startdefinicion
+    \youtube{\from[AE66A]}
+    Una \obj{fracción decimal periódica} es aquella que contiene un bloque de digitos que se repite para siempre.
+  \stopdefinicion
+
+  \startteorema
+    A cualquier número racional le corresponde una fracción decimal periódica y viceversa.
+  \stopteorema
+
+  \startdemo
+    No tenemos todavía las herramientas para demostrarlo.
+  \stopdemo
+
+\stopsection
+
+\startsection[title={El conjunto de los números irracionales}]
+  
+  Consideremos la fracción decimal 0,101001000100001000001\dots \comentario{Este decimal tiene un patrón pero no tiene un bloque de dígitos que se repite.}
+
+  ¿Es éste número un número racional? La respuesta es NO. Luego, obtenemos un nuevo conjunto
+
+  \startformula
+    \mathbb{L} = \{r \mid r  \nin \rationals \} \text{ es el \obj{conjunto de los números irracionales.}}
+  \stopformula
+
+  \startcenteraligned
+    \framed {$\naturalnumbers \subseteq \mathbb{W} \subseteq \integers \subseteq \rationals \subseteq \mathbb{L}$}
+  \stopcenteraligned
+
+  \startdiscusion{¿Pasarán las propiedades de $\rationals$ a $\mathbb{L}$}
+
+    Consideremos $0,101001000100001000001\dots$ y
+    
+    \starteffect[hidden]Consideremos \stopeffect $0,202002000200002000002\dots$
+  
+    si los sumamos
+ 
+   \starteffect[hidden]Consideremos \stopeffect 0,303003000300003000003\dots
+
+      Parece que la ley de clausura de la suma funciona. Veamos ahora estos otros números
+
+      \starttabulate[|r|r|r|]
+        \NC \NC $0,101001000100001000001\dots$ \NC $\in \mathbb{L}$ \NR
+        \NC + \NC $0,232332333233332333332\dots$ \NC $\in \mathbb{L}$ \NR
+        \HL
+        \NC \NC $0,333333333333333333333\dots$ \NC $\in \rationals$ \NR
+      \stoptabulate
+      
+      Vemos que la ley de clausura de la suma no se cumple en los irracionales.
+
+      \startformula
+        \youtube{\from[AE66B]}
+        \rationals \subseteq \mathbb{L}
+      \stopformula
+      \startformula
+        \mathbb{L} = \{r \mid r \nin \rationals\}
+      \stopformula
+      \startformula
+        \therefore \rationals \cap \mathbb{L} = \emptyset
+      \stopformula
+
+  \stopdiscusion
+\stopsection
+
+\startsubsection[title={El conjunto de los números reales}]
+  \startdefinicion
+    $\reals = \rationals \cup \mathbb{L}$ es el \obj{conjunto de los números reales}.
+  \stopdefinicion
+
+  Tenemos que
+  \startformula
+    \rationals, \mathbb{L} \subseteq \reals
+  \stopformula
+
+  Las propiedades de $\rationals$ pasan a $\reals$ por herencia y serán compartidas por $\mathbb{L}$.
+
+  \startejemplo
+    \ini{Demuestre que $x \in \rationals \wedge y \in \mathbb{L} \quad --> \quad x + y \in \mathbb{L}$ }
+
+
+    \startdemoejem
+      (por contradicción): Supongamos que $x + y = z \in \rationals$. Entonces
+
+      \startcenteraligned
+        \starttabulate[|r|c|l|]
+          \NC $-x + x + y$ \NC = \NC $- x + z$ \NR
+          \NC $(-x + x) + y$ \NC = \NC $- x + z$ \NR
+          \NC $0 + y$ \NC = \NC $- x + z$ \NR
+          \NC $y$ \NC = \NC $- x + z$ \NR
+        \stoptabulate
+      \stopcenteraligned
+
+      Pero $-x,z \in \rationals$, por lo que $-x+z \in \rationals$. Es decir, que $y \in \rationals \quad !--><--!$, pues $y \in \mathbb{L}$.
+    \stopdemoejem
+  \stopejemplo
+
+  \startdiscusion{Repaso del orden de los números racinales}
+    \comentario{propiedades de $\reals$ heredadas}    
+    \startitemize
+      \startitem
+        $a,b \in \reals$, $a > b$ ssi $a - b \in \reals^{+}$ ssi $a - b > 0$
+      \stopitem
+      \startitem
+        $\dfrac{a}{b} > \dfrac{c}{d}\quad <--> ad > bc$
+      \stopitem
+      \startitem
+        $\dfrac{a}{b} < \dfrac{c}{d}\quad <--> ad < bc$
+      \stopitem
+    \stopitemize
+  \stopdiscusion
+
+  \startteorema
+    Sean $a,b,c,d \in \integers$, con $b,d > 0$. Entonces,
+    \startitemizer
+      \startitem
+        $ad > bc \quad --> \quad \dfrac{a}{b} - \dfrac{c}{d} > 0$
+      \stopitem
+      \startitem
+        $ad < bc \quad --> \quad \dfrac{a}{b} - \dfrac{c}{d} < 0$
+      \stopitem
+    \stopitemizer
+  \stopteorema
+
+  \startdemop
+    \startitemizep
+      \startitem
+        $ad > bc$ sii $ad - bc > 0$. Por  otro lado, $b,d > 0$, por lo que
+        \startformula
+          bd > 0 \;\text{ y }\; \dfrac{1}{bd} > 0
+        \stopformula
+        Entonces,
+        \startformula
+          \dfrac{1}{bd}(ad - bc) > \dfrac{1}{bd} - 0
+        \stopformula
+        \startformula
+          \dfrac{a}{b} - \dfrac{c}{d} > 0
+        \stopformula
+      \stopitem
+      \startitem
+        Se demuestra de forma análoga.
+      \stopitem
+    \stopitemizep
+  \stopdemop
+
+\stopsubsection
+
+\youtube{\from[AE67A]}
+\startsubsection[title={Orden de fracciones decimales}]
+
+Para compara el orden de fracciones comunes nos son útiles las expresiones siguientes, que ya hemos demostrado:
+\startformula
+  \dfrac{a}{b} > \dfrac{c}{d} \quad <--> \quad ad > bc
+\stopformula
+\startformula
+  \dfrac{a}{b} < \dfrac{c}{d} \quad <--> \quad ad < bc
+\stopformula
+
+Y, para comparar fracciones decimales nos son útiles las expresiones siguientes:
+
+\startformula
+  ad > bc  \quad --> \quad \dfrac{a}{b} - \dfrac{c}{d} > 0
+\stopformula
+\startformula
+  ad < bc  \quad --> \quad \dfrac{a}{b} - \dfrac{c}{d} < 0
+\stopformula
+
+Sin embargo, no tenemos una implicación doble en estas expresiones. El siguiente teorema nos solucionará esto.
+
+\startteorema
+  Sean $a,b,c,d \in \integers$ con $b,d \neq 0$. Entonces
+  \startitemizer
+    \startitem
+      $\dfrac{a}{b} - \dfrac{c}{d} > 0 --> ad > bc$
+    \stopitem
+    \startitem
+      $\dfrac{a}{b} - \dfrac{c}{d} < 0 --> ad < bc$
+    \stopitem
+  \stopitemizer
+\stopteorema
+
+\startdemop
+  \startitemizep
+    \startitem
+      Por hipótesis, $\dfrac{a}{b} - \dfrac{c}{d} > 0$ y $b,d > 0$. Entonces $bd > 0$ y, por la ley de multiplicación positiva,
+      \startformula
+         bd\left( \dfrac{a}{b} - \dfrac{c}{d}\right) > bd \cdot 0
+      \stopformula
+      \startformula
+        \dfrac{bd}{1} \cdot \dfrac{a}{b} - \dfrac{bd}{1} \cdot \dfrac{c}{d} > 0
+      \stopformula
+      \startformula
+        da - bc > 0
+      \stopformula
+      \startformula
+        ad + (-bc) + bc > 0 + bc
+      \stopformula
+      \startformula
+        ad + \left[(-bc) + bc\right] > 0 + bc
+      \stopformula
+      \startformula
+        ad + 0 > bc
+      \stopformula
+      \startformula
+        ad > bc
+      \stopformula
+    \stopitem
+    \startitem
+      Por hipótesis, $\dfrac{a}{b} - \dfrac{c}{d} < 0$ y $b,d > 0$. Entonces $bd > 0$ y, por la ley de multiplicación positiva,
+      \startformula
+         bd\left( \dfrac{a}{b} - \dfrac{c}{d}\right) < bd \cdot 0
+      \stopformula
+      \startformula
+        \dfrac{bd}{1} \cdot \dfrac{a}{b} - \dfrac{bd}{1} \cdot \dfrac{c}{d} < 0
+      \stopformula
+      \startformula
+        da - bc < 0
+      \stopformula
+      \startformula
+        ad + (-bc) + bc < 0 + bc
+      \stopformula
+      \startformula
+        ad + \left[(-bc) + bc\right] < 0 + bc
+      \stopformula
+      \startformula
+        ad + 0 < bc
+      \stopformula
+      \startformula
+        ad < bc
+      \stopformula
+    \stopitem
+  \stopitemizep
+\stopdemop
+
+\startobservacion
+  Para comparar fracciones decimales nos fijamos hasta la última posición decimal en que sean iguales. Entoces nos fijamos en la siguiente posición decimal. Si ambas posiciones decimales son positivas, la que tenga esa siguiente posición decimal mayor, será la fracción decimal mayor. Si ambas son negativas, la que tenga esa siguiente posición decimal mayor será la fracción decimal menor.
+\stopobservacion
+
+\startejemplos
+  Decida cuál de las siguientes fracciones es mayor o menor que la otra.
+  \youtube{\from[AE67B]}
+  \startitemejem
+    \startitem
+      \ini{746,3851 y 746,394}
+
+       746,394 > 746,3851 y también 746,3851 < 746,394
+     \stopitem
+     \startitem
+       \ini{16,24 y 6,89}
+
+       16,24 > 6,89
+     \stopitem
+     \startitem
+       \ini{-2001,645 y -2001,647}
+
+       -2001,645 > -2001,647 o -2001,647 < -2001,645
+     \stopitem
+     \startitem
+       \ini{0,253181 y 0,253149}
+
+       0,253181 > 0,253149 o 0,253149 < 0,253181
+     \stopitem
+     \startitem
+       \ini{3,29 y -246,872}
+
+       3,29 > -246,872 o -246,872 < 3,29 
+     \stopitem
+  \stopitemejem
+
+\stopejemplos
+
+\stopsubsection
+
+\startsubsection[title={Localización de fracciones decimales en la recta numérica}]
+  \startdiscusion{Reglas de redondeo}
+    Si queremos redondear un número a cierta posición decimal, nos fijamos en el dígito en la siguiente posición decimal del numeral que lo representa.
+    \startitemize[n]
+      \startitem
+        Si el dígito en esa posición es menor de 5, el dígito en la posición a la que vamos a redondear se deja igual.
+      \stopitem
+      \startitem
+        Si el dígito en esa posición es mayor de 5, el dígito en la posición a la que vamos a redondear se aumenta por 1.
+      \stopitem
+      \startitem
+        Si el dígito en esa posición es 5, nos fijamos en el dígito en la posición a la que queremos redondear:
+        \startitemize[a]
+          \startitem
+            Si dicho dígito es impar, se aumenta por 1
+          \stopitem
+          \startitem
+            Si dicho dígito es par, nos fijamos si hay dígitos diferentes de cero, después de aquel 5. Si no los hay el dígito en la posición a la que queremos redondear se deja igual; si los hay aumentamos por 1 el dígito en la posición a la que vamos a redondear.
+          \stopitem
+        \stopitemize
+      \stopitem
+      \startitem
+        Si la posición a la que redondeamos está antes del punto decimal (a su izquierda) completamos el numeral con ceros hasta la posición de las unidades.
+      \stopitem
+      \startitem
+        Si la posición a la que vamos a redondear está después del punto decimal (a su derecha), no escribimos nada más después de la posición redondeada.
+      \stopitem
+    \stopitemize
+
+    \startejemplos
+      \youtube{\from[AE68A]}
+      \ini{Redondee a la posición indicada}
+      \startitemejem
+        \startitem
+          \ini{2 435, a la centena más cercana} $2 400 \doteq 2435 \approx 2400$
+        \stopitem
+        \startitem
+          \ini{426 710, a la posición de los millares} $\approx 427000$
+        \stopitem
+        \startitem
+          \ini{31,35, a la décima posición más cercana} $\doteq 31,4$
+        \stopitem
+        \startitem
+          \ini{203,43981, a tres lugares decimales} $\approx 203,440$
+        \stopitem
+        \startitem
+          \ini{450,21, al centenar más cercano} $\doteq 500$
+        \stopitem
+        \youtube{\from[AE68B]}
+        \startitem
+          \ini{0,0036500, a la diezmilésima más cercana} $\approx 0,0036$
+        \stopitem
+        \startitem
+          \ini{3 827,47499, a dos lugares} $\doteq 3827,47$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+  \stopdiscusion
+
+  \startdiscusion{Regla de la décima}
+    \comentario{La llamamos regla de la décima porque siempre nos vamos a dejar llevar por la posición de las décimas para decidir en que sitio está localizado el punto que le corresponde al decimal}
+
+    $\dfrac{1}{10} \quad \dfrac{2}{10} \quad \dfrac{9}{10}$
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{2,2}$
+          \startformula
+            \externalfigure[decimal_1.png][width=5cm]
+          \stopformula
+        \stopitem
+        \startitem
+          $\ini{3,38} \approx 3,4$
+          \startformula
+            \externalfigure[decimal_2.png][width=5cm]
+          \stopformula
+        \stopitem
+        \startitem
+          $\ini{4,757} \doteq 4,8$
+          \startformula
+            \externalfigure[decimal_3.png][width=5cm]
+          \stopformula
+        \stopitem
+        \startitem
+          $\ini{-5,66} \approx -5,7$
+          \startformula
+            \externalfigure[decimal_4.png][width=5cm]
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+  \stopdiscusion
+
+\stopsubsection
+
+
+\stopchapter
+
+\stopcomponent

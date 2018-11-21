@@ -1,0 +1,606 @@
+
+\startcomponent c_operaciones
+
+\project project_matemprepa
+
+\startchapter[title={Operaciones fundamentales con expresiones algebraicas}]
+
+  \startdefinicion
+    Llamamos una \obj{expresión algebraica} a cualquier combinación de símbolos consistentes de números relaes fijos, que llamaremos \obj{constantes}, y letras, que representarán a números reales, llamdas \obj{variables}, relacionados entre sí por medio de las operaciones de suma, resta, multiplicación, división y exponenciación.
+  \stopdefinicion
+ 
+  \startejemplos
+    \startitemejem
+      \startitem
+        $\ini{2x^2 - 3x - 1}\quad$ constantes: 2, 3, 1; variables: $x$; operaciones: multiplicación, exponenciación y restas
+      \stopitem
+      \startitem
+        $\ini{\left(a^2b -1\right)\left(\dfrac{a^2}{3c - b^3}\right)}\quad$ constantes: 1, 3, 2; variables: $a, b, c$; operaciones: restas, multiplicaciones, división y exponenciaciones.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x^3 -x +11}{2x^3 +5x^2 -3x^4}}\quad$, constantes: 3, 2, 5, 4, 11; variables: $x$; operaciones: exponenciaciones, restas, sumas, división y multipliaciones.
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \startdefinicion
+    \startitemizer
+      \startitem
+        Cada sumando en una expresión algebraica se llama un \obj{término}
+      \stopitem
+      \startitem
+        Cada número (constante o variable) que esté multiplicado por otro en una expresión algebraica se llama un \obj{factor}.
+      \stopitem
+    \stopitemizer
+  \stopdefinicion
+
+  \startejemplos
+    \startitemejem
+      \startitem
+        \ini{Términos en la expresión algebraica $2x^2 -3x -1$:} $2x^2$, $-3x$, $-1$.
+      \stopitem
+      \startitem
+        \ini{Factores en el primer término de la expresión algebraica anterior:} 2, $x^2$.
+      \stopitem
+      \startitem
+        \ini{Términos en el primer factor de $\left(a^2b -1\right)\left(\dfrac{a^2}{3c - b^3}\right)$:} $a^2b$, $-1$.
+      \stopitem
+      \startitem
+        \ini{Factores en el primer término del denominador del segundo factor en la expresión algebraica anterior:} 3, $c$.
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \startdefinicion
+    \startitemizer
+      \startitem
+        Una expresión algebraica que es, fundamentalmente, una suma (de términos) se llama un \obj{multinomio}.
+      \stopitem
+      \startitem
+        Una expresión algebraica que es, fundamentalmente, una multiplicación se llama un \obj{producto}.
+      \stopitem
+      \startitem
+        La expresión algebraica que es, fundamentalmente, una división se llama una \obj{fracción algebraica}.
+      \stopitem
+    \stopitemizer
+  \stopdefinicion
+
+  \startejemplos
+    \startitemejem
+      \startitem
+        $2x^2-3x-1$ es un multinomio.
+      \stopitem
+      \startitem
+        $\left(a^2b -1\right)\left(\dfrac{a^2}{3c - b^3}\right)$ es un producto.
+      \stopitem
+      \startitem
+        $\dfrac{x^3 -x +11}{2x^3 +5x^2 -3x^4}$ es una fracción algebraica.
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  Podemos clasificar los multinomios de acuerdo al número de términos que contiene:
+
+  \startcenteraligned
+    \starttabulate[|||]
+      \HL
+      \NC \bf  nonomio:    \NC dos términos    \NC\NR
+      \NC \bf  binomio:    \NC dos términos    \NC\NR
+      \NC \bf  trinomio:   \NC tres términos   \NC\NR
+      \NC \bf  tetranomio: \NC cuatro términos \NC\NR
+      \NC \bf  pentanomio: \NC cinco términos  \NC\NR
+      \NC \bf  hexanomio:  \NC seis términos   \NC\NR
+      \HL
+ \stoptabulate
+  \stopcenteraligned
+
+  \startejemplos
+    \ini{Clasifique:}
+    \startitemejem
+      \startitem
+        $\ini{-2x^3y^4}\quad$ monomio
+      \stopitem
+      \startitem
+        $\ini{5x -3y +9}\quad$ trinomio
+      \stopitem
+      \startitem
+        $\ini{(x-y)(x+2)-6x^2}\quad$ binomio
+      \stopitem
+      \startitem
+        $\ini{x^2 -3y(x+1)-\dfrac{3}{y^3}-5 -3x^3y^2 + 9y}\quad$ hexanomio
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \startdefinicion
+    En un término particular
+    \startitemizer
+      \startitem
+        el producto de sus factores constantes es un \obj{coeficiente (numérico)}.
+      \stopitem
+      \startitem
+        el producto de sus factores variables se llama su \obj{coeficiente literal}.
+      \stopitem
+      \startitem
+        dada el producto de varios de sus factores, al producto del resto de sus factores se le llama el \obj{coeficiente del producto dado}.
+      \stopitem
+      \startitem
+        si el término no contiene factores variables en su denominador, su \obj{grado} es el total de la suma de los exponentes de sus variables.
+      \stopitem
+    \stopitemizer
+  \stopdefinicion
+
+  \startejemplos
+    \startitemejem
+      \startitem
+        $\ini{3x^2y^3(-2z)}$
+        \startitemize[packed]
+          \startitem
+            coeficiente numérico (c.n): $3(-2) = -6$
+          \stopitem
+          \startitem
+            coeficiente literal (c.l): $x^2\cdot y \cdot z$
+          \stopitem
+          \startitem
+            coeficiente de $3x^2$: $-2y^3z$
+          \stopitem
+          \startitem
+            coefiente de de $x^2z$: $3(-2)y^3 = -6y^3$
+          \stopitem
+          \startitem
+            coeficiente de $-2xyz$: $3xy^2$
+          \stopitem
+          \startitem
+            grado: $2+3+1 = 6$
+          \stopitem
+        \stopitemize
+      \stopitem
+
+      \startitem
+        $\ini{\dfrac{4x^3y^4z^2}{5}}$
+        \startitemize[packed]
+          \startitem
+            c.n: $\dfrac{4}{5}$
+          \stopitem
+          \youtube{\from[AE70A]}
+          \startitem
+            c.l: $x^3y^4z^2$
+          \stopitem
+          \startitem
+            coeficiente de $\dfrac{1}{5}y^4$: $4x^3z^2$
+          \stopitem
+          \startitem
+            coeficiente de $2x^2y^4z$: $\dfrac{2xz}{5}$
+          \stopitem
+          \startitem
+            coeficiente de $\dfrac{4}{5}xy^3$: $x^2yz^2$
+          \stopitem
+          \startitem
+            grado: $3+4+2 = 9$
+          \stopitem
+        \stopitemize
+      \stopitem
+
+      \startitem
+        $\ini{\dfrac{-3a^3b^5c^6}{4d^7}}$
+        \startitemize[packed]
+          \startitem
+            c.n: $-\dfrac{3}{4}$
+          \stopitem
+          \startitem
+            c.l: $\dfrac{a^3b^5c^6}{d^7}$
+          \stopitem
+          \startitem
+            coeficiente de $\dfrac{3}{4}a^3b^4$: $-\dfrac{bc^6}{d^7}$
+          \stopitem
+          \startitem
+            coeficiente de $\dfrac{a^2b^2c}{-4d^2}$: $\dfrac{3ab^3c^5}{d^5}$
+          \stopitem
+          \startitem
+            coeficiente de $\dfrac{-3b^5c^2}{d^5}$: $\dfrac{a^3c^4}{4d^2}$
+          \stopitem
+          \startitem
+            su grado no está definido pues contiene variables en denominador.
+          \stopitem
+        \stopitemize
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \startdefinicion
+    Dos términos se llaman \obj{semejantes} ssi tienen los mismos coeficientes literales.
+  \stopdefinicion
+
+  \startejemplos
+    \startitemejem
+      \startitem
+        \ini{$3x$ y $-2y$:} no son semejantes
+      \stopitem
+      \startitem
+        \ini{$5^2$ y $-6x^2$:} son semejantes
+      \stopitem
+      \startitem
+        \ini{$x^3y^2$ y $4x^2y^3$:} no son semejantes
+      \stopitem
+      \startitem
+        \ini{$\dfrac{4}{5}a^4b$ y $-3ba^4$:} son semejantes
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+  
+  \youtube{\from[AE70B]}
+  \startejemplo
+   \ini{Simplifique las siguientes expresiones:}
+   \startitemejem
+     \startitem
+       $\ini{3x -2y^3 + 7x^2 -1 + 2y^3 - 6x^2} = 3x + x^2 - 1$ 
+     \stopitem
+     \startitem
+       $\ini{2x^3y + 1 - \left[2y + 6\left(3x^2-2+x^3-y\right)\right]+7x^3y} = 2x^3y + 1 -\left[2y +6 \left(4x^3-2-y\right)\right]+7x^3y = 2x^3y + 1 - \left[ 2y + 24x^3 -12 -6y\right] + 7x^3y = 2x^3y + 1 - \left[-4y + 24x^3 -12\right] + 7x^3y = 2x^3y + 1 + 4y - 24x^3 + 12 + 7 x^3y = 9x^3y + 13 + 4y - 24x^3$
+     \stopitem
+   \stopitemejem
+  \stopejemplo
+
+  \youtube{\from[AE71A]}
+  \startejemplo
+    \ini{Simplifique:}
+    \startejerformula
+      \startalign
+        \NC   \NC \ini{\left(2x-y^3+x\right) - \left{2x - \left[y^3+4-6x+\left(2-5x-1\right)\right]\right} + 4y^3} \NR
+        \NC = \NC \left(3x-y^3\right) - \left{2x - \left[y^3+4-6x+\left(1-5x\right)\right]\right} + 4y^3\NR
+        \NC = \NC 3x-y^3 - \left{2x - \left[y^3+4-6x+1-5x\right]\right} + 4y^3\NR
+        \NC = \NC 3x-y^3 - \left{2x - \left[y^3+5-11x\right]\right} + 4y^3\NR
+        \NC = \NC 3x-y^3 - \left{2x - y^3 -5 +11x\right} + 4y^3\NR
+        \NC = \NC 3x-y^3 - \left{13x - y^3 -5\right} + 4y^3\NR
+        \NC = \NC 3x-y^3 - 13x + y^3 +5 + 4y^3\NR
+        \NC = \NC -10x +4y^3 +5\NR
+      \stopalign
+    \stopejerformula
+  \stopejemplo
+
+  \startdefinicion
+    Decimos que \obj{evaluamos numéricamente una expresión algebraica} ssi al conocer valores específicos de sus variables los sustituimos por éstos y entonces simplificamos.
+  \stopdefinicion
+
+  \startejemplos
+    \startitemejem
+      \startitem
+        \ini{$a + 4b - c^2 + d^2$ si $a=3,\; b=-2,\; c=5,\; d=2$}
+
+        $= 3 + 4(-2) -5^2 + 2^3 = 3 + 4(-2) -25 + 8 = 3 + (-8) -25 + 8 = [3+(-8)] -25 + 8 = [-5+(-25)]+8 = -30 + 8 = -22$
+      \stopitem
+      \startitem
+        \youtube{\from[AE71B]}
+        \ini{$x - y \left\{z^2 - \left[ 5 -xy + \left(7-x^2 \right)\right]\right\}$ si $x=3,\; y=2,\; z=4$}
+
+        \startejerformula
+          \startalign
+            \NC   \NC 3 - 2\left\{4^2 -\left[5-3\cdot 2 + \left(7 - 3^2\right)\right]\right\} \NR
+            \NC = \NC 3 - 2\left\{4^2 -\left[5-3\cdot 2 + \left(7 - 9\right)\right]\right\} \NR
+            \NC = \NC 3 - 2\left\{4^2 -\left[5-3\cdot 2 + \left(- 2\right)\right]\right\} \NR
+            \NC = \NC 3 - 2\left\{4^2 -\left[5- 6 + \left(- 2\right)\right]\right\} \NR
+            \NC = \NC 3 - 2\left\{4^2 -\left[5 + (-6) + \left(- 2\right)\right]\right\} \NR
+            \NC = \NC 3 - 2\left\{4^2 -\left[-3\right]\right\} \NR
+            \NC = \NC 3 - 2 \{16 -\left(-3\right)\} \NR
+            \NC = \NC 3 - 2 \{19 \} \NR
+            \NC = \NC 3 - 38 \NR
+            \NC = \NC 35 \NR
+          \stopalign
+        \stopejerformula
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \startsection[title={Leyes de exponentes}]
+
+    \startteorema{leyes de exponentes}
+      Sean $x,y \in \reals$ y $m,n \in \naturalnumbers$. Entonces,
+      \startitemizer
+        \startitem
+          $x^mx^n = x^{m+n}$
+        \stopitem
+
+        \startitem
+          si $x \neq 0$, entonces
+
+          \startformula
+            \dfrac{x^m}{x^n} =
+            \startmathcases
+              \NC x^{m-n},            \NC si $\;m \geq n$ \NR
+              \NC \dfrac{1}{x^{n-m}}, \NC si $\;m < n$    \NR
+            \stopmathcases
+          \stopformula
+        \stopitem
+
+        \startitem
+          $\left(x^m\right)^n = x^{m\cdot n}$
+        \stopitem
+
+        \startitem
+          $\left(xy\right)^n = x^ny^n$
+        \stopitem
+
+        \startitem
+          si $y \neq 0, \;\; \left(\dfrac{x}{y}\right)^n = \dfrac{x^n}{y^n}$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+    
+    \startdemop
+
+      {\sl i)} $\;x^mx^n = \underbrace{(x \cdot x \cdot x \cdot \dots \cdot x)}_{\text{m-factores}}(\underbrace{x \cdot x \cdot x \cdot \dots \cdot x}_{\text{n-factores}}) = \underbrace{x \cdot x \cdot x \cdot \dots \cdot x \cdot x \cdot x \cdot x \cdot \dots \cdot x}_{\text{(m+n) factores}} = x^{m+n}$
+
+      {\sl ii)} si $m \geq n$
+      \startformula
+        \dfrac{x^m}{x^n} = \dfrac{\overbrace{x \cdot x \cdot x \cdot \dots \cdot x}^{\text{m-factores}}}{\underbrace{x \cdot x \cdot x \cdot \dots \cdot x}_{\text{n-factores}}} = \dfrac{\overbrace{(x \cdot x \cdot x \cdot \dots \cdot x)}^{\text{n-factores}}\overbrace{(x \cdot x \cdot x \cdot \dots \cdot x)}^{\text{(m-n)-factores}}}{\underbrace{x \cdot x \cdot x \cdot \dots \cdot x}_{\text{n-factores}}} = \underbrace{x \cdot x \cdot x \cdot \dots \cdot x}_{\text{(m-n) factores}} = x^{m-n}
+      \stopformula
+      \youtube{\from[AE72A]}
+      \starteffect[hidden]{\sl ii)} \stopeffect si $m < n$
+        \startformula
+          \dfrac{x^m}{x^n} = \dfrac{\overbrace{x \cdot x \cdot x \cdot \dots \cdot x}^{\text{m-factores}}}{\underbrace{x \cdot x \cdot x \cdot \dots \cdot x}_{\text{n-factores}}} = \dfrac{\overbrace{x \cdot x \cdot x \cdot \dots \cdot x}^{\text{m-factores}}}{\underbrace{(x \cdot x \cdot x \cdot \dots \cdot x)}_{\text{m-factores}}\underbrace{(x \cdot x \cdot x \cdot \dots \cdot x)}_{\text{(n-m)-factores}}} = \dfrac{1}{\underbrace{(x \cdot x \cdot x \cdot \dots \cdot x)}_{\text{(n-m)-factores}}} = \dfrac{1}{x^{n-m}}
+        \stopformula
+
+      {\sl iii)}\; Se deja como ejercicio
+
+      {\sl iv)} $\;(xy)^n = \underbrace{xy \cdot xy \cdot xy \cdot \dots \cdot xy}_{\text{n factores}} = \underbrace{(x \cdot x \cdot x \cdot \dots \cdot x)}_{\text{n factores}} \cdot \underbrace{(y \cdot y \cdot y \cdot \dots \cdot y)}_{\text{n factores}} = x^ny^n$
+
+      {\sl v)} $\;\left(\dfrac{x}{y}\right)^n = \underbrace{\dfrac{x}{y} \cdot \dfrac{x}{y} \cdot \dots \cdot \dfrac{x}{y}}_{\text{n factores}} = \dfrac{\overbrace{x \cdot x \cdot \dots \cdot x}^{\text{n factores}}}{\underbrace{y \cdot y \cdot \dots \cdot y}_{\text{n factores}}} = \dfrac{x^n}{y^n}$
+    \stopdemop
+
+    \startdiscusion{Exponente 0 \;$x^0$}
+
+      Consideremos el siguiente razomaniemto
+
+      \startformula
+        x^0 = x^{1+(-1)} = x^{1-1} = \dfrac{x}{x} = 1
+      \stopformula
+    
+      \startdefinicion
+        Sea $x \in \reals$, $x \neq 0$. Entonces,
+        \startformula
+          x^0 = 1.
+        \stopformula
+      \stopdefinicion
+
+    \stopdiscusion
+
+    \youtube{\from[AE72B]}
+    \startdiscusion{$x^n\;$ siendo $n$ un entero negativo}
+      Consideremos $x^{-n}$. Lo vamos a multiplicar por $x^n$:
+      \comentario{$x^mx^n = x^{m+n}$}
+
+      \startformula
+        \comentario{inverso multiplicativo\\$ab = 1 --> a = b^{-1} \wedge b = a^{-1}$}
+        x^{-n}x^n = x^{-n+n} = x^0 = 1, \text{ si } x \neq 0
+      \stopformula
+      \startformula
+        x^{-n} = \left(x^n\right)^1 = \left(\dfrac{x^n}{-1}\right)^{-1} = \dfrac{1}{x^n}, \text{ si } x \neq 0
+      \stopformula
+    \stopdiscusion
+
+    \startdefinicion
+      Sea $x \in \reals, \; x \neq 0$, y sea $n \in \naturalnumbers$. Entonces,
+      \startformula
+        x^{-n} = \dfrac{1}{x^n}.
+      \stopformula
+    \stopdefinicion
+
+    \startteorema
+      Sean $x,y \in \reals,\, x,y \neq 0$, y sea $n \in \naturalnumbers$. Entonces,
+      \startitemizer
+        \startitem
+          $\dfrac{1}{x^{-n}} = x^n$
+        \stopitem
+        \startitem
+          $\left(\dfrac{x}{y}\right)^{-n} = \left(\dfrac{y}{x}\right)^n$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      {\sl i)} Queda como ejercicio
+
+      {\sl ii)} $\left(\dfrac{x}{y}\right)^{-n} = \dfrac{1}{\left(\dfrac{x}{y}\right)^n} = \dfrac{1}{\dfrac{x^n}{y^n}} = \dfrac{(1)y^n}{\left(\dfrac{x^n}{y^n}\right) y^n} = \dfrac{y^n}{x^n} = \left(\dfrac{y}{x}\right)^n$
+    \stopdemop
+
+    \startdiscusion{Recopilatorio de las leyes de exponentes}
+      \startitemizer[columns,joinedup]
+        \startitem
+          $x^m \cdot y^n = x^{m+n}$
+        \stopitem
+
+        \startitem
+          $\dfrac{x^m}{x^n} =
+            \startmathcases
+              \NC x^{m-n},            \NC si $\;m \geq n$ \NR
+              \NC \dfrac{1}{x^{n-m}}, \NC si $\;m < n$    \NR
+            \stopmathcases$
+        \stopitem
+
+        \startitem
+          $\left(x^m\right)^n = x^{mn}$
+        \stopitem
+
+        \startitem
+          $(xy)^n = x^n y^n$
+        \stopitem
+
+        \startitem
+          $\left(\dfrac{x}{y}\right)^n = \dfrac{x^n}{y^n}$
+        \stopitem
+
+        \startitem
+          $x \neq 0, \, x^0=1$
+        \stopitem
+
+        \startitem
+          $x^{-n} = \dfrac{1}{x^n}; \; \dfrac{1}{x^{-n}} = x^n,\, x \neq 0$
+        \stopitem
+
+        \startitem
+          $\left(\dfrac{x}{y}\right)^{-n} = \left(\dfrac{y}{x}\right)^n,\, x,y \neq 0$
+        \stopitem
+      \stopitemizer
+    \stopdiscusion
+
+    \startejemplos
+      \startplaceformula
+        \startejerformula
+          \startalign
+            \NC   \NC \ini{5 \cdot 3^2xy^2z^3\cdot 3^3ax^4y^5} \NR[+]
+            \NC = \NC 5 \cdot \left(3^2 \cdot 3^3\right)\left(x x^4\right)\left(y^2y^3\right)z^3a \NR
+            \NC = \NC 5 \cdot 3^{2+3}x^{1+4}y^{2+5}z^3a \NR
+            \NC = \NC 5 \cdot 3^5x^5y^7z^3a \NR
+          \stopalign
+        \stopejerformula
+
+        \startplaceformula
+          \startejerformula
+            \startalign
+              \NC \NC \ini{\left(-2x^5y^3\right)^2\left(-3xy^5z\right)^3} \NR[+]
+              \NC = \NC (-2)^2\left(x^5\right)^2\left(y^3\right)^2(-3)^3x^3\left(^5\right)^3z^3 \NR
+              \NC = \NC 4x^{5\cdot 2}y^{3\cdot 2}(-27)x^3y^{5 \cdot 3}z^3 \NR
+              \NC = \NC -108x^{10}y^6x^3y^{15}z^3 \NR
+              \NC = \NC -108x^{13}y^{21}z^3 \NR
+            \stopalign
+          \stopejerformula
+        \stopplaceformula
+
+        \youtube{\from[AE73A]}
+        \startplaceformula
+          \startejerformula
+            \startalign
+              \NC   \NC \ini{-\left(\dfrac{3^4xy^5}{3^5x^6y^2}\right)^3} \NR[+]
+              \NC = \NC -\left(\dfrac{y^{5-2}}{3^{5-4}x^{6-1}}\right)^3 
+              = -\left(\dfrac{y^3}{3x^5}\right)^3 
+              = -\dfrac{\left(y^3\right)^3}{\left(3x^5\right)^3} 
+              = -\dfrac{y^9}{3^3\left(x^5\right)^3}
+              = -\dfrac{y^9}{27x^{15}} \NR
+             \stopalign
+          \stopejerformula
+        \stopplaceformula
+
+        \startplaceformula
+          \startejerformula
+            \startalign
+              \NC \NC \ini{\left(\dfrac{-2a^3b^{-2}c}{a^5b^{-9}c^{-3}}\right)^{-5}} \NR[+]
+              \NC = \NC \left(\dfrac{-2b^9cc^3}{a^5b^2}\right)^{-5}
+              = \left(\dfrac{-2b^7c^4}{a^5}\right)^{-5}
+              = \left(\dfrac{a^5}{-2b^7c^4}\right)^5
+              = \dfrac{\left(a^5\right)^5}{\left(-2b^7c^4\right)^5}
+              = \dfrac{\left(a^5\right)^5}{\left(-2b^7c^4\right)^5}
+              \NR
+              \NC = \NC \dfrac{a^{25}}{(-2)^5\left(b^7\right)^5\left(c^4\right)^5}
+              = \dfrac{a^{25}}{-32b^{35}c^{20}}\NR
+            \stopalign
+          \stopejerformula
+        \stopplaceformula
+      \stopejemplos
+      \youtube{\from[AE73B]}
+
+      \startejemplos
+        \startitemejem[start=5]
+          \startitem
+            \ini{¿Cómo se comparan los valores de $\left(3x\right)^0$ y $3x^0$, si $x \neq 0$?}
+
+            \startformula
+              (3x)^0 = 1; \quad 3 \cdot x^0 = 3 \cdot 1 = 3
+            \stopformula
+          \stopitem
+
+          \startitem
+            \ini{Si $x-2y-7z \neq 0$ y si $a^2 + 3b \neq 0$, evalúe la expresión \\ $(x-2y-7z)^0 - 5\left(a^2 + 3b\right)^0 + 3$}
+
+            \startformula
+              = 1 - 5 \cdot 1 + 3 = 1 - 5 + 3 = -1
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      Se puede demostrar que todas estas leyes de exponentes que han sido dadas para exponentes naturales funcionan aunque éstos sean enteros (no necesariamente positivos)
+
+      \startejemplos
+        \startitemejem[start=7]
+          \startitem
+            \ini{Demuestre que si $x \in \reals \setminus \{\emptyset\}$, y $m,n \in \integers$, entonces $x^mx^n = x^{m+n}.$}
+
+            Veamos solo el caso en que $m,n \in \integers^{-}$. Los otros casos se dejan como ejercicio.
+
+            \startformula
+              x^m x^n = \dfrac{1}{x^{-m}}\dfrac{1}{x^{-n}}
+            \stopformula
+            donde ahora $-m,-n \in \integers^{+} \equiv \naturalnumbers$
+            \startformula
+              = \dfrac{1 \cdot 1}{x^{-m}x^{-n}} = \dfrac{1}{x^{-m+(-n)}} = \dfrac{1}{x^{-(m+n)}} = x^{m+n}
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+      
+  \stopsection
+
+  \youtube{\from[AE74A]}
+  \startsection[title={Polinomios}]
+    \startdefinicion
+      Un \obj{polinomio en la variable $x$ de grado $n$}, donde $x \in \reals$ y $n \in \mathbb{W}$, es un multinomio en la forma
+      \startformula
+        a_n x^n + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \cdots + a_1 x + a_0,
+      \stopformula
+      donde $a_n, a_{n-1}, a_{n-2},\dots, a_0 \in \reals$ fijos, llamados los \obj{coeficientes del polinomio}. Si el polinomio es el número cero, su grado no se define.
+    \stopdefinicion
+
+    \startejemplos
+      Determine si las siguientes igualdades son ciertas o falsas,
+      \startitemejem
+        \startitem
+          $\ini{x^2 + x^3 = x^5} --> $ Falsa
+        \stopitem
+        \startitem
+          $\ini{3x^5 + 7x^5 = 10x^{10}} --> $ Falsa
+        \stopitem
+        \startitem
+          $\ini{x^3 x^2 = x^6} --> $  Falsa
+        \stopitem
+        \startitem
+          $\ini{3x^2 \cdot 2x^3 = 5x^5} --> $  Falsa
+        \stopitem
+        \startitem
+          $\ini{\left(x^3\right)^5 = x^8} --> $  Falsa
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startsubsection[title={Características de los polinomios}]
+      \startformula
+        a_n x^n + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \cdots + a_1 x + a_0,
+      \stopformula
+
+
+      \startitemize[n]
+        \startitem
+          es una suma de términos
+        \stopitem
+        \startitem
+          la variable tiene que estar elevada a potencias enteras y no negativas
+        \stopitem
+        \startitem
+          la variable no puede aparecer en ningún denominador, ya que $\dfrac{1}{x^n} = x^{-n}$ y, por tanto, el exponente sería negativo
+        \stopitem
+        \startitem
+          el grado es la potencia más alta a la cual aparece elevada la variable
+        \stopitem
+        \startitem
+          puede tener más de una variable, las cuales tienen que cumplir con las mismas condiciones con las que cumple una sola
+        \stopitem
+        \startitem
+          si hay más de una variable, su grado es el grado más alto de entre sus términos, el grado de un polinomio $p$ se representa por símbolo $\partial^{0} p$
+        \stopitem
+      \stopitemize
+    \stopsubsection
+
+  \stopsection
+  
+\stopchapter
+  
+\stopcomponent

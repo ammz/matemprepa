@@ -1,0 +1,1948 @@
+
+\startcomponent c_enteros
+
+\project project_matemprepa
+
+  \startchapter[title={El conjunto de los números enteros}]
+
+    \margindata[youtube][method=top]{\from[AE34B]}
+    \startsection[title={El inverso aditivo}]
+      \startaxioma
+        $\forall n \in \naturalnumbers, \exists -n$ tal que $n + (-n) = -n + n = 0$. Llamamos a $-n$ \obj{el inverso aditivo (o con respecto a la suma) o el negativo de n}.
+      \stopaxioma
+
+      Además de los cardinales $\mathbb{W} = \{0, 1, 2, 3, \dots\}$, ahora tenemos el conjunto de los negativos de $\naturalnumbers$, $\{-1, -2, -3, \dots\}$ y si unimos a ambos obtenemos
+
+      \startformula
+        \mathbb{W} \cup \naturalnumbers =\{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \} = \integers
+      \stopformula
+
+      que conocemos como \obj{el conjunto de los números enteros}.
+
+      Recordemos que $\naturalnumbers \subseteq \mathbb{W} \subseteq \integers$.
+
+      \margindata[youtube]{\from[AE35A]}
+      Tenemos que $\integers = \{\dots, -3,-2,-1, \overbrace{0, 1, 2, 3, \dots}^{\mathbb{W}}\}$. Para los números cardinales, $\mathbb{W}$, rigen ciertas propiedades para (+) y (\times).
+
+      Ya conocemos que $-n + n = n + (-n) = 0$ y 0 es el único elemento identidad para la suma en \mathbb{W}.
+
+      Vemos, pues, que $\forall n \in \integers,\; n + 0 = 0 + n = n$; o sea existe elemento neutro para la suma en $\integers$.
+
+      \startaxioma
+        0 es el único elemento identidad para la suma en $\integers$.
+      \stopaxioma
+
+      Si $n \in \naturalnumbers,\; -(-n) = n$ ya que $-n + \left[-(-n)\right] = 0$, y sabemos que $-n + n = 0$, entonces debe ocurrir que $-(-n) = n$.
+
+      \startejemplos
+        \startitemejem[horizontal,three,intro, joinedup]
+          \startitem
+            $\ini{-(-1)} = 1$
+          \stopitem
+          \startitem
+            $\ini{-(-16)} = 16$
+          \stopitem
+          \startitem
+            $\ini{-(-1075)} = 1075$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startaxioma
+      $\forall x \in \integers,\, \exists -x \in \integers$ tal que $x + (-x) = -x + x = 0)$.
+      \stopaxioma
+
+      \startdiscusion{¿Cuál es el inverso aditivo del 0?}
+
+        \startteorema
+          - 0 = 0.
+        \stopteorema
+      
+        \startdemo
+          Tiene que ocurrir que $0 + (-0) = 0$. Esto se puede reescribir, por la ley simétrica de la igualdad, como
+          \startformula
+            0 = 0 + (-0)
+          \stopformula
+          Y, puesto que, 0 es el elemento identidad de la suma en $\integers$,
+          \startformula
+            0 + (-0) = -0.
+          \stopformula
+          \startformula
+            \therefore 0 = -0, \text{ que se reescribe como } -0 = 0.
+          \stopformula
+        \stopdemo
+
+      \stopdiscusion
+
+    \stopsection
+
+    \startsection[title={El conjunto de los enteros positivos}]
+      \startdefinicion
+        \margindata[youtube]{\from[AE35B]}
+        \startitemizer
+          \startitem
+            Llamamos a $\integers^{+} \subseteq \integers$, \obj{el conjunto de los números enteros positivos}, ssi $\integers^{+}$ cumple con las siguientes condiciones
+            \startitemize[a]
+              \startitem
+                (\obj{ley de cierre de la suma})
+                \startformula
+                  a, b \in \integers^{+} --> a + b \in \integers^{+}.
+                \stopformula
+              \stopitem
+              \startitem
+                (\obj{ley de cierre de la multipliacación})
+                \startformula
+                  a, b \in \integers^{+} --> ab \in \integers^{+}.
+                \stopformula
+              \stopitem
+              \startitem
+                (\obj{ley de tricotomía}) \par Para cada $a \in \integers$, una y sólo una de las siguientes afirmaciones es cierta:
+                \startformula
+                  a = 0 \quad\veebar\quad a \in \integers^{+} \quad\veebar\quad -a \in \integers^{+}.
+                \stopformula
+              \stopitem
+            \stopitemize
+          \stopitem
+          \startitem
+            Si $a \nin \integers^{+}$ y $ a \neq 0$, decimos que \obj{$a$ es un número negativo}.
+          \stopitem
+          \startitem
+            Decimos que para $a,b \in \integers$, \obj{$a$ es mayor (o más grande) que $b$}, representado con el símbolo $ a > b$, ssi $a - b \in \integers^{+}$.
+          \stopitem
+          \startitem
+            Decimos que para $a,b \in \integers$, \obj{$a$ es menor (o más pequeño) que $b$}, representado con el símbolo $ a < b$, ssi $b > a$.
+          \stopitem
+        \stopitemizer
+      \stopdefinicion
+
+      \startobservacion
+        Tomemos $a,b \in \integers$.
+        \startitemize[n,unpacked]
+          \startitem
+            $a > 0$ ssi $a - 0 \in \integers^{+}$, pero $a - 0 = a$, luego $a \in \integers^{+}$.
+            \startformula
+              \therefore a > 0 \text{ ssi } a \in \integers^{+}.
+            \stopformula
+          \stopitem
+          \startitem
+            $0 = 0$, entonces, por la ley de tricotomía, $0 \nin \integers^{+}$. Por tanto, el 0 no es un número entero positivo.
+          \stopitem
+          \startitem
+            El símbolo $a \geq b$ significa que $a > b \veebar a = b$ y \par el símbolo $a \leq b$ significa que $a < b \veebar a = b$.
+          \stopitem
+          \startitem
+            Cualquier enunciado o afirmación que contenga uno o más de los signos $>, <, \geq \text{ o } \leq$ se llama \obj{una desigualdad}.
+          \stopitem
+        \stopitemize
+      \stopobservacion
+
+    \stopsection
+
+    \startsection[title={Propiedades de los números enteros}]
+      \startaxioma
+        \comentario{Se trata de las mismas leyes que hemos visto para los números cardinales y que se transfieren a los enteros sin discusión.}
+        Sean $a,b,c \in \integers$. Entonces:
+        \startitemizer
+
+          \startitem
+            \obj{Leyes de clausura}
+            \startitemize[a]
+              \startitem
+                (\obj{suma}) \quad $a + b \in \integers$, único
+              \stopitem
+              \startitem
+                (\obj{multiplicación}) \quad $a \cdot b \in \integers$, único
+              \stopitem
+            \stopitemize
+          \stopitem
+
+          \startitem
+            \obj{Leyes conmutativas}
+            \startitemize[a]
+              \startitem
+                (\obj{suma}) \quad $a + b = b + a$
+              \stopitem
+              \startitem
+                (\obj{multiplicación}) \quad $a \cdot b = b \cdot a$
+              \stopitem
+            \stopitemize
+          \stopitem
+
+          \startitem
+            \obj{Leyes asociativas}
+            \startitemize[a]
+              \startitem
+                (\obj{suma}) \quad $(a + b) + c = a (b + c)$
+              \stopitem
+              \startitem
+                (\obj{multiplicación}) \quad $(a \cdot b) \cdot c = a \cdot (b \cdot c)$             
+              \stopitem
+            \stopitemize
+          \stopitem
+
+          \startitem
+            \obj{Existencia de identidades}
+            \startitemize[a]
+              \startitem
+                (\obj{suma}) \quad $0 + a = a + 0 = a$
+              \stopitem
+              \startitem
+                (\obj{multiplicación}) \quad $1 \cdot a = a \cdot 1 = a$
+              \stopitem
+            \stopitemize
+          \stopitem
+
+          \startitem
+            \obj{Existencia de inversos de la suma} \quad $ a + (-a) = -a + a = 0$
+          \stopitem
+
+          \startitem
+            \obj{Leyes distributivas}
+          \stopitem
+
+          \startitemize[a]
+            \startitem
+              (\obj{izquierda}) \quad $a \cdot (b + c) = ab + ac$
+            \stopitem
+            \startitem
+              (\obj{derecha}) \quad $(a + b) \cdot c = ac + bc$
+            \stopitem
+          \stopitemize
+
+        \stopitemizer
+      \stopaxioma
+
+      \startaxiomaextra{\tf continuación}
+        \margindata[youtube][method=height]{\from[AE36A]}
+        \startitemizer[start=7]
+          \startitem
+            (\obj{Ley de suma de la igualad}) \quad $a = b --> a + c = {b + c} \land {c + a = c + b}$
+          \stopitem
+          \startitem
+            (\obj{Ley de resta de la igualdad}) \quad $a = b --> a - c = b - c$
+          \stopitem
+          \startitem
+            (\obj{Ley de multiplicación de la igualdad}) \quad $a = b --> {ac = bc} \land {ca = cb}$
+          \stopitem
+          \startitem
+            (\obj{Ley de división de la igualdad}) \quad $a = b \land c \neq 0 --> \dfrac{a}{c} = \dfrac{b}{c}$
+          \stopitem
+          \startitem
+            (\obj{Propiedad multiplicativa del cero}) \quad $a \cdot 0 = 0 \cdot a = 0$
+          \stopitem
+          \startitem
+            (\obj{División de iguales}) \quad $a \neq 0 --> \dfrac{a}{a} = 1$
+          \stopitem
+          \startitem
+            (\obj{División entre 1}) \quad $\dfrac{a}{1} = a$
+          \stopitem
+          \startitem
+            (\obj{Resta de cero}) \quad $a - 0 = a$
+          \stopitem
+          \startitem
+            (\obj{Resta de iguales}) \quad $a - a = 0$
+          \stopitem
+        \stopitemizer
+    \stopaxiomaextra
+
+      \startteorema
+        Sea $x \in \integers$. Entonces $-x$ es único.
+      \stopteorema
+
+      \startdemo
+        Suponemos que existe $e \in \integers$ que tiene la misma propieadad que $-x$. Esto es,
+        \startformula
+          x + e = e + x = 0
+        \stopformula
+        Queremos ver que $e = -x$.
+        \comentario{
+          \startitemize
+            \startitem
+              Ley de suma de la igualdad\par
+              $a = b --> a + c = {b + c} \land {c + a = c + b}$
+            \stopitem
+            \startitem
+              Ley asociativa (+)\par
+              $(a + b) + c = a (b + c)$
+            \stopitem
+            \startitem
+              Inversos de la suma\par
+              $a + (-a) = 0$
+            \stopitem
+            \startitem
+              Identidad de la suma\par
+              $a + 0 = a$
+            \stopitem
+          \stopitemize
+        }
+        \startformula
+          \startalign
+            \NC e + x                     \NC = 0        \NR
+            \NC e + x + (-x)              \NC = 0 + (-x) \NR
+            \NC e + \left[x + (-x)\right] \NC = -x       \NR
+            \NC e + 0                     \NC = -x       \NR
+            \NC e                         \NC = -x\NR
+          \stopalign
+        \stopformula
+      \stopdemo
+
+      \startteorema
+        Sean $a,b \in \integers$. Entonces
+        \comentario{Este teorema permite establecer de otra forma la unicidad del 0 y del inverso aditivo.}
+        \startitemizer
+          \startitem
+            $a + b = b + a = a --> b = 0$
+          \stopitem
+          \startitem
+            $a + b = b + a = 0 --> a = -b \land b = -a$
+          \stopitem
+        \stopitemizer
+      \stopteorema
+
+      \startdemop
+        $i)$
+        \comentario{
+          \startitemize
+            \startitem
+              Ley de suma de la igualdad\par
+              $a = b --> a + c = {b + c} \land {c + a = c + b}$
+            \stopitem
+            \startitem
+              Ley asociativa (+)\par
+              $(a + b) + c = a (b + c)$
+            \stopitem
+            \startitem
+              Inversos de la suma\par
+              $a + (-a) = 0$
+            \stopitem
+            \startitem
+              Identidad de la suma\par
+              $a + 0 = a$
+            \stopitem
+          \stopitemize
+        }
+        \startformulas
+          \startformula
+            \startalign
+              \NC a + b        \NC = a       \NR
+              \NC -a + a + b   \NC = - a + a \NR
+              \NC (-a + a) + b \NC = 0       \NR
+              \NC 0 + b        \NC = 0       \NR
+              \NC b            \NC = 0       \NR
+            \stopalign
+          \stopformula
+          \startformula
+            \startalign
+              \NC b + a        \NC = a       \NR
+              \NC b + a - a    \NC = a - a \NR
+              \NC b + (a - a)  \NC = 0       \NR
+              \NC b + 0        \NC = 0       \NR
+              \NC b            \NC = 0       \NR
+            \stopalign
+          \stopformula
+        \stopformulas
+
+        $ii)$
+        \startformulas
+          \startformula
+            \startalign
+              \NC a + b          \NC = 0        \NR
+              \NC -a + a + b     \NC = - a + 0  \NR
+              \NC (-a + a) + b   \NC = -a       \NR
+              \NC 0 + b          \NC = -a       \NR
+              \NC b              \NC = -a       \NR
+            \stopalign
+          \stopformula
+          \startformula
+            \startalign
+              \NC b + a          \NC = 0        \NR
+              \NC b + a (-a)     \NC = 0 + (-a) \NR
+              \NC b + [a + (-a)] \NC = -a       \NR
+              \NC b + 0          \NC = -a       \NR
+              \NC b              \NC = -a       \NR
+            \stopalign
+          \stopformula
+        \stopformulas
+
+      \stopdemop
+
+      \startteorema
+        \margindata[youtube]{\from[AE36B]}
+        Sean $a,b \in \integers$. Entonces $-(a + b) = - a + (- b)$
+      \stopteorema
+
+      \startdemo
+        Este teorema establece que el negativo de $a + b$ es la suma de los negativos de $a$ y $b$. Luego, bastará ver que
+        \comentario{Existencia de inversos de la suma \par $ a + (-a) = -a + a = 0$}
+        \startformula
+          (a + b) + [-(a + b)] = (a + b) + [-a + (-b)] = 0
+        \stopformula
+        \comentario{
+          \startitemize
+            \startitem
+              Ley asociativa general
+            \stopitem
+            \startitem
+              Ley conmutativa general
+            \stopitem
+            \startitem
+              Elemento identidad (+)\par
+              $a + 0 = a$
+            \stopitem
+          \stopitemize
+        }
+        Pero,
+        \startformula
+          \startalign
+            \NC (a + b) + [-a + (-b)] \NC = a + b + (-a) + (-b)     \NR
+            \NC                       \NC = a + (-a) + b + (-b)     \NR
+            \NC                       \NC = [a + (-a)] + [b + (-b)] \NR
+            \NC                       \NC = 0 + 0 = 0               \NR
+          \stopalign
+        \stopformula
+      \stopdemo
+
+      \startejemplos
+        \startitemize[n]
+          \startitem
+            $\ini{(-3) + (-4)} = -(3 + 4) = -7$
+          \stopitem
+          \startitem
+            \starttabulate[|r|][before=]
+              \NC $\ini{-20}$ \NR
+              \NC $\ini{-16}$ \NR
+              \NC $\overbar{-36}$ \NR
+            \stoptabulate
+          \stopitem
+          \startitem
+            $\ini{-12 + (-16) + (-245)} = -28 + (-245) = -(28 + 245) = -273$
+          \stopitem
+          \startitem
+            \starttabulate[|r|][before=]
+              \NC $\ini{-25}$ \NR
+              \NC $\ini{-136}$ \NR
+              \NC $\ini{-205}$ \NR
+              \NC $\ini{-79}$ \NR
+              \NC $\overbar{-445}$ \NR
+            \stoptabulate
+          \stopitem
+        \stopitemize
+      \stopejemplos
+
+      \startteorema
+        Sean $a,b \in \integers$. Entonces
+        \startitemizer
+          \startitem
+            $(-1) a = -a$
+          \stopitem
+          \startitem
+            $(-a)b = a(-b) = -ab$
+          \stopitem
+          \startitem
+            $(-a)(-b)= ab$
+          \stopitem
+        \stopitemizer
+      \stopteorema
+
+      \startdemop
+        $i)\quad$ Partimos de
+
+        \comentario{%
+          \startitemize
+            \startitem
+              Existencia de invesos (+)\par
+              $x + (-x) = 0$
+            \stopitem
+            \startitem
+              Ley de la multiplicación de la igualdad\par
+              $x = y --> zx = zy $
+            \stopitem
+            \startitem
+              Ley distributiva por la izquierda\par
+              $x(y+z) = xy + xz$
+            \stopitem
+            \startitem
+              $x + y = 0 --> y = -x$
+            \stopitem
+            \startitem
+              Ley conmutativa (\times)
+            \stopitem
+          \stopitemize
+        }
+        \startformula
+          \startalign
+            \NC 1 + (-1)\NC = 0 \NR
+            \NC a [1 + (-1)]\NC = a \cdot 0 \NR
+            \NC a \cdot 1 + a (-1)\NC = 0 \NR
+            \NC a + a(-1)\NC = 0 \NR
+            \NC a(-1) \NC = -a \NR
+            \NC (-1)a \NC = -a \NR
+          \stopalign
+        \stopformula
+
+        $ii)\quad$ Que como ejercicio. Se ha de forma parecida al caso $iii)$.
+
+        \comentario{
+          \startitemize
+            \startitem
+              $(-1) a = -a$
+            \stopitem
+            \startitem
+              Ley asociativa general (\times)
+            \stopitem
+            \startitem
+              Ley conmutativa general (\times)
+            \stopitem
+            \startitem
+              $-(-n) = n$
+            \stopitem
+          \stopitemize
+        }
+        \margindata[youtube]{\from[AE37A]}
+        $iii)\quad$ Partimos de
+        \startformula
+          \startalign
+            \NC (-a) (-b) \NC = [(-1)a][(-1)b]\NR
+            \NC \NC = (-1) a (-1) b \NR
+            \NC \NC = (-1)(-1)ab\NR
+            \NC \NC = [(-1)(-1)]ab\NR
+            \NC \NC = [-(-1)]ab\NR
+            \NC \NC = 1 \cdot ab = ab\NR
+          \stopalign
+        \stopformula
+      \stopdemop
+
+      \startejemplos
+        \startitemize[n]
+          \startitem
+            $\ini{(-2) 3} = -2 \cdot 3 = 6 $
+          \stopitem
+          \startitem
+            $\ini{16 (-5)} = -16 \cdot 5 = -90$
+          \stopitem
+          \startitem
+            \starttabulate[|rTm|][before=]
+              \NC \ini{-109}  \NR
+              \NC \ini{-28}   \NR
+              \HL
+              \NC 872         \NR
+              \NC {213\ \ }   \NR
+              \HL
+              \NC {3052}     \NR
+            \stoptabulate
+          \stopitem
+          \startitem
+            \starttabulate[|rTm|][before=]
+              \NC \ini{-71}  \NR
+              \NC \ini{-22}   \NR
+              \HL
+              \NC 142         \NR
+              \NC {142\ \ }   \NR
+              \HL
+              \NC {1562}     \NR
+            \stoptabulate
+          \stopitem
+          \startitem
+            $\ini{(-12)(-5)\,8\,(-4)} = [(-12)(-5)]\,[8\,(-4)] = 60\,[-32] = -1920$
+          \stopitem
+          \startitem
+            $\ini{26(-2)(-13)(-1)(-30)}$ \par $ = [26\,(-2)]\,[-13\,(-1)](-30) = (-52)\,13\,(-30) = (-52)\,[13\, (-30)] = -52\,[-390]= 20280$
+          \stopitem
+        \stopitemize
+      \stopejemplos
+    \stopsection
+
+    \startsection[title={Operación de resta de los enteros}]
+      
+      En los números cardinales habíamos definido la resta así, $a - b = x$ ssi $a = b + x = x + b$. Esta misma definición la aplicamos a la resta de los números enteros.
+
+      Así,
+      \startformula
+        \startalign
+          \NC (-3) + (-5) \NC = 8  \NR
+          \NC -8 - (-3)   \NC = -5 \NR
+          \NC -8 - (-5)   \NC = -3 \NR
+        \stopalign
+      \stopformula
+
+      \startteorema{equivalencia de la resta}
+        Sean $a,b \in \integers$, entonces $a - b = a + (-b)$.
+      \stopteorema
+
+      \startdemo
+        \margindata[youtube]{\from[AE37B]}
+        Llamemos
+        \startformula
+          a - b  = x
+        \stopformula
+        Entonces,
+        \comentario{Definición de resta\par$a - b = x --> a = x + b$}
+        \startformula
+          a  = x + b 
+        \stopformula
+        Luego,
+        \comentario{
+          \startitemize
+            \startitem
+              Ley de suma de la igualdad\par
+              $a = b --> a + c = {b + c} \land {c + a = c + b}$
+            \stopitem
+            \startitem
+              Ley asociativa (+)\par
+              $(a + b) + c = a (b + c)$
+            \stopitem
+            \startitem
+              Inversos de la suma\par
+              $a + (-a) = 0$
+            \stopitem
+            \startitem
+              Identidad de la suma\par
+              $a + 0 = a$
+            \stopitem
+            \startitem
+              Ley de sustitución\par
+             $a - b = x$
+            \stopitem
+            \startitem
+              Ley simétrica de la igualdad\par
+              $x = y --> y = x$
+            \stopitem
+          \stopitemize
+        }
+        \startformula
+          \startalign
+            \NC a + (-b) \NC = x + b + (-b)   \NR
+            \NC a + (-b) \NC = x + [b + (-b)] \NR
+            \NC a + (-b) \NC = x + 0          \NR
+            \NC a + (-b) \NC = x              \NR
+            \NC a + (-b) \NC = a - b          \NR
+            \NC a - b\NC = a + (-b)           \NR
+          \stopalign
+        \stopformula
+      \stopdemo
+    \stopsection
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{5 - 2} = 5 + (-2)$
+        \stopitem
+        \startitem
+          $\ini{-6 -8} = -6 + (-8)$
+        \stopitem
+        \startitem
+          $\ini{13 - (-9)} = 13 + [-(-9)]$
+        \stopitem
+        \startitem
+          $\ini{-7-(-318)} = -7 +[-(-318)]$
+        \stopitem
+        \startitem
+          Sabemos que $5 - 2 = 4$. Luego $5 + (-2) = 3$
+        \stopitem
+        \startitem
+          Sabemos que $-6 + (-8) = -14$. Por lo tanto, $-6 -8 = -14$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    Recordemos que los números enteros positivos $\integers^{+}$ cumplen las siguientes propiedades:
+
+    \startitemize
+      \startitem
+        ley de clausura (+)
+      \stopitem
+      \startitem
+        ley clausura (\times)
+      \stopitem
+      \startitem
+        ley de tricotomia: Para $a \in \integers$ ocurre \par
+        $a = 0 \veebar a \in \integers^{+} \veebar -a \in \integers^{+}$
+      \stopitem
+      \startitem
+        $a \neq 0 \land a \nin \integers^{+}, a$ es un entero negativo
+      \stopitem
+      \startitem
+        $a > b$ ssi $a -b \in \integers^{+}$
+      \stopitem
+      \startitem
+        $b < a$ ssi $b > a$
+      \stopitem
+      \startitem
+        $a > 0 <--> a $ es entero positivo
+      \stopitem
+      \startitem
+        0 no es entero positivo
+      \stopitem
+    \stopitemize
+
+    \startobservacion
+      \startitemize
+        \startitem
+          Vemos que si $a < 0$, entonces $0 > a$. Luego, $0 - a \in \integers^{+}$. O sea, $0 + (-a) \in \integers^{+}$. Es decir, $-a \in \integers^{+}$. Por lo tanto, $a$ es un entero negativo.
+
+          $ a < 0 <--> a$ es entero negativo.
+        \stopitem
+
+        \margindata[youtube]{\from[AE38A]}
+        \startitem
+          Como $0 = 0$, entonces, por la ley de tricotomía, $0 \nin \integers^{+}$ y el negativo de cero tampoco es un entero positivo, $-0 = 0 \nin \integers^{+}$.
+
+          0 no es un entero negativo.
+        \stopitem
+      \stopitemize
+    \stopobservacion
+
+    \startteorema{leyes distributivas de la multiplicación de números enteros sobre la resta de números enteros}
+      Sean $x,y,z \in \integers$
+      \startitemizer
+        \startitem
+          \obj{(de la izquierda)} $x(y-z) = xy - xz$
+        \stopitem
+        \startitem
+          \obj{(de la derecha)} $(x-y)z = xz - yz$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+    \comentario{%
+      \startitemize
+        \startitem
+          $a - b = a + (-b)$
+        \stopitem
+        \startitem
+          Distributiva por la izquierda / derecha
+        \stopitem
+        \startitem
+          $a (-b) = -ab$
+        \stopitem
+      \stopitemize
+    }
+    \startdemop
+      \startformulas
+        \startformula
+          \startalign
+            \NC i)\quad x(y-z) \NC = x(y+(-z))\NR
+            \NC \NC = xy + x(-z)\NR
+            \NC \NC = xy - xz\NR
+          \stopalign
+        \stopformula
+
+        \startformula
+          \startalign
+            \NC ii)\quad (x-y)z \NC = (x+(-y))z\NR
+            \NC \NC = xz - (y)z)\NR
+            \NC \NC = xz - yz\NR
+          \stopalign
+        \stopformula
+      \stopformulas
+    \stopdemop
+
+    \startteorema{propiedades fundamentales de las desigualdades}
+      Sean $a,b,c \in \integers$. Entonces
+      \startitemizer
+        \startitem
+          \obj{(ley de tricotomía)} Una y sólo una de las siguientes afirmaciones es cierta:
+          \startformula
+            a = b  \;\veebar\; a > b \;\veebar\; a < b.
+          \stopformula
+        \stopitem
+        \startitem
+          \obj{(ley transitiva)} \quad $a > b \;\land\; b > c --> a > c$.
+        \stopitem
+        \startitem
+          \obj{(ley de suma)} \quad $a > b --> a + c > b + c \;\land\; c + a > c + b$.
+        \stopitem
+        \startitem
+          \obj{(leyes de multiplicación)}\quad $a > b \;\land$
+          \startitemize[a]
+            \startitem
+              \obj{(positiva)} \quad $c > 0 --> ac > b c \land ca > cb$.
+            \stopitem
+            \startitem
+              \obj{(negativa)} \quad $c < 0 --> ac < bc \land ca < cb$.
+            \stopitem
+          \stopitemize
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      \youtube{\from[AE38B]}
+      \comentario{%
+        Ley de equivalencia de la resta\par
+        $x -y = x +(-y) \in \integers$
+      }
+      $i)\quad$ Consideremos el número $a - b$, por la ley de equivalencia de la resta tenemos que
+
+      \startformula
+        a - b = a + (-b) \in \integers
+      \stopformula
+
+      \comentario{%
+        Ley de tricotomía de $\integers$\par
+        $\forall a \in \integers -> a = 0 \veebar a \in \integers^{+} \veebar -a \in \integers^{+}$
+      }
+      La ley de tricotomía de $\integers$ nos dice que sólo una de las siguientes posibilidades puede ocurrir:
+      \startitemizer[a,packed][style=\sl,right=$)$]
+        \startitem
+          $a - b = 0$
+        \stopitem
+        \startitem
+          $a - b \in \integers^{+}$
+        \stopitem
+        \startitem
+          $-(a - b) \in \integers^{+}$
+        \stopitem
+      \stopitemizer
+
+      \blank[2*big]
+      \startitemize
+        \startitem
+          Si ocurre $a)$
+          \startformula
+            \startalign
+              \NC a - b + b      \NC = 0 + b \NR
+              \NC a + (-b) + b   \NC = b     \NR
+              \NC a + [(-b) + b] \NC = b     \NR
+              \NC a + 0          \NC = b     \NR
+            \stopalign
+          \stopformula
+          \startformula
+            \quad\quad \therefore \quad \graymath{a = b}
+          \stopformula
+        \stopitem
+
+        \startitem
+          \comentario{$a > b <--> a -b \in \integers^{+}$}
+          Si ocurre $b)$
+          \startformula
+            a - b \in \integers^{+} \text{ ssi }\; \graymath{a > b}
+          \stopformula
+        \stopitem
+      
+        \comentario{%
+          \startitemize[1]
+            \startitem
+              $-(x + y) = -x + (-y)$\par
+            \stopitem
+            \startitem
+              $x - y = x + (-y) \in \integers$\par
+            \stopitem
+            \startitem
+              $a > b <--> a - b \in \integers^{+}$\par
+            \stopitem
+            \startitem
+              $a < b <--> b > a$
+            \stopitem
+          \stopitemize
+        }
+        \startitem
+          Si ocurre $c)$
+          \startformula
+            \startalign
+              \NC -(a - b) \NC = -(a + (-b))  \NR
+              \NC          \NC = -a + (-(-b)) \NR
+              \NC          \NC = -a + b       \NR
+              \NC          \NC = b + (-a)     \NR
+              \NC          \NC = b - a \in \integers^{+} \text{ ssi } b > a \text{ ssi }\; \graymath{a < b} \NR
+            \stopalign
+          \stopformula
+        \stopitem
+
+      \stopitemize
+
+      $ii)\quad$ Por hipótesis, $a > b \land b > c$. Luego,
+      \comentario{$a > b <-->  a - b \in \integers^{+}$}
+      \startformula
+        \startalign[n=1]
+          \NC a > b <--> a - b \in \integers^{+} \NR
+          \NC b > c <--> b - c \in \integers^{+} \NR
+        \stopalign
+      \stopformula
+      \comentario{%
+        \startitemize
+          \startitem
+            Ley de clausura (+)\par
+          \stopitem
+          \startitem
+            Ley asociativa general (+)\par
+          \stopitem
+          \startitem
+            $a > b <--> a - b \in \integers^{+}$
+          \stopitem
+        \stopitemize
+      }
+      Por tanto,
+      \startformula
+        \startalign[n=1]
+          \NC  (a - b) + (b - c) \in \integers^{+} \NR
+          \NC  a + (-b) + b - c \in \integers^{+} \NR
+          \NC  a + [(-b) + b] -c \in \integers^{+} \NR
+          \NC  a + 0 - c \in \integers^{+} \NR
+          \NC  (a + 0) - c \in \integers^{+} \NR
+          \NC  a - c \in \integers^{+} \NR
+          \NC  a > c \NR
+        \stopalign
+      \stopformula
+
+      \youtube{\from[AE39A]}
+
+      $iii)\quad$ Por hipótesis, $a > b$. Luego,
+      \comentario{%
+        \startitemize
+          \startitem
+            $x > y <--> x - y \in \integers^{+}$
+          \stopitem
+          \startitem
+            $x - y = x + (-y)$
+          \stopitem
+          \startitem
+            $-(x + y) = (-x) + (-y)$
+          \stopitem
+        \stopitemize
+      }
+      \placeformula
+      \startformula
+        a - b \in \integers^{+}
+      \stopformula
+      Pero,
+      \startformula
+        \startalign
+          \NC a - b \NC = (a + 0) - b \NR
+          \NC \NC = a + 0 - b\NR
+          \NC \NC = a + [c + (-c)] - b \NR
+          \NC \NC = a + c + (-c) -b \NR
+          \NC \NC = a + c + (-c) + (-b) \NR
+          \NC \NC = a + c + (-b) + (-c) \NR
+          \NC \NC = a + c + [(-b) + (-c)] \NR
+          \NC \NC = a + c + [-(b + c)] \NR
+          \NC \NC = (a + c) + [-(b + c)] \NR
+          \NC \NC = (a + c) - (b + c) \NR
+        \stopalign
+      \stopformula
+      O sea, $a - b = (a + c) - (b + c)$. Sustituyendo en $(1)$, tenemos que $(a + c) - (b + c) \in \integers^{+}$. Por lo tanto, $a + c > b + c$, que se puede reescribir como $c + a > c + b$.
+
+      $iv)\quad b)\quad$ Por hipótesis,
+      \placeformula
+      \startformula
+        a > b
+      \stopformula
+      y $c < 0$, lo que equivale a decir que $0 > c$. Entonces, $0 + (-c) > c + (-c)$, que se simplifica a $-c > 0$. Entonces, por la ley de multiplicación positiva, y $(2)$,
+      \startformula
+        \startalign
+          \NC a (-c) \NC > b (-c) \NR
+          \NC -ac \NC > - bc \NR
+        \stopalign
+      \stopformula
+      \youtube{\from[AE39B]}
+
+      Por lo tanto, $-ac - (-bc) \in \integers^{+}$ y esto se convierte en:
+      \comentario{%
+        \startitemize
+          \startitem
+            $x -y = x + (-y)$
+          \stopitem
+          \startitem
+            $-(-n) = n$
+          \stopitem
+          \startitem
+            $x > y <--> x - y \in \integers^{+}$
+          \stopitem
+        \stopitemize
+      }
+      \startformula
+        \startalign[n=1]
+          \NC -ac + [-(-bc)] \in \integers^{+} \NR
+          \NC -ac + bc \in \integers^{+} \NR
+          \NC bc + (-ac) \in \integers^{+}\NR
+          \NC bc - ac \in \integers^{+} \NR
+          \NC bc > ac \NR
+          \NC ac < bc. \NR
+        \stopalign
+      \stopformula
+
+      $iv)\quad\ a)\quad$ Se de muestra de forma similar al anterior.
+    \stopdemop
+
+    \startteorema
+      Sea $a \in \integers^{+}$ con $a > 0$. Entonces $-a < 0$.
+    \stopteorema
+
+    \startdemo
+      Por hipótesis, $a > 0$. Entonces, por la ley de suma de las desigualdades
+      \startformula
+        a + (-a) > 0 + (-a)
+      \stopformula
+      Es decir, $0 > -a$, que equivale a $-a < 0$.
+    \stopdemo
+
+    \startteorema
+      $\forall n \in \naturalnumbers,\; n >0$.
+    \stopteorema
+
+    \startdemo
+      Bastará ver que $1 > 0$. Lo haremos por contradicción.
+
+      Suponemos que $\graymath{1 < 0}$. Esto es equivalente a decir que
+      \comentario{$a > b, c < 0 --> ca < cb$}
+      \startformula
+        \startalign[n=1]
+          \NC 0 > 1 \NR
+          \NC 1 \cdot 0 < 1 \cdot 1 \NR
+          \NC \graymath{0 < 1} \NR
+        \stopalign
+      \stopformula
+      \comentario{$a = b \,\veebar\, a > b \,\veebar\, a < b$}
+      Esto contradice la ley de tricotomía.
+
+      Ahora, que tenemos que $1 > 0$ y podemos hacer lo siguiente
+      \comentario{%
+        \startitemize
+          \startitem
+            $a > b --> a+c > b+c$
+          \stopitem
+          \startitem
+            $a > b \land b > c --> a > c$
+          \stopitem
+        \stopitemize
+      } 
+      \startformula
+        \startalign[n=1]
+          \NC 1 > 0 \NR
+          \NC 1 + 1 > 0 + 1 \NR
+          \NC 2 > 1 \NR
+          \NC \therefore 2 > 0 \NR
+          \startintertext
+            Si ahora hacemos
+          \stopintertext
+          \NC 2 + 1 > 0 + 1 \NR
+          \NC 3 > 1 \NR
+          \NC \therefore 3 > 0 \NR
+        \stopalign
+      \stopformula
+      y así se podría seguir para todos los números naturales.
+    \stopdemo
+
+    \youtube{\from[AE40A]}
+    Hemos visto en el teorema anterior que todos los números naturales van a ser mayores que cero. Por lo tanto, $\naturalnumbers = \{1,2,3,\dots\}$ está compuesto por enteros positivos.
+
+    Recordamos que el conjunto $\{0\}$ contiene un entero que no es entero positivo ni entero negativo.
+
+    Además, vimos un teorema que establecía que los números mayores que cero, (enteros positivos) tenían su inverso aditivo menor que 0 (enteros negativos):  $a > 0 --> -a < 0$.
+
+    Por lo tanto, el conjunto compuesto por los números negativos de los naturales $\{-1, -2, -3, \dots \}$ va a estar compuesto por enteros negativos.
+
+    Pero, $\integers = \underbrace{\{-1, -2, -3, \dots \}}_{\text{enteros negativos}} \cup\; \{ 0 \} \;\cup \underbrace{\{ 1, 2, 3, \dots \}}_{\text{enteros negativos}} ={\{ \dots, -3, -2, -1, 0, 1, 2, 3, \dots \}}$.
+
+    Por tanto, $\naturalnumbers = \integers^{+}$ y $\{-1, -2, -3, \dots \} = \integers^{-}$, es el conjunto de enteros negativos.
+
+    \startobservacion
+      Todas las propiedades relacionadas a desigualdades en que aparezca el signo $>$, son ciertas aunque aparezcan los signos $<, \geq$ o $\leq$ en su lugar. Excepto en las leyes de multiplicación de $c > 0$ en la positiva y $c < 0$ en la negativa. Así,
+      \startformula
+        a < b --> a + c < b + c \land c + a < c + b
+      \stopformula
+      \startformula
+        a < 0 --> -a > 0
+      \stopformula
+      \startformula
+        a < b \land c > 0 --> ac < bc \land ca < cb
+      \stopformula
+      \startformula
+        a < b \land c < 0 --> ac > bc \land ca > cb
+      \stopformula
+    \stopobservacion
+    
+    \startdefinicion
+      Sea $a \in \integers$. El \obj{valor absoluto de $a$}, representado por el símbolo $\abs{a}$, se define como:
+      \startformula
+        \abs{a} = 
+        \startcases
+          \MC a, \MC \text{si } a \geq 0 \NR
+          \MC -a, \MC \text{si } a < 0 \NR
+        \stopcases
+      \stopformula
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\abs{2} = 2$, ya que $2 > 0$.
+        \stopitem
+        \startitem
+          $\abs{-3} = -(-3) = 3$, ya que $-3 < 0$.
+        \stopitem
+        \startitem
+          $-\abs{6} = -6$.
+        \stopitem
+        \startitem
+          $-\abs{-12} = -[-(12)] = -12$
+        \stopitem
+        \startitem
+          $\abs{0} = 0$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \youtube{\from[AE40B]}
+    \startteorema
+      Sean $a,b \in \integers^{+} = \naturalnumbers$. Esto es, $a,b > 0$. Entonces,
+      \startitemizer
+        \startitem
+          $a + b > 0$ y $\abs{a + b} = \abs{a} + \abs{b}$.
+        \stopitem
+        \startitem
+          $-a - b < 0$ y $\abs{-a -b} = \abs{a} + \abs{b}$.
+        \stopitem
+        \startitem
+          Si $a > b$, entonces $a + (-b) > 0$ y $\abs{a + (-b)} = \abs{a} - \abs{b}$.
+        \stopitem
+        \startitem
+          Si $a < b$, entonces $a + (-b) < 0$ y $\abs{a + (-b)} = \abs{b} - \abs{a}$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $i)\quad$ Como $a,b \in \integers^{+}$, entonces $a + b \in \integers^{+}$ (ley clausura (+) en $\integers^{+}$). Luego, $\graymath{a + b > 0}$. Por lo tanto, $\abs{a + b} = a + b$. Como $a,b > 0$, $\abs{a} = a$  y $\abs{b} = b$. Luego, por sustitución, $\graymath{\abs{a + b} = \abs{a} + \abs{b}}$.
+
+      \comentario{%
+        \startitemize[joinedup]
+          \startitem
+            Equivalencia de la resta\par$x-y = x+ (-y)$
+          \stopitem
+          \startitem
+            $-x + (-y) = -(x+y)$
+          \stopitem
+          \startitem
+            $ a > 0 --> -a < 0'$
+          \stopitem
+          \startitem
+            $-(-n) = n$
+          \stopitem
+        \stopitemize
+        }
+      $ii)\quad$ $-a  - b = -a + (-b) = -(a + b)$. Vimos en el apartado $i)$ que $a + b > 0$. Luego, $-(a + b) = 0$. Por lo tanto $\graymath{-a - b < 0}$, al hacer la sustitución.
+
+      Entonces $\abs{-a -b} = - (-a -b) = [-a + (-b)] = -(-a) + [(-b)] = a + b$.
+      \startformula
+        \therefore \graymath{\abs{-a - b} = \abs{a} + \abs{b}}
+      \stopformula
+
+      \comentario{$x > y --> x + z > y + z$}
+      $iii)\quad$ Como $a > b$, entonces 
+      \startformula
+        a + (-b) > b + (-b) 
+      \stopformula
+      \startformula
+        \graymath{a + (-b) > 0}
+      \stopformula
+
+      Vemos ahora que
+      \startformula
+        \abs{a + (-b)} = a + (-b) = a - b = \abs{a} - \abs{b}
+      \stopformula
+      \startformula
+        \therefore \graymath{\abs{a + (-b)} = \abs{a} - \abs{b}}
+      \stopformula
+
+      \youtube{\from[AE41A]}
+      $iv)\quad$ Por hipótesis, $a < b$. Entonces, por la ley de suma de las desigualdades,
+      \startformula
+        a + (-b) < b + (-b)
+      \stopformula
+      \startformula
+        \graymath{a + (-b) < 0}
+      \stopformula
+      Entonces,
+      \startformula
+        \abs{a + (-b)} = -[a + (-b)] = -a + [-(-b)] = -a +b = b + (-a) = b - a
+      \stopformula
+      Como $\abs{a} = a $ y $\abs{b} = b$, pues, por hipótesis, $a,b > 0$, al sustituir y aplicando la ley transitiva de la igualdad, obtenemos que
+      \startformula
+        \graymath{\abs{a + (-b)} = \abs{b} - \abs{a}}
+      \stopformula
+
+    \stopdemop
+
+
+    \comentario{%
+      \startitemizer
+        \startitem
+          $a + b > 0 \land \abs{a + b} = \abs{a} + \abs{b}$
+        \stopitem
+        \startitem
+          $-a - b < 0 \land \abs{- a - b} = \abs{a} + \abs{b}$
+        \stopitem
+        \startitem
+          $a > b --> a + (-b) > 0 \land \abs{a + (-b)} = \abs{a - b}$
+        \stopitem
+        \startitem
+          $a < b --> a + (-b) < 0 \land \abs{a + (-b)} = \abs{b - a}$
+        \stopitem
+      \stopitemizer
+      \blank
+      Equivalencia de la resta\par$a - b = a + (-b)$
+      \blank
+      $a,b > 0\; (a,b \in \naturalnumbers)$
+    \startitemizer
+      \startitem
+        a \cdot b > 0
+      \stopitem
+      \startitem
+        (-a) (-b) = a \cdot b > 0
+      \stopitem
+      \startitem
+        a(-b) = (-a) b = -ab < 0
+      \stopitem
+    \stopitemizer
+    }
+    \startdiscusion{Resumiendo}
+      \startitemize[n, unpacked]
+        \startitem
+          Si sumamos numeros positivos, el resultaod es postivo, si sumamos números negativos, el resultado es negativo, y lo que hay que hacer es sumar los valores absoluto de esos números.
+        \stopitem
+        \startitem
+          Si sumamos números enteros con diferente signo, el resultado lleva el signo del de mayor valor absoluto y se resta el de mayor valor absoluto menos el de menos valor absoluto.
+        \stopitem
+        \youtube{\from[AE41B]}
+        \startitem
+          Para la resta se aplican las mismas reglas de la suma.
+        \stopitem
+        \startitem
+          Al multiplicar dos números enteros con el mismo signo, el producto será postivo.
+        \stopitem
+        \startitem
+          Al multiplicar dos números enteros con diferente signo, el producto será negativo.
+        \stopitem
+      \stopitemize
+    \stopdiscusion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{-16 + 4} = -(16-4) = 12
+        \stopitem
+        \startitem
+          \ini{28 + (-17)} = 28 -17 = 11
+        \stopitem
+        \startitem
+          \ini{305 + (-458)} =-(458-305) = -153
+        \stopitem
+        \startitem
+          \ini{-72 + 239} = 239 -72 = 167
+        \stopitem
+        \startitem
+          \ini{46 + 27 + (-13) + (-31)} = (46 + 27) + [(-13)+ (31)] = 73 + [-(13 + 31)] = 73 + [-44] = 73 - 44 = 29
+        \stopitem
+        \startitem
+          En forma vertical
+          \starttabulate[|r|][before=]
+            \NC $\ini{254}$  \NR
+            \NC $\ini{-329}$ \NR
+            \NC $\ini{-645}$ \NR
+            \NC $\ini{432}$  \NR
+            \NC $\overbar{-288}$ \NR
+          \stoptabulate
+        \stopitem
+        \startitem
+          En forma vertical
+          \starttabulate[|r|][before=]
+            \NC $\ini{-35}$  \NR
+            \NC $\ini{748}$ \NR
+            \NC $\ini{229}$ \NR
+            \NC $\ini{-96}$  \NR
+            \NC $\ini{-235}$  \NR
+            \NC $\overbar{611}$ \NR
+          \stoptabulate
+        \stopitem
+        \startitem
+          Efectúe las siguientes restas:
+          \startitemize[a][stopper=)]
+            \startitem
+              \ini{13 - (-25)} = 13 + 25 = 38
+            \stopitem
+            \startitem
+              \ini{132 - 141} = 132 + (-141) = -9
+            \stopitem
+            \startitem
+              \starttabulate[|r|][before=]
+                \NC $\ini{-725}$  \NR
+                \NC $\ini{-(-648)}$  \NR
+                \NC $\overbar{\quad\quad -77}$ \NR
+              \stoptabulate
+            \stopitem
+          \stopitemize
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \youtube{\from[AE42A]}
+    % \definemathmatrix[Bmatrix] [left={\left\{\,},right={\,\right\}}]
+    \definemathmatrix[Bmatrix] [right={\,\Bigg\}}]
+    \comentario{Reglas de signos
+      \setupformulas[align=right]
+      \startformula
+        (+) + (+) = +
+      \stopformula
+      \startformula
+        (-) + (-) = -
+      \stopformula
+      \startformula
+        \startBmatrix
+          \NC (+) + (-) \NR
+          \NC (-) + (+) \NR
+        \stopBmatrix
+        = \text{signo de mayor valor absoluto}
+      \stopformula
+      \startformula
+        (+)(+) = (-)(-) = +
+      \stopformula
+      \startformula
+        (+)(-) = (-)(+) = -
+      \stopformula
+    }
+
+    \startejemplos
+      Efectúe las siguientes restas
+      \starttabulate[|c|r|c|r|c|r|c|r|][before=]
+        \NC 1) \NC  1045 \NC 2) \NC  -528 \NC 3) \NC    49 \NC 4) \NC  229 \NR
+        \NC    \NC -1032 \NC    \NC -1024 \NC    \NC - -75 \NC    \NC -178 \NR
+        \NC    \NC $\overbar{\;\quad -13}$
+        \NC    \NC $\overbar{\;\quad -1552}$
+        \NC    \NC $\overbar{\;\quad 124}$
+        \NC    \NC $\overbar{\;\quad 51}$ \NR
+      \stoptabulate
+
+      \starttabulate[|c|r|c|r|c|r|][before=]
+        \NC 5) \NC   -741 \NC 6) \NC    -528 \NC 7) \NC  223 \NR
+        \NC    \NC - -372 \NC    \NC - -1021 \NC    \NC -572 \NR
+        \NC    \NC $\overbar{\;\quad -369}$
+        \NC    \NC $\overbar{\;\quad 276}$
+        \NC    \NC $\overbar{\;\quad -349}$ \NR
+      \stoptabulate
+    \stopejemplos
+
+    \youtube{\from[AE42B]}
+    \startsection[title={División de números enteros}]
+      Aplicamos la misma definición de la división en $\mathbb{W}$ a la división en $\integers$. Esto es: $a,b \in \integers$, entonces $a \div b = x$ ssi $a = xb = bx$, siempre que $b \neq 0$.
+      \startejemplos
+        \startitemejem
+          \startitem
+            Como $5(-3) = -15$, entonces $-15 - 5 = -3 \,\land\, -15 \div (-3) = 5$
+          \stopitem
+          \startitem
+            Como $(-12)(-10) = 120$, entonces $120 \div (-12) = -10 \,\land\, 120 \div (-10) = -12$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startteorema
+        Sean $a,b \in \integers\, b \neq 0$, de modo que las siguientes divisiones están definicidas (tienen resultado en $\integers$). Luego,
+        \startitemize[n, stopper=)]
+          \startitem
+          Si $a > 0 \land b < 0 --> a \div b < 0$ 
+        \stopitem
+        \startitem
+          Si $a < 0 \land b > 0 --> a \div b < 0$
+        \stopitem
+        \startitem
+          Si $a,b < 0 --> a \div b > 0$
+        \stopitem
+        \stopitemize
+      \stopteorema
+
+      \startdemop
+        $i)\quad$ Por hipótesis $a \div b = x \in \integers$. Luego, por la definiión de división:
+        \placeformula
+        \startformula[+]
+          a = b x
+        \stopformula
+        Por hipótesis $b<0$. En consecuencia $b$ será el negativo de algún número natural, esto es $b = -c$, esto es $b = -c,\, c \in \naturalnumbers$.
+
+        Para demostrar que $x < 0$, lo veremos por contradicción. Supongamos que $x > 0$, esto es, $x \in \naturalnumbers$. Entonces (1) se convierte, al sustituirlo por $b$, en
+        \startformula
+          a = (-c) x
+        \stopformula
+        \comentario{%
+          \setupformula[align=right]
+          \startformula
+            (-a)b = -ab;\; (-a)(-b) = ab
+          \stopformula
+          \startformula
+            a > 0 --> -a < 0
+          \stopformula
+        }
+        Pero, por un teorema previo,
+        \startformula
+          (-c)x = -cx = a
+        \stopformula
+        donde $cx \in \naturalnumbers$ por la ley de clausura de la multiplicación en $\naturalnumbers$. Luego $cx > 0$ y $-cx = a < 0$. Llegamos a una contradiccón $(--><--)$, pues $a > 0$.
+
+        $ii)\quad$ queda como ejercicio.
+
+        $iii)\quad$ Por hipótesis, $a \div b \in \integers$. Luego, $a \div b = x \in \integers$, y, por definición de división,
+        \placeformula
+        \startformula[+]
+          a = bx.
+        \stopformula
+        Como $b < 0$ (por hipótesis), $b = -c, \,c \in \naturalnumbers$. Para demostrar que $x > 0$, usaremos también cotradicción.
+
+        Suponemos que $x < 0$. Entonces $x = -d \in \naturalnumbers$. Luego, al sustituir en (1), obtenemos:
+        \startformula
+          a = (-c)(-d) = cd,
+        \stopformula
+        y como $c,d \in \naturalnumbers$, entonces $cd \in \naturalnumbers$ (debido a la ley de cierre de la multiplicación en $\naturalnumbers$).
+
+        Luego,
+        \startformula
+          cd = a \in \naturalnumbers
+        \stopformula
+        En consecuencia $a > 0$ $(--><--)$ Se llega a una contradicción, pues $a < 0$.
+      \stopdemop
+
+      \youtube{\from[AE43A]}
+      \startdiscusion{Resumiendo}
+        \startitemize[n]
+          \startitem
+          Si dividimos dos enteros positivos o dos enteros negativos, el resultado es positivo.
+        \stopitem
+        \startitem
+          Si dividimos dos números enteros con diferente signo, el resultado es negativo.
+        \stopitem
+        \stopitemize
+
+        \startejemplos
+          \startitemejem
+            \startitem
+              $\ini{\dfrac{-28}{4}} = -7$
+            \stopitem
+            \startitem
+              $\ini{-56/(-8)} = 7$
+            \stopitem
+            \startitem
+              $\ini{36 \div (-6)} = -6$
+            \stopitem
+            \startitem
+              $\ini{-3\overline{\smash{}{)-24}}} = 8$%$
+            \stopitem
+          \stopitemejem
+        \stopejemplos
+
+        \comentario{Los signos de valor absoluto se consideran como si fueran signos de agrupación en la jerarquía de operaciones.}
+        \startejemplos
+          Evalúe
+          \startplaceformula
+            \startejerformula
+              \startalign
+                \NC   \NC \ini{-6 + 4 (-5) - (-14) -10 + 2 \cdot 9} \NR[+]
+                \NC = \NC -6 + (-20) - (-14) -10 + 18               \NR
+                \NC = \NC -26 + 14 + (-10) + 18                     \NR
+                \NC = \NC -4                                        \NR
+              \stopalign
+            \stopejerformula
+          \stopplaceformula
+
+          \startplaceformula
+            \startejerformula
+              \startalign
+                \NC   \NC \ini{6 + (-2)^3 - \dfrac{3 \times 4}{-2} + \abs{5(-4)}} \NR[+]
+                \NC = \NC 6 + (-2)^3 - \dfrac{3 \times 4}{-2} + \abs{-20}         \NR
+                \NC = \NC 6 + (-2)^3 - \dfrac{3 \times 4}{-2} + 20 \NR
+                \NC = \NC 6 + (-8) - \dfrac{3 \times 4}{-2} + 20 \NR
+                \NC = \NC 6 + (-8) - (-6) + 20 \NR
+                \NC = \NC (-2) + 6 + 20  \NR
+                \NC = \NC 24 \NR
+              \stopalign
+            \stopejerformula
+          \stopplaceformula
+
+          \startplaceformula
+            \startejerformula
+              \startalign
+                \NC   \NC \ini{-12 + 5 \times(-25) -4^2 + 42/-7} \NR[+]
+                \NC = \NC -12 + 5 \times(-25) -16 + 42/-7 \NR
+                \NC = \NC -12 + (-125) -16 + (-6) \NR
+                \NC = \NC  -137 + (-16) + (-6)\NR   
+                \NC = \NC  159\NR
+              \stopalign
+            \stopejerformula
+          \stopplaceformula
+
+          \youtube[method=top]{\from[AE43B]}
+          \startplaceformula
+            \startejerformula
+              \startalign
+                \NC \NC \ini{2(-4 - 7) + \dfrac{5(-3)(-2)}{6} - \abs{2^2 -5 + (-1)^3}} \NR[+]
+                \NC = \NC 2(-11) + \dfrac{5(-3)(-2)}{6} - \abs{4 -5 + (-1)} \NR
+                \NC = \NC 2(-11) + \dfrac{5(-3)(-2)}{6} - \abs{4 + (-5) + (-1)} \NR
+                \NC = \NC 2(-11) + \dfrac{5(-3)(-2)}{6} - \abs{-2} \NR
+                \NC = \NC 2(-11) + \dfrac{5(-3)(-2)}{6} - 2 \NR
+                \NC = \NC -22 + 5 + (-2) \NR
+                \NC = \NC -19 \NR
+              \stopalign
+            \stopejerformula
+          \stopplaceformula
+
+          \startplaceformula
+            \startejerformula
+              \startalign
+                \NC \NC \ini{-25 -\left[(-2)^2 - 3(5^2 -(-14)) -3\times(-5)\right] + 3^3} \NR[+]
+                \NC = \NC -25 -\left[(-2)^2 - 3(25 -(-14)) -3\times(-5)\right] + 3^3 \NR
+                \NC = \NC -25 -\left[(-2)^2 - 3(25 + 14) -3\times(-5)\right] + 3^3 \NR
+                \NC = \NC -25 -\left[(-2)^2 - 3(39) -3\times(-5)\right] + 3^3 \NR
+                \NC = \NC -25 - [4 - 3(39) -3\times(-5)] + 3^3 \NR
+                \NC = \NC -25 - [4 - 117 - (-15)] + 3^3 \NR
+                \NC = \NC -25 - [4 + (-117) + 15] + 3^3 \NR
+                \NC = \NC -25 - [-98] + 3^3 \NR
+                \NC = \NC -25 - [-98] + 27 \NR
+                \NC = \NC -25 + 98 + 27 \NR
+                \NC = \NC 100 \NR
+              \stopalign
+            \stopejerformula
+          \stopplaceformula
+
+          \ \youtube{\from[AE44A]}
+          \startplaceformula
+            \startejerformula
+              \startalign
+                \NC \NC \ini{-6 \cdot 4/3 + \left\{ -4^2 + 2\left[5 - 3^2 \left(9 - 2^2\right) - 6^2\right] +2(4)\right\} -(-5)^2} \NR[+]
+                \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2\left[5 - 3^2 (9 - 4) - 6^2\right] +2(4)\right\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2\left[5 - 3^2 (5) - 6^2\right] +2(4)\right\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2 [5 - 9 (5) - 36] +2(4)\right\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2[5 - 45 - 36] +2(4)\right\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2[5 + (-45) + (-36)] +2(4)\right\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2 [76] +2(4)\right\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \{ -16 + 2 [-76] +2(4)\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \{ -16 + [-152] + 8\} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \{ -160 \} -(-5)^2 \NR
+                \NC = \NC -6 \cdot 4/3 + \{ -160 \} -(25) \NR
+                \NC = \NC -8 + \{ -160 \} -(25) \NR
+                \NC = \NC -8 + \{ -160 \} + (-25) \NR
+                \NC = \NC -193 \NR
+              \stopalign
+            \stopejerformula
+          \stopplaceformula
+        \stopejemplos
+
+        \youtube{\from[AE44B]}
+        \comentario{%
+            \startformula[align=right]
+              x > y --> x - y \in \integers^{+}
+            \stopformula
+            \startformula[align=right]
+              x < y --> y > x
+            \stopformula
+            \startformula[align=right]
+              a > 0 --> -a < 0
+            \stopformula
+        }
+        \startejemplos
+          \startitemejem
+            \startitem
+              \ini{Demuestre que $3 < 5$}.
+
+              $3 < 5$ ssi $5 > 3$ ssi $5 - 3 \in \integers^{+}$ ssi $2 \in \naturalnumbers$, que sabemos que es cierto.
+            \stopitem
+
+            \startitem
+              \ini{Demuestre que $-8 > -15$}.
+
+              $-8 > -15 <--> -8 -(-15) \in \integers^{+} <--> -8 + 15 \in \integers^{+} <--> 15 + (-8) \in \integers^{+} <--> 15 - 8 \in \integers^{+} <--> 7 \in \naturalnumbers$, que sabemos que es cierto.
+            \stopitem
+            \startitem
+              \ini{Demuestre que si $x < 0$ y si $y > 0$, entonces $x < y$}.
+
+              Como $y > 0$, entonces podemos decir que
+              \placeformula
+              \startformula
+                0 < y
+              \stopformula
+              Por hipótesis,
+              \placeformula
+              \startformula
+                x < 0
+              \stopformula
+              Luego, por (1) y (2) y la ley transitiva de las desigualdades,
+              \startformula
+                x < 0 < y
+              \stopformula
+              \startformula
+                x < y.
+              \stopformula
+            \stopitem
+
+            \startitem
+              \ini{Demuestre que $\forall\, x \in \integers,\, \abs{x} \geq x$}.
+
+              Si $x \geq 0$,
+              \resetcounter[formula]
+              \placeformula
+              \startformula
+                \abs{x} = x
+              \stopformula
+              Si $x < 0$,
+              \placeformula
+              \startformula
+                \abs{x} = -x
+              \stopformula
+              Además, también ocurre que
+              \placeformula
+              \startformula
+                0 > x
+              \stopformula
+              y
+              \placeformula
+              \startformula
+                - x > 0
+              \stopformula
+              Luego, por (4), (3) y la ley transitiva de las desigualdades, tenemos que
+              \placeformula
+              \startformula
+                -x > x
+              \stopformula
+              Entonces por (5), (2) y la ley de sustitución
+              \placeformula
+              \startformula
+                \abs{x} > x
+              \stopformula
+              Por lo tanto, resumiendo, por (1) y (6), concluimos que
+              \startformula
+                \abs{x} \geq x.
+              \stopformula
+            \stopitem
+          \stopitemejem
+        \stopejemplos
+
+        \youtube{\from[AE45A]}
+        \startejemplo
+          \ini{Pruebe que $\abs{a} = \abs{-a}$}.
+
+          Si $a \leq 0$,
+          \resetcounter[formula]
+          \placeformula
+          \startformula
+            \abs{a} = a
+          \stopformula
+          También, $-a \leq 0$. Luego
+          \startformula
+            \abs{-a} = - (-a) = a,
+          \stopformula
+          que, por la ley simétrica de la igualdad equivale a
+          \placeformula
+          \startformula
+            a = \abs{-a}
+          \stopformula
+          Entonces, por (1), (2) y la ley transitiva de la igualdad,
+          \startformula
+            \abs{a} = \abs{-a}.
+          \stopformula
+
+          Si $a < 0$, entonces
+          \placeformula
+          \startformula
+            \abs{a} = -a,
+          \stopformula
+          y también
+          \startformula
+            -a > 0
+          \stopformula
+          En consecuencia,
+          \startformula
+            \abs{-a} = -a,
+          \stopformula
+          que podemos escribir, por la ley simétrica de la igualdad, como
+          \placeformula
+          \startformula
+            - a = \abs{-a}
+          \stopformula
+          Luego, por (3), (4) y la ley transitiva de la igualdad concluimos que
+          \startformula
+            \abs{a} = \abs{-a}.
+          \stopformula
+          
+        \stopejemplo
+
+      \stopdiscusion
+
+      \startsection[title={Orden en $\integers$}]
+        \startdefinicion
+          Sea $n \in \integers$.
+          \startitemizer
+            \startitem
+              \obj{El número entero sucesor o consecutivo de $n$} es el número entero $n + 1$. Decimos que $n$ y $n + 1$ son \obj{números enteros sucesivos o consecutivos}.
+            \stopitem
+            \startitem
+              El entero $n - 1$ se llama \obj{el antecesor o predecesor del número entero $n$}. Vea que $n - 1$ y $n$ son también consecutivos o sucesivos ya que $(n -1) + 1 = n + [(-1) + 1] = n + 0 = n$.
+            \stopitem
+          \stopitemizer
+        \stopdefinicion
+      \stopsection
+
+      \startejemplos
+        \startitemejem
+          \startitem
+           $2 \text{ y } (2 + 1 =)\, 3$ son enteros consecutivos o sucesivos.
+          \stopitem
+          \startitem
+            $2 = 3 - 1$, entonces 2 es el antecesor de 3.
+          \stopitem
+          \startitem
+            $-15 \text{ y } (-15 + 1 =)\, -14 $ son sucesivos o consecutivos.
+          \stopitem
+          \startitem
+            $-15 - 1 = -16$, pues el -16 es el predecesor de -15.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AE45B]}
+      \startteorema
+        Para todo $n \in \integers,\, n < n + 1$
+      \stopteorema
+
+      \startdemo
+        Como $1 > 0$, entonces por la ley de suma de las desigualdades,
+        \startformula
+          n + 1 > n + 0,
+        \stopformula
+        esto es $n + 1 > n$, que equivale a decir que $n < n + 1$.
+      \stopdemo
+
+      \startcorolario
+        Para todo $n \in \integers,\, n - 1 < n$. (El antecesor de un número es menor que éste).
+      \stopcorolario
+
+      \startdefinicion
+        Un conjunto $S$ de números enteros se llama \obj{bien ordenado} ssi $\forall T \subseteq S, T \neq \emptyset,\,\exists s_0 \in T$ tal que $s_0 \leq s,\, \forall s \in T$.
+      \stopdefinicion
+
+      Un subconjutno de números enteros se llamará bien ordena ssi en todo subconjutno de ese subconjutno podemos encontrar su elemento menor.
+
+      \comentario{Para demotrar que un conjutno de número enteros no está bien ordenado, bastará encontrar un subconjunto no vacio de éste, en donde no podamos determinar su elemento más pequeño.}
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{$\integers$ no está bien ordenado.}
+
+            Considere $\{\dots,-101,-100,-99,-98\}$. Vemos que en este subconjunto de $\integers$ no podemos encontrar su elemento más pequeño ya que consiste de -98 y los antecesores de sus antecesores, y el corolario anterior asegura que estos son menores unos de otros.
+          \stopitem
+          \startitem
+            \ini{Considere a $\naturalnumbers$, y los siguientes subconjuntos de $\naturalnumbers$:}
+            \startitemize
+              \startitem
+                $\{1,2,3\} \subseteq \naturalnumbers$. El elemento más pequeño es el 1.
+              \stopitem
+              \startitem
+                $\{100,101,102,\dots\} \subseteq \naturalnumbers$. El elemento más pequeño es el 100.
+              \stopitem
+              \startitem
+                $\{16,14,11,13,38\} \subseteq \naturalnumbers$. El elemento más pequeño es el 11.
+              \stopitem
+              \startitem
+                $\{28,31,32,27,26,21,41,40,56,39,72,73,74,75,\dots\} \subseteq \naturalnumbers$. El elemento más pequeño es el 21.
+              \stopitem
+            \stopitemize
+            Parece que el conjunto de los números enteros está bien ordenado, según los casos que hemos analizado.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AE46A]}
+      \startaxioma{el principio del buen orden, pbo}
+        $\naturalnumbers$ está bien ordenado
+      \stopaxioma
+
+      \startdiscusion{Notación}
+        Sean $a,b,c \in \integers$ con $a < b \land b < c$. Abreviamos esto con cualquiera de los símbolos
+        \startformula
+          a < b < c \,\lor\, c > b > a.
+        \stopformula
+      \stopdiscusion
+
+      \startteorema
+        El principio del buen orden implica que 1 es el elemento más pequeño en $\naturalnumbers$.
+      \stopteorema
+
+      \startdemo
+        (por contradicción). Recordemos que todo número natural es positivo. Consideremos $M = \{x \mid x \in \naturalnumbers,\, 0 < x < 1\}$. Si $M = \emptyset$, entonces 1 será el elemento más pequeño en $\naturalnumbers$.
+
+        Si $M \neq \emptyset$, por el principio del buen orden, como $M \subseteq \naturalnumbers$, $M$ tendrá un elemento más pequeño que llamaremos $m$. Entonces como $m \in M,\, 0 < m < 1$. Pero eso significa que $0 < m$, o sea que $m > 0$, y que
+        \resetcounter[formula]\placeformula
+        \startformula
+          m < 1.
+        \stopformula
+        Entonces, por la ley de multiplicación positiva de las desigualdades,
+        \startformula
+          m \cdot m > 0 \cdot m \;\land\; m \cdot m < 1 \cdot m.
+        \stopformula
+        O sea, que $m^2 > 0$ que puede escribirse como
+        \placeformula
+        \startformula
+          0 < m^2,
+        \stopformula
+        que
+        \placeformula
+        \startformula
+          m^2 < m
+        \stopformula
+        Entonces, resumiendo
+        \startformula
+          0 < m^2 < m.
+        \stopformula
+        Luego, por (1) y la ley transitiva de las desigualdades, tenemos que
+        \startformula
+          0 < m^2 < 1
+        \stopformula
+        Como la multiplicación es binaria en $\naturalnumbers$. Luego, $m \cdot m = m^2 \in \naturalnumbers,\, M$. Pero vimos que $m^2 < m$. Pero $m$ era el elemento más pequeño en $M$. Esto es una contradicción.
+        \startformula
+          \therefore M = \emptyset \text{ y esto implica que 1 es el natural más pequeño.}
+        \stopformula
+      \stopdemo
+
+      \startteorema
+      \youtube{\from[AE46B]}
+        Si $n \in \naturalnumbers$, entonces no existe $k \in \naturalnumbers$ con $n < k < n+1$. Esto es, no existe un número natural entre un número natural y su consecutivo.
+      \stopteorema
+
+      \startdemo
+        (por contradicción). Supongamos que existe dicho $k \in \naturalnumbers$ cn $n < k < n+1$. Entonces, esto significa que
+        \startformula
+          n < k \,\land\, k < n+1.
+        \stopformula
+        Luego, por la ley de suma de las desigualdades,
+        \startformula
+          n + (-n) < k + (-n) \,\land\, k + (-n) < n + 1 + (-n) = [n + (-n)] + 1 = 0 + 1
+        \stopformula
+        O sea,
+        \startformula
+          0 < k + (-n) \,\land\, k + (-n) < 1
+        \stopformula
+        \startformula
+          \therefore \, 0 < k + (-n) < 1.
+        \stopformula
+        Como la suma es binaria en $\integers$ y $k + (-n) > 0, k + (-n) \in \naturalnumbers$, que es menor que 1. Llegamos a una contradicción ya que el teorema anterior establecía que el 1 es el número más pequeño de los naturales.
+      \stopdemo
+
+      \startobservacion
+        \startitemize[n]
+          \startitem
+            Entre 1 y 2 no hay un número natural; entre 2 y 3,igual; entre 105 y 106, igual; etc.
+          \stopitem
+          \startitem
+            Siguiendo argumentos análogos, podemos demostrar que en $\{-1,-2,-3,\dots\}$ el -1 es el elemento más grande. También que entre $n-1$ y $n$ no hay ningún entero. Así, entre $-1$ y $-2$ no hay un entero; entre $-2$ y $-3$, tampoco, etc.
+          \stopitem
+        \stopitemize
+      \stopobservacion
+
+    \stopsection
+
+    \startsection[title={La recta numérica}]
+      $\dots --> -4 --> -3 --> -2 --> -1 --> 0 --> 1 --> 2 --> 3 --> 4 --> \dots$      
+
+      Entre cada número entero y su consecutivo hay la misma distancia, una unidad de distancia.
+
+      \youtube{\from[AE47A]}
+      \startdiscusion{Repaso}
+        \startitemize
+          \startitem
+            1 es el natural menor.
+          \stopitem
+          \startitem
+            $-1$ es el entero negativo mayor.
+          \stopitem
+          \startitem
+            $n$ y $n+1$ son números enteros consecutivos, y $n-1$ es el antecesor del entero $n$.
+          \stopitem
+          \startitem
+            $\nexists\, k \in \integers$ con $n < k < n+1$
+          \stopitem
+        \stopitemize
+      \stopdiscusion
+
+      El orden de los números enteros lo represetamos con la recta numérica.
+
+      GRAFICO
+
+      \startdefinicion
+        Llamamos al largo de la parte de la recta numérica entre el punto que representa a un número entero y el punto que corresponde a su consecutivo, \obj{el largo unitario}. Éste se representa con la variable $u$ y se le asigna el valor de 1.
+      \stopdefinicion
+
+      Como $a - b = x --> a = b + x$
+      \startformula
+        a = b + x \cdot 1,
+      \stopformula
+      diremos que para movernos del putno que corresponde al entero $b$ al que corresponde al entero $a$, en una recta númerica, nos movemos $x$ largos unitarios partiendo de $b$.
+
+      Este movimiento se hará hacia la derecha (o hacia arriba) si $x > 0$; se hará hacia la izquierda (o hacia abajo) si $x < 0$.
+
+      \startejemplos
+        GRAFICOS
+        \startitemejem
+          \startitem
+            $\ini{5 - 2 = 3} --> 5 = 2 + 3 \cdot 1$ 
+          \stopitem
+          \startitem
+            $\ini{2 - 4 = -2} --> 2 = 4 + (-2) \cdot 1$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AE47B]}
+      Recordemos que  $\abs{a} = \abs{-a}$. Luego, si consideremo al número $x - y \in \integers$, donde $x, y \in \integers$, vemos que
+      \startformula
+        \startalign
+          \NC \abs{x - y} = \NC \abs{-(x-y)} \NR
+          \NC               \NC \abs{-(x + (-y))} \NR
+          \NC               \NC \abs{-x +[-(-y)]} \NR
+          \NC               \NC \abs{-x + y} \NR
+          \NC               \NC \abs{y + (-x)} \NR
+          \NC               \NC \abs{y - x} \NR
+        \stopalign
+      \stopformula
+      \startformula
+        \therefore\, \abs{x-y} = \abs{y -x}
+      \stopformula
+
+      \startdefinicion
+        Sean $a,b \in \integers$. \obj{La distancia entre $a$ y $b$}, representada con la variable $d$, se define como $d = \abs{a - b} = abs{b -a}$.
+      \stopdefinicion
+
+      \startejemplos
+        Determine la distancia entre:
+        \startitemejem
+          \startitem
+            $\ini{229 \text{ y } 315}$
+            \startformula[align=right]
+              d = \abs{229-315} = \abs{-86} = -(-86) = 86
+            \stopformula
+            \startformula[align=right]
+              d = \abs{315-229} = \abs{86} = 86
+            \stopformula
+          \stopitem
+          \startitem
+            $\ini{-8 \text{ y } -31}$
+            \startformula[align=right]
+              d = \abs{-8 -(-31)} = \abs{-8 + 31} = \abs{23} = 23
+            \stopformula
+          \stopitem
+          \startitem
+            $\ini{5 \text{ y } -2}$
+            \startformula[align=right]
+              d = \abs{-2 -5)} = \abs{-2 + (-5)} = \abs{-7} = -(-7) = 7
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startobservacion
+        \startitemize[n]
+          \startitem
+            La distancia entre dos números enteros corresponde al número de largos unitarios que hay entre los putnos que corresponden a esos enteros en una recta numérica. 
+          \stopitem
+          \startitem
+            En la notación $a < b < c$, por lo discutido al construir la recta numérica, los puntos que corresponden en ésta a los números $a,b$ y $c$ irán de izquierda a derecha.
+          \stopitem
+        \stopitemize
+      \stopobservacion
+    \stopsection
+  \stopchapter
+\stopcomponent

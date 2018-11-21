@@ -1,0 +1,7 @@
+*.log
+*.tuc
+*.pdf
+/auto
+/sandbox
+*/img
+*/org

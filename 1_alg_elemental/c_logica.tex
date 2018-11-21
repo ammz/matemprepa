@@ -1,0 +1,937 @@
+\startcomponent c_logica
+
+\project project_matemprepa
+
+\youtube{\from[AE1A]}
+\startdiscusion{Bloques de construcción}
+  \startitemize
+    \startitem
+      \obj{términos indefinidos:} conceptos básicos que no requieren definición
+    \stopitem
+    \startitem
+      \obj{términos definidos:} conceptos que requieren definición
+    \stopitem
+    \startitem
+      \obj{axiomas o postulados:} leyes o propiedades aceptadas como ciertas
+    \stopitem
+    \startitem
+      \obj{teoremas o proposiciones:} leyes o propiedades que se tienen que demostrar que son ciertas
+    \stopitem
+    \startitemize
+      \startitem
+        \obj{lemas:} teoremas que se usan como una justificación en la demostración de un teorema más imporante
+      \stopitem
+      \startitem
+        \obj{corolarios:} teoremas que son casos especiales o consecuencias directas de un teorema previo
+      \stopitem    
+    \stopitemize
+  \stopitemize
+\stopdiscusion
+
+\startchapter[title={Lógica}]
+  La \obj{lógica} se encarga del estudio de los argumentos o razonamientos válidos
+
+  \startdefinicion
+    Una oración que establece un hecho que, en algún momento, puede ser clasificado cierto o falso, se llama \obj{una afirmación o enunciado}.
+  \stopdefinicion
+
+  \obj{variable:} letra que representa una cosa.
+  
+  \startejemplos
+    \startitemize[packed]
+      \startitem
+        Está lloviendo. $-->\; p$. $p$ es una proposición.
+      \stopitem
+      \startitem
+        Siéntate y mantente en silencio. $-->\; x$. $x$ no es una proposición.
+      \stopitem
+      \startitem
+        Tengo los zapatos nuevos puestos. $-->\; q$.
+      \stopitem
+      \startitem
+        $p$ y $q\; -->$ Está lloviendo y tendo los zapatos nuevos puestos. 
+      \stopitem
+    \stopitemize
+  \stopejemplos
+
+  \margindata[youtube]{\from[AE1B]}
+  \startsection[title={Estudio de las afirmaciones compuestas}]
+    
+    \startdefinicion
+      Una afirmación que contiene dos o más afirmaciones se llama \obj{una afirmación o enunciado compuesto}.
+
+      \startitemizer[packed]
+        \startitem
+          \obj{La conjunción de $p$ con $q$}, leída "p y q", y representada con el símbolo $p \wedge q$.
+        \stopitem
+        \startitem
+          \obj{La disjunción o disyunción de $p$ con $q$}, leída "p o q" y denotada con el símbolo $q \vee q$.
+        \stopitem
+        \startitem
+          \obj{La disyunción (o disjunción) exclusiva}, leída "p o q, pero no ambas" o "o p o q" y representada por el símbolo $p \veebar q$.
+        \stopitem
+      \stopitemize
+    \stopdefinicion
+
+    \startaxioma
+      Sean $p$ y $q$ dos enunciados. Entoces
+      \startitemizer[packed]
+        \startitem
+          $p \wedge q$ será cierta si tanto $p$ y $q$ lo son. 
+        \stopitem
+        \startitem
+          $p \vee q$ será cierta si, al menos, una de las afirmaciones $p$ o $q$ lo es.
+        \stopitem
+        \startitem
+          $p \veebar q$ será cierta si, únicamente, una de las dos afirmaciones $p$ o $q$ lo es.
+        \stopitem
+      \stopitemizer
+    \stopaxioma
+
+    \startdefinicion
+      Si $p$ es una afirmación, \obj{la negación de p}, representada con el símbolo $\neg p$, se lee 'no p'.
+    \stopdefinicion
+
+    \startaxioma
+      Si $p$ es un enunciado cierto, entonces $\neg p$ es falso y viceversa.
+    \stopaxioma
+
+    \startdiscusion{Valor de verdad de un enunciado o afirmación}
+      Solo existen dos valores posibles: C (cierto) y F (falso)
+    \stopdiscusion
+
+    \startdiscusion{Tablas de verdad}
+      Una \obj{tabla de verdad} es un esquema donde se recogen los valores de verdad de una afirmación.
+    \stopdiscusion
+
+    \startitemize[a,columns,joinedup]
+
+      \startitem
+        Conjunción \par
+        \starttable[|cm|c|c|c|]
+          \NC \VL $p$ \VL $q$ \VL $p \wedge q$ \NC \AR
+          \HL
+          \NC c_1 \VL C \VL C \VL C \NC \AR
+          \NC c_2 \VL C \VL F \VL F \NC \AR
+          \NC c_3 \VL F \VL C \VL F \NC \AR
+          \NC c_4 \VL F \VL F \VL F \NC \AR
+        \stoptable
+      \stopitem
+
+      \margindata[youtube]{\from[AE2A]}
+      \startitem
+        Disyunción \par
+        \starttable[|cm|c|c|c|]
+          \NC \VL $p$ \VL $q$ \VL $p \vee q$ \NC \AR
+          \HL
+          \NC c_1 \VL C \VL C \VL C \NC \AR
+          \NC c_2 \VL C \VL F \VL C \NC \AR
+          \NC c_3 \VL F \VL C \VL C \NC \AR
+          \NC c_4 \VL F \VL F \VL F \NC \AR
+        \stoptable
+      \stopitem
+    \stopitemize
+    
+    \startitemize[continue,columns,joinedup]
+      \startitem
+        Disyunción exclusiva \par
+        \starttable[|cm|c|c|c|]
+          \NC \VL $p$ \VL $q$ \VL $p \veebar q$ \NC \AR
+          \HL
+          \NC c_1 \VL C \VL C \VL F \NC \AR
+          \NC c_2 \VL C \VL F \VL C \NC \AR
+          \NC c_3 \VL F \VL C \VL C \NC \AR
+          \NC c_4 \VL F \VL F \VL F \NC \AR
+        \stoptable
+      \stopitem
+
+      \startitem
+        Negación \par
+        \starttable[|cm|c|c|]
+          \NC \VL $p$ \VL $\neg p$ \NC \AR
+          \HL
+          \NC c_1 \VL C \VL F \NC \AR
+          \NC c_2 \VL F \VL C \NC \AR
+        \stoptable
+      \stopitem
+
+    \stopitemize  
+
+    \startdiscusion{Conexiones de una afirmación compuesta}
+      \starttable[|l|c|cm|]
+        \NC Conjunción           \NC y                      \NC \wedge  \NC \AR
+        \NC Disjunción           \NC o                      \NC \vee    \NC \AR
+        \NC Disjunción exclusiva \NC ... o ..., pero no ambas / o ... o... \NC \veebar \NC \AR
+      \stoptable
+    \stopdiscusion
+
+    \startejemplos
+      Suponga que los siguientes enunciados son ciertos o falsos como se indica:
+      \startitemize[packed,horizontal]
+        \startitem
+          $p$: Está lloviendo (C)
+        \stopitem
+        \startitem
+          $q$: Tengo los zapatos nuevos puestos (F)
+        \stopitem
+        \startitem
+          $r$: Me vienen a bucar en carro (C)
+        \stopitem
+        \startitem
+          $s$: Salgo antes de las 2 p.m. (F)
+        \stopitem
+        \startitem
+          $t$: Aprobé el examen con calificación de A (C)
+        \stopitem
+      \stopitemize
+
+      \startitemejem[packed]
+        \startitem
+          Está lloviendo y tengo los zapatos nuevos puestos. $(p \wedge q)$\par C $\wedge$ F $-->$ F 
+        \stopitem
+        \startitem
+          Está lloviendo y me vienen a buscar en el carro. $(q \wedge r)$\par C $\wedge$ C $-->$ C 
+        \stopitem
+        \margindata[youtube]{\from[AE2B]}
+        \startitem
+          Tengo los zapatos nuevos puestos y salgo antes de las 2 p.m. $(q \wedge s)$\par F $\wedge$ F $-->$ F
+        \stopitem
+        \startitem
+          $(s \vee p)\; -->\;$ Salgo antes de las 2p.m o está lloviendo \par F $\vee$ C $-->$ C
+        \stopitem
+        \startitem
+          $q \vee (\neg s)\; -->\;$ Tengo los zapatos nuevos puestos o no salgo antes de las 2 p.m. \par F $\vee$ C $-->$ C
+        \stopitem
+        \startitem
+          Tengo los zapatos nuevos puestos o aprobé el examen con calificación de A, pero no ambas $(q \veebar t)$ \par F $\veebar$ C $-->$ C
+        \stopitem
+        \startitem
+          O me vienen a buscar en el carro o aprobé el examen con calificación de A $(r \veebar t)$ \par C  $\veebar$ C $-->$ F
+        \stopitem
+        \margindata[youtube]{\from[AE3A]}
+        \startitem
+          $q \veebar s\;-->\;$ Tengo los zapatos nuevos puestos o salgo antes de las 2 p.m. \par O tengo los zapatos nuevos puestos o salgo antes de las 2 p.m. \par F $\veebar$ F $-->$ F
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \margindata[comentario]{{\bf Signos de agrupación} \par paréntesis $(\,)$ \par paréntesis angulares o corchetes $[\,]$\par llaves $\{\,\}$ \par barras $\overline{\quad}$ }
+    \startdiscusion{Tablas de verdad para enunciados más elaborados}
+      \startejemplos
+        \startitemejem
+
+          \startitem
+            $\ini{(p \wedge q) \wedge (\neg p)}$
+
+            \startcenteraligned
+              \starttable[|cm|c|c|c|c|c|]
+                \NC \VL $p$ \VL $q$ \VL$p \vee q$ \VL $\neg p$ \VL $(p \wedge q) \wedge (\neg p)$\NC \AR
+                \HL
+                \NC c_1 \VL C \VL C \VL C \VL F \VL C \NC \AR
+                \NC c_2 \VL C \VL F \VL C \VL F \VL C \NC \AR
+                \NC c_3 \VL F \VL C \VL C \VL C \VL C \NC \AR
+                \NC c_4 \VL F \VL F \VL F \VL C \VL C \NC \AR
+              \stoptable
+            \stopcenteraligned
+          \stopitem
+
+        \stopitemejem
+      \stopejemplos
+
+      \startdefinicion
+        \obj{Una tautología} es un enunciado cierto en todos sus posibles casos.
+      \stopdefinicion
+
+      \margindata[youtube]{\from[AE3B]}
+      \startejemplos
+        \startitemejem[continue]
+
+          \startitem
+            $\ini{(p \veebar (\neg q)) \wedge p}$
+
+            \startcenteraligned
+              \starttable[|cm|c|c|c|c|c|]
+                \NC \VL $p$ \VL $q$ \VL $\neg q$ \VL $p \veebar (\neg q)$ \VL $(p \veebar (\neg q)) \wedge p$\NC \AR
+                \HL
+                \NC c_1 \VL C \VL C \VL F \VL C \VL C \NC \AR
+                \NC c_2 \VL C \VL F \VL C \VL F \VL F \NC \AR
+                \NC c_3 \VL F \VL C \VL F \VL F \VL F \NC \AR
+                \NC c_4 \VL F \VL F \VL C \VL C \VL F \NC \AR
+              \stoptable
+            \stopcenteraligned
+          \stopitem
+
+          \startitem
+            $\ini{(p \vee (\neg q)) \wedge (\neg p)}$
+
+            \startcenteraligned
+              \starttable[|cm|c|c|c|c|c|c|]
+                \NC \VL $p$ \VL $q$ \VL $\neg q$ \VL $p \vee (\neg q)$ \VL $\neg p$ \VL $(p \vee (\neg q)) \wedge (\neg p)$\NC \AR
+                \HL
+                \NC c_1 \VL C \VL C \VL F \VL C \VL F \VL F \NC \AR
+                \NC c_2 \VL C \VL F \VL C \VL C \VL F \VL F \NC \AR
+                \NC c_3 \VL F \VL C \VL F \VL F \VL C \VL F \NC \AR
+                \NC c_4 \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
+              \stoptable
+            \stopcenteraligned
+          \stopitem
+
+          \startitem
+            $\ini{\neg (p \vee q) \vee \big[\neg (q \vee p)\big]}$
+
+            \startcenteraligned
+              \starttable[|cm|c|c|c|c|c|c|c|]
+                \NC \VL $p$ \VL $q$ \VL $p \vee q$ \VL $\neg (p \vee q)$ \VL $q \vee p$ \VL $\neg (q \vee p)$ \VL $\neg (p \vee q) \vee \big[\neg (q \vee p)\big]$\NC \AR
+                \HL
+                \NC c_1 \VL C \VL C \VL C \VL F \VL C  \VL F \VL F \NC \AR
+                \NC c_2 \VL C \VL F \VL C \VL F \VL C  \VL F \VL F \NC \AR
+                \NC c_3 \VL F \VL C \VL C \VL F \VL C  \VL F \VL F \NC \AR
+                \NC c_4 \VL F \VL F \VL F \VL C \VL F  \VL C \VL C \NC \AR
+              \stoptable
+            \stopcenteraligned
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startdefinicion
+        Dos enunciados son \obj{equivalentes} si tienen los mismos valores de verdad en todos los casos correspondientes.
+      \stopdefinicion
+
+      Podemos ver que los valores de verdad de los ejemplos (3) y (4) son equivalentes.
+      
+      \margindata[youtube]{\from[AE4A]}
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{Decida si los enunciados $\neg (p \wedge q)\;$ y $\;\neg p \vee (\neg q)$ son equivalentes.}
+
+            \startcenteraligned
+              \starttable[|cm|c|c|c|c|c|c|c|]
+                \NC \VL $p$ \VL $q$ \VL $p \wedge q$ \VL $\neg (p \wedge q)$ \VL $\neg p$ \VL $\neg q$ \VL $\neg p \vee (\neg q)$\NC \AR
+                \HL
+                \NC c_1 \VL C \VL C \VL C \VL F \VL F \VL F \VL F \NC \AR
+                \NC c_2 \VL C \VL F \VL F \VL C \VL F \VL C \VL C \NC \AR
+                \NC c_3 \VL F \VL C \VL C \VL C \VL C \VL F \VL C \NC \AR
+                \NC c_4 \VL F \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
+              \stoptable
+            \stopcenteraligned
+
+            Se comprueba que ambos enunciados tienen los mismos valores de verdad y por consiguiente son equivalentes.
+          \stopitem
+
+          \startitem
+            \ini{Decida si la negación de la disyunción de dos enunciados es equivalente a la conjunción de sus negaciones}
+
+            Los enunciados a comparar son $\neg (p \vee q)\;$ y $\neg p \wedge (\neg q)$.
+
+            \startcenteraligned
+              \starttable[|cm|c|c|c|c|c|c|c|]
+                \NC \VL $p$ \VL $q$ \VL $p \vee q$ \VL $\neg (p \vee q)$ \VL $\neg p$ \VL $\neg q$ \VL $\neg p \wedge (\neg q)$ \NC \AR
+                \HL
+                \NC c_1 \VL C \VL C \VL C \VL F \VL F \VL F \VL F \NC \AR
+                \NC c_2 \VL C \VL F \VL C \VL F \VL F \VL C \VL F \NC \AR
+                \NC c_3 \VL F \VL C \VL C \VL F \VL C \VL F \VL F \NC \AR
+                \NC c_4 \VL F \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
+              \stoptable
+            \stopcenteraligned
+
+            También se comprueba que ambos enunciados son equivalentes.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+    \stopdiscusion
+
+
+    \startdefinicion
+    \margindata[youtube]{\from[AE4B]}
+      Sean $p$ y $q$ dos enunciados. El enunciado compuesto "si p, entonces q", representado con el símbolo $p --> q$, se llama \obj{la condicional de p con q}.
+    \stopdefinicion
+
+      {\bf conexión de la condicional:} \hskip1em si ..., entonces ...  $\qquad-->$ 
+
+      \startaxioma
+        La siguiente tabla de verdad da los valores de una condicional.
+
+        \startcenteraligned
+          \starttable[|cm|c|c|c|]
+            \NC \VL $p$ \VL $q$ \VL $p --> q$ \NC \AR
+            \HL
+            \NC c_1 \VL C \VL C \VL C \NC \AR
+            \NC c_2 \VL C \VL F \VL F \NC \AR
+            \NC c_3 \VL F \VL C \VL C \NC \AR
+            \NC c_4 \VL F \VL F \VL C \NC \AR
+          \stoptable
+        \stopcenteraligned
+      \stopaxioma
+
+      \startdefinicion
+        La condicional $q --> p$ se llama \obj{el recíproco o converso} de la condicional $p --> q$.
+      \stopdefinicion
+
+      \comentario{%
+        Otras formas de expresar el recíproco (esta observación se discute en el video \from[AE5B]):
+        \startitemize[packed,a][before=,after=]
+          \startitem
+            $q --> p$
+          \stopitem
+          \startitem
+            Sólo $p --> q$
+          \stopitem
+          \startitem
+            $q$ sólo si $p$
+          \stopitem
+        \stopitemize
+      }
+      \startejemplo
+        \startitemize[packed,intro][before=,after=,]
+          \startitem
+            Condicional: Si está lloviendo, entonces te voy a buscar en el carro.
+          \stopitem
+          \startitem
+            Recíproco: Si te voy a buscar en el carro, entonces está lloviendo.
+          \stopitem
+        \stopitemize
+      \stopejemplo
+
+      \startdiscusion{¿Es el recíproco o converso equivalente a la condicional original?}
+
+        \startcenteraligned
+          \starttable[|cm|c|c|c|c|c|]
+            \NC \VL $p$ \VL $q$ \VL $q --> p$ \VL $p --> q$ \NC\AR
+            \HL
+            \NC c_1 \VL C \VL C \VL C \VL C \NC \AR
+            \NC c_2 \VL C \VL F \VL C \VL F \NC \AR
+            \NC c_3 \VL F \VL C \VL F \VL C \NC \AR
+            \NC c_4 \VL F \VL F \VL C \VL C \NC \AR
+          \stoptable
+        \stopcenteraligned
+        
+        Vemos que no son equivalentes.
+      \stopdiscusion
+
+ 
+     \startejemplo
+        \startitemize[packed][before=,after=,]
+          \startitem
+            Condicional: Si está lloviendo, entonces te voy a buscar en el carro.
+          \stopitem
+          \startitem
+            Recíprocos:
+            \startitemize[packed,a]
+              \startitem
+                Si te voy a buscar en el carro, entonces está lloviendo.
+              \stopitem
+              \startitem
+                Sólo si está lloviendo, entonces te voy a buscar en el carro.
+              \stopitem
+              \startitem
+                Te voy a buscar en el carro sólo si está lloviendo
+              \stopitem
+            \stopitemize
+          \stopitem
+        \stopitemize
+      \stopejemplo
+
+      \startdefinicion
+        La condicional $\neg p --> (\neg q)$ se llama \obj{el inverso} de la condicional $p --> q$.
+      \stopdefinicion
+
+      \startejemplo
+        \startitemize[packed][before=,after=,]
+          \startitem
+            Condicional: Si está lloviendo, entonces te voy a buscar en el carro.
+          \stopitem
+          \startitem
+            Inverso: Si no está lloviendo, entonces no te voy a buscar en el carro.
+          \stopitem
+        \stopitemize
+      \stopejemplo
+
+      \margindata[youtube]{\from[AE5A]}
+      \startdiscusion{¿Es el inverso equivalente a la condicional original?}
+        \startcenteraligned
+          \starttable[|cm|c|c|c|c|c|c|c|]
+            \NC \VL $p$ \VL $q$ \VL $\neg p$ \VL $\neg q$ \VL $\neg p --> (\neg q)$ \VL $p --> q$ \NC\AR
+            \HL
+            \NC c_1 \VL C \VL C \VL F \VL F \VL C \VL C \NC \AR
+            \NC c_2 \VL C \VL F \VL F \VL C \VL C \VL F \NC \AR
+            \NC c_3 \VL F \VL C \VL C \VL F \VL F \VL C \NC \AR
+            \NC c_4 \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
+          \stoptable
+        \stopcenteraligned
+
+        $\therefore\;$ el inverso no es equivalente a la condicional original
+      \stopdiscusion
+
+      \startobservacion
+        El inverso y el recíproco de la condicional son equivalentes.
+      \stopobservacion
+
+      \startdefinicion
+        La condicional $\neg q --> (\neg p)$ se llama \obj{el contrapositivo} de la condicional $p --> q$.
+      \stopdefinicion
+
+      \startejemplo
+        \startitemize[packed][before=,after=,]
+          \startitem
+            Condicional: Si está lloviendo, entonces te voy a buscar en el carro.
+          \stopitem
+          \startitem
+            Contrapositivo: Si no te vengo a buscar en el carro, entonces no está lloviendo.
+          \stopitem
+        \stopitemize
+      \stopejemplo
+
+      \startdiscusion{¿Es el contrapositivo de una condicional equivalente a ésta?}
+        \startcenteraligned
+          \starttable[|cm|c|c|c|c|c|c|c|]
+            \NC \VL $p$ \VL $q$ \VL $\neg q$ \VL $\neg p$ \VL $\neg q --> (\neg p)$ \VL $p --> q$ \NC\AR
+            \HL
+            \NC c_1 \VL C \VL C \VL F \VL F \VL C \VL C \NC \AR
+            \NC c_2 \VL C \VL F \VL C \VL F \VL F \VL F \NC \AR
+            \NC c_3 \VL F \VL C \VL F \VL C \VL C \VL C \NC \AR
+            \NC c_4 \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
+          \stoptable
+        \stopcenteraligned
+
+        $\therefore\;$ el contrapositivo es equivalente a la condicional original
+      \stopdiscusion
+
+      \margindata[youtube]{\from[AE5B]}
+      \startejemplo
+        \ini{Verifique que el enunciado $\big[p \wedge (p --> q)\big] --> q$ es una tautología.} 
+
+        \startcenteraligned
+          \starttable[|cm|c|c|c|c|c|]
+            \NC \VL $p$ \VL $q$ \VL $p --> q$ \VL $p \wedge (p --> q)$ \VL $\big[p \wedge (p --> q)\big] --> q$ \NC\AR
+            \HL
+            \NC c_1 \VL C \VL C \VL C \VL C \VL C \NC \AR
+            \NC c_2 \VL C \VL F \VL F \VL F \VL C \NC \AR
+            \NC c_3 \VL F \VL C \VL C \VL F \VL C \NC \AR
+            \NC c_4 \VL F \VL F \VL C \VL F \VL C \NC \AR
+          \stoptable
+        \stopcenteraligned
+
+        $\therefore\;$ es una tautología.    
+      \stopejemplo
+      
+      \startdefinicion
+        Sean $p$ y $q$ dos enunciados. La afirmación "p si y sólo si q", que se representa con el símbolo $p <--> q$, se llama \obj{la bicondicional} de p y q y significa que $(p --> q) \wedge (q --> p)$.
+      \stopdefinicion
+
+
+      \startaxioma
+        \margindata[youtube]{\from[AE6A]}
+        La siguiente tabla da los valores de verdad de la bicondicional $p <--> q$.
+      
+        \startcenteraligned
+          \starttabulate[|cm|c|c|c|c|c|]
+            \NC \NC   \NC   \NC   \NC   \VL $(p --> q) \wedge (q --> p)$  \NC \AR
+            \NC \VL $p$ \VL $q$ \VL $p --> q$ \VL $q --> p$ \VL $p <--> q$ \NC\AR
+            \HL
+            \NC c_1 \VL C \VL C \VL C \VL C \VL C \NC \AR
+            \NC c_2 \VL C \VL F \VL F \VL C \VL F \NC \AR
+            \NC c_3 \VL F \VL C \VL C \VL F \VL F \NC \AR
+            \NC c_4 \VL F \VL F \VL C \VL C \VL C \NC \AR
+          \stoptabulate
+        \stopcenteraligned
+      \stopaxioma
+
+      \startplacetable[title=Resumen de enunciados compuestos, location=here]
+        \starttable[|p(3.5cm)Bf\ss|lm|p(5.5cm)|]
+          \HL
+          \NC CONJUNCIÓN           \NC p \wedge q:  \NC cierta si ambas lo son.\NC\FR
+          \TB[line]
+          % \HL
+          \NC DISJUNCIÓN           \NC p \vee q:    \NC cierta cuando al menos una lo es.\NC\MR
+          \TB[line]
+          % \HL
+          \NC DISJUNCIÓN \\ EXCLUSIVA \NC p \veebar q: \NC cierta cuando únicamnete una lo es.\NC\MR
+          \TB[line]
+          % \HL
+          \NC CONDICIONAL          \NC p --> q:     \NC cierta en todos los casos excepto si la primera es cierta y la segunda es falsa.\NC\MR
+          \TB[line]
+          % \HL
+          \NC BICONDICIONAL        \NC p <--> q:    \NC cierta cuando ambas
+          sean ciertas o cuando ambas sean falsas.\NC\LR
+          \HL
+        \stoptable
+      \stopplacetable
+
+      \startdiscusion{Revisión de la condicional}
+        La frase "si $p$ entonces $q$" tiene una implicación: será suficiente que ocurra $p$ para que en consecuencia ocurra $q$. Por lo tanto, en una condicional a la primera afirmación se la conoce como una condición suficiente y a la segunda se le dice que es una condición necesaria.
+
+        \startformula
+          \startalign[n=3]
+            \NC p \NC --> \NC q \NR
+            \NC \text{\small condición suficiente} \NC \NC \text{\small condición necesaria} \NR
+          \stopalign
+        \stopformula
+
+        Podemos decir que es suficiente que ocurra $p$ para que en consecuencia ocurra $q$. Y también, que si ocurre $p$ necesariamente tiene que ocurrir $q$.
+
+        \startejemplos{Otras formas de expresar la condicional}
+          \startitemize[packed]
+            \startitem
+              Si está lloviendo, entonces te voy a buscar en el carro.
+            \stopitem
+            \startitem
+              Estar lloviendo es una condición suficiente para irte a buscar en el carro.
+            \stopitem
+            \startitem
+              Irte a buscar en el carro es una condición necesaria para que esté lloviendo.
+            \stopitem 
+          \stopitemize
+        \stopejemplos
+
+      \stopdiscusion
+
+      \startdiscusion{Revisión de la bicondicional}
+        En una bicondicional ambas afirmaciones son condición suficiente y necesaria.
+
+        \startejemplos
+          \startitemize[packed]
+            \startitem
+              Mi mamá me ama si y sólo si yo soy bueno.
+            \stopitem
+            \startitem
+              Mi mamá me ama es una condición necesaria y suficiente para yo ser bueno.
+            \stopitem
+            \startitem
+              Yo ser bueno es una condición necesaria y suficiente para que mi mamá me ame.
+            \stopitem
+          \stopitemize
+        \stopejemplos
+
+      \stopdiscusion
+
+
+      \startdefinicion
+      \margindata[youtube]{\from[AE6B]}
+        En la condicional $p --> q$, al enunciado $p$ se le llama \obj{la hipótesis de la condicional} mientras que al  $q$ se le llama \obj{la conclusión de la condicional}.
+      \stopdefinicion
+
+      \startejemplos
+        {\ini Identifique las hipótesis y la conclusión en las siguientes condicionales.}
+        \startitemize[n,intro]
+          \startitem
+            Si $\underbrace{\text{está lloviendo}}_{h}$, entonces $\underbrace{\text{te voy a buscar en el carro}}_{c}$.
+          \stopitem
+          \startitem
+            $\underbrace{\text{Estar hambriento}}_{c}$ es una condición necesaria para $\underbrace{\text{comerme dos raciones de comidad.}}_{h}$
+          \stopitem
+          \startitem
+            Sólo si $\underbrace{\text{ceno temprano}}_{c}$ entonces $\underbrace{\text{iré al cine.}}_{h}$
+          \stopitem
+          \startitem
+            $\underbrace{\text{Tener el tanque del coche lleno}}_{h}$ es una condición suficiente para $\underbrace{\text{dar un paseo largo.}}_{c}$
+          \stopitem
+          \startitem
+            $\underbrace{\text{Llevaré mi paraguas}}_{h}$, sólo si $\underbrace{\text{está nublado.}}_{c}$
+          \stopitem
+        \stopitemize
+      \stopejemplos
+
+    \stopsection
+
+
+    \startsection[title={Métodos de prueba}]
+      \startdescripcion{Método directo}
+        $p --> q$
+      \stopdescripcion
+      
+      \startdescripcion{Método indirecto, \\ de contradicción o \\ de reducción al absurdo}
+        Para demostrar que $p$ es cierta, suponemos que es cierto $\neg p$ y argumentamos hasta contradecir algo que es cierto.
+      \stopdescripcion
+
+      \startdescripcion{Prueba doble}
+        $p <--> q$. Hay que hacer las dos pruebas $(p --> q) \wedge (q --> p)$.
+      \stopdescripcion
+
+      \startdescripcion{Prueba del \\ contrapositivo}
+        $p --> q$.  Recordamos que $\neg q --> (\neg p)$ es una proposición equivalente.
+      \stopdescripcion
+
+      \margindata[youtube]{\from[AE7A]}
+      \startdescripcion{Prueba de existencia}
+        Se puede comprobar la existencia por dos métodos:
+        \startitemize[packed]
+          \startitem
+            {\bf por construcción}: formar el objeto a partir de sus características.
+          \stopitem
+          \startitem
+            {\bf por presentación}: presenta el objeto y comprueba que cumple con las condiciones.
+          \stopitem
+        \stopitemize
+      \stopdescripcion
+
+      \startdescripcion{Prueba de \\ existencia única}
+        Suponemos que existe otro objeto distinto al que el teorema supone que es único y llegamos al mismo objeto que se alega que es único, luego la conclusión es que es el mismo objeto que queríamos demostrar que era único.
+      \stopdescripcion
+
+      \startdescripcion{Desprueba por \\ un contraejemplo}
+        Todos los teoremas comienzan como una \obj{conjetura} \comentario{{\bf Conjetura:} teorema que todavía no se ha demostrado que es cierto.} hasta que se demuestre que son ciertos o aparece un contraejemplo que prueba que la conjetura es falsa.
+      \stopdescripcion
+
+      \startejemplo
+        Demuestre que: \ini{Si yo no como dulces de chocolate, entonces yo siento calor.}
+
+        Datos ciertos:
+        \startitemize[packed, a, intro]
+          \startitem
+            Si voy al cine, entonces yo cmo dulces de chocolate.
+          \stopitem
+          \startitem
+            Me tomo un refresco o me tomo un jugo.
+          \stopitem
+          \startitem
+            Si yo me tomo un refresco, entonces siento calor.
+          \stopitem
+          \startitem
+            Yo no como dulces de chocolate.
+          \stopitem
+          \startitem
+            Si yo viajo por carro, entonces yo siento fresco.
+          \stopitem
+          \startitem
+            Si yo tomo jugo, entonces yo voy al cine.
+          \stopitem
+        \stopitemize
+
+        \startdemoejem
+          Aplicamos el \ini{método directo}.
+          
+          Por hipótesis, yo no como dulces de chocolate. Entonces por el contrapositivo de (a), usted no va al cine. Luego, por el contrapositivo de (f) usted no toma jugo. Entonces, por (b) usted se toma un refresco. Luego, por (c) usted siente calor.
+        \stopdemoejem
+      \stopejemplo
+
+      \margindata[youtube]{\from[AE7B]}
+      \startejemplo
+        Demuestre que: \ini{Se daña el carro.}
+
+        Datos ciertos:
+        \startitemize[packed,a,intro]
+          \startitem
+            Está haciendo calor.
+          \stopitem
+          \startitem
+            Yo completé mi tarea.
+          \stopitem
+          \startitem
+            Si anuncian tormenta, entonces suspenden las clases.
+          \stopitem
+          \startitem
+            Si suspenden las clases, entonces yo me voy para mi pueblo.
+          \stopitem
+          \startitem
+            Si yo me voy para mi pueblo, entonces yo no completé mi tarea.
+          \stopitem
+          \startitem
+            Si no se daña el carro, entonces yo no me voy para la playa.
+          \stopitem
+          \startitem
+            Si yo me voy para la playa, entonces estamos en el mes de septiembre.
+          \stopitem
+          \startitem
+            Si estamos en el mes de septiembre, entonces anuncian tormeta.
+          \stopitem
+        \stopitemize
+
+        \startdemoejem
+          Utilizamos el \ini{método indirecto}.
+
+          Suponga que no se daña el carro. Entonces por (f) yo me voy para la playa. Luego, por (g) estamos en el mes de septiembre. En consecuecia, por (h), anuncian tormenta. Entonces, por (c) suspenden las clases. Luego, por (d) yo me voy para mi pueblo. En consecuencia, por (e), yo no completé mi tarea. Esto es una contradicción al dato (b).
+        \stopdemoejem
+      \stopejemplo
+
+      \margindata[youtube]{\from[AE8A]}
+      \startejemplo
+        Demuestre que: \ini{Si está lloviendo, entonces me pongo los zapatos nuevos.}
+
+        Datos ciertos:
+        \startitemize[packed,a,intro]
+          \startitem
+            Si no me pongo los zapatos nuevos, entonces voy a la biblioteca.
+          \stopitem
+          \startitem
+            Si apruebo el examen de matemáticas con calificación de A, entonces no está lloviendo.
+          \stopitem
+          \startitem
+            Si no estudio para el examen de inglés, entonces apruebo el examen de matemáticas con calificación de A.
+          \stopitem
+          \startitem
+            Si voy a la biblioteca, entonces no estudio para el examen de inglés.
+          \stopitem
+        \stopitemize
+
+        \startdemoejem
+          Utilizamos el \ini{método del contrapositivo.}
+
+          Suponga que no me pongo los zapatos nuevos. Entonces, por (a) yo voy a la biblioteca. Luego, por (d) yo no estudio para examen de inglés. En consecuencia, por (c), aprueba el examen de matemáticas con calificación de A. Finalmente, por (b), no está lloviendo.
+        \stopdemoejem
+        
+        Se ha utilizado el \obj{formato de demostración por párrafo}. Sin embargo, también existe el \obj{formato por columna}.
+
+        \startcenteraligned
+          \starttable[|l|l|]
+            \NC \REF[c]{Paso} \NC \REF[c]{Razón} \NC\AR
+            \HL
+            \NC (1) no me pongo los zapatos nuevos          \NC (1) Suposición \NC\AR
+            \NC (2) voy a la biblioteca                     \NC (2) (a)        \NC\AR
+            \NC (3) no estudio para el examen de inglés     \NC (3) (d)        \NC\AR
+            \NC (4) apruebo el examen de matemáticas con A  \NC (4) (c)        \NC\AR
+            \NC (5) no está lloviendo                       \NC (5) (b)        \NC\AR
+          \stoptable
+        \stopcenteraligned
+
+      \stopejemplo
+
+      \margindata[youtube]{\from[AE8B]}
+      \startejemplo
+        Demuestre que: \ini{Hace calor si y sólo si como papas.}
+
+        Datos ciertos:
+        \startitemize[packed,a,intro]
+          \startitem
+            Si hace calor, entonces me pongo los zapatos nuevos.
+          \stopitem
+          \startitem
+            Me pongo los zapatos nuevos si y sólo si voy al cine.
+          \stopitem
+          \startitem
+            Voy al cine si y sólo si compro papas.
+          \stopitem
+          \startitem
+            Si me pongo los zapatos nuevos, entonces no almuerzo a las doce del mediodía.
+          \stopitem
+          \startitem
+            Si no almuerzo a las doce del mediodía, entonces hace calor.
+          \stopitem
+        \stopitemize
+
+        \startdemoejem
+          Utilizamos el \ini{método de la doble prueba.}
+                    
+          $==>$ Suponenmos que hace calor. Entonces, debido a (a), me pongo los zapatos nuevos. Luego, de acuerdo con (b), voy al cine. En consecuencia, por (c) como papas.
+
+          $<==$ Suponemos que como papas. Entonces, por (c) voy al cine. Luego, por (b), me pongo los zapatos nuevos. Luego, por (d), no almuerzo a las doce del mediodía. Luego, por (e), hace calor.
+        \stopdemoejem
+
+      \stopejemplo
+
+      \startejemplo
+        Demuestre que: \ini{Hace calor si y sólo si como papas.}
+
+        Datos ciertos:
+        \startitemize[packed,a,intro]
+          \startitem
+            Si hace calor, entonces me pongo los zapatos nuevos.
+          \stopitem
+          \startitem
+            Me pongo los zapatos nuevos si y sólo si voy al cine.
+          \stopitem
+          \startitem
+            Voy al cine si y sólo si compro papas.
+          \stopitem
+          \startitem
+            Si no hace calor, entonces almuerzo a las docde del mediodía.
+          \stopitem
+          \startitem
+            Si almuerzo a las doce de mediodía, entonces como postre.
+          \stopitem
+          \startitem
+            Si como postre, entonces no como papas.
+          \stopitem
+        \stopitemize
+
+        \startdemoejem{}
+          
+          $==>$ Suponemos que hace calor. Entonces, debido a (a), me pongo los zapatos nuevos. Luego, de acuerdo con (b), voy al cine. En consecuencia, por (c) como papas.
+
+          $<==$ Ahora necesitams usar el \ini{método del contrapositivo.} Suponemos que no hace calor. Entonces, por (d), almuerzo antes de las doce del mediodía. Luego, por (e), como postre. Entonces, por (f), no como papas.
+        \stopdemoejem
+      \stopejemplo
+
+      \margindata[youtube]{\from[AE9A]}
+      \startejemplo
+        Demuestre: \ini{Existe un animal cuya cabeza posee las siguientes partes:}
+
+        \startcenteraligned
+          \externalfigure[partes.png][maxwidth=0.3\textwidth]
+        \stopcenteraligned
+
+        \startdemoejem{Este es un caso de \ini{prueba de existencia.}}
+
+          \startcenteraligned
+            \starttable[|lp(4cm)|lp(4cm)|]
+              \NC \REF[c]{\ini{Por construcción}} \VL \REF[c]{\ini{Por presentación}} \NC\AR
+              \HL
+              \NC Vamos colocando las partes hasta obtener el animal.
+              \VL Partimos de una representación y comprobamos que coinciden las partes. \NC\AR
+              \NC
+              \startcenteraligned
+                \externalfigure[construccion.png][maxwidth=0.2\textwidth]
+              \stopcenteraligned
+              \VL
+              \startcenteraligned
+                \externalfigure[presentacion.png][maxwidth=0.3\textwidth]
+              \stopcenteraligned
+              \NC\AR
+            \stoptable
+          \stopcenteraligned
+
+        \stopdemoejem
+      \stopejemplo
+
+      \margindata[youtube]{\from[AE9B]}
+      
+    \stopsection
+
+    \startsection[title={Cuantificadores}]
+      
+      Los \obj{cuantificadores} son palabras o frases que indican cantidad en algún enunciado o afirmación.
+
+      \startdiscusion{Cuantificadores matemáticos}
+        \startitemize[packed,n]
+          \startitem
+            existe: $\exists$
+          \stopitem
+          \startitem
+            para todo: $\forall$
+          \stopitem
+          \startitem
+            existe un sólo: $\exists!$
+          \stopitem
+        \stopitemize
+      \stopdiscusion
+
+      \startdiscusion{Presentación en matemáticas de los enunciados que usan identificadores}
+        Sean $x$ un objeto y $p$ una afirmación, 
+        \startitemize[packed,n]
+          \startitem
+            Podemos decir: \ini{$\;\exists\, x $ de modo que $p$}, o bien, \ini{$\exists\, x \;\cdot\ni\cdot\; p\;$} o \ini{$\;\exists\, x$ t.q. $p$}. 
+          \stopitem
+          \startitem
+            \ini{$\forall\, x, p$}
+          \stopitem
+          \startitem
+            \ini{$\exists!\, x \;\cdot\ni\cdot\; p\;$} o \ini{$\;\exists!\, x$ t.q. $\,p$}
+          \stopitem
+        \stopitemize
+      \stopdiscusion
+
+      \startdiscusion{Negación de los cuantificadores}
+        \startitemize[packed,n]
+          \startitem
+            $\exists\, x \;\cdot\ni\cdot\; p\qquad;\qquad \ini{\nexists\,x \;\cdot\ni\cdot\; p}$ o preferiblemente \ini{$\forall\, x, \neg p$}.
+          \stopitem
+          \startitem
+            $\forall\, x, p\qquad;\qquad \ini{\exists\, x \;\cdot\ni\cdot\; \neg p}$
+          \stopitem
+        \stopitemize
+      \stopdiscusion
+    \stopsection
+  \stopchapter
+
+\stopcomponent

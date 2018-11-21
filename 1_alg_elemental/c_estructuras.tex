@@ -1,0 +1,706 @@
+\startcomponent c_estructuras
+
+  \project project_matemprepa
+
+  \margindata[youtube]{\from[AE20A]}
+  \startchapter[title={Estructuras algebraicas y\\ estructuras analíticas}]
+    \startsection[title={Estructuras algebraicas}]
+      \startsubsection[title={Operaciones}]
+
+      \startdefinicion
+        \startitemizer
+          \startitem
+            \obj{Una operación en un conjunto} es una regla que relaciona a dos elementos de dicho conjunto con un tercero y único elemento.
+          \stopitem
+          \startitem
+            Una operación en un conjunto se llama \obj{binaria}, ssi el tercer elemento también es miembro del conjunto.
+          \stopitem
+          \startitem
+            Si representamos una operación en un conjunto por medio del signo $\ast$, diremos que el \obj{resultado de la operación $\ast$ para los elementos $a$ y $b$ es el elemento $c$}, haciendo uso del símbolo $a \ast b = c$. En este caso, $a$ y $b$ son llamados los \obj{operandos}. 
+          \stopitem
+        \stopitemizer
+      \stopdefinicion
+
+      \startdefinicion
+        Sea $A$ un conjunto. El \obj{conjunto potencia de $A$}, denotado con el símbolo $P(A))$, es el conjunto compuesto por los subconjuntos de $A$ 
+      \stopdefinicion
+
+      \startejemplo
+        Sea $A = \{1,2,3\}$, los subconjuntos de $A$ son \{1,2,3\}, $\emptyset$, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}. Así, el conjunto potencia de $A$ será:
+
+        \startformula
+          P(A) = \left\{ \{1,2,3\}, \emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\} \right\}
+        \stopformula
+      \stopejemplo
+
+      Las operaciones de unión, intersección y diferencia de conjutos son binarias en $P(A)$.
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            Comprobemos lo anterior para los siguientes casos:
+            \startejerformula
+              \{1\} \cup \{2\} = \{1,2\} \in P(A)
+            \stopejerformula
+            \startejerformula
+              \{1,2\} \cup \{3\} = \{1,2,3\} \in P(A)
+            \stopejerformula
+            \startejerformula
+              \{1,2\} \cap \{2,3\} = \{2\} \in P(A)
+            \stopejerformula
+            \startejerformula
+              \{2\} \setminus \{3\} = \{2\} \in P(A)
+            \stopejerformula
+            \startejerformula
+              \{1\} \setminus \{1,3\} = \emptyset \in P(A)
+            \stopejerformula
+          \stopitem
+
+          \margindata[youtube]{\from[AE20B]}
+          \startitem
+            Consideremos el conjunto $Q = \left\{\{1\}, \{1,2\}, \{1,3\}, \{2,3\}\right\}$. Las operaciones unión de conjuntos, intersección de conjuntos y diferencia de conjuntos no son binarias en $Q$.
+            \startejerformula
+              \{1,2\} \cup \{1,3\} = \{1,2,3\} \nin Q
+            \stopejerformula
+            \startejerformula
+              \{1,2\} \cap \{2,3\} = \{2\} \nin Q
+            \stopejerformula
+            \startejerformula
+              \{1,3\} \setminus \{1\} = \{3\} \nin Q
+            \stopejerformula
+            \startejerformula
+              \{1\} \cup \{1,2\} = \{1,2\} \in Q
+            \stopejerformula
+            Aunque alguna operación, como la última del ejemplo, da como resultado un elemento de $Q$ eso no implica que sea binaria, ya que para ello se debería dar en todos los casos.
+          \stopitem
+
+
+          \startitem
+            Consideremos el conjunto $B = \{a,b,c,d\}$. Definimos las operaciones \quotation{chuma} y la \quotation{multiplicachón} con los signos $\bigoplus$ y $\bigotimes$, respectivamente con las tablas:
+
+            \blank[medium]
+            \setupTABLE[width=1.3em]
+            \setupTABLE[c][each][align=middle]
+            \setupTABLE[r][first][topframe=off]
+            \setupTABLE[r][last][bottomframe=off]
+            \setupTABLE[c][first,last][leftframe=off,rightframe=off]
+
+            \dontleavehmode
+            \hbox \bgroup \ignorespaces
+
+            \bTABLE
+            \bTR \bTD $\bigoplus$ \eTD \bTD a \eTD \bTD b \eTD \bTD c \eTD \bTD d \eTD \eTR
+            \bTR \bTD a \eTD \bTD a \eTD \bTD b \eTD \bTD c \eTD \bTD d \eTD \eTR
+            \bTR \bTD b \eTD \bTD b \eTD \bTD a \eTD \bTD d \eTD \bTD c \eTD \eTR
+            \bTR \bTD c \eTD \bTD c \eTD \bTD d \eTD \bTD a \eTD \bTD b \eTD \eTR
+            \bTR \bTD d \eTD \bTD d \eTD \bTD c \eTD \bTD b \eTD \bTD a \eTD \eTR
+            \eTABLE
+
+            \unskip \quad \ignorespaces
+
+            \bTABLE
+            \bTR \bTD $\bigotimes$ \eTD \bTD a \eTD \bTD b \eTD \bTD c \eTD \bTD d \eTD \eTR
+            \bTR \bTD a \eTD \bTD a \eTD \bTD a \eTD \bTD a \eTD \bTD a \eTD \eTR
+            \bTR \bTD b \eTD \bTD a \eTD \bTD b \eTD \bTD c \eTD \bTD d \eTD \eTR
+            \bTR \bTD c \eTD \bTD a \eTD \bTD a \eTD \bTD a \eTD \bTD a \eTD \eTR
+            \bTR \bTD d \eTD \bTD a \eTD \bTD b \eTD \bTD c \eTD \bTD d \eTD \eTR
+            \eTABLE
+            \unskip \egroup
+
+            \startitemize[horizontal,four,a]
+              \startitem
+                $a \oplus b = b$ 
+              \stopitem
+              \startitem
+                $b \oplus c = d$
+              \stopitem
+              \startitem
+                $c \otimes d = a$
+              \stopitem
+              \startitem
+                $d \otimes b = b$
+              \stopitem
+            \stopitemize
+          \stopitem
+
+          Se puede verificar que estas operaciones son binarias en ese conjunto $B$.
+
+        \stopitemejem
+      \stopejemplos
+
+    \stopsubsection
+
+    \startsubsection[title={Propiedades de las operaciones binarias}]
+
+      \startobservacion
+        Cuando una operación es binaria en un conjunto decimos que la \obj{ley de cierre o clausura es válida o rige en ese conjunto para esa operación}.
+      \stopobservacion
+
+      
+      \startdefinicion
+        \margindata[youtube]{\from[AE21A]}
+        Una operación binaria $\ast$ en un conjunto $A$ se dice que es \obj{conmutativa} ssi $\forall x,y \in A$, ocurre que $x \ast y = y \ast x$. Es decir, no importa el orden en que escribamos los operandos, el resultado será el mismo. Luego, decimos que \obj{en dicho conjunto $A$ la ley conmutativa para la operación $\ast$ rige o es válida}. 
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            Las operaciones de unión, intersección \comentario{Ya se demostró que ${A \cap B} = {B \cap A}$ en \from[AE17B]} y diferencia simétrica son conmutativas.
+          \stopitem
+          \startitem
+            Se puede verificar que la operación \quotation{chuma} es conmutativa. Para ello, habría que tomar cualesquiera dos elementos y operarlos en los dos órdenes.
+          \stopitem
+          \startitem
+            La operación de ``multiplicachón'' no es conmutativa. Así,
+            \startformula
+              c \otimes d = a \neq c = d \otimes c
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startdefinicion
+        Una operación binaria $\ast$ en un conjunto $A$ se dice que es \obj{asociativa} ssi $\forall x,y,z \in A$, ocurre que $(x \ast y) \ast z = x \ast (y \ast z)$. Es decir, no importa la forma en que agrupemos los operandos, el resultado será el mismo. Si esto ocurre, decimos que \obj{la ley asociativa $\ast$ rige o es válida para la operación $\ast$ en el conjunto $A$}. 
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            Las operaciones de unión \comentario{Ya se demostró en \from[AE17B]} e instersección de conjuntos son asociativas.
+          \stopitem
+          \startitem
+            \margindata[youtube]{\from[AE21B]}
+            Se puede verificar que las operaciones de \quotation{chuma} y \quotation{multiplicachón} son asociativas. Veamos algunos casos
+            \startformula
+              (c \oplus d) \oplus b = b \oplus b = a
+            \stopformula
+            \startformula
+              c \oplus (d \oplus b) = c \oplus c = a
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startdefinicion
+        En un conjunto $A$, un elemento $e \in A$ se llama \obj{la (o el elemento) identidad o neutro de la operación binaria $\ast$} ssi $\forall x \in A$ ocurre que $e \ast x = x \ast e = x$. Es decir, el elemento identidad o neutro hace que el resultado sea el otro elemento con el que se está operando. Si esto ocurre, decimos que \obj{rige o es válida la existencia de un elemento identidad o neutro para la operación $\ast$ en el conjunto $A$}.
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            El conjunto nulo o vacío, $\{\} \equiv \emptyset$, es el elemento identidad o neutro de la operación de unión de conjuntos en cualquier conjunto potencia, $P(A)$, de cualquier conjunto $A$.
+            \startformula
+              A \cup \emptyset = \emptyset \cup A = A
+            \stopformula
+          \stopitem
+          \startitem
+            Se puede verificar que $a$ es el elemento identidad o neutro de la operación \quotation{chuma} en el conjunto B. Verifiquémoslo para algunos casos:
+            \startformula
+              c \oplus a = c
+            \stopformula
+            \startformula
+              a \oplus c = c
+            \stopformula
+          \stopitem
+          \startitem
+            Se puede verificar que no hay elemento identidad o neutro para la \quotation{multiplicachón}.
+          \stopitem
+          \startitem
+            Si tomamos el conjunto potencia, $P(A)$, de un conjunto, y $U = P(A)$, veremos que $U$ es el elemento identidad de la operación de intersección en $P(A)$
+            \startformula
+              x \cap U = U \cap x = x
+            \stopformula
+          \stopitem
+        \stopitemejem
+
+      \stopejemplos
+
+      \startdefinicion
+      \margindata[youtube]{\from[AE22A]}
+        En un conjunto $A$, con una operación binaria $\ast$, si para $x \in A$ existe un elemento $x' \in A$ de modo que $x \ast x'  = x' \ast x = e$, donde $e$ es el elemento identidad de $\ast$ en $A$, diremos que \obj{$x'$ es el elemento inverso con respecto a $\ast$ del elemento $e$}. Si esto ocurre, decimos que \obj{rige o es válida la existencia del elemento inverso para la operación $\ast$ en el conjunto $A$}.
+      \stopdefinicion
+
+      \startdefinicion
+        Sea $A$ un conjunto donde están definidas dos operaciones binarias $\ast$ y $\#$.
+        \startitemizer
+          \startitem
+            Decimos que \obj{$\ast$ es distributiva por la izquierda sobre $\#$} ssi $\forall x, y, z \in A$ ocurre que $x \ast (y \# z) = (x \ast y) \# (x \ast z)$.
+          \stopitem
+          \startitem
+            Decimos que \obj{$\ast$ es distributiva por la derecha sobre $\#$} ssi $\forall x, y, z \in A$ ocurre que $(x \# y) \ast z = (x \ast z) \# (y \ast z)$.
+          \stopitem
+          \startitem
+            Si la operación $\ast$ es distributiva sobre la operación $\#$ por la izquierda y por la derecha, entonces diremos que \obj{$\ast$ es distributiva sobre $\#$ }. 
+          \stopitem
+        \stopitemizer
+      \stopdefinicion
+
+      \margindata[youtube]{\from[AE22B]}
+      \startejemplos
+        \startitemejem
+          \startitem
+          $\bigotimes$ es distributiva sobre $\bigoplus$ en $B$. Veamos un caso en particular:
+          \startejerformula
+            b \otimes (d \oplus c) = b \otimes b = b
+          \stopejerformula
+          \startejerformula
+            (b \otimes d) \oplus (b \otimes c) = d \oplus c = b
+          \stopejerformula
+          \startejerformula
+            (d \oplus c) \otimes b = b \otimes b = b
+          \stopejerformula
+          \startejerformula
+            (d \otimes b) \oplus (d \otimes b) = b \oplus a = b
+          \stopejerformula
+        \stopitem
+
+        \startitem
+          $\bigoplus$ no es distributiva sobre $\bigotimes$ ni por la izquierda ni por la derecha. Así:
+
+          \startejerformula
+            c \oplus (a \otimes b) = c \oplus a = c
+          \stopejerformula
+          \startejerformula
+            (c \oplus a) \otimes (c \otimes b) = c \otimes d = a
+          \stopejerformula
+          \startejerformula
+            (a \otimes b) \oplus c = (a \oplus c) = c
+          \stopejerformula
+          \startejerformula
+            (a \oplus c) \otimes (b \oplus c) = c \otimes d = a
+          \stopejerformula
+        \stopitem
+
+        \startitem
+          Se puede ver que la operación de unión de conjuntos es distributiva sobre la intersección de conjuntos. También que la operación de intersección de conjuntos es distributiva por la derecha sobre la unión.
+        \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startejemplo
+        \margindata[youtube]{\from[AE23A]}
+        \ini{Demuestre que la intersección de conjuntos es distributivas sobre la unión de  conjuntos por la izquierda. Esto es, $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$}.
+        
+        \startdemoejem
+          Bastará ver que $A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$ y que $(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C)$.
+
+          Para lo primero, tomamos $x \in A \cap (B \cup C)$. Entonces, $x \in A, x \in (B \cup C)$. Lo anterior significa que $x \in A \land (x \in B \lor x \in C)$. Si ocurre que $x \in B$, como $x \in A$, entonces $x \in A \cap B$. Entonces $x \in (A \cap B) \cup (A \cap C)$. Si ocurre que $x \in C$, como $x \in A$ entonces $x \in A \cap C$. Entonces $x \in (A \cap B) \cup (A \cap C)$. Por lo tanto, $A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C)$.
+
+          \margindata[youtube]{\from[AE23B]}
+          Para lo segundo, tomamos $x \in (A \cap B) \cup (A \cap C)$. Luego, $x \in A \cap B \lor x \in A \cap C$. Si ocurre que $x \in A \cap B$, entonces $x \in A \land x \in B$. Luego, $x \in B \cup C$, y como $x \in A$, entonces $x \in A \cap (B \cup C)$. Si ocurre que $x \in A \cap C$, entonces $x \in A \land x \in C$. Luego, $x \in B \cup C$, y como $x \in A$, entonces $x \in A \cap (B \cup C)$. Por lo tanto, $(A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C)$.
+      \stopdemoejem
+      \stopejemplo
+
+      \startdefinicion
+        Considere la operación binaria y conmutativa $\ast$ en un conjunto $A$. La \obj{operación inversa de $\ast$} es la operación binaria $\sim$, ssi $\forall x, y, z \in A$, con $x \ast y = y \ast x = z$, ocurre que $z \sim x = y \land z \sim y = x$.
+      \stopdefinicion
+
+      \startejemplo
+        En $B = \{a,b,c,d\}$ definimos la operación $\ominus$, llamada \quotation{rechta}, y vea que es la operación inversa de $\oplus$.
+
+        \blank[medium]
+        \setupTABLE[width=1.3em]
+        \setupTABLE[c][each][align=middle]
+        \setupTABLE[r][first][topframe=off]
+        \setupTABLE[r][last][bottomframe=off]
+        \setupTABLE[c][first,last][leftframe=off,rightframe=off]
+
+        \bTABLE
+        \bTR \bTD $\ominus$ \eTD \bTD a \eTD \bTD b \eTD \bTD c \eTD \bTD d \eTD \eTR
+        \bTR \bTD a \eTD \bTD a \eTD \bTD b \eTD \bTD c \eTD \bTD d \eTD \eTR
+        \bTR \bTD b \eTD \bTD b \eTD \bTD a \eTD \bTD d \eTD \bTD c \eTD \eTR
+        \bTR \bTD c \eTD \bTD c \eTD \bTD d \eTD \bTD a \eTD \bTD b \eTD \eTR
+        \bTR \bTD d \eTD \bTD d \eTD \bTD c \eTD \bTD b \eTD \bTD a \eTD \eTR
+        \eTABLE
+
+        Para $a \oplus b = b$ tenemos $b \ominus a = b$ y $ b \ominus b = a$.
+
+      \stopejemplo
+
+      \startejemplos
+        \margindata[youtube]{\from[AE24A]}
+        \startitemejem[columns]
+          \startitem
+            \ini{$b \oplus c = d$}
+
+            $d \ominus c = b$ \par $d \ominus b = c$
+          \stopitem
+          \startitem
+            \ini{$c \oplus d = b$}
+
+            $b \ominus d = d$ \par $b \ominus d = c$
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startobservacion
+        Un conjunto en donde una o más operaciones han sido definidas y en donde una o más de las propiedades que éstas pueden tener (clausura, conmutatividad, asociatividad, existencia de identidades, existencia de inversos, distributividad y existencia de operaciones inversas) rigen, se lla una \obj{estructura algebraica}.
+      \stopobservacion
+
+      Presentamos una tabla resumen considerando el conjunto $A$ con dos operaciones binarias $\ast$ y $\circ$ definidas en él.
+      
+      \blank
+      \setupTABLE[r][first][align=middle, topframe=off]
+      \setupTABLE[c][first][leftframe=off]
+      \setupTABLE[c][last][rightframe=off]
+
+      \bTABLE
+      \bTR \bTD Propiedades \eTD \bTD Definición \eTD \bTD Leyes generales \eTD \eTR
+      \bTR \bTD Clausura o cierre \eTD \bTD $x \ast y \in A$ único \eTD \bTD $x \ast y \ast z \ast w \in A$ único \eTD \eTR
+      \bTR \bTD Conmutativa \eTD \bTD $x \ast y = y \ast x$ \eTD \bTD $x \ast y \ast z= y \ast x \ast z = z \ast x \ast x = x \ast z \ast y$ \eTD \eTR
+      \bTR \bTD Asociativa \eTD \bTD $(x \ast y) \ast z = x \ast (y \ast z)$ \eTD \bTD $(x \ast y \ast z) \ast (t \ast u)= (x \ast y) \ast z \ast (t \ast u)$ = $x \ast (y \ast z \ast t \ast u)$\eTD \eTR
+      \bTR \bTD Distributiva por la izquierda\eTD \bTD $x \ast (y \circ z) = (x \ast y) \circ (x \ast z)$ \eTD \bTD $x \ast (y \circ z \circ w) = (x \ast y) \circ (x \ast z) \circ (x \ast w)$ \eTD \eTR
+      \bTR \bTD Distributiva por la derecha\eTD \bTD $(x \circ y) \ast z = (x \ast z) \circ (t \ast z)$ \eTD \bTD $(x \circ y \circ z) \ast w  = (x \ast w) \circ (t \ast w) \circ (z \ast w)$ \eTD \eTR
+      \eTABLE
+    \stopsubsection
+  \stopsection
+
+  \margindata[youtube]{\from[AE24B]}
+  \startsection[title={Estructuras analíticas}]
+    \startsubsection[title={Relaciones}]
+      \startdefinicion
+        Una \obj{relación} es una regla que asocia a dos elementos de un conjunto o de dos conjuntos.
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{Sea $S = \{a,b,c,d,e\}$. ¿Qué elementos de $S$ están asociados por medio de la relación \quotation{igual a}?}
+
+            $a = a$, $b = b$, $c = c$, $d = d$ y $e = e$. Esta relación asocia a cada elemento del conjunto con ellos mismos.
+          \stopitem
+          \startitem
+            \ini{Sea $A = \{1,2,3\}$ y $P(A) = \left\{\{1,2,3\}, \emptyset, \{1,\}, \{2,\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\} \right\}$. ¿Qué elementos de $P(A)$ están relacionados por la relación \quotation{es subconjunto de}?}
+
+            \startejerformula
+              \{1,2,3\} \subseteq \{1,2,3\}
+            \stopejerformula
+            \startejerformula
+              \emptyset \subseteq \{\{1,2,3\}, \emptyset, \{1,\}, \{2,\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}
+            \stopejerformula
+            \startejerformula
+              \{1\} \subseteq \{1,2,3\}, \{1\}, \{1,2\}, \{1,3\}
+            \stopejerformula
+            \startejerformula
+              \{2\} \subseteq \{1,2,3\}, \{2\}, \{1,2\}, \{2,3\}
+            \stopejerformula
+            \startejerformula
+              \{3\} \subseteq \{1,2,3\}, \{3\}, \{1,3\}, \{2,3\}
+            \stopejerformula
+            \startejerformula
+              \{1,2\} \subseteq \{1,2,3\}, \{1,2\}
+            \stopejerformula
+            \startejerformula
+              \{1,3\} \subseteq \{1,2,3\}, \{1,3\}
+            \stopejerformula
+            \startejerformula
+              \{2,3\} \subseteq \{1,2,3\}, \{2,3\}
+            \stopejerformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startejemplo
+        \margindata[youtube]{\from[AE25A]}
+        Suponga que frente a su casa hay dos casas donde viven dos hermanos, D. José y D. Pedro. Cierto día parece que han decidido celebrar una reunión familiar por lo que en casa de D. José están sus tres hijos, Juan, Jaime y Carlos, mientras que en casa de D. Pedro está su hijo Ramón junto con sus tres hijos (y nietos de D. Pedro), Ana, Samuel y Eric.
+
+        ¿Qué elementos del conjunto compuesto por las personas en esas casas están asociados por la relación quotation{es descendiente de} (D)?
+
+        \blank[big]
+        \startcenteraligned
+          \startMPcode
+            z0 = (0cm,2.35cm) ; z1 = (1.5cm,2.35cm) ; z2 = (3cm,2.35cm) ; z3 = (1.5cm,3.35cm) ;
+            z4 = (0cm,0cm) ;
+
+            draw (z0 -- z3) withcolor .425white ;
+            draw (z1 -- z3) withcolor .425white ;
+            draw (z2 -- z3) withcolor .425white ;
+
+            dotlabel.top("José", z3) withcolor .425white ;
+            dotlabel.bot("Juan", z0) withcolor .25white ;
+            dotlabel.bot("Jaime", z1) withcolor .425white ;
+            dotlabel.bot("Carlos", z2) withcolor .425white ;
+
+            draw (z4) ;
+          \stopMPcode
+          \qquad
+          \startMPcode
+            z0 = (0cm,0cm) ; z1 = (1.5cm,0cm) ; z2 = (3cm,0cm) ; z3 = (1.5cm,1.5cm) ; z4 = (1.5cm,3cm) ; z5 = (1.5cm,2cm) ;
+
+            draw (z4 -- z5) withcolor .425white ;
+            draw (z0 -- z3) withcolor .425white ;
+            draw (z1 -- z3) withcolor .425white ;
+            draw (z2 -- z3) withcolor .425white ;
+
+            dotlabel.top("Pedro", z4) withcolor .425white ;
+            dotlabel.top("Ramón", z3) withcolor .425white ;
+            dotlabel.bot("Ana", z0) withcolor .425white ;
+            dotlabel.bot("Samuel", z1) withcolor .425white ;
+            dotlabel.bot("Eric", z2) withcolor .425white;
+          \stopMPcode
+        \stopcenteraligned
+
+        \starttabulate[|ri7.8|c|l|cw(1.1cm)|r|c|l|][split=no]
+          \NC Juan   \NC D \NC José \NC \NC Ramón  \NC D \NC Pedro \NC \NR
+          \NC Jaime  \NC D \NC José \NC \NC Ana    \NC D \NC Ramón \NC \NR
+          \NC Carlos \NC D \NC José \NC \NC Samuel \NC D \NC Ramón \NC \NR
+          \NC        \NC   \NC      \NC \NC Eric   \NC D \NC Pedro \NC \NR
+          \NC        \NC   \NC      \NC \NC Ana    \NC D \NC Pedro \NC \NR
+          \NC        \NC   \NC      \NC \NC Samuel \NC D \NC Pedro \NC \NR
+          \NC        \NC   \NC      \NC \NC Eric   \NC D \NC Pedro \NC \NR
+        \stoptabulate
+
+        ¿Qué elementos de ese conjunto están asociados por medio de la relación \quotation{es hermano de} (H)?
+
+        \starttabulate[|ri7.8|c|l|cw(1.1cm)|r|c|l|]
+          \NC José   \NC H \NC Pedro  \NC \NC Jaime  \NC H \NC Carlos \NC \NR
+          \NC Pedro  \NC H \NC José   \NC \NC Carlos \NC H \NC Jaime  \NC \NR
+          \NC Juan   \NC H \NC Jaime  \NC \NC Samuel \NC H \NC Ana    \NC \NR
+          \NC Jaime  \NC H \NC Juan   \NC \NC Samuel \NC H \NC Eric   \NC \NR
+          \NC Juan   \NC H \NC Carlos \NC \NC Eric   \NC H \NC Samuel \NC \NR
+          \NC Carlos \NC H \NC Juan   \NC \NC Eric   \NC H \NC Ana    \NC \NR
+        \stoptabulate
+
+        ¿Qué elementos de ese conjunto están asociados por medio de la relación \quotation{es hermana de} (S)?
+
+        \startcenteraligned
+          \starttabulate[|r|c||l]
+            \NC Ana \NC S \NC Samuel \NC\NR
+            \NC Ana \NC S \NC Eric \NC\NR
+          \stoptabulate
+        \stopcenteraligned
+        
+      \stopejemplo
+
+
+      \startdefinicion
+      \margindata[youtube]{\from[AE25B]}
+        Una relación $R$ en un conjunto $A$ se llama \obj{un orden parcial en $A$}, ssi $\forall x, y, z \in A$, las siguientes condiciones se cumplen:
+        \startitemizer
+          \startitem
+            $x \mathbin{R} x$
+          \stopitem
+          \startitem
+            $x \mathbin{R} y \land y \mathbin{R} x <--> x = y$
+          \stopitem
+          \startitem
+            $x \mathbin{R} y \land y \mathbin{R} z --> x \mathbin{R} z$
+          \stopitem
+        \stopitemizer
+
+        El conjunto $A$ junto con el orden parcial $R$ definido en él si llama un \obj{conjunto parcialmente ordenado} (\quotation{poconjunto}).
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{$\subseteq$ es un orden parcial en $P(X)$}
+
+            Las siguientes relaciones ya han sido demostradas.
+            \startitemize
+              \startitem
+                $A \subseteq A$
+              \stopitem
+              \startitem
+                $A \subseteq B \land B \subseteq A <--> A = B$
+              \stopitem
+              \startitem
+                $A \subseteq B \land B \subseteq C --> A \subseteq B$
+              \stopitem
+            \stopitemize
+          \stopitem
+
+          \startitem
+            D(escendiente) y H(ermano) no son órdenes parciales, ya que, por ejemplo, Eric noD Eris o Samuel noH Samuel.
+          \stopitem
+
+          \startitem
+            Consideremos el conjunto $A = \{1,2,3,4,p\}$ y el siguiente diagrama
+
+            \startcenteraligned
+              \startMPcode
+                z2 = (0cm,1cm) ; z4 = (1cm,0cm) ; z3 = (2cm,1cm) ; z1 = (1cm,2cm) ;
+                z5 = (3cm,0cm) ;
+
+
+                drawarrow (z4..z2) withcolor .425white ;
+                drawarrow (z4..z3) withcolor .425white ;
+                drawarrow (z2..z1) withcolor .425white ;
+                drawarrow (z3..z1) withcolor .425white ;
+                drawarrow (z5..z3) withcolor .425white ;
+
+
+                draw thelabel.top("1", z1) withcolor .425white ;
+                draw thelabel.lft("2", z2) withcolor .25white ;
+                draw thelabel.top("3", z3) withcolor .425white ;
+                draw thelabel.bot("4", z4) withcolor .425white ;
+                draw thelabel.bot("p", z5) withcolor .425white ;
+              \stopMPcode
+            \stopcenteraligned
+
+            Definimos la relación $R$ indicando:
+            
+            $x \mathbin{R} y$ ssi $x = y\; \lor$ pasamos de $x$ a $y$ siguiendo la dirección de las flechas en ese diagrama.
+
+            \starttabulate[|ri7.8|c|l|cw(1.1cm)|r|c|l|][split=no]
+              \NC 1 \NC $R$ \NC 1 \NC \NC 4 \NC $R$ \NC 3 \NC \NR
+              \NC 2 \NC $R$ \NC 2 \NC \NC 4 \NC $R$ \NC 1 \NC \NR
+              \NC 3 \NC $R$ \NC 3 \NC \NC 2 \NC $R$ \NC 1 \NC \NR
+              \NC 4 \NC $R$ \NC 4 \NC \NC 3 \NC $R$ \NC 1 \NC \NR
+              \NC p \NC $R$ \NC p \NC \NC p \NC $R$ \NC 3 \NC \NR
+              \NC 4 \NC $R$ \NC 2 \NC \NC p \NC $R$ \NC 1 \NC \NR
+            \stoptabulate
+
+            Podemos comprobar que se cumplen con las propiedades que determinan una relación de orden parcial.
+          \stopitem
+
+          \startitem
+            \ini{La relación \quotation{es igual a}, $=$, es un orden parcial}.
+
+            Ya vimos las propiedades de la igualdad, que decían que:
+            \startitemize[packed,r]
+              \startitem
+                $x = x$ (ley reflexiva)
+              \stopitem
+              \startitem
+                $x = y --> y = x$ (ley simétrica)
+              \stopitem
+              \startitem
+                $x = y \land y = z --> x = z$ (ley transitiva)
+              \stopitem
+            \stopitemize
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startdefinicion
+        \margindata[youtube]{\from[AE26A]}
+        Un conjunto $A$ parcialmente ordenado por la relación $R$, se dice que \obj{está totalmente ordenado por $R$} ssi $\forall x,y \in A$, o $x \mathbin{R} y$ o $y \mathbin{R} x$. Esto es, ssi $\forall x,y \in A, x \mathbin{R} y \veebar  y \mathbin{R} x$. En este caso, llamaremos al orden parcial $R$, \obj{un orden total o lineal}.
+      \stopdefinicion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            El orden parcial \quotation{es igual a} no es un orden total pues, debido a la ley simétria, $x = y \land y = x$
+          \stopitem
+          \startitem
+            El orden parcial \quotation{es un subconjunto de} no es un orden total o lineal pues para $\{1\}, \{2\} \in P(A)$, no es cierto que $\{1\} \subseteq \{2\}$ ni que $\{2\}$ \subseteq $\{1\}$.
+          \stopitem
+          \startitem
+            Considere el orden parcial en $A = \{1,2,3,4,p\}$ dado por
+
+            \startcenteraligned
+              \startMPcode
+                z2 = (0cm,1cm) ; z4 = (1cm,0cm) ; z3 = (2cm,1cm) ; z1 = (1cm,2cm) ;
+                z5 = (3cm,0cm) ;
+
+
+                drawarrow (z4..z2) withcolor .425white ;
+                drawarrow (z4..z3) withcolor .425white ;
+                drawarrow (z2..z1) withcolor .425white ;
+                drawarrow (z3..z1) withcolor .425white ;
+                drawarrow (z5..z3) withcolor .425white ;
+
+
+                draw thelabel.top("1", z1) withcolor .425white ;
+                draw thelabel.lft("2", z2) withcolor .25white ;
+                draw thelabel.top("3", z3) withcolor .425white ;
+                draw thelabel.bot("4", z4) withcolor .425white ;
+                draw thelabel.bot("p", z5) withcolor .425white ;
+              \stopMPcode
+            \stopcenteraligned
+
+            No se trata de un orden total, pues algunos elementos no están relacionados: $4 \mathbin{R} p$ o $p \mathbin{R} 4$
+          \stopitem
+          \startitem
+            Consideremos el conjunto $\{1,3,p\} \subseteq A$.
+
+            \startitemize
+              \startitem
+                Está parcialmente ordenado
+                \startitemize
+                  \startitem
+                    $1 \mathbin{R} 1, 3 \mathbin{R} 3, p \mathbin{R} p$ 
+                  \stopitem
+                  \startitem
+                    También se cumple que $x \mathbin{R} y \land y \mathbin{R} x <--> x = y$
+                  \stopitem
+                  \startitem
+                    $p \mathbin{R} 3 \land 3 \mathbin{R} 1 --> p \mathbin{R} 1$
+                  \stopitem
+                \stopitemize
+              \stopitem
+              \startitem
+                Está totalmente ordenado
+                \startitemize
+                  \startitem
+                    $1 \mathbin{R} 3 \veebar 3 \mathbin{R} 1$
+                  \stopitem
+                  \startitem
+                    $1 \mathbin{R} p \veebar p \mathbin{R} 1$
+                  \stopitem
+                  \startitem
+                    $3 \mathbin{R} p \veebar p \mathbin{R} 3$
+                  \stopitem
+                \stopitemize
+                Vemos que se da para todos los casos posibles.
+              \stopitem
+            \stopitemize
+          \stopitem
+          \startitem
+            Consideremos $\{4,3,p\} \subseteq A$.
+
+            Está parcialmente ordenado. Sin embargo, no es un orden total ya que ni $4 \mathbin{R} p$ ni $p  \mathbin{R} 4$.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubsection
+  \stopsection
+  \startsection[title={Resumen}]
+
+    \starttabulate[|p|c|p|][split=no]
+      \HL
+      \NC Estructuras algebraicas \NC  \NC Estructuras analíticas \NC\NR
+      \HL
+      \NC Conjuntos con una o más operaciones definidas en él y sus operadores \NC  \NC Conjuntos con una o más relaciones definidas en él y sus características \NC\NR
+
+      \NC
+      \startitemize[n]
+        \startitem
+          Cierre o clausura
+        \stopitem
+        \startitem
+          Conmutatividad
+        \stopitem
+        \startitem
+          Asociatividad
+        \stopitem
+        \startitem
+          Existencia de identidades
+        \stopitem
+        \startitem
+          Existencia de inversos
+        \stopitem
+        \startitem
+          Distributividad
+        \stopitem
+        \startitem
+          Existencia de operaciones inversas
+        \stopitem
+      \stopitemize
+      \NC
+      \NC
+      \startitemize[n]
+        \startitem
+          Orden parcial
+        \stopitem
+        \startitem
+          Orden total o lineal
+        \stopitem
+      \stopitemize
+      \NC\NR
+
+    \stoptabulate
+
+  \stopsection
+  \stopchapter
