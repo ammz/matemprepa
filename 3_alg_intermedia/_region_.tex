@@ -1,3 +1,5 @@
+\message{ !name(c_sistemas_ecuaciones_lineales.tex)} %
+\message{ !name(c_sistemas_ecuaciones_lineales.tex) !offset(-2) }
 \startcomponent c_sistemas_ecuaciones_lineales
 \project project_matemprepa
 % \product prod_algebra_intermedia
@@ -58,7 +60,7 @@
     Para hallar esos valores nos tienen que dar un conjunto de sustitución de cada incógnita del sistema, para de entre los elementos de ellos encontrar los valores que hacen ciertas a las ecuaciones del sistema.
 
     \startejemplos
-      \startplaceformula 
+      \startplaceformula
         \startejerformula[color=ejemcolor]
           \startmathalignment[n=4,align={right,right,right,middle}]
             \NC 4x \NC +3y \NC = \NC 7 \NR[+]
@@ -185,7 +187,7 @@
       Ahora vamos sustituyendo hasta encontrar un trío que satisfaga las ecuaciones del sistema
 
       $x =2, \, y = -1, \, z = 0$
-      
+
       \startformulas
         \startformula
           \startmathalignment[n=5, align={middle,middle,middle,middle,left}]
@@ -215,7 +217,7 @@
       \stopformulas
 
       $x =3, \, y = 2, \, z = 1$
-      
+
       \startformulas
         \startformula
           \startmathalignment[n=5, align={middle,middle,middle,middle,left}]
@@ -250,7 +252,7 @@
       Pero aún debemos comprobar el último tuplo.
 
       $x = -1, \, y = -2, \, z = 1$
-      
+
       \startformulas
         \startformula
           \startmathalignment[n=5, align={middle,middle,middle,middle,left}]
@@ -284,7 +286,7 @@
     Este método, como se ha visto, es muy engorroso, por lo que debemos buscar otros métodos alternativos.
   \stopsection
 
-  \youtube{\from[AI57A]}    
+  \youtube{\from[AI57A]}
   \startsection[title={Solución por sustitución}]
     \startejemplos
       Resuelva los siguientes sisitemas por sustitución.
@@ -386,7 +388,7 @@
         \startformula
           z = 2x +y -7 \leftarrow \text{ecuación auxiliar}
         \stopformula
-        
+
         \startformulas
           \startformula
             \startmathalignment[n=3, align={middle,middle,left}]
@@ -448,7 +450,7 @@
         \stopformula
         Ahora obtenemos las otras incógnitas
         \startformula
-          y = 23 - 7(3) =23 - 21 
+          y = 23 - 7(3) =23 - 21
         \stopformula
         \startformula
           y = 2
@@ -470,7 +472,7 @@
             \NC 4ax + 3ay = 10 \NC\NR
           \stopmathalignment
         \stopejerformula
-        
+
         \startformula
           2ay = 7 - 3ax
         \stopformula
@@ -604,7 +606,7 @@
       \stopplaceformula
 
       Escojemos dos ecuaciones y eliminamos una de las incógnitas
-      
+
       \startcenteraligned
         \starttabulate [|mr|mr|mr|mc|mr|]
           \NC 2x \NC  +y  \NC  -z \NC = \NC -6  \NR
@@ -620,7 +622,7 @@
           \NC       \NC -5y \NC -11z \NC = \NC -12 \NR
         \stoptabulate
       \stopcenteraligned
-      
+
       Ahora seleccionamos la ecuación que quedaba y alguna otra ecuación y eliminamos la misma incógnita que en el caso anterior.
 
       \startcenteraligned
@@ -640,7 +642,7 @@
       \stopcenteraligned
 
       Formamos un nuevo sistema de ecuaciones lineales con las dos ecuaciones resultantes.
-      
+
       \startcenteraligned
         \starttabulate [|mr|mr|mc|mr|]
           \NC -5y \NC -11z \NC = \NC -12 \NR
@@ -671,7 +673,7 @@
       \startformula
         y = \dfrac{10}{-5} = -2
       \stopformula
-      
+
       Sustituimos ahora en la tercera ecuación
 
       \startformula
@@ -704,7 +706,7 @@
           \NC b(bx \NC +ay \NC = \NC a^2 + b^2) \NR
         \stoptabulate
       \stopcenteraligned
-      
+
       \startcenteraligned
         \starttabulate [|mr|mr|mc|ml|]
           \NC a^{2}x \NC -aby \NC = \NC a^3 +a b^2 \NR
@@ -713,7 +715,7 @@
           \NC a^2x + b^{2}x \NC  \NC = \NC a^3 + a b^2 + a^2 b + b^3) \NR
         \stoptabulate
       \stopcenteraligned
-      
+
       \startformula
         x(a^2 + b^2) = a^3 + a b^2 + a^2 b + b^3
       \stopformula
@@ -742,7 +744,7 @@
         ay = a^2 + b^2 - ab - b^2
       \stopformula
       \startformula
-        ay = a (a-b) 
+        ay = a (a-b)
       \stopformula
       \startformula
         y = \dfrac{a(a-b)}{a} = a - b
@@ -792,7 +794,7 @@
   \startsection[title={Solución por igualación}]
     \startejemplos
       Resuelva los siguientes sistemas por igualación
-      
+
       \startplaceformula
         \startejerformula[color=ejemcolor]
           \startmathalignment[n=4, align={right,right,middle,left}]
@@ -803,14 +805,14 @@
       \stopplaceformula
 
       Despejamos $y$ en ambas ecuaciones
-      
+
       \startformula
         y = 5 + 2x \leftarrow \text{1 ecuación auxiliar}
       \stopformula
       \startformula
         y = 1  - 2x \leftarrow \text{2 ecuación auxiliar}
       \stopformula
-  
+
       Podemos forma la siguiente ecuación
       \startformula
         5 + 2x = 1 - 2x
@@ -824,7 +826,7 @@
       \startformula
         x = \dfrac{-4}{4} = -1
       \stopformula
-      
+
       Ahora sustuitmos en cualquiera de las ecuaciones
 
       \startformula
@@ -932,7 +934,7 @@
       Ahora podemos sustituir en (2), por tener los coeficientes más pequeños
 
       \startformula
-        y = 7 - 2(3) + (1) = 7 - 6 + 1 
+        y = 7 - 2(3) + (1) = 7 - 6 + 1
       \stopformula
       \startformula
         y = 2
@@ -949,8 +951,7 @@
         \stopejerformula
       \stopplaceformula
 
-      Como la primera ecuación ya tiene solo dos incógnitas (la $x$ y la $y$), resolvemos las otas dos ecuaciones del sistema para la incógnita $z$. De esa forma la segunda ecuación del sistema \quote{reducido} (donde la primera ecuación de ese sistema reducido es la primera ecuación del 
-sistema original), no tendrá a la $z$.
+      Como la primera ecuación ya tiene solo dos incógnitas (la $x$ y la $y$), resolvemos las otas dos ecuaciones del sistema para la incógnita $z$. De esa forma la segunda ecuación del sistema \quote{reducido} (donde la primera ecuación de ese sistema reducido es la primera ecuación del sistema original), no tendrá a la $z$.
 
       \startformula
         3z = -1 -3x +2y
@@ -1021,48 +1022,28 @@ sistema original), no tendrá a la $z$.
       \stopformula
       Nos falta obtener la $z$. Podemos utilizar las ecuaciones auxiliares. Sustituimos en la primera por tener los coeficientes más pequeños.
       \startformula
-        z = \dfrac{-1-3(-\dfrac{19}{24})+2(\dfrac{11}{16})}{3} = \dfrac{-1 + \dfrac{19}{8} + \dfrac{11}{8}}{3} = \dfrac{-1 + \dfrac{15}{4}}{3} = \dfrac{-4 + 15}{12} = \dfrac{11}{12}
+        z = \dfrac{-1-3(-\dfrac{19}{24})+2(\dfrac{11}{16})}{3} = \dfrac{-1 + \dfrac{19}{8} + \dfrac{11}{8}}{3} = \dfrac{-1 + \dfrac{18}{4}}{3}
       \stopformula
-      Por lo tanto, el conjunto solución será $(-\dfrac{19}{24}, \dfrac{11}{16}, \dfrac{11}{12})$.
     \stopejemplos
   \stopsection
 
-  \youtube{\from[AI60A]}
-  \startsection[title={Método gráfico (o de gráficas) para resolver sistemas de ecuaciones de dos incógnitas}]
 
-    Recordemos que en el tema de la introducción a la geometría analítica, del curso de geometría, vimos que una ecuación lineal, $ax + by = c$, con las variables $x$ y $y$, generaban una recta como gráfica. Esa recta consiste de todos los puntos $(x',y')$ que satisfacen o hacen cierta a la ecuación. Luego, si consideramos el sistema de dos ecuaciones lineales con las dos incógnitas 
 
-    \startmathalignment[n=5,align={right,middle,right,right,middle}]
-      \NC a_1 x \NC + \NC b_1 y \NC = \NC c_1 \NR
-      \NC a_2 x \NC + \NC b_2 y \NC = \NC c_2,\NR
-    \stopmathalignment
 
-    si ocurrieran que ambas se intersecan en el punto $(x_0, y_0)$, las coordenadas $x_0$ y $y_0$, harán ciertas o satisfacen a ambas ecuaciones del sistema. O sea que $(x_0, y_0)$ es la solución del sistema.
-
-    Como la lectura de las coordenadas $x_0$ y $y_0$ depende de la precisión con que hayamos hecho el dibujo y de la precisión de nuestra vista, la solución del sistema se dará en forma aproximada. Esto es:
-    
-    \startmathalignment[n=3,align={right,middle,left}]
-      \NC x \NC = \NC x_0 \NR
-      \NC y \NC = \NC y_0 \NR
-    \stopmathalignment
-
-    Hay un caso en donde sí podremos dar la solución en forma exacta.
-
-    \youtube{\from[AI60B]}
-
+  \startsection[title={Solución gráfica}]
 
   \stopsection
 
   \startsection[title={Observaciones interesantes}]
-    
+
   \stopsection
 
   \startsection[title={Sistemas en los recíprocos de las incógnitas}]
-    
+
   \stopsection
 
   \startsection[title={Problemas verbales}]
-    
+
   \stopsection
 \stopchapter
 \stopcomponent
@@ -1070,3 +1051,5 @@ sistema original), no tendrá a la $z$.
 %%% mode: context
 %%% TeX-master: t
 %%% End:
+
+\message{ !name(c_sistemas_ecuaciones_lineales.tex) !offset(-1055) }

@@ -1,12 +1,12 @@
 \startcomponent c_cardinales
 
 \project project_matemprepa
-  
+
   \margindata[youtube][method=top]{\from[AE26B]}
   \startchapter[title={Conjunto de los números cardinales}]
 
     \startdefinicion
-      \margindata[comentario]{Recordemos que la cardinalidad de un conjunto es el número de elementos que hay en un conjunto.}
+      \comentario{Recordemos que la cardinalidad de un conjunto es el número de elementos que hay en un conjunto.}
 
       Sea $A$ y $B$ dos conjuntos con $A \cap B = \emptyset$. Suponga que $\#A = a$ y $\#B = b$. La \obj{suma de $a$ y $b$}, denotada con el símbolo $a + b$ y leída \quotation{a más b}, se define como $a + b = \#(A \cup B) = \#A + \#B$.
 
@@ -15,7 +15,7 @@
 
 
     \startaxioma
-      \margindata[comentario]{Aceptamos que es una operación binaria sin discusión, ya que al estar uniendo conjuntos de cosas y el primer conjunto tiene una cardinalidad que es un número natural y el segundo también, al contarlos sale un conjunto que también tiene una cardinaliad que es un numero natural.}
+      \comentario{Aceptamos que es una operación binaria sin discusión, ya que al estar uniendo conjuntos de cosas y el primer conjunto tiene una cardinalidad que es un número natural y el segundo también, al contarlos sale un conjunto que también tiene una cardinaliad que es un numero natural.}
 
       La suma de dos números naturales es una operación binaria determinada por la siguiente tabla:
 
@@ -59,7 +59,7 @@
       Primero queremos ver que $a + b = b + a$.
 
       Tomamos dos conjuntos $A$ y $B$ con $A \cap B = \emptyset$, y que $a = \#A$ y $b = \#B$. Entonces
-      \margindata[comentario]{
+      \comentario{
         \startitemize
           \startitem
             $a + b = \#(A \cup B) = \#A + \#B$
@@ -84,21 +84,20 @@
       Tomamos $C$, un conjunto con $\#C = c$, de modo que $(A \cup B) \cap C = \emptyset = A \cap (B \cup C) = B \cap C$.
 
       \margindata[youtube]{\from[AE27B]}
-      \margindata[comentario]{$A \cap B = \emptyset --> a + b = \#(A \cup B) = \#A + \#B$}
+      \comentario{$A \cap B = \emptyset --> a + b = \#(A \cup B) = \#A + \#B$}
       Entonces tenemos que
       \startformula
         \startalign
-          \NC \#\left[(A \cup B) \cup C \right] \NC = \#(A \cup B) + \#C  \NR
+          \NC \#\left[(A \cup B) \cup C \right] \NC = \#(A \cup B) + \#C \NR
           \NC                                   \NC = (\#A + \#B) + \#C  \NR
           \NC                                   \NC = (a + b) + c        \NR
           \NC \#\left[A \cup (B \cup C) \right] \NC = \#A + \#(B \cup C) \NR
           \NC                                   \NC = \#A + (\#B + \#C)  \NR
           \NC                                   \NC = a + (b + c)        \NR
         \stopalign
-
       \stopformula
 
-      \margindata[comentario]{$(A \cup B) \cup C = A \cup (B \cup C)$}
+      \comentario{$(A \cup B) \cup C = A \cup (B \cup C)$}
       Por tanto, $\#\left[(A \cup B) \cup C\right] = \#\left[A \cup (B \cup C)\right]$
 
       \startformula
@@ -108,7 +107,7 @@
 
 
     \startobservacion
-      \margindata[comentario]{Aunque en este curso no vamos demostrarlo.}
+      \comentario{Aunque en este curso no vamos demostrarlo.}
       Las leyes conmutativas y asociativas generales son aplicables.
     \stopobservacion
 
@@ -121,7 +120,7 @@
     \startejemplos
       \startitemejem
         \startitem
-          $\ini{2 + 3 + 5 + 1 + 4} = (2 + 3) + (5 + 1) + 4 = 5 + 6 + 4 = 5 + (6 + 4) = 5 + 10 = 15$ (aplicando la ley asociativa general)  
+          $\ini{2 + 3 + 5 + 1 + 4} = (2 + 3) + (5 + 1) + 4 = 5 + 6 + 4 = 5 + (6 + 4) = 5 + 10 = 15$ (aplicando la ley asociativa general)
         \stopitem
         \startitem
           $\ini{2 + 3 + 5 + 1 + 4} = 3 + 1 + 4 + 2 + 5 = (3 + 1) + 4 + (2 + 5) = 4 + 4 + 7 = (4 + 4) + 7 = 8 + 7 = 15$ (aplicando las leyes conmutativa y asociativa generales)
@@ -215,7 +214,7 @@
     \startdemo
       Tenemos que ver que $n \cdot 1 = 1 \cdot n = n$.
 
-      \margindata[comentario]{Definición de multiplicación:\par$xy = \underbrace{y+y+y+\cdots+y}_{\text{x sumandos}}$}
+      \comentario{Definición de multiplicación:\par$xy = \underbrace{y+y+y+\cdots+y}_{\text{x sumandos}}$}
       Por definición de la multipliación,
 
       \startformula
@@ -237,10 +236,10 @@
     \stopteorema
 
     \startdemo
-      \margindata[comentario]{Propiedad distributiva por la izquierda\par$x \ast (y \circ z) = (x \ast y) \circ (x \ast z)$}
+      \comentario{Propiedad distributiva por la izquierda\par$x \ast (y \circ z) = (x \ast y) \circ (x \ast z)$}
       Tenemos que probar que $n(a+b) = na + nb$, donde $n,a,b \in \naturalnumbers$. Entonces, como $a + b \in \naturalnumbers$ (lo vimos en un axioma anterior), y por la definición de multiplicación,
 
-      \margindata[comentario]{
+      \comentario{
         \startitemize
           \startitem
             Definición de multiplicación:\par$xy = \underbrace{y+y+y+\cdots+y}_{\text{x sumandos}}$
@@ -275,10 +274,10 @@
 
     \startdemo
       Sean $n,a \in \naturalnumbers$. Tenemos que ver que $na = an$.
-      \margindata[comentario]{Propiedad conmutativa\par$x \ast y = y \ast x$}
+      \comentario{Propiedad conmutativa\par$x \ast y = y \ast x$}
 
       Pero,
-      \margindata[comentario]{
+      \comentario{
         \startitemize
           \startitem
           1 es elemento identidad de la multiplicación en $\naturalnumbers$\par$x\cdot 1 = 1\cdot x = x$
@@ -307,11 +306,11 @@
     \stopteorema
 
     \startdemo
-      \margindata[comentario]{Propiedad distributiva por la derecha\par$(x \circ y) \ast z = (x \ast z) \circ (y \ast z)$}
+      \comentario{Propiedad distributiva por la derecha\par$(x \circ y) \ast z = (x \ast z) \circ (y \ast z)$}
       Sean $n,a,b \in \naturalnumbers$, queremos ver que $(a+b)n = an + bn$.
 
       Pero,
-      \margindata[comentario]{
+      \comentario{
         \startitemize
           \startitem
             conmutatividad ($\times$)
@@ -370,7 +369,7 @@
     \stopteorema
 
     \startdemo
-      \margindata[comentario]{1 es elemento identidad de la multiplicación en $\naturalnumbers$\par$x\cdot 1 = 1\cdot x = x$}
+      \comentario{1 es elemento identidad de la multiplicación en $\naturalnumbers$\par$x\cdot 1 = 1\cdot x = x$}
       Supondremos que existe un $e \in \naturalnumbers$, diferente de 1, pero que tiene la misma propiedad que el 1, y vemos que $e = 1$.
 
       Como estamos suponiendo que $e$ tiene la misma propiedad que el 1, entonces $\forall x \in \naturalnumbers$,
@@ -386,7 +385,7 @@
       \startformula
         1 \cdot e = 1
       \stopformula
-      \margindata[comentario]{$x = y --> y = x$}
+      \comentario{$x = y --> y = x$}
       lo que equivale a decir, por la ley simétrica de la igualdad, que
       \placeformula[t4-8-2]
       \startformula
@@ -457,7 +456,7 @@
     \startejemplos
       \startitemejem
         \startitem
-          ${5-3} = 2$, pues $5 = 2 + 3$ 
+          ${5-3} = 2$, pues $5 = 2 + 3$
         \stopitem
         \startitem
           $8 - 3 = 5$, pues $8 = 3 + 5$
@@ -484,7 +483,7 @@
         10 \text{ Digitos}: \overbrace{0}^{\text{origen árabe}}, \underbrace{1, 2, 3, 4, 5, 6, 7, 8, 9}_{\text{origen indú}}
       \stopformula
     \stopdiscusion
-     
+
     \startdefinicion
       $\mathbb{W} = \naturalnumbers \cup \{0\} = \{0,1,2,3,4,\dots\}$ es \obj{el conjunto de los números cardinales}.
     \stopdefinicion
@@ -545,8 +544,8 @@
 
     \startdemop
       {\sl i)} Por la ley reflexiva de la igualdad $a + c = a + c$. Como, por hipótesis, $a = b$, podemos sustituir $a$ en el lado derecho de la igualdad anterior, obteniendo que $a + c = b + c$.
-      
-      {\sl ii)} y {\sl iii)} se demuestran de la misma forma. 
+
+      {\sl ii)} y {\sl iii)} se demuestran de la misma forma.
     \stopdemop
 
     \startteorema{propiedad multiplicativa del cero}
@@ -555,15 +554,15 @@
 
     \startdemo
       Sabemos que como 0 es el elemento identidad de la suma, $0 + 0 = 0$. Entonces, por la parte $iii)$ del teorema anterior (ley de la multiplicación),  $a(0 + 0) = a \cdot 0$. Pero, por la ley distributiva de la multiplicación sobre la suma de los números cardinales, la igualdad anterior se convierte en $a \cdot 0 + a \cdot 0 = a \cdot 0$.
-      
-      \margindata[comentario]{Unicidad del elemento identidad ($+$)\par$a + b = b + a = a --> b = 0$}
+
+      \comentario{Unicidad del elemento identidad ($+$)\par$a + b = b + a = a --> b = 0$}
       Luego, por el teorema de la unicidad del elemento identidad de la suma, $a \cdot 0 = 0$. Claro, como la multiplicación es conmutativa, $0 \cdot a = 0$.
     \stopdemo
 
     \startdefinicion
     \margindata[youtube]{\from[AE31B]}
     Sean $a,b,x \in \blackboard{W}$, $b \neq 0$. \obj{La división de a con b}, denotada por cualquiera de los símbolos $a \div b \equiv \frac{a}{b} \equiv a/b \equiv b\overline{\smash{}{)a}}$, y leído \quotation{a (dividido) entre b} o \quotation{a sobre b}, se define como $a \div b = x$ ssi $a = xb = bx$.
-      
+
     LLamamos al operando $a$, \obj{el dividendo}, al operando $b$, \obj{el divisor}, y al resultado $x$, \obj{el cociente}.
     \stopdefinicion
 
@@ -601,12 +600,13 @@
 
       \startitemizep
         \startitem
-          $i)\;$ Como por hipótesis $a \neq 0$, la división $\dfrac{a}{a}$ está definida. Luego, si $\dfrac{a}{a} = x$, por definición de división, $a = xa = ax$.
-          \margindata[comentario]{Unicidad del elemento identidad ($\times$)\par$ab = ba = a --> b = 1$}
+          Como por hipótesis $a \neq 0$, la división $\dfrac{a}{a}$ está definida. Luego, si $\dfrac{a}{a} = x$, por definición de división, $a = xa = ax$.
+          \comentario{Unicidad del elemento identidad ($\times$)\par$ab = ba = a --> b = 1$}
           Por el teorema de la unicidad del elemento identidad de la multiplicación, tenemos que $x = 1$. Por lo tanto, $\dfrac{a}{a} = 1$, al sustituir 1 por $x$.
         \stopitem
-
-      $ii)\;$ Se demuestra de forma parecida. 
+        \startitem
+          Se demuestra de forma parecida.
+        \stopitem
     \stopitemizep
     \stopdemop
 
@@ -634,7 +634,7 @@
         \stopitem
       \stopitemejem
     \stopejemplos
-    
+
     \startdefinicion
       Sean $a \in \blackboard{W}$ y $n \in \naturalnumbers$. \obj{La operación de exponenciación}, representada con el símbolo $a^n$, y leída \quotation{a (elevada) a la (potencia) n} o \quotation{a a la enésima potencia}, se define como $a^n = \underbrace{a \cdot a \cdot a \cdot \cdots \cdot a}_{\text{n factores}}$.
 
@@ -823,7 +823,7 @@
           \startcenteraligned
             \externalfigure[comite2][maxheight=3cm]
           \stopcenteraligned
-          
+
           Hay doce estudiantes que se mantendrán estudiando la teoría de estos deportes.
 
         \stopitem

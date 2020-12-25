@@ -1,0 +1,387 @@
+\startcomponent c_fracciones_algebraicas
+\project project_matemprepa
+% \product prod_algebra_intermedia
+
+\youtube{\from[AI23B]}
+\startchapter[title={Fracciones algebraicas}]
+\startsection[title={El dominio de una función algebraica}]
+
+  \obj{El dominio de una fracción algebraica} se refiere a los valores que pueden tomar las variables en ésta. Como para cualquier facción $\dfrac{a}{b},\; b \neq 0$, el dominio de una fracción algebraica consistirá de los valores de las variables que no hacen que el denominador valga cero.
+
+  \startejemplo
+    Determine el dominio de las siguientes fracciones algebraicas:
+    \startitemejem
+      \startitem
+        \ini{$\dfrac{x^2 -3x +1}{x}$}
+
+        Aquí $x \neq 0$. Luego, el dominio de esta fracción consiste de   $\reals \setminus \{0\}$.
+      \stopitem
+      \startitem
+        \ini{$\dfrac{x-1}{x+2}$}
+
+        Como $x+2 = 0$, si $x=-2$, entonces el dominio de esta fracción es $\reals \setminus \{-2\}$.
+      \stopitem
+      \startitem
+        \ini{$\dfrac{a^2 - b}{a + b}$}
+
+        Como  $a + b = 0$, si $a = -b$, el dominio de esta fracción es $\{a,b \in \reals \bigm| a \neq -b\}$.
+      \stopitem
+      \startitem
+        \ini{$\dfrac{2x+1}{x(3x-2)}$}
+
+        Vea que $x(3x-2) = 0 \leftrightarrow x = 0 \vee 3x = 0$. Por lo tanto, el dominio de esta fracción es $\reals \setminus \left\{0, \dfrac{2}{3}\right\}$.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{(x-1)(x+2)}{x^2-9}} = \dfrac{(x-1)(x+2)}{(x+3)(x-3)}$
+
+        Vea que $(x+3)(x-3) = 0 \leftrightarrow x + 3= 0 \vee x - 3 = 0$. En consecuencia, el dominio de esta fracción algebraica es $\reals \setminus \{-3, 3\}$.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{-2}{x^3 + 3x^2 + 2x}} = \dfrac{-2}{x\left(x^2+3x+2\right)} = \dfrac{-2}{x(x+2)(x+1)}$.
+
+        Vea que $x(x+2)(x+1) = 0 \leftrightarrow x = 0 \vee x+2 = 0 \vee x+1 = 0 $. Por lo tanto, el dominio de esta fracción algebraica es $\reals \setminus \{0, -2, -1\}$.
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x+5}{3}}$
+
+        El dominio de esta fracción algebraica es $\reals$.
+      \stopitem
+    \stopitemejem
+  \stopejemplo
+\stopsection
+
+\youtube{\from[AI24A]}
+\startsection[title={Reducción a términos menores}]
+  \comentario{Principio fundamental de fracciones (p.f.f.)\\$\dfrac{a}{b} = \dfrac{ka}{kb} = \dfrac{ak}{bk}$ siempre que $b,k \neq 0$.}
+  \startejemplos
+    Simplifique
+    \startitemejem
+      \startitem
+        $\ini{\dfrac{6a^2b^3c^2}{15ab^8d}} = \dfrac{2ac^2}{5b^5d}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{2ab}{2ab + 4ac}} = \dfrac{2ab}{2a(b+2c)} = \dfrac{b}{b+2c}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{b+a}{2a-ax+2b-bx}} = \dfrac{(b+a)}{a(2-x)+b(2-x)} = \dfrac{(b+a)}{(2-x)(a+b)} = \dfrac{1}{2-x}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{4x^2-y^2}{6x^2+5xy+y^2}} = \dfrac{(2x+y)(2x-y)}{y^2+5xy+6x^2} = \dfrac{(2x+y)(2x-y)}{(y+3x)(y+2x)} = \dfrac{2x-y}{y+3x}$
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \youtube{\from[AI24B]}
+  \comentario{Ley o regla de signos de una fracción:\\$\dfrac{a}{b} = -\dfrac{-a}{b} = -\dfrac{a}{-b} = \dfrac{-a}{-b}$}
+  \startejemplos
+    Reduzca:
+    \startitemejem
+      \startitem
+        $\ini{\dfrac{x^2-4xy+3y^2}{y^2-x^2}} = \dfrac{(x-3y)(x-y)}{(y+x)(y-x)} = -\dfrac{(x-3y)(y-x)}{(y+x)(y-x)} = -\dfrac{(x-3y)}{(y+x)}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{2x^2+xu-3y^2}{y^3-x^3}} = \dfrac{2x^2+3xy-2xy-3y^2}{y^3-x^3} = \dfrac{x(2x+3y)-y(2x+3y)}{y^3-x^3}$
+
+        $ = \dfrac{(2x+3y)(x-y)}{y^3-x^3} = \dfrac{(2x+3y)(x-y)}{(y-x)\left(y^2+yx+x^2\right)} = -\dfrac{(2x+3y)(y-x)}{(y-x)\left(y^2+yx+x^2\right)}$
+        
+        $ = -\dfrac{2x+3y}{y^2+yx+x^2}$
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+\stopsection
+
+\youtube{\from[AI25A]}
+\startsection[title={Multiplicación y división}]
+  \comentario{$\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{ac}{bd}$\\$\dfrac{a}{b} \div \dfrac{c}{d} = \dfrac{a}{b} \cdot \dfrac{d}{c}$}
+  \startejemplos
+    \startitemejem
+      \startitem
+        $\ini{\dfrac{2a}{3b} \div \dfrac{4a^2}{9b^2} \cdot \dfrac{c}{2ad^3}} = \dfrac{2a}{3b} \cdot \dfrac{9b^2}{4a^2} \cdot \dfrac{c}{2ad^3} = \dfrac{3bc}{4a^2d^3}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x^2-4}{xy^2} \cdot \dfrac{2xy}{x^2-4x+4}} = \dfrac{(x+2)(x-2)}{xy^2} \cdot \dfrac{2xy}{(x-2)^2} = \dfrac{(x+2)2}{y(x-2)}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x^2-y^2}{2ax+2ay} \cdot \dfrac{ax}{2x-y} \div \dfrac{x^2-xy}{4ax-2ay}} = \dfrac{(x+y)(x-y)}{2a(x+y)} \cdot \dfrac{ax}{(2x-y)} \cdot \dfrac{2a(2x-y)}{x(x-y)} = \dfrac{a}{1} = a$
+      \stopitem
+      \youtube{\from[AI25B]}
+      \startitem
+        $\ini{\dfrac{x^2+4x-5}{x^2-3x+2} \div \dfrac{x^2+7x+10}{x^2-4}} = \dfrac{(x+5)(x-1)}{(x-2)(x-1)} \cdot \dfrac{(x+2)(x-2)}{(x+2)(x+5)} = \dfrac{1}{1} = 1$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x^2-4y^2}{8y^3-x^3} \cdot \dfrac{4x^2y^2+2yx^3+x^4}{x^2+4xy+4y^2}} = \dfrac{(x+2y)(x-2y)}{(2y-x)(4y^2+2yx+x^2)} \cdot \dfrac{x^2(4y^2+2yx+x^2)}{(x+2y)^2}$
+
+        $ = \dfrac{(x-2y)x^2}{(2y-x)(x+2y)} = -\dfrac{(2y-x)x^2}{(2y-x)(x+2y)} = -\dfrac{x^2}{x+2y}$
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+\stopsection
+
+\youtube{\from[AI26A]}
+\startsection[title={Suma y resta}]
+  \comentario{$\dfrac{a}{c} + \dfrac{b}{c} = \dfrac{a+b}{c}$\\$\dfrac{a}{c} - \dfrac{b}{c} = \dfrac{a-b}{c}$}
+  \startejemplos
+    \startitemejem
+      \startitem
+        $\ini{\dfrac{3}{a^2} + \dfrac{b}{a^2}} = \dfrac{3+b}{a^2}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x^2}{y} - \dfrac{x}{y} + \dfrac{5}{y}} = \dfrac{x^2-x+5}{y}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x}{x^2-1} + \dfrac{1}{x^2-1}} = \dfrac{x+1}{x^2-1} = \dfrac{(x+1)}{(x+1)(x-1)} = \dfrac{1}{x-1}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{y}{y^2-4} - \dfrac{2}{y^2-4}} = \dfrac{y-2}{y^2-4} = \dfrac{(y-2)}{(y+2)(y-2)} = \dfrac{1}{y+2}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{x^2-3}{x^2+2x+1} - \dfrac{2x}{x^2+2x+1}} = \dfrac{x^2-3-2x}{x^2+2x+1} = \dfrac{x^2-2x-3}{x^2+2x+1} = \dfrac{(x+1)(x-3)}{(x+1)^2}$
+
+        $ = \dfrac{x-3}{x+1}$
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \youtube{\from[AI26B]}
+  \comentario{Procedimiento para hallar el m.d.c. de entre los denominadores de un conjunto de fracciones heterogéneas, que es el m.c.m de entre esos mismos denominadores
+  \startitemize[n]
+    \startitem
+      factorice primamente a los denominadores.
+    \stopitem
+    \startitem
+      Tome todos los factores primos que aparecen en dichas factorizaciones primas.
+    \stopitem
+    \startitem
+      Escoja los exponentes más altos a los que aparecen esos factores primos en aquellas factorizaciones
+    \stopitem
+    \startitem
+      El producto de lo que tenemos en el paso anterior es el m.d.c. que necesitamos
+    \stopitem
+  \stopitemize}
+  \startejemplos
+    \startitemejem
+      \startitem
+        $\ini{\dfrac{3y}{2} + \dfrac{3y^2}{4} - \dfrac{y}{6}} = \dfrac{6 \cdot 3y}{12} + \dfrac{3 \cdot 3y^2}{12} - \dfrac{2 \cdot y}{12} = \dfrac{18y+9y^2-2y}{12} = \dfrac{16y+9y^2}{12} = \dfrac{y(16+9y)}{12}$
+      \stopitem
+      \startitem
+        $\ini{\dfrac{5}{2x} - \dfrac{2}{6x^2y} + \dfrac{3xy}{5}} = \dfrac{5 \cdot 15xy}{30x^2y} - \dfrac{2 \cdot 5}{30x^2y} + \dfrac{3xy \cdot 6x^2y}{30x^2y} = \dfrac{75xy-10+18x^3y^2}{30x^2y}$
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+  \youtube{\from[AI27A]}
+  \startejemplos
+    Combine
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC   \NC \ini{\dfrac{4}{3a^2} + \dfrac{5}{6a}}
+           =  \dfrac{4 \cdot 2}{6a^2} + \dfrac{5 \cdot a}{6a^2}
+           =  \dfrac{8 + 5a}{6a^2} \NR[+]
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \NC  \ini{\dfrac{4}{a-3} - \dfrac{3}{2a - 5}} = \dfrac{4 \cdot (2a-5)}{(a-3)(2a-5)} - \dfrac{3 \cdot (a-3)}{(a-3)(2a-5)} = \dfrac{8a-20-3a+9}{(a-3)(2a-5)} \NR[+]
+          \NC \NC = \dfrac{5a - 11}{(a-3)(2a-5)} \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+    
+    \youtube{\from[AI27B]}
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \NC \ini{\dfrac{x+3}{x-2} - \dfrac{x+2}{x-3} + \dfrac{6}{x^2-4}} \NR[+]
+          \NC \NC = \dfrac{(x+3)(x-3)(x+2)}{(x-2)(x-3)(x+2)} - \dfrac{(x-2)(x+2)^2}{(x-2)(x-3)(x+2)} +  \dfrac{6(x-3)}{(x-2)(x-3)(x+2)} \NR
+          \NC \NC = \dfrac{(x^2-9)(x+2)-(x^2+4x+4)(x-2)+6x-18}{(x-2)(x-3)(x+2)} \NR
+          \NC \NC = \dfrac{x^3+2x^2-9x-18-x^3-2x^2+4x+8+6x-18}{(x-2)(x-3)(x+2)} = \dfrac{x-28}{(x-2)(x-3)(x+2)} \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    \youtube{\from[AI28A]}
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \NC \ini{\dfrac{2}{p-2} - \dfrac{4p}{4-p^2} - \dfrac{3p}{p^2+4p+4}} \NR[+]
+          \NC \NC = \dfrac{2}{(p-2)} - \dfrac{4p}{(2+p)(2-p)} - \dfrac{3p}{(p+2)^2} \NR
+          \NC \NC = \dfrac{2}{(p-2)} + \dfrac{4p}{(p+2)(p-2)} - \dfrac{3p}{(p+2)^2} \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+    
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \NC  \ini{\dfrac{x-4}{2x} + \dfrac{x+2}{x+1} - \dfrac{3x+2}{x^2+x}} = \dfrac{(x-4)(x+1)}{2x(x+1)} + \dfrac{2x(x+2)}{2x(x+1)} - \dfrac{2(3x+2)}{2x(x+1)} \NR[+]
+          \NC \NC = \dfrac{x^2-3x-4+2x^2+4x-6x-4}{2x(x+1)} = \dfrac{3x^2-5x-8}{2x(x+1)} = \dfrac{(3x-8)(x+1)}{2x(x+1)} = \dfrac{3x-8}{2x} \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    \youtube[method=top]{\from[AI28B]}    
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \NC \ini{3x+1 - \dfrac{3}{2x^2-x+5}} = \dfrac{3x+1}{1} - \dfrac{3}{2x^2-x+5} \NR[+]
+          \NC \NC = \dfrac{(3x+1)(2x^2-x+5)}{2x^2-x+5} - \dfrac{3}{2x^2-x+5} \NR
+          \NC \NC = \dfrac{6x^3-x^2+14x+5-3}{2x^2-x+5} = \dfrac{6x^3-x^2+14x+2}{2x^2-x+5}\NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \NC \ini{\text{Divida } t-6 +\dfrac{20}{t+3} \text{ entre } t+ \dfrac{2}{t-3}} \NR[+]
+          \NC \NC \it{i)}\quad \dfrac{t-6}{1} + \dfrac{20}{t+3} = \dfrac{(t-6)(t+3)}{t+3} + \dfrac{20}{t+3} = \dfrac{t^2-3t-18+20}{t+3} = \NR
+          \NC \NC \quad\;\;\dfrac{t^3-3t+2}{t+3} = \dfrac{(t-2)(t-1)}{t+3} \NR
+
+          \NC \NC \it{ii)}\quad \dfrac{t}{1} + \dfrac{2}{t-3} = \dfrac{t(t-3)}{t-3} + \dfrac{2}{t-3} = \dfrac{t^2-3t+2}{t-3} = \dfrac{(t-2)(t-1)}{t-3} \NR
+          \NC \NC \text{Entonces} \NR
+          \NC \NC \left({t-6 +\dfrac{20}{t+3}}\right) \div \left(t+ \dfrac{2}{t-3}\right) = 
+           \dfrac{(t-2)(t-1)}{t+3} \div \dfrac{(t-2)(t-1)}{t-3} = \NR
+          \NC \NC \dfrac{(t-2)(t-1)}{t+3} \cdot \dfrac{(t-3)}{(t-2)(t-1)} = \dfrac{t-3}{t+3} \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+  \stopejemplos
+\stopsection
+
+\youtube[method=top]{\from[AI29A]}
+\startsection[title={Fracciones algebraicas propias e impropias y expresiones mixtas}]
+
+  \startdefinicion
+    Sean $P$ y $Q$ dos polinomios y considere la fracción algebraica $\dfrac{P}{Q}$. Si ocurre que $\partial^{\circ}P < \partial^{\circ} Q$ decimos que $\dfrac{P}{Q}$ es una \obj{fracción algegraica propia}. De lo contraio, esto es si $\partial^{\circ} P \geq \partial^{\circ} Q$, diremos que $\dfrac{P}{Q}$ es una \obj{fracción algebraica impropia}.
+  \stopdefinicion
+
+  \startejemplos
+    \startitemejem
+      \startitem
+        \ini{$\dfrac{2x-1}{x+3}$}, es impropia ya que grado del polinomio en el numerador (1) es igual al grado del polinomio en el denomidador (1).
+      \stopitem
+      \startitem
+        \ini{$\dfrac{a + b}{3a + 2ab - 5b}$}, es propia ya que el grado del polinomio en el numerador (1) es menor que grado del polimonio en el denomidador (2).
+      \stopitem
+      \startitem
+        \ini{$\dfrac{6x^3-x^2+14x+2}{2x^2-x+5}$}, es una fracción algebraica impropia puesto que el grado del polinomio en el numerador (3) es mayor que el grado del polinomio en el denominador (2).
+      \stopitem
+      \startitem
+        \ini{$\dfrac{x}{x^4+5}$}, es una fracción algebraica propia ya que el grado del numerador (1) es menor que grado del polinomio en el denominador (4).
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \comentario{A veces es importante trabajar con fracciones propias. Para lograr cambiar una expresión que contiene una fracción impropia en una expresión que contiene una fracción propia, se efectúa la división del numerador de esa fracción algebraica impropia entre su denominador.}
+
+  \startejemplo
+    Considere la fracción impropia $\dfrac{6x^3-x^2+14x+2}{2x^2-x+5}$. Efectuamos la división indicada.
+
+    \startformula
+      \dfrac{6x^3-x^2+14x+2}{2x^2-x+5} = 3x + 1 + \dfrac{-3}{2x^2-x+5} = 3x + 1 - \dfrac{3}{2x^2-x+5}
+    \stopformula
+  \stopejemplo
+
+  \startdefinicion
+    Si $Q$ es un polinomio y $\dfrac{Q}{R}$ es una fracción algebraica propia, la expresión $Q + \dfrac{P}{R}$ se llama una \obj{expresión mixta}.
+  \stopdefinicion
+
+  \startobservacion
+    El ejemplo anterior indica como podemos transformar una fracción impropia en una expresión algebraica mixta. El proceso inverso, de cambiar de una expresión mixta a una fracción impropia, fue visto en el ejemplo (6) de la suma y resta de fracciones algebricas heterogéneas.
+  \stopobservacion
+
+ \stopsection
+
+\youtube{\from[AI29B]}
+ \startsection[title={Fracciones complejas}]
+   
+   Recuerde que una \obj{fracción compleja} es aquélla que contiene fracciones en su numerador o en su denominador.
+
+   Una fración que no es compleja se llama \obj{simple}. 
+
+   Recuerde, también, que hay dos métodos para transformar fracciones complejas en fracciones simples.
+   
+   \startitemize
+     \startitem
+       \comentario{{\em p. f. f.}: principio fundamental de fracciones \\ {\em m. d. c.}: mínimo denominador común}
+       \obj{Método I}: Aplicando el {\em p. f. f.}, multiplicamos el numerador y el denominador de la fracción compleja dada por el {\em m. d. c.} de entre las fracciones que contenga. Entonces simplificamos a términos menores la fracción simple así obtenida.
+
+       \startejemplo
+         Simplifique \ini{$\dfrac{1 + \dfrac{3x-5}{10x-21}}{\dfrac{x^2+x-6}{10x^2+9x-63}}$}.
+
+         \startformula
+           \startalign
+             \NC = \NC \dfrac{\left[1 + \dfrac{3x-5}{(10x-21)}\right]}{\left[\dfrac{x^2+x-6}{(x+3)(10x-21)}\right]} \cdot \dfrac{(x+3)(10x-21)}{(x+3)(10x-21)} \NR
+             \NC = \NC \dfrac{(x+3)(10x-21) + (3x-5) (x+3)}{x^2+x-6} = \dfrac{(x+3)(10x-21+3x-5)}{(x+3)(x-2)} \NR
+             \NC = \NC \dfrac{(10x-21+3x-5)}{(x-2)} = \dfrac{13x-26}{x-2} = \dfrac{13(x-2)}{x-2} = 13 \NR
+           \stopalign
+         \stopformula
+
+       \stopejemplo
+     \stopitem
+
+     \youtube{\from[AI30A]}
+     \startitem
+       \obj{Método II}: Simplifique por separado el numerador y el denominador de la fracción compleja dada. Entonces efectúe la división del numerador entre el denominador así simplicados.
+
+       \startejemplo
+         Simplifique \ini{$\dfrac{1-\dfrac{1}{x}}{x- \dfrac{1}{x^2}}$}.
+
+         \startformula
+           \startalign
+             \NC = \NC \dfrac{\dfrac{1}{1}-\dfrac{1}{x}}{\dfrac{x}{1}- \dfrac{1}{x^2}} = \dfrac{\dfrac{1 \cdot x}{x} - \dfrac{1}{x}}{\dfrac{x \cdot x^2}{x^2} - \dfrac{1}{x^2}} = \dfrac{\dfrac{x-1}{x}}{\dfrac{x^3-1}{x^2}} = \dfrac{x-1}{x} \div \dfrac{x^3 -1}{x^2} \NR
+             \NC = \NC \dfrac{(x-1)}{x} \cdot \dfrac{x^2}{(x-1)(x^2+x+1)} = \dfrac{x}{x^2+x+1}\NR
+           \stopalign
+         \stopformula
+       \stopejemplo
+     \stopitem
+   \stopitemize
+
+   \startobservacion
+     Cualquier fracción compleja se puede transformar en una simple, aplicando cualquiera de los dos métodos. En ambos casos, obtendremos la misma fracción simple.
+   \stopobservacion
+
+   \startejemplo
+     Simplifique la fracción compleja \ini{$\dfrac{\dfrac{a+1}{a-2} + \dfrac{a-1}{a+2}}{\dfrac{a+1}{a-2}-\dfrac{a-1}{a+2}}$}, por ambos métodos.
+
+     \startitemize
+       \startitem
+         Método I
+
+         Consiste en multiplicar el numerador y denominador de la fracción compleja por el {\em mínimo denominador común} que halla entre todas las fracciones que tenga.
+
+         \startformula
+           (a-2)(a+2) -> \text{m.d.c}           
+         \stopformula
+         \youtube{\from[AI30B]}
+
+         Luego,
+
+         \startformula
+           = \dfrac{\left[\dfrac{a+1}{a-2} + \dfrac{a-1}{a+2}\right] (a-2)(a+2)} {\left[\dfrac{a+1}{a-2} - \dfrac{a-1}{a+2}\right] (a-2)(a+2)}
+           = \dfrac{(a+1)(a+2) + (a-1)(a-2)} {(a+1)(a+2)- (a-1)(a-2)}
+           = \dfrac{a^2 + 3a + 2 + a^2 -3a +2} {a^2 + 3a + 2 - a^2 + 3a -2}
+           = \dfrac{2a^2 + 4}{6a} = \dfrac{2(a^2 + 2)}{6a} = \dfrac{a^2 + 2}{3a}
+         \stopformula
+       \stopitem
+       \startitem
+         Método II
+
+         Se requiere simplificar, por separado, tanto el numerador como el denominador de la fracción compleja. Y una vez simplificado efectuamos la división.
+
+         \startformula
+           = \dfrac{\dfrac{(a+1)(a+2)}{(a-2)(a+2)} + \dfrac{(a-1)(a-2)}{(a-2)(a+2)}}
+           {\dfrac{(a+1)(a+2)}{(a-2)(a+2)} - \dfrac{(a-1)(a-2)}{(a-2)(a+2)}}
+           = \dfrac{\dfrac{a^2 + 3a + 2 + a^2 -3a - 3}{(a-2)(a+2)}}{\dfrac{a^2 + 3a +2 - a^2 + 3a - 2}{(a-2)(a+2)}} = \dfrac{\dfrac{2a^2 + 4}{(a-2)(a+2)}}{\dfrac{6a}{(a-2)(a+2)}} = \dfrac{\dfrac{2(a^2 + 2)}{(a-2)(a+2)}}{\dfrac{6a}{(a-2)(a+2)}} = \dfrac{2(a^2 + 2)}{(a-2)(a+2)} \div \dfrac{6a}{(a-2)(a+2)} = \dfrac{2(a^2 + 2)}{(a-2)(a+2)} \cdot \dfrac{(a-2)(a+2)}{6a} = \dfrac{a^2 + 2}{3a} 
+         \stopformula
+       \stopitem
+     \stopitemize
+   \stopejemplo
+ \stopsection
+\stopchapter
+\stopcomponent

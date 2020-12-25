@@ -5,7 +5,7 @@
 
 \youtube{\from[AE48A]}
 \startchapter[title={Los conjuntos de los números racionales, los irracionales y los reales}, marking={Conjuntos de números racionales, irracionales y reales}]
-  
+
   \startsection[title={Otra forma de interpretar la división}]
     \startformula[align=right]
       3 \times 5 = 5 + 5 + 5 = \#(\hl \cup \hl \cup \hl)
@@ -30,7 +30,7 @@
     \startformula
       \naturalnumbers \subseteq \mathbb{W} \subseteq \integers \subseteq \rationals
     \stopformula
-    
+
     Luego, las propiedades de los naturales pasan por herencia a los racionales. Esto lo aceptamos sin discusión.
 
     \youtube{\from[AE49A]}
@@ -73,8 +73,8 @@
     \startteorema
       Para todo $\dfrac{a}{b} \in \rationals, \, a,b \neq 0$ existe su recíproco.
     \stopteorema
-    
-    \comentario{$\dfrac{m}{n} = m\left(\dfrac{1}{n}\right)$}
+
+    % \comentario{$\dfrac{m}{n} = m\left(\dfrac{1}{n}\right)$}
     \startdemo
       (Prueba de existencia por construcción) Supongamos que $x$ es el recíproco $\dfrac{a}{b}$. Entonces,
 
@@ -168,7 +168,7 @@
       \stopformula
 
       Igualmente
-      
+
       \startformula
         \startalign
           \NC b \cdot a \NC = a \NR
@@ -192,7 +192,7 @@
       \stopformula
 
       También
-      
+
       \startformula
         \startalign
           \NC a \cdot b \NC = 1 \NR
@@ -206,7 +206,7 @@
       Queda pendiente el caso para $ba = 1$.
     \stopdemop
 
-    \comentario{Esta es una forma de establecer la unicidad del inverso aditivo y del multiplicativo}
+    % \comentario{Esta es una forma de establecer la unicidad del inverso aditivo y del multiplicativo}
     \startteorema
       Sean $a,b \in \rationals$. Entonces
       \startitemizer
@@ -270,7 +270,7 @@
         \frac{a}{b} = x
       \stopformula
 
-      \comentario{$x \div y = z$ ssi $x = zy = yz$}
+      % \comentario{$x \div y = z$ ssi $x = zy = yz$}
       Entonces, por definición de la división,
 
       \startformula
@@ -305,11 +305,11 @@
     \stopejemplos
 
     \startteorema
-      \comentario{
-        Este teorema se parece a:\par
-        $-(-a) = a$\par
-        $-(a+b) = -a + (-b)$
-      }
+      % \comentario{
+      %   Este teorema se parece a:\par
+      %   $-(-a) = a$\par
+      %   $-(a+b) = -a + (-b)$
+      % }
       Sean $a,b \in \rationals$ con $a,b \neq 0$. Entonces:
       \startitemizer
         \startitem
@@ -321,7 +321,7 @@
       \stopitemizer
     \stopteorema
 
-    \comentario{$ab = 1 --> a = b^{-1} \land b = a^{-1}$}
+    % \comentario{$ab = 1 --> a = b^{-1} \land b = a^{-1}$}
     \startdemop
       $i)\quad$ Sabemos que $a \cdot a^{-1} = 1$. Luego, por un teorema anterior, $a = \left(a^{-1}\right)^{-1}$, lo que se puede escrbir como $\left(a^{-1}\right)^{-1} = a$.
 
@@ -442,7 +442,7 @@
       \startformula
         \startalign
           \NC kab  \NC = kba  \NR
-          \NC kab  \NC = kab.\comentario{Por la ley conmutativa de la multiplicación} \NR
+          \NC kab  \NC = kab. \NR % \comentario{Por la ley conmutativa de la multiplicación}
         \stopalign
       \stopformula
     \stopdemop
@@ -470,11 +470,11 @@
           \startitemize[a,columns,joinedup][color=ejemcolor,stopper=)]
             \startitem
               $\ini{\dfrac{3}{8}} = \dfrac{3 \cdot 6}{8 \cdot 6} = \dfrac{18}{48}$ \par
-              $\ini{\dfrac{3}{8}} = \dfrac{3 \cdot 10}{8 \cdot 10} = \dfrac{30}{80}$ 
+              $\ini{\dfrac{3}{8}} = \dfrac{3 \cdot 10}{8 \cdot 10} = \dfrac{30}{80}$
             \stopitem
             \startitem
               $\ini{\dfrac{-1}{7}} = \dfrac{-1 \cdot 3}{7 \cdot 3} = \dfrac{-3}{21}$ \par
-              $\ini{\dfrac{-1}{7}} = \dfrac{-1 \cdot (-4)}{7 \cdot (-4)} = \dfrac{4}{-28}$ 
+              $\ini{\dfrac{-1}{7}} = \dfrac{-1 \cdot (-4)}{7 \cdot (-4)} = \dfrac{4}{-28}$
             \stopitem
           \stopitemize
         \stopitem
@@ -482,7 +482,7 @@
           \ini{Escriba la fracción dada con el nuevo numerador o denominador indicado:}
           \startitemize[a,horizontal][color=ejemcolor,stopper=)]
             \startitem
-              $\ini{\dfrac{1}{2} = \dfrac{?}{8}} = \dfrac{4}{8}$ 
+              $\ini{\dfrac{1}{2} = \dfrac{?}{8}} = \dfrac{4}{8}$
             \stopitem
             \startitem
               $\ini{\dfrac{7}{-5} = \dfrac{?}{15}} = \dfrac{-21}{15}$
@@ -493,18 +493,18 @@
           \stopitemize
         \stopitem
         \startitem
-          \comentario{
-            \startitemize
-              \startitem
-                $a \cdot b = 1 --> a = b^{-1} \land b = a^{-1}$\par
-              \stopitem
-              \startitem
-                $ab = 0 <--> a = 0 \lor b = 0$\par
-              \stopitem
-              \startitem
-                Principio fundamental de fracciones: $\dfrac{ka}{kb} = \dfrac{ak}{bk} = \dfrac{a}{b}$
-              \stopitem
-            \stopitemize}
+          % \comentario{
+          %   \startitemize
+          %     \startitem
+          %       $a \cdot b = 1 --> a = b^{-1} \land b = a^{-1}$\par
+          %     \stopitem
+          %     \startitem
+          %       $ab = 0 <--> a = 0 \lor b = 0$\par
+          %     \stopitem
+          %     \startitem
+          %       Principio fundamental de fracciones: $\dfrac{ka}{kb} = \dfrac{ak}{bk} = \dfrac{a}{b}$
+          %     \stopitem
+          %   \stopitemize}
           \ini{Justifique:}
           \startitemize[a][color=ejemcolor,stopper=)]
             \startitem
@@ -527,7 +527,7 @@
   \stopsection
 
   \youtube{\from[AE52B]}
-  \startsection[title={Divisibilidad y factorización prima}]    
+  \startsection[title={Divisibilidad y factorización prima}]
 
     \startdefinicion
       Sean $a,b \in \mathbb{W}$. Decimos que \ini{a divide $a$ (o es divisor de) $b$} ssi $a$ es un factor de $b$. Esto es, ssi $\exists \, c \in \mathbb{W}$ de modo que $ac$ (o $ca$) $= b$. En este caso, también decimos que \ini{$b$ es divisible entre (o es un múltiplo de) $a$}. (Observe que la misma relación que existe entre $a$ y $b$, existe entre $c$ y $b$). Denotamos esto con el símbolo $a\mid b$ y lo negamos con el símbolo $a \nmid b$. Si un número $a$ divide a los números $b$ y $d$, escribimos $a \mid b,d$ o $a \mid d,b$; si los números $a$ y $b$ son divisores del número $d$, escribimos $a,b \mid d$ o $b,a \mid d$.
@@ -561,7 +561,7 @@
     \startdefinicion
       Un número $p \in \naturalnumbers, \, p \neq 1$, se llama \ini{un número primo} ssi los únicos factores (divisores) de $p$ son $p$ y 1. Si $p \in \naturalnumbers, \, p \neq 1$, no es primo, se dice que es \ini{un número compuesto}.
     \stopdefinicion
-    
+
     \startejemplos
       \startitemejem
         \startitem
@@ -596,7 +596,7 @@
       \stopteorema
       No lo podemos demostrar todavía.
 
-      
+
       \startejemplos
         \ini{Considere el número $351.378$.}
         \startitemejem
@@ -638,10 +638,10 @@
             $24 = 2^3 \cdot 3$
           \stopitem
           \startitem
-            $18 = 2 \cdot 9 = 2 \cdot 3^2$ 
+            $18 = 2 \cdot 9 = 2 \cdot 3^2$
           \stopitem
           \startitem
-            $72 = 2^3 \cdot 9 = 2^3 \cdot 3^2$ 
+            $72 = 2^3 \cdot 9 = 2^3 \cdot 3^2$
           \stopitem
         \stopitemejem
       \stopejemplos
@@ -651,10 +651,10 @@
         \ini{Factorice primamente o completamente.}
         \startitemejem[columns]
           \startitem
-            $\ini{30} = 2 \cdot 3 \cdot 5$ 
+            $\ini{30} = 2 \cdot 3 \cdot 5$
           \stopitem
           \startitem
-            $\ini{24} = 2^3 \cdot 3$ 
+            $\ini{24} = 2^3 \cdot 3$
           \stopitem
           \startitem
             $\ini{100} = 2^2 \cdot 5^2$
@@ -772,7 +772,7 @@
               \NC  6 \VL 2 \NC  9 \VL 3 \NC\AR
               \NC  3 \VL 3 \NC  3 \VL 3 \NC\AR
               \NC  1 \VL   \NC  1 \VL   \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
 
           \startitem
@@ -787,7 +787,7 @@
               \NC  5 \VL 5 \NC  9 \VL 3 \NC\AR
               \NC  1 \VL   \NC  3 \VL 3 \NC\AR
               \NC    \NC   \NC  1 \VL   \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
         \stopitemejem
 
@@ -807,7 +807,7 @@
               \NC  9 \VL 3 \NC  1 \VL   \NC  1 \NC  \NC\AR
               \NC  3 \VL 3 \NC    \NC   \NC    \NC  \NC\AR
               \NC  1 \VL   \NC    \NC   \NC    \NC  \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
 
           \startitem
@@ -823,9 +823,9 @@
               \NC  25 \VL 5 \NC     \NC    \NC\AR
               \NC   5 \VL 5 \NC     \NC    \NC\AR
               \NC   1 \VL   \NC     \NC    \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
-        \stopitemejem          
+        \stopitemejem
 
       \stopejemplos
 
@@ -846,7 +846,7 @@
               \NC  1 \VL   \NC  15 \VL 3 \NC   35 \VL 5 \NC\AR
               \NC   \NC    \NC   5 \VL 5 \NC    7 \VL 7 \NC\AR
               \NC   \NC    \NC   1 \VL   \NC    1 \VL   \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
 
           \startitem
@@ -858,7 +858,7 @@
               \NC 26 \VL 2  \NC 13 \VL 13 \NC\AR
               \NC 13 \VL 13 \NC  1 \VL    \NC\AR
               \NC  1 \VL    \NC    \NC    \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
         \stopitemejem
 
@@ -875,7 +875,7 @@
               \NC  3 \VL 3 \NC  1 \VL   \NC\AR
               \NC  1 \VL   \NC    \NC   \NC\AR
               \NC    \NC   \NC    \NC   \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
 
 
@@ -892,9 +892,9 @@
               \NC 14 \VL 2 \NC    \NC   \NC  1 \VL   \NC\AR
               \NC  7 \VL 7 \NC    \NC   \NC    \NC   \NC\AR
               \NC  1 \VL   \NC    \NC   \NC    \NC   \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
-        \stopitemejem          
+        \stopitemejem
 
         \startitemejem
           \startitem
@@ -908,7 +908,7 @@
               \NC  5 \VL 5 \NC  6 \VL 2 \NC\AR
               \NC  1 \NC   \NC  3 \VL 3 \NC\AR
               \NC    \NC   \NC  1 \VL   \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
 
           \startitem
@@ -923,10 +923,10 @@
               \NC  9 \VL 3 \NC  3 \VL 3 \NC\AR
               \NC  3 \VL 3 \NC  1 \VL   \NC\AR
               \NC  1 \VL   \NC    \NC   \NC\AR
-            \stoptable     
+            \stoptable
           \stopitem
-          
-        \stopitemejem          
+
+        \stopitemejem
 
       \stopejemplos
 
@@ -949,7 +949,7 @@
       \stopejemplos
 
       \startteorema
-        Sean $a,b \in \naturalnumbers$, $a$ y $b$ primos. Entonces, $(a,b) = 1$.\comentario{Es decir, son relativamente primos.}
+        Sean $a,b \in \naturalnumbers$, $a$ y $b$ primos. Entonces, $(a,b) = 1$.% \comentario{Es decir, son relativamente primos.}
       \stopteorema
 
       \startdemo
@@ -1017,16 +1017,16 @@
       \startdemop
         \startitemizep
           \startitem
-            $\dfrac{a}{c}+\dfrac{b}{c} = a c^{-1} + b c^{-1} = (a + b)c^{-1}= \dfrac{a+b}{c}$ \comentario{$\dfrac{x}{y}=xy^{-1}, y \neq 0$}
+            $\dfrac{a}{c}+\dfrac{b}{c} = a c^{-1} + b c^{-1} = (a + b)c^{-1}= \dfrac{a+b}{c}$ % \comentario{$\dfrac{x}{y}=xy^{-1}, y \neq 0$}
           \stopitem
           \startitem
             $\dfrac{a}{c}-\dfrac{b}{c} = a c^{-1} - b c^{-1} = (a - b)c^{-1}= \dfrac{a-b}{c}$
           \stopitem
           \startitem
-            $\dfrac{a}{b} \cdot \dfrac{c}{d} = (a b^{-1}) (c d^{-1}) = ab^{-1}cd^{-1} = acb^{-1}d^{-1} = (ac)(b^{-1}d^{-1}) = (ac)(bd)^{-1} = \dfrac{a}{b} \cdot \dfrac{d}{c}$ \comentario{$(xy)^{-1} = x^{-1}y^{-1}$ si $xy \neq 0$}
+            $\dfrac{a}{b} \cdot \dfrac{c}{d} = (a b^{-1}) (c d^{-1}) = ab^{-1}cd^{-1} = acb^{-1}d^{-1} = (ac)(b^{-1}d^{-1}) = (ac)(bd)^{-1} = \dfrac{a}{b} \cdot \dfrac{d}{c}$ % \comentario{$(xy)^{-1} = x^{-1}y^{-1}$ si $xy \neq 0$}
           \stopitem
           \startitem
-            $\dfrac{a}{b} \div \dfrac{c}{d} = \dfrac{a}{b} \cdot \bigg(\dfrac{c}{d}\bigg)^{-1} = \dfrac{a}{b} \cdot \dfrac{d}{c}$ \comentario{$\bigg(\dfrac{x}{y}\bigg)^{-1} = \dfrac{y}{x}$}
+            $\dfrac{a}{b} \div \dfrac{c}{d} = \dfrac{a}{b} \cdot \bigg(\dfrac{c}{d}\bigg)^{-1} = \dfrac{a}{b} \cdot \dfrac{d}{c}$ % \comentario{$\bigg(\dfrac{x}{y}\bigg)^{-1} = \dfrac{y}{x}$}
           \stopitem
         \stopitemizep
       \stopdemop
@@ -1047,7 +1047,7 @@
               $\ini{\dfrac{5}{7} - \dfrac{-2}{7}} = \dfrac{5-(-2)}{7} = \dfrac{5+2+1}{7} = \dfrac{8}{7}$
             \stopitem
             \startitem
-              $\ini{\dfrac{19}{4} + \dfrac{-7}{4}- \dfrac{10}{4}} = \dfrac{19+(-7)+(-10)}{4} = \dfrac{2}{4} = \dfrac{1}{2}$            
+              $\ini{\dfrac{19}{4} + \dfrac{-7}{4}- \dfrac{10}{4}} = \dfrac{19+(-7)+(-10)}{4} = \dfrac{2}{4} = \dfrac{1}{2}$
             \stopitem
           \stopitemejem
       \stopejemplos
@@ -1064,7 +1064,7 @@
 
 
       \startejemplos
-        \comentario{Principio fundamental de fracciones:\\ $\dfrac{ka}{kb} = \dfrac{kb}{ka} = \dfrac{a}{b}$}
+        % \comentario{Principio fundamental de fracciones:\\ $\dfrac{ka}{kb} = \dfrac{kb}{ka} = \dfrac{a}{b}$}
         \startitemejem
           \startitem
             $\ini{\dfrac{3}{5} + \dfrac{-2}{3} - 4} = \dfrac{3}{5} + \dfrac{-2}{3} - \dfrac{4}{1} = \dfrac{8}{15} + \dfrac{-10}{15} - \dfrac{60}{15} = \dfrac{9+(-10)+(-60)}{15} = \dfrac{-61}{15}$
@@ -1073,11 +1073,11 @@
           \stopitem
           \startitem
             \youtube{\from[AE58B]}
-            \comentario{$[4,6,1,9]= 2^2 \cdot 3^2 = 36$}
+            % \comentario{$[4,6,1,9]= 2^2 \cdot 3^2 = 36$}
             $\ini{\dfrac{3}{4} - \dfrac{1}{6} -2 + \dfrac{2}{9}} = \dfrac{3}{4} - \dfrac{1}{6} \dfrac{-2}{1} + \dfrac{2}{9} = \dfrac{27}{36} - \dfrac{6}{36} - \dfrac{72}{36}  + \dfrac{8}{36} = \dfrac{27+(-6)+(-72)+8}{36} = \dfrac{35+(-78)}{36} = \dfrac{-43}{36}$
           \stopitem
           \startitem
-            \comentario{$[8,5,10,18]= 2^3 \cdot 3^2 \cdot 5 = 360$}
+            % \comentario{$[8,5,10,18]= 2^3 \cdot 3^2 \cdot 5 = 360$}
             $\ini{\dfrac{7}{8}+\dfrac{-3}{5}-\dfrac{9}{30}-\dfrac{-1}{18}} = \dfrac{7}{8}+\dfrac{-3}{5}-\dfrac{3}{10}-\dfrac{-1}{18} = \dfrac{7(45)+(-3)72+(-3)36-(-20)}{360} = \dfrac{315 + (-216) + (-108) +20}{360} = \dfrac{335+(-324)}{360} = \dfrac{11}{360}$
           \stopitem
         \stopitemejem
@@ -1106,7 +1106,7 @@
           \stopitem
           \startitem
             $\ini{6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[-2 + \bigg(\dfrac{4}{-3}\bigg)^2 - \bigg(\dfrac{-5}{4}\dfrac{1}{3} -2\bigg)\bigg]\Bigg\} + \dfrac{-1}{5}}$
-            
+
               \startejerformula
                 \startalign
                   \NC = \NC 6 \div \Bigg\{\dfrac{2}{5} + \dfrac{-3}{5} \bigg[-2 + \bigg(\dfrac{4}{-3}\bigg)^2 - \bigg(\dfrac{-5}{12} \dfrac{-2}{1}\bigg)\bigg]\Bigg\} + \dfrac{-1}{5} \NR
@@ -1120,7 +1120,7 @@
                   \NC = \NC 6 \cdot \dfrac{12}{-11} + \dfrac{-1}{5} = \dfrac{72}{-11} + \dfrac{-1}{5} = \dfrac{72 \cdot 5}{-11 \cdot 5} + \dfrac{-1(-11)}{-11 \cdot 5} = \dfrac{360 + 11}{-55} = \dfrac{371}{-55}\NR
                 \stopalign
               \stopejerformula
-            
+
           \stopitem
         \stopitemejem
       \stopejemplos
@@ -1225,7 +1225,7 @@
       Cambie los siguientes mixtos a fracción impropia
       \startitemejem
         \startitem
-         $\ini{3\frac{2}{3}} = \dfrac{17}{5} \quad --> \quad 3\frac{2}{5}$ 
+         $\ini{3\frac{2}{3}} = \dfrac{17}{5} \quad --> \quad 3\frac{2}{5}$
         \stopitem
         \startitem
           $\ini{-2\frac{1}{6}} = - \dfrac{13}{6} \quad --> \quad -2\frac{1}{6}$
@@ -1317,7 +1317,7 @@
   \stopsection
 
   \startsection[title={Orden en $\rationals$}]
-    
+
     \startobservacion
       \youtube{\from[AE63A]}
       En una recta numérica cuanto más a la izquierda se localice un número entero, menor es y viceversa.
@@ -1349,7 +1349,7 @@
 
 
       $\quad\quad <-- \quad$ Por hipótesis $a < b$ y $c > 0$. Por un teorema anterior, $c^{-1} > 0$. Entonces, por la ley de multiplicación positiva de las desigualdades
-      \comentario{$\dfrac{x}{y} = xy^{-1}$}
+      % \comentario{$\dfrac{x}{y} = xy^{-1}$}
       \startformula
         ac^{-1} < b c^{-1}
       \stopformula
@@ -1460,7 +1460,7 @@
     \stopformula
 
     El caso {\sl ii)} se demuestra de forma parecida.
-  \stopdemop  
+  \stopdemop
 
   \startejemplos
     Decida si las siguientes desigualdades son ciertas o falsas:
@@ -1482,8 +1482,8 @@
     \startejemplo
       \ini{Determinar el punto que le corresponde al número $\dfrac{1}{3}$ en la recta numérica}
 
-      \comentario{Interpretamos $\dfrac{1}{3}$ como el largo unitario repartido en tres largos.\\
-      \externalfigure[recta_racional_1.png][width=5cm]}
+      % \comentario{Interpretamos $\dfrac{1}{3}$ como el largo unitario repartido en tres largos.\\
+      % \externalfigure[recta_racional_1.png][width=5cm]}
 
       Como $\dfrac{1}{3} = 0 + \dfrac{1}{3}$, sospechamos que $0 < \dfrac{1}{3} < 1$. Lo verificamos a continuación:
       \startformula
@@ -1504,7 +1504,7 @@
           $\ini{-\dfrac{3}{4}}$
 
           Como  $-\dfrac{3}{4} = 0 + \left( -\dfrac{3}{4}\right)$, sospechamos que $-1 < -\dfrac{3}{4} < 0$. Lo verificamos
-          \comentario{\externalfigure[recta_racional_2.png][width=5cm]}
+          % \comentario{\externalfigure[recta_racional_2.png][width=5cm]}
           \startformula
             \dfrac{-1}{1} < \dfrac{-3}{4} \; --> \; (-1)4 < 1(-3) --> -4 < -3 \quad\quad -\dfrac{3}{4} < 0 --> (-3)1 < 4 \cdot 0 --> -3 < 0.
           \stopformula
@@ -1527,7 +1527,7 @@
     \startdefinicion
       Un conjunto $X$ con un orden parcial $R$ definido en él se llama \obj{denso} ssi para todos $x,y \in X$ con $x \mathbin{R} y$, existe $z \in X$ con $c \mathbin{R} z \mathbin{R} y$.
     \stopdefinicion
-    
+
     \startejemplos
       En $\integers$ se demuestra que $\geq$ y $\leq$ son órdenes parciales. Pero $\integers$ no es denso, pues para $n, n+1 \in \integers$, no existe $k \in \integers$ con $n < k < n+1$.
 
@@ -1629,7 +1629,7 @@
           $\ini{-\dfrac{1}{2}} = - 0,5\quad$ Resto es 0.
         \stopitem
         \startitem
-          $\ini{6\frac{5}{8}} = \dfrac{53}{8} = 6,625\quad$ Resto es 0. 
+          $\ini{6\frac{5}{8}} = \dfrac{53}{8} = 6,625\quad$ Resto es 0.
         \stopitem
         \startitem
           $\ini{-38\frac{13}{20}} = -\left(38 + \underbrace{\dfrac{13}{20}}_{\text{Resto 0}}\right) = - (38 + 0,65) = -38,65$
@@ -1660,8 +1660,8 @@
 \stopsection
 
 \startsection[title={El conjunto de los números irracionales}]
-  
-  Consideremos la fracción decimal 0,101001000100001000001\dots \comentario{Este decimal tiene un patrón pero no tiene un bloque de dígitos que se repite.}
+
+  Consideremos la fracción decimal 0,101001000100001000001\dots % \comentario{Este decimal tiene un patrón pero no tiene un bloque de dígitos que se repite.}
 
   ¿Es éste número un número racional? La respuesta es NO. Luego, obtenemos un nuevo conjunto
 
@@ -1676,11 +1676,11 @@
   \startdiscusion{¿Pasarán las propiedades de $\rationals$ a $\mathbb{L}$}
 
     Consideremos $0,101001000100001000001\dots$ y
-    
+
     \starteffect[hidden]Consideremos \stopeffect $0,202002000200002000002\dots$
-  
+
     si los sumamos
- 
+
    \starteffect[hidden]Consideremos \stopeffect 0,303003000300003000003\dots
 
       Parece que la ley de clausura de la suma funciona. Veamos ahora estos otros números
@@ -1691,7 +1691,7 @@
         \HL
         \NC \NC $0,333333333333333333333\dots$ \NC $\in \rationals$ \NR
       \stoptabulate
-      
+
       Vemos que la ley de clausura de la suma no se cumple en los irracionales.
 
       \startformula
@@ -1741,7 +1741,7 @@
   \stopejemplo
 
   \startdiscusion{Repaso del orden de los números racinales}
-    \comentario{propiedades de $\reals$ heredadas}    
+    % \comentario{propiedades de $\reals$ heredadas}
     \startitemize
       \startitem
         $a,b \in \reals$, $a > b$ ssi $a - b \in \reals^{+}$ ssi $a - b > 0$
@@ -1908,7 +1908,7 @@ Sin embargo, no tenemos una implicación doble en estas expresiones. El siguient
      \startitem
        \ini{3,29 y -246,872}
 
-       3,29 > -246,872 o -246,872 < 3,29 
+       3,29 > -246,872 o -246,872 < 3,29
      \stopitem
   \stopitemejem
 
@@ -1977,7 +1977,7 @@ Sin embargo, no tenemos una implicación doble en estas expresiones. El siguient
   \stopdiscusion
 
   \startdiscusion{Regla de la décima}
-    \comentario{La llamamos regla de la décima porque siempre nos vamos a dejar llevar por la posición de las décimas para decidir en que sitio está localizado el punto que le corresponde al decimal}
+    % \comentario{La llamamos regla de la décima porque siempre nos vamos a dejar llevar por la posición de las décimas para decidir en que sitio está localizado el punto que le corresponde al decimal}
 
     $\dfrac{1}{10} \quad \dfrac{2}{10} \quad \dfrac{9}{10}$
 

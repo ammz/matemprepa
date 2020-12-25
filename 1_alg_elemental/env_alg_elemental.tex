@@ -1,5 +1,25 @@
-% \setupheadertexts[\centeraligned{Algebra elemental}][][][\centeraligned{\getmarking[chapter]}]
+\startenvironment env_algebra_elemental
+  \setupheadertexts[]
+  \setupheadertexts[text]
+    [\setups{par}][][][\setups{impar}]
+    % [\centeraligned{\headnumber[chapter]. \fetchmark[chapter][first]}]
+    % [\centeraligned{\WORD{Algebra elemental}}]
+    %                [pagenumber]
 
-% \setupheadertexts[impar izq][impar der][par izq][par der]
 
-\setupheadertexts[margin][][\rightaligned{\ss\WORD{\bf\fetchmark[chapter][first]}\qquad\qquad \pagenumber}][\leftaligned{\ss\pagenumber\qquad\qquad \WORD{\bf Algebra elemental}}][]
+  \startsetups[par]
+    \rlap{}
+    \hfill
+    \headnumber[chapter]. \getmarking[chapter]
+    \hfill
+    \llap{\pagenumber}
+  \stopsetups
+
+  \startsetups[impar]
+    \rlap{\pagenumber}
+    \hfill
+    \WORD{Algebra elemental}
+    \hfill
+    \llap{}
+  \stopsetups
+\stopenvironment

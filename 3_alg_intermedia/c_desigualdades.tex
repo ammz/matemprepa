@@ -1,8 +1,125 @@
 \startcomponent c_desigualdades
-
 \project project_matemprepa
-\product 3_alg_intermedia
+% \product prod_algebra_intermedia
 
+\youtube{\from[AI88A]}
+\startchapter[title={Desigualdades}]
+  \startsection[title={Intervalos}]
 
+    Recordamos que una \obj{desigualdad} es cualquier enunciado matemático que contiene cualquiera o varios de los signos $<$, $>$, $\geq$ o $\leq$.
 
+    Consideremos $a, b, c \in \reals$, localizados en una recta numérica.
+
+    dibujo
+
+    Por lo que estudiamos referente al orden de los números reales en el Álgebra Elemental
+    \startformula
+      a < b \quad\vee\quad b < c
+    \stopformula
+    Abreviamos lo anterior con el símbolo
+
+    \resetnumber[formula]
+    \setupformulas[align=middle]
+    \placeformula
+    \startformula
+      a < b < c
+    \stopformula
+    También
+    \startformula
+      a > b \quad\vee\quad b > a
+    \stopformula
+    lo abreviamos con el símbolo
+    \placeformula
+    \startformula
+      c > b > a
+    \stopformula
+
+    \startdefinicion
+      Sean $a, b \in \reals$ con $a<b$. Los siguientes conjuntos se denominan \obj{intervalos acotados}:
+      \startitemizer
+        \startitem
+          {\bf cerrado}:
+          \startformula
+            \{x \mid a \leq x \leq b\} \equiv \{x \mid b \geq x \geq a\} \equiv \[a, b\]
+          \stopformula
+        \stopitem
+        \startitem
+          {\bf abierto}:
+          \startformula
+            \{x \mid a < x < b\} \equiv \{x \mid b > x > a\} \equiv (a, b)
+          \stopformula
+        \stopitem
+        \startitem
+          {\bf semiabierto o semicerrado}:
+          \startformula
+            \{x \mid a \leq x < b\} \equiv \{x \mid b > x \geq a\} \equiv \[a, b)
+          \stopformula
+          \startformula
+            \{x \mid  a < x \leq b\} \equiv \{x \mid b \geq x > a\} \equiv (a, b\]
+          \stopformula
+        \stopitem
+      \stopitemizer
+    \stopdefinicion
+    \startdefinicion
+      Sean $a, b \in \reals$. Los siguientes conjuntos se llaman \obj{intervalos no acotados}:
+      \startitemize[i][placestopper=no, style=\sl, right=),]
+        \startitem
+          {\bf  cerrado}:
+          \startformula
+            \{x \mid x \geq b \} \equiv \{x \mid b \leq x \} \equiv \{x \mid b \leq x < \infty \} \equiv \{x \mid \infty > x \geq b\} \equiv \[a, \infty)
+          \stopformula
+          \startformula
+            \{x \mid x \leq a \} \equiv \{x \mid a \geq x \} \equiv \{x \mid a \geq x > -\infty \} \equiv \{x \mid -\infty < x \leq a\} \equiv (-\infty, a \]
+          \stopformula
+        \stopitem
+        \startitem
+          {\bf  abierto}:
+          \startformula
+            \{x \mid x > b \} \equiv \{x \mid b < x \} \equiv \{x \mid b < x < \infty \} \equiv \{x \mid \infty > x > b\} \equiv (b, \infty)
+          \stopformula
+          \startformula
+            \{x \mid x < a \} \equiv \{x \mid a > x \} \equiv \{x \mid -\infty < x < a \} \equiv \{x \mid a > x > -\infty \} \equiv (a, \infty)
+          \stopformula
+        \stopitem
+      \stopitemize
+    \stopdefinicion
+
+    \startobservacion
+      Vea que los intervalos son conjuntos de números reales que se localizan en segmentos de la recta numérica.
+    \stopobservacion
+
+    \startsubsection[title={Representación de intervalos en la recta numérica}]
+      Graficos
+
+      \youtube{\from[AI88B]}
+      \startejemplos
+        Clasifique, represente de otras formas e ilustre, gráficamente, a los siguientes intervalos
+        \startitemejem
+          \startitem
+            \ini{$A = \{x \mid -2 \leq x \leq 2 \}$}
+
+            Se trata de un intervalo acotado cerrado.
+
+            $\equiv \{x \mid 2 \geq x \geq -2 \} \equiv \[-2, 2\]$
+
+            Gráficos
+          \stopitem
+          \startitem
+            \ini{$B = \left(-\dfrac{2}{5}, 3\right)$}
+
+            Se trata de un intervalo acotado abierto.
+
+            $\equiv \left\{x \mid -\dfrac{2}{5} < x < 3\right\} \equiv \left\{x \mid 3 > x > -\dfrac{2}{5}\right\}$
+
+            Gráficos
+          \stopitem
+          \startitem
+            \ini{$\left[-5 \dfrac{1}{3}, -.5\right]$}
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+    \stopsubsection
+  \stopsection
+\stopchapter
 \stopcomponent

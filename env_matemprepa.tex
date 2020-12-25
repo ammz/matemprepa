@@ -1,15 +1,15 @@
-
+\startenvironment env_matemprepa
 \project matemprepa
 
-% \usepath[{1_alg_elemental,2_geometria,3_alg_intermedia,4_alg_avanzada,5_precalculo}]
+\usepath[{1_alg_elemental,2_geometria,3_alg_intermedia,4_alg_avanzada,5_precalculo}]
 
 \definefontfamily [mainface] [rm] [Cambria]
 \definefontfamily [mainface] [ss] [Calibri]
 \definefontfamily [mainface] [tt] [Consolas]
 \definefontfamily [mainface] [mm] [Cambria Math]
 
-\definefontfamily [office] [serif] [Times]
-\definefontfamily [office] [sans]  [Arial] 
+\definefontfamily [office] [serif] [Times New Roman]
+\definefontfamily [office] [sans]  [Arial]
 \definefontfamily [office] [mono]  [Courier]
 \definefontfamily [office] [math]  [TeX Gyre Termes Math]
 
@@ -32,6 +32,9 @@
   % figure=Gráfico ,
   % ]
 
+\usemodule[tikz]
+\usemodule[pgf]
+\usetikzlibrary[arrows]
 
 \setupcolors[state=start]
 \definecolor [fondo]     [r=0.95,g=0.95,b=0.95]
@@ -45,19 +48,36 @@
   style=bolditalic]
 \definehighlight [ini][color=ejemcolor]
 
+\setuppapersize[A5][A5]
 \setuplayout[%
-  backspace=23mm,
+  backspace=14mm,
+  % cutspace=15mm,
   width=120mm,
   % leftmargindistance=3cm,
   leftmargin=0em,
   % leftedge=0em,
-  rightmargin=50mm,
+  % rightmargin=30mm,
   % rightedgedistance=2cm,
-  topspace=15mm,
-  header=20mm,
+  topspace=10mm,
+  header=10mm,
   footer=0mm,
-  height=260mm,
+  height=180mm,
 ]
+
+% \setuppapersize[A4][A4]
+% \setuplayout[%
+%   backspace=23mm,
+%   width=120mm,
+%   % leftmargindistance=3cm,
+%   leftmargin=0em,
+%   % leftedge=0em,
+%   rightmargin=50mm,
+%   % rightedgedistance=2cm,
+%   topspace=15mm,
+%   header=20mm,
+%   footer=0mm,
+%   height=260mm,
+% ]
 
 \setupwhitespace[medium]
 
@@ -67,10 +87,10 @@
   right=),
 ]
 
-\setuppagenumbering[alternative=doublesided, location=,]
-\setupheader[after={\vskip 4pt \hrule}]
-\setupheader[text][after=]
-\setupheader[margin][after=]
+\setuppagenumbering[alternative=doublesided]%, location={header,right}]
+\setupheader[text][after={\vskip 1pt \hrule}, style=\ss\tfx]
+% \setupheader[text][after=]
+% \setupheader[margin][after=]
 
 
 \define[2]\MyChapterCommand%
@@ -96,7 +116,7 @@
        }
 
 \setuphead[chapter][%
-   command=\MyChapterCommand,
+   % command=\MyChapterCommand,
    style=\ss\bfd,
    header=empty,
    after={\blank[10*big]}]
@@ -204,8 +224,8 @@
   leftoffset=13pt,
   rightoffset=10pt,
   bottomoffset=3pt,
-  before={\startpostponingnotes\blank[2*big]\vbox\bgroup},
-  after={\egroup\blank[2*big]\stoppostponingnotes},
+  before={\startpostponingnotes\blank[big]\vbox\bgroup},
+  after={\egroup\blank[big]\stoppostponingnotes},
 ]
 
 \definetextbackground[tfondo][trecuadro][%
@@ -217,11 +237,21 @@
   after={\blank[2*big]\stoppostponingnotes},
 ]
 
-\definetextbackground [tbteor]  [trecuadro] [framecolor=color_teo]
-\definetextbackground [tbdemo]  [tfondo]    [framecolor=color_teo, backgroundcolor=white]
-\definetextbackground [tbdefi]  [trecuadro] [framecolor=color_def]
-\definetextbackground [tbejem]  [tfondo]    [backgroundcolor=fondoejem]
-\definetextbackground [tbobser] [tfondo]   
+\definetextbackground [tbteor][trecuadro][%
+  framecolor=color_teo]
+
+\definetextbackground [tbdemo][tfondo][%
+  framecolor=color_teo,
+  backgroundcolor=white]
+
+\definetextbackground [tbdefi][trecuadro][%
+  framecolor=color_def]
+
+\definetextbackground [tbejem][tfondo][%
+  backgroundcolor=white]
+
+\definetextbackground [tbobser][tfondo][%
+  backgroundcolor=white]
 
 
 \defineframed[frecuadro][%
@@ -260,7 +290,7 @@
   titlecolor=black,
   titlestyle={\rm\bia}, % head y title están relacionados
   titledistance=.7em,
-  style=italic,
+  % style=italic,
   before={\starttbdefi},
   after={\stoptbdefi},
 ]
@@ -272,7 +302,7 @@
 ]
 
 \defineenumeration[axiomaextra][axioma][%
-  number=no,      
+  number=no,
 ]
 
 \definecounter[teorema][way=bytext]
@@ -288,10 +318,23 @@
 \defineenumeration[lema][teorema][%
   text=LEMA ,
   number=no,
-]       
+]
 
 \defineenumeration[corolario][lema][%
   text=COROLARIO ,
+]
+
+\defineenumeration [observacion][definicion] [%
+  text=OBSERVACIÓN: ,
+  headcolor=darkgray,
+  style={\switchtobodyfont[9pt]},
+  number=no,
+  before={\starttbobser},
+  after={\stoptbobser},
+]
+
+\defineenumeration [acuerdo][observacion] [%
+  text=ACUERDO: ,
 ]
 
 \defineenumeration [demo] [%
@@ -320,26 +363,27 @@
   % after={\stoptbejem\blank[none]},
 ]
 
-\defineenumeration [observacion][definicion] [%
-  alternative=serried,
-  text=OBSERVACIÓN: ,
-  headcolor=black,
-  color=darkgray,
-  style=normal,
-  number=no,
-  before={\starttbobser},
-  after={\stoptbobser},
+\defineenumeration [metodo][demo][%
+ before=, after=,
+ text=,
+]
+
+\setupnarrower[middle=1cm]
+\defineparagraphs[ej][%
+  rule=on,
+  before={\blank\startnarrower},
+  after={\stopnarrower\blank},
 ]
 
 \defineenumeration [ejemplo] [%
-  style={\switchtobodyfont[9pt]},
+  style={\switchtobodyfont[small]},
   text=Ejemplo: ,
   number=no,
   headstyle=\ss\tx,
   color=darkgray,
-  before={\blank[big]%
-    \resetcounter[formula]\starttbejem},
-  after={\resetcounter[formula]\stoptbejem},
+  before={\blank[medium]%
+    \resetcounter[formula]\startnarrower},%\starttbejem},
+  after={\resetcounter[formula]\stopnarrower}%\stoptbejem},
 ]
 
 \defineenumeration [ejemplos][ejemplo] [%
@@ -356,13 +400,25 @@
 ]
 
 \definedescription [descripcion] [%
-  headstyle=\ss\bf,
-  width=.4\textwidth,
+  alternative=top,
+  headcolor=darkred,
+  hang=50,
+  headstyle=\ss,
+  % width=.4\textwidth,
   before={\blank[2*big]},
   after={\blank[2*big]},
 ]
 
-\setupformulas[prefix=no]
+\definedescription [comentario] [%
+  style={\switchtobodyfont[small]},
+  before={\starttbejem},
+  after={\stoptbejem},
+]
+
+
+\setupformulas[prefix=no,% split=page
+]
+
 \defineformula[ejer] [%
   location=left,
   prefix=no,
@@ -378,8 +434,9 @@
   distance=.5cm,
 ]
 
+
 % \define\PlaceFootnote
-%   {\inoutermargin{\vtop{\placelocalnotes[footnote][before=,after=]}}}
+%   {\inmargin{\vtop{\placelocalnotes[footnote][before=,after=]}}}
 
 % \setupnote [footnote][%
 %   location=text,
@@ -388,9 +445,9 @@
 %   next=\PlaceFootnote,
 % ]
 
-\setupnotation[footnote][%
-  alternative=serried,
-]
+% \setupnotation[footnote][%
+%   alternative=serried,
+% ]
 
 \setupexternalfigures[directory=img]
 
@@ -422,3 +479,8 @@
 % \showframe
 % \showlayout
 \stopenvironment
+
+%%% Local Variables:
+%%% mode: context
+%%% TeX-master: t
+%%% End:

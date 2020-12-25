@@ -6,7 +6,8 @@
 \startchapter[title={Conjuntos}]
 
   \startsection[title={Relación de igualdad}]
-    Las cosas que se colocan a cada lado del signo de igualdad tienen que representar una y la misma cosa.
+    Las cosas que se colocan a cada lado del signo de igualdad tienen
+    que representar una y la misma cosa.
 
     \startaxioma{Propiedades fundamentales de la igualdad}
       Sean $x, y, z$ tres objetos o cosas. Entonces:
@@ -21,13 +22,18 @@
           \obj{Ley transitiva}: $x = y \wedge y = z --> x = z$
         \stopitem
         \startitem
-          \obj{Ley de sustitución}: Si $x = y$, entonces en cualquier enunciado en donde aparezca $x$ podemos escribir $y$, y viceversa, sin alterar el valor de verdad de dicho enunciado.
+          \obj{Ley de sustitución}: Si $x = y$, entonces en cualquier
+          enunciado en donde aparezca $x$ podemos escribir $y$, y
+          viceversa, sin alterar el valor de verdad de dicho
+          enunciado.
         \stopitem
       \stopitemizer
     \stopaxioma
 
     \startobservacion
-      Si aceptamos como cierta únicamente la ley de sustitución, se pueden demostrar las otras tres leyes a partir de ésta.
+
+      Si aceptamos como cierta únicamente la ley de sustitución, se
+      pueden demostrar las otras tres leyes a partir de ésta.
     \stopobservacion
 
     \startteorema[teo:1]
@@ -48,13 +54,16 @@
     \startdemop
       \startitemizep
         \startitem
-          Por hipótesis, $x=y$. Luego, por la ley de sustitución, $x=x$.
+          Por hipótesis, $x=y$. Luego, por la ley de sustitución,
+          $x=x$.
         \stopitem
         \startitem
-          Por hipótesis, $x=y$. Entonces, $y=x$, por la ley de sustitución.
+          Por hipótesis, $x=y$. Entonces, $y=x$, por la ley de
+          sustitución.
         \stopitem
         \startitem
-          Por hipótesis, $x=y, y=x$. En consecuencia, debido a la ley de sustitución, $x=z$
+          Por hipótesis, $x=y, y=x$. En consecuencia, debido a la ley
+          de sustitución, $x=z$
         \stopitem
       \stopitemizep
     \stopdemop
@@ -62,12 +71,14 @@
   \stopsection
 
   \startsection[title={Definición de conjunto}]
-    Partimos del concepto de \obj{colección} que se entiende como un término indefinido o primitivo.
+    Partimos del concepto de \obj{colección} que se entiende como un
+    término indefinido o primitivo.
 
     \startdefinicion
       \startitemizer
         \startitem
-          \obj{Una colección bien definida} es aquella en donde sabemos seguro qué cosas están y qué cosas no están en ella.
+          \obj{Una colección bien definida} es aquella en donde
+          sabemos seguro qué cosas están y qué cosas no están en ella.
         \stopitem
 
         \startitem
@@ -75,7 +86,8 @@
         \stopitem
 
         \startitem
-          Los componentes de un conjunto se llaman \obj{elementos o miembros de éste}.
+          Los componentes de un conjunto se llaman \obj{elementos o
+            miembros de éste}.
         \stopitem
       \stopitemizer
     \stopdefinicion
@@ -84,10 +96,13 @@
     \startejemplos
       \startitemize[n]
         \startitem
-          \ini{La colección de las letras del idioma español} está bien definida. Por lo tanto, esa colección es un conjunto. Sus elementos o miembros son: a, e, i, o, u. 
+          \ini{La colección de las letras del idioma español} está
+          bien definida. Por lo tanto, esa colección es un
+          conjunto. Sus elementos o miembros son: a, e, i, o, u.
         \stopitem
         \startitem
-          \ini{La colección de cinco libros escritos en español} no está bien definida. luega, esta colección no es un conjunto.
+          \ini{La colección de cinco libros escritos en español} no
+          está bien definida. luega, esta colección no es un conjunto.
         \stopitem
       \stopitemize
     \stopejemplos
@@ -98,7 +113,8 @@
       \startejemplos
         \startitemize[packed]
           \startitem
-            $V:\;$ representa el conjunto de las letras vocales del idioma español.
+            $V:\;$ representa el conjunto de las letras vocales del
+            idioma español.
           \stopitem
           \startitem
             $x:\;$ representante o miembro de un conjunto.
@@ -108,7 +124,8 @@
 
     \stopdiscusion
 
-    Indicamos que una cosa es miembro de un conjunto por medio del símbolo $\in$.
+    Indicamos que una cosa es miembro de un conjunto por medio del
+    símbolo $\in$.
     \startformula
       \text{elemento} \in \text{conjunto}
     \stopformula
@@ -120,15 +137,20 @@
     \startdiscusion{Representación de conjuntos}
       \startitemize[n]
         \startitem
-          \obj{Descripción verbal}: A es el conjunto de las letras del alfabeto español.
+          \obj{Descripción verbal}: A es el conjunto de las letras del
+          alfabeto español.
         \stopitem
         \startitem
-          \obj{Tabulación o enumeración}: $\{a, e, i, o, u\} = V\quad;\quad A = \{a,b,c, \dots,z\}$
+          \obj{Tabulación o enumeración}:
+          $\{a, e, i, o, u\} = V\quad;\quad A = \{a,b,c, \dots,z\}$
         \stopitem
         \startitem
-          \obj{Forma estándar o constructiva}: $\{x \mid p\}$ siendo $p$ un enunciado que da una propiedad de los elementos del conjunto.
+          \obj{Forma estándar o constructiva}: $\{x \mid p\}$ siendo
+          $p$ un enunciado que da una propiedad de los elementos del
+          conjunto.
 
-          $V = \{x \mid x\; \text{es una letra vocal del idioma español}\}$
+          $V = \{x \mid x\; \text{es una letra vocal del idioma
+            español}\}$
         \stopitem
         \startitem
           \obj{Diagramas de Venn}
@@ -136,7 +158,7 @@
           \startcenteraligned
             \externalfigure[diagramasVenn.png][maxwidth=0.5\textwidth]
           \stopcenteraligned
-          
+
         \stopitem
       \stopitemize
 
@@ -149,27 +171,35 @@
     \stopdiscusion
 
     \startdefinicion
-      \obj{Un suscrito} es un símbolo que se escribe en la parte inferior derecha de otro símbolo. Su uso es para ordenar o para identificar.
+      \obj{Un suscrito} es un símbolo que se escribe en la parte
+      inferior derecha de otro símbolo. Su uso es para ordenar o para
+      identificar.
     \stopdefinicion
 
     \startejemplos
       \startitemize[n]
         \startitem
-          Los cuatro casos que representan los posibles valores de verdad que podrían ocurrir para dos enunciados son $C_1, C_2, C_3 \text{ y } C_4$. En este caso sirve para ordenar.
+          Los cuatro casos que representan los posibles valores de
+          verdad que podrían ocurrir para dos enunciados son
+          $C_1, C_2, C_3 \text{ y } C_4$. En este caso sirve para
+          ordenar.
         \stopitem
         \startitem
-          Si $A = \{a, 3, -8, -d\}$ tenemos que $a_1 = a;\, a_2 = 3;\, a_3 = -8;\, a_4 = -d$ (identificar)
+          Si $A = \{a, 3, -8, -d\}$ tenemos que
+          $a_1 = a;\, a_2 = 3;\, a_3 = -8;\, a_4 = -d$ (identificar)
         \stopitem
         \startitem
-          Si $A = \{3, -d, a, -8\}$ tenemos que $a_1 = 3;\, a_2 = -d;\, a_3 = a;\, a_4 = -8$ (identificar)
+          Si $A = \{3, -d, a, -8\}$ tenemos que
+          $a_1 = 3;\, a_2 = -d;\, a_3 = a;\, a_4 = -8$ (identificar)
         \stopitem
       \stopitemize
     \stopejemplos
-    
+
   \stopsection
 
   \margindata[youtube][method=top]{\from[AE11B]}
-  \startsection[title={Un conjunto muy especial: el conjunto de los números naturales o de contar, $\naturalnumbers$}]
+  \startsection[title={Un conjunto muy especial: el conjunto de los
+      números naturales o de contar, $\naturalnumbers$}]
 
     \startformula
       \naturalnumbers = \{1, 2, 3, \dots\}
@@ -178,30 +208,40 @@
     \startdefinicion
       \startitemizer
         \startitem
-          El símbolo usado para representar una cantidad se llama \obj{un numeral}.
+          El símbolo usado para representar una cantidad se llama
+          \obj{un numeral}.
         \stopitem
         \startitem
-          La cantidad que representa un numeral se llama \obj{un número}.
+          La cantidad que representa un numeral se llama \obj{un
+            número}.
         \stopitem
         \startitem
-          El proceso de parear objetos, cosas o personas con los numerales que representan su cantidad, se conoce como \obj{conteo}.
+          El proceso de parear objetos, cosas o personas con los
+          numerales que representan su cantidad, se conoce como
+          \obj{conteo}.
         \stopitem
         \startitem
-          El conjunto de signos o \obj{dígitos} y la manera de construir los numerales con ellos se conoce como \obj{un sistema de numeración}.
+          El conjunto de signos o \obj{dígitos} y la manera de
+          construir los numerales con ellos se conoce como \obj{un
+            sistema de numeración}.
         \stopitem
       \stopitemizer
     \stopdefinicion
 
   \stopsection
-  
+
   \startsection[title={Características de los conjuntos}]
+
     \startdefinicion
-      Sea $A$ un conjunto. La \obj{cardinalidad de $A$} denotada por cualquiera de los símbolos $\#A \equiv c(A) \equiv n(A)$, se refiere al número de elementos que contiene $A$.
+      Sea $A$ un conjunto. La \obj{cardinalidad de $A$} denotada por
+      cualquiera de los símbolos $\#A \equiv c(A) \equiv n(A)$, se
+      refiere al número de elementos que contiene $A$.
     \stopdefinicion
 
     \startdefinicion
-      \margindata[youtube]{\from[AE12A]}
-      \obj{El conjunto nulo o vacío} es aquel que no contiene elementos. Se representa por cualquiera de los signos: $\{\,\}$ o $\emptyset$.
+      \margindata[youtube]{\from[AE12A]} \obj{El conjunto nulo o
+        vacío} es aquel que no contiene elementos. Se representa por
+      cualquiera de los signos: $\{\,\}$ o $\emptyset$.
     \stopdefinicion
 
     \startejemplos
@@ -210,292 +250,398 @@
           El conjunto de las personas que han durado más de mil años.
         \stopitem
         \startitem
-          El conjunto de las palabras en español que contienen cinco o más letras consonantes juntas.
+          El conjunto de las palabras en español que contienen cinco o
+          más letras consonantes juntas.
         \stopitem
       \stopitemize
     \stopejemplos
 
-  \startdefinicion
-    \startitemizer
-      \startitem
-        Dos conjuntos, $A$ y $B$, se llaman \obj{iguales}, denotado por el símbolo $A = B$, ssi $\forall\, x \in A;\, x \in B \wedge \forall\, x \in B, x \in A$. Es decir, ssi $A$ y $B$ tienen los mismos elementos. Si $A$ no es igual a $B$, escribimos $A /= B$
-      \stopitem
-      \startitem
-        Dos conjuntos $A$ y $B$ se llaman \obj{equivalentes}, denotado por el símbolo $A <-> B$, ssi $\#A = \#B$. Si $A$ y $B$ no son equivalentes los representamos por el símbolo $A  \nleftrightarrow B$.
-      \stopitem
-    \stopitemizer
-  \stopdefinicion
+    \startdefinicion
+      \startitemizer
+        \startitem
+          Dos conjuntos, $A$ y $B$, se llaman \obj{iguales}, denotado
+          por el símbolo $A = B$, ssi
+          $\forall\, x \in A;\, x \in B \wedge \forall\, x \in B, x \in
+          A$. Es decir, ssi $A$ y $B$ tienen los mismos elementos. Si
+          $A$ no es igual a $B$, escribimos $A /= B$
+        \stopitem
+        \startitem
+          Dos conjuntos $A$ y $B$ se llaman \obj{equivalentes}, denotado
+          por el símbolo $A <-> B$, ssi $\#A = \#B$. Si $A$ y $B$ no son
+          equivalentes los representamos por el símbolo
+          $A \nleftrightarrow B$.
+        \stopitem
+      \stopitemizer
+    \stopdefinicion
 
-  \startobservacion
-    \startitemize[packed,joinedup]
-      \startitem
-        Al representar un conjunto por tabulación o enumeración no hay que repetir los elementos. 
-      \stopitem
-      \startitem
-        Dos conjuntos pueden ser iguales aunque tengan sus elementos enumerados en diferente orden.
-      \stopitem
-      \startitem
-        Dos conjuntos iguales son, automáticamente, equivalentes.
-      \stopitem
-    \stopitemize
-  \stopobservacion
+    \startobservacion
+      \startitemize[packed,joinedup]
+        \startitem
+          Al representar un conjunto por tabulación o enumeración no hay
+          que repetir los elementos.
+        \stopitem
+        \startitem
+          Dos conjuntos pueden ser iguales aunque tengan sus elementos
+          enumerados en diferente orden.
+        \stopitem
+        \startitem
+          Dos conjuntos iguales son, automáticamente, equivalentes.
+        \stopitem
+      \stopitemize
+    \stopobservacion
 
-  \startejemplos
-    \startitemejem
-      
-      \startitem
-        \ini{Sea $V = \{a, e, i, o, u\}$ y $W = \{i, u, e, u, a, o, i\}$.}
-        \startitemize[packed]
-          \startitem
-            Para ver si estos dos conjuntos son iguales comprobamos que todo elemento del primero tienen que estar en el segundo y viceversa. Y, por lo tanto, $V = W$.
+    \startejemplos
+      \startitemejem
 
-            En $W\,$ algunos elementos están repetidos. Podemos reescribir este conjunto eliminando los elementos repetidos. Tampoco importa el orden en el que estén presentados los elementos. Así que ahora tendremos, $W = \{i, u, e, a, o\}$.
-          \stopitem
-          \startitem
-            Para ver si estos dos conjuntos son equivalentes comprobamos su cardinalidad: $\#V = 5 =\#W$.
-          \stopitem
-        \stopitemize
-      \stopitem
+        \startitem
+          \ini{Sea $V = \{a, e, i, o, u\}$ y
+            $W = \{i, u, e, u, a, o, i\}$.}
+          \startitemize[packed]
+            \startitem
+              Para ver si estos dos conjuntos son iguales comprobamos
+              que todo elemento del primero tienen que estar en el
+              segundo y viceversa. Y, por lo tanto, $V = W$.
 
-      \margindata[youtube]{\from[AE12B]}
-      \startitem
-        \ini{Sea $A =\{p, q, \{r, s\}\}$ y $B =\{r, q, s, p\}$.}  
-        \startitemize[packed]
-          \startitem
-            Estos dos conjuntos no son iguales. $A /= B$
-          \stopitem
-          \startitem
-            Como $\#A = 3$ y $\#B = 4$, entonces no son equivalentes. $A \nleftrightarrow B$.
-          \stopitem
-        \stopitemize
-      \stopitem
+              En $W\,$ algunos elementos están repetidos. Podemos
+              reescribir este conjunto eliminando los elementos
+              repetidos. Tampoco importa el orden en el que estén
+              presentados los elementos. Así que ahora tendremos,
+              $W = \{i, u, e, a, o\}$.
+            \stopitem
+            \startitem
+              Para ver si estos dos conjuntos son equivalentes
+              comprobamos su cardinalidad: $\#V = 5 =\#W$.
+            \stopitem
+          \stopitemize
+        \stopitem
 
-      \startitem
-        \ini{$P = \{?, 3, q\}$ y $Q$ \inoutermargin[voffset=1cm]{\externalfigure[Q_Venn.png][maxwidth=2.6cm]}}
-        \startitemize[packed]
-          \startitem
-            Estos dos conjuntos son iguales. $P = Q$. Aunque están representados de formas diferentes.
-          \stopitem
-          \startitem
-            Al ser iguales, automáticamente, son equivalentes. $A \leftrightarrow B$.
-          \stopitem
-        \stopitemize
-      \stopitem
+        \margindata[youtube]{\from[AE12B]}
+        \startitem
+          \ini{Sea $A =\{p, q, \{r, s\}\}$ y $B =\{r, q, s, p\}$.}
+          \startitemize[packed]
+            \startitem
+              Estos dos conjuntos no son iguales. $A \neq B$
+            \stopitem
+            \startitem
+              Como $\#A = 3$ y $\#B = 4$, entonces no son
+              equivalentes. $A \nleftrightarrow B$.
+            \stopitem
+          \stopitemize
+        \stopitem
 
-      \startitem
-        \ini{Sea $M =\{1, 2, 3\}$ y $N =\{1, 2, c\}$.}  
-        \startitemize[packed]
-          \startitem
-            Estos dos conjuntos no son iguales. $M /= N$
-          \stopitem
-          \startitem
-            Como $\#M = 3 = \#N$, entonces son equivalentes. $M \leftrightarrow N$.
-          \stopitem
-        \stopitemize
-      \stopitem
+        \startitem
+          \ini{$P = \{?, 3, q\}$ y $Q$}
+          % \inoutermargin[voffset=1cm]{\externalfigure[Q_Venn.png][maxwidth=2.6cm]}}
+          \placefigure [none] {} {\externalfigure[Q_Venn.png][maxwidth=2.6cm]}
 
-    \stopitemejem
-  \stopejemplos
+          \startitemize[packed]
+            \startitem
+              Estos dos conjuntos son iguales. $P = Q$. Aunque están
+              representados de formas diferentes.
+            \stopitem
+            \startitem
+              Al ser iguales, automáticamente, son equivalentes.
+              $A \leftrightarrow B$.
+            \stopitem
+          \stopitemize
+        \stopitem
+          
+        \startitem
+          \ini{Sea $M =\{1, 2, 3\}$ y $N =\{1, 2, c\}$.}
+          \startitemize[packed]
+            \startitem
+              Estos dos conjuntos no son iguales. $M \neq N$
+            \stopitem
+            \startitem
+              Como $\#M = 3 = \#N$, entonces son equivalentes.
+              $M \leftrightarrow N$.
+            \stopitem
+          \stopitemize
+        \stopitem
 
-  \startdefinicion
-    \startitemizer
-      \startitem
-        Un conjunto se llama \obj{finito} si podemos terminar de contar sus elementos.
-      \stopitem
-      \startitem
-        Un conjunto se llama \obj{infinito} si el proceso de contar sus elementos no termina. La cardinalidad de un conjunto se llama \obj{infinita} y se representa por el signo $\infty$.
-      \stopitem
-    \stopitemizer
-  \stopdefinicion
+      \stopitemejem
+    \stopejemplos
 
-  \startejemplos
-    \startitemejem
-      \startitem
-        El conjunto $V = \{a, e, i, o, u\}$ tiene cardinalidad $\#V = 5$, luego es un conjunto finito. También lo son los conjuntos $A, B, P, Q$ vistos anterioremente.
-      \stopitem
-      \startitem
-        $\naturalnumbers = \{1, 2, 3, \dots \,\}$ es infinito. $\#\naturalnumbers = \infty$.
-      \stopitem
-    \stopitemejem
-  \stopejemplos
+    \startdefinicion
+      \startitemizer
+        \startitem
+          Un conjunto se llama \obj{finito} si podemos terminar de
+          contar sus elementos.
+        \stopitem
+        \startitem
+          Un conjunto se llama \obj{infinito} si el proceso de contar
+          sus elementos no termina. La cardinalidad de un conjunto se
+          llama \obj{infinita} y se representa por el signo $\infty$.
+        \stopitem
+      \stopitemizer
+    \stopdefinicion
 
-  \startdefinicion
-    Consideremos dos conjuntos $A$ y $B$. Decimos que \obj{$A$ es subconjunto de $B$}, representado con el símbolo $A \subseteq B$, ssi $\forall\, x \in A, x \in B$. Si $A$ no es subconjunto de $B$ lo indicamos con el símbolo $A \nsubseteq B$.
-  \stopdefinicion
+    \startejemplos
+      \startitemejem
+        \startitem
+          El conjunto $V = \{a, e, i, o, u\}$ tiene cardinalidad
+          $\#V = 5$, luego es un conjunto finito. También lo son los
+          conjuntos $A, B, P, Q$ vistos anterioremente.
+        \stopitem
+        \startitem
+          $\naturalnumbers = \{1, 2, 3, \dots \,\}$ es
+          infinito. $\#\naturalnumbers = \infty$.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
 
-  \margindata[youtube]{\from[AE13A]}
-  \startobservacion
-    $X \subseteq A \wedge Y \subseteq A$ se abrevia $X,Y \subseteq A$.
-  \stopobservacion
+    \startdefinicion
+      Consideremos dos conjuntos $A$ y $B$. Decimos que \obj{$A$ es
+        subconjunto de $B$}, representado con el símbolo
+      $A \subseteq B$, ssi $\forall\, x \in A, x \in B$. Si $A$ no es
+      subconjunto de $B$ lo indicamos con el símbolo $A \nsubseteq B$.
+    \stopdefinicion
 
-  \startejemplos
-    \startitemejem
-      \startitem
-        \ini{$A = \{1,2,3\}$ y $B = \{1\}$} Tenemos que $A \nsubseteq B$ y $B \subseteq A$.
-      \stopitem
-      \startitem
-        \ini{$C = \{x \mid x$ es un número natural desde el uno hasta el 15\}  y D = \{1, 2, 3, $\dots$, 100\}}. Tenemos que $C \subseteq D$ y $D \nsubseteq C$.
-      \stopitem
-      \startitem
-        \ini{$P = \{a, b, c\};\, Q =\{c, a, b\}$} Tenemos que $P \subseteq Q$ y $Q \subseteq P$. También observamos que ambos son iguales.
-      \stopitem
-      \startitem
-        \ini{$M = \{1, 2\};\, N =\{2, 3\}$} Tenemos que $M \nsubseteq N$ y $M \nsubseteq N$.
-      \stopitem
-    \stopitemejem
-  \stopejemplos
+    \margindata[youtube]{\from[AE13A]}
+    \startobservacion
+      $X \subseteq A \wedge Y \subseteq A$ se abrevia $X,Y \subseteq A$.
+    \stopobservacion
 
-  \startobservacion
-    $A \nsubseteq B$ ssi $\exists x \in A$ tal que $x \nin B$
-  \stopobservacion
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{$A = \{1,2,3\}$ y $B = \{1\}$} Tenemos que
+          $A \nsubseteq B$ y $B \subseteq A$.
+        \stopitem
+        \startitem
+          \ini{$C = \{x \mid x$ es un número natural desde el uno hasta
+            el 15\} y D = \{1, 2, 3, $\dots$, 100\}}. Tenemos que
+          $C \subseteq D$ y $D \nsubseteq C$.
+        \stopitem
+        \startitem
+          \ini{$P = \{a, b, c\};\, Q =\{c, a, b\}$} Tenemos que
+          $P \subseteq Q$ y $Q \subseteq P$. También observamos que
+          ambos son iguales.
+        \stopitem
+        \startitem
+          \ini{$M = \{1, 2\};\, N =\{2, 3\}$} Tenemos que
+          $M \nsubseteq N$ y $M \nsubseteq N$.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
 
-  \startlema
-    Las afirmaciones $p$ y $p \wedge p$ son equivalentes.
-  \stoplema
+    \startobservacion
+      $A \nsubseteq B$ ssi $\exists x \in A$ tal que $x \nin B$
+    \stopobservacion
 
-  \startdemo{}
-    
-    \startcenteraligned
-      \starttable[|cm|c|c|c|]
-        \NC \VL $p$ \VL $p$ \VL $p \wedge p$ \NC \AR
-        \HL
-        \NC c_1 \VL C \VL C \VL C \NC \AR
-        \NC c_2 \VL F \VL F \VL F \NC \AR
-      \stoptable
-    \stopcenteraligned
-  \stopdemo
+    \startlema
+      Las afirmaciones $p$ y $p \wedge p$ son equivalentes.
+    \stoplema
 
-  \startteorema[teo:2]
-    \margindata[youtube]{\from[AE13B]}
-    Sea $A$, un conjunto cualquiera, y $\emptyset$ un conjunto nulo. Entonces
-    \startitemizer
-      \startitem
-        $A \subseteq A$
-      \stopitem
-      \startitem
-        $\emptyset \subseteq A$
-      \stopitem
-    \stopitemizer
-  \stopteorema
+    \startdemo{}\\
+      \startcenteraligned
+        \starttable[|cm|c|c|c|]
+          \NC \VL $p$ \VL $p$ \VL $p \wedge p$ \NC \AR
+          \HL
+          \NC c_1 \VL C \VL C \VL C \NC \AR
+          \NC c_2 \VL F \VL F \VL F \NC \AR
+        \stoptable
+      \stopcenteraligned
+    \stopdemo
 
-  \startdemop
-    \startitemizep
-      \startitem
-        Por la ley reflexiva de la igualdad, $A = A$. Luego, según la definición de conjuntos iguales, $\forall\, x \in A, x \in A \wedge \forall\, x \in A, x \in A$. Entonces, por el lema que acabamos de demostrar, lo anterior se reduce a decir que $\forall\, x \in A, x \in A$. En consecuencia, por la definición de subconjunto, $A \subseteq A$.
-      \stopitem
-      \startitem
-        (por contradicción) Suponemos que $\emptyset \nsubseteq A$. Entonces $\exists\, x \in \emptyset$ tal que $x \nin A$. Pero vemos que es una contradicción $(\rightarrow\leftarrow)$ a la definición de conjunto nulo.
-      \stopitem
-    \stopitemizep
-  \stopdemop
+    \startteorema[teo:2]
+      \margindata[youtube]{\from[AE13B]} Sea $A$, un conjunto
+      cualquiera, y $\emptyset$ un conjunto nulo. Entonces
+      \startitemizer
+        \startitem
+          $A \subseteq A$
+        \stopitem
+        \startitem
+          $\emptyset \subseteq A$
+        \stopitem
+      \stopitemizer
+    \stopteorema
 
-  \startejemplos{Escriba los subconjuntos de:}
-    \startitemejem
-      \startitem
-        \ini{$Q = \{3, a\}$}
-        
-        $\{3, a\},\; \emptyset,\;\{3\},\; \{a\}$
-      \stopitem
-      \startitem
-        \margindata[youtube]{\from[AE14A]}
-        \ini{$R =\{p, \{q\}, 3\}$}
-        
-        $\{p, \{q\}, 3\},\; \emptyset,\; \{p\},\; \{\{q\}\},\; \{3\},\; \{p, \{q\}\},\; \{p, 3\},\; \{\{q\},\; 3\}$
-      \stopitem
-    \stopitemejem
-  \stopejemplos
+    \startdemop
+      \startitemizep
+        \startitem
+          Por la ley reflexiva de la igualdad, $A = A$. Luego, según la
+          definición de conjuntos iguales,
+          $\forall\, x \in A, x \in A \wedge \forall\, x \in A, x \in
+          A$. Entonces, por el lema que acabamos de demostrar, lo
+          anterior se reduce a decir que $\forall\, x \in A, x \in
+          A$. En consecuencia, por la definición de subconjunto,
+          $A \subseteq A$.
+        \stopitem
+        \startitem
+          (por contradicción) Suponemos que $\emptyset \nsubseteq
+          A$. Entonces $\exists\, x \in \emptyset$ tal que $x \nin
+          A$. Pero vemos que es una contradicción
+          $(\rightarrow\leftarrow)$ a la definición de conjunto nulo.
+        \stopitem
+      \stopitemizep
+    \stopdemop
 
-  \startdefinicion
-    Sean $A$ y $B$ dos conjuntos con $A \subseteq B$. Decimos que \obj{$A$ es un subconjunto propio de $B$} o que \obj{$A$ está contenido propiamente en $B$}, denotado por el símbolo $A \subset B$, ssi $A /= B \wedge A /= \emptyset$. Si esto no ocurre, lo indicamos con símbolo $A \nsubset B$.
-  \stopdefinicion
+    \startejemplos{Escriba los subconjuntos de:}
+      \startitemejem
+        \startitem
+          \ini{$Q = \{3, a\}$}
 
-  \startejemplo
-    Los subconjuntos propios de $R$ son $\{p\}$, $\{\{q\}\}$, $\{3\}$, $\{p, \{q\}\}$, $\{p, 3\}$, $\{\{q\}$, $3\}$. Se han excluido el original, $\{p, \{q\}, 3\}$ y el nulo, $\emptyset$.
-  \stopejemplo
+          $\{3, a\},\; \emptyset,\;\{3\},\; \{a\}$
+        \stopitem
+        \startitem
+          \margindata[youtube]{\from[AE14A]}
+          \ini{$R =\{p, \{q\}, 3\}$}
 
-  \startteorema[teo:3]
-    Sean $A$ y $B$ dos conjuntos. $A \subseteq B \wedge B \subseteq A$ si y sólo si $A = B$.
-  \stopteorema
+          $\{p, \{q\}, 3\},\; \emptyset,\; \{p\},\; \{\{q\}\},\;
+          \{3\},\; \{p, \{q\}\},\; \{p, 3\},\; \{\{q\},\; 3\}$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
 
-  \startdemo
-    Por ser una bicondicional hay que demostrarlo en las dos direcciones.
+    \startdefinicion
+      Sean $A$ y $B$ dos conjuntos con $A \subseteq B$. Decimos que
+      \obj{$A$ es un subconjunto propio de $B$} o que \obj{$A$ está
+        contenido propiamente en $B$}, denotado por el símbolo
+      $A \subset B$, ssi $A /= B \wedge A /= \emptyset$. Si esto no
+      ocurre, lo indicamos con símbolo $A \nsubset B$.
+    \stopdefinicion
 
-    $\Longrightarrow\;$ Suponemos que $A \subseteq B \wedge B \subseteq A$ (hipótesis). Pero $A \subseteq B$ significa, por la definición de subconjunto, que $\forall\, x \in A, x \in B$; mientras que $B \subseteq A$ significa que $\forall\, x \in B, x \in A$. Pero, lo anterior implica que, $A = B$, por la definición de igualdad de conjuntos.
+    \startejemplo
+      Los subconjuntos propios de $R$ son $\{p\}$, $\{\{q\}\}$, $\{3\}$,
+      $\{p, \{q\}\}$, $\{p, 3\}$, $\{\{q\}$, $3\}$. Se han excluido el
+      original, $\{p, \{q\}, 3\}$ y el nulo, $\emptyset$.
+    \stopejemplo
 
-    \margindata[youtube]{\from[AE14B]}
-    $\Longleftarrow\;$ Suponemos que $A = B$. Esto significa, por la definición de conjuntos iguales, que $\underbrace{\forall\, x \in A, x \in B}_{(1)} \wedge \underbrace{\forall\, x \in B, x \in A}_{(2)}$.
+    \startteorema[teo:3]
+      Sean $A$ y $B$ dos conjuntos. $A \subseteq B \wedge B \subseteq A$
+      si y sólo si $A = B$.
+    \stopteorema
 
-    Pero (1) significa que $A \subseteq B$ y (2) significa que $B \subseteq A$, ambos por la definición de subconjunto.
-  \stopdemo
+    \startdemo
+      Por ser una bicondicional hay que demostrarlo en las dos
+      direcciones.
 
-  \startteorema[teo:4]
-    El conjunto nulo es único.
-  \stopteorema
+      $\Longrightarrow\;$ Suponemos que
+      $A \subseteq B \wedge B \subseteq A$ (hipótesis). Pero
+      $A \subseteq B$ significa, por la definición de subconjunto, que
+      $\forall\, x \in A, x \in B$; mientras que $B \subseteq A$
+      significa que $\forall\, x \in B, x \in A$. Pero, lo anterior
+      implica que, $A = B$, por la definición de igualdad de conjuntos.
 
-  \startdemo
-    Supongamos que $\emptyset$ y $\emptyset'$ son dos conjuntos diferentes. Entonces, por el \in{teorema}[teo:2], que nos dice que $\emptyset \subseteq A$, tenemos que $\emptyset \subseteq \emptyset'$ y por la misma razón $\emptyset' \subseteq \emptyset$. Entonces, por el \in{teorema}[teo:3], $\emptyset = \emptyset'$.
-  \stopdemo
+      \margindata[youtube]{\from[AE14B]}
 
-  \startteorema
-    Sean $A, B$ y $C$ tres conjuntos con $A \subseteq B$ y $B \subseteq C$. Entonces, $A \subseteq C$. 
-  \stopteorema
+      $\Longleftarrow\;$ Suponemos que $A = B$. Esto significa, por la
+      definición de conjuntos iguales, que
+      $\underbrace{\forall\, x \in A, x \in B}_{(1)} \wedge
+      \underbrace{\forall\, x \in B, x \in A}_{(2)}$.
 
-  \startdemo
-    Como $A \subseteq B$, entonces, por la definición de subconjunto, tenemos que $\forall {x \in A}, {x \in B}$. Y como $B \subseteq C$, entonces resulta que $\forall\, x \in B, x \in C$. Resumiendo, $\forall\, x \in A, x \in C$. Pero esto significa que $A \subseteq C$.
-  \stopdemo
+      Pero (1) significa que $A \subseteq B$ y (2) significa que
+      $B \subseteq A$, ambos por la definición de subconjunto.
+    \stopdemo
 
-  \startdefinicion
-  \margindata[youtube]{\from[AE15A]}
-    Un conjunto en el cual esté contenido otro conjunto se llama \obj{un conjunto universo o universal de éste}. Damos el nombre $U$ a cualquier conjunto universo.
-  \stopdefinicion
-  
-  \startobservacion
-    Un conjunto universal se representa, usualmente, como un rectángulo al representarlo por diagramas de Venn.
-  \stopobservacion
+    \startteorema[teo:4]
+      El conjunto nulo es único.
+    \stopteorema
 
-  \startejemplo
-    Si $I = \{1, 2, 3\}$, dos posibles universos de ese conjunto serían
-    \startitemize[n,packed]
-      \startitem
-        $U_1 = I = \{1, 2, 3\}$, ya que todo conjunto está contenido en él mismo, $A \subseteq A$. 
-      \stopitem
-      \startitem
-        $U_2 = \{1, 2, 3, a, b\}$
-      \stopitem
-    \stopitemize
-  \stopejemplo
+    \startdemo
+      Supongamos que $\emptyset$ y $\emptyset'$ son dos conjuntos
+      diferentes. Entonces, por el \in{teorema}[teo:2], que nos dice que
+      $\emptyset \subseteq A$, tenemos que
+      $\emptyset \subseteq \emptyset'$ y por la misma razón
+      $\emptyset' \subseteq \emptyset$. Entonces, por el
+      \in{teorema}[teo:3], $\emptyset = \emptyset'$.
+    \stopdemo
+
+    \startteorema
+      Sean $A, B$ y $C$ tres conjuntos con $A \subseteq B$ y
+      $B \subseteq C$. Entonces, $A \subseteq C$.
+    \stopteorema
+
+    \startdemo
+      Como $A \subseteq B$, entonces, por la definición de subconjunto,
+      tenemos que $\forall {x \in A}, {x \in B}$. Y como
+      $B \subseteq C$, entonces resulta que
+      $\forall\, x \in B, x \in C$. Resumiendo,
+      $\forall\, x \in A, x \in C$. Pero esto significa que
+      $A \subseteq C$.
+    \stopdemo
+
+    \startdefinicion
+      \margindata[youtube]{\from[AE15A]} Un conjunto en el cual esté
+      contenido otro conjunto se llama \obj{un conjunto universo o
+        universal de éste}. Damos el nombre $U$ a cualquier conjunto
+      universo.
+    \stopdefinicion
+
+    \startobservacion
+      Un conjunto universal se representa, usualmente, como un
+      rectángulo al representarlo por diagramas de Venn.
+    \stopobservacion
+
+    \startejemplo
+      Si $I = \{1, 2, 3\}$, dos posibles universos de ese conjunto
+      serían
+      \startitemize[n,packed]
+        \startitem
+          $U_1 = I = \{1, 2, 3\}$, ya que todo conjunto está contenido
+          en él mismo, $A \subseteq A$.
+        \stopitem
+        \startitem
+          $U_2 = \{1, 2, 3, a, b\}$
+        \stopitem
+      \stopitemize
+    \stopejemplo
 
   \stopsection
 
   \startsection[title={Operaciones entre conjuntos}]
-  
-    Las \obj{operaciones} son ejecutorias o actividades que se pueden efectuar con dos objetos o cosas para obtener una tercera cosa. A las dos primeras cosas se les llama los \obj{operandos de la operación} y la tercera, se le llama el \obj{resultado de la operación}.
+
+    Las \obj{operaciones} son ejecutorias o actividades que se pueden
+    efectuar con dos objetos o cosas para obtener una tercera cosa. A
+    las dos primeras cosas se les llama los \obj{operandos de la
+      operación} y la tercera, se le llama el \obj{resultado de la
+      operación}.
 
     \startdefinicion{}
-      Sean $A$ y $B$ dos conjuntos. Se definen las siguientes operaciones\footnote{Se presenta un repaso detallado de estas operaciones al comienzo del video \from[AE16A]}
-      
+      Sean $A$ y $B$ dos conjuntos. Se definen las siguientes
+      operaciones\footnote{Se presenta un repaso detallado de estas
+        operaciones al comienzo del video \from[AE16A]}
+
       \startitemizer[unpacked]
         \startitem
-          \obj{La unión de $A$ con $B$}, denotada con el símbolo $A \cup B$, es el conjunto $\{x \mid x \in A \lor x \in B\}$.
+          \obj{La unión de $A$ con $B$}, denotada con el símbolo
+          $A \cup B$, es el conjunto
+          $\{x \mid x \in A \lor x \in B\}$.
         \stopitem
         \startitem
-          \obj{La intersección de $A$ con $B$}, denotada con el símbolo $A \cap B$, es el conjunto $\{x \mid x \in A \land x \in B\}$.
+          \obj{La intersección de $A$ con $B$}, denotada con el
+          símbolo $A \cap B$, es el conjunto
+          $\{x \mid x \in A \land x \in B\}$.
         \stopitem
         \startitem
-          \obj{La diferencia de $A$ con $B$}, representada con cualquiera de los símbolos $A \setminus B \equiv A - B$, y que se lee "A menos B", es el conjunto $\{x \mid {x \in A} \land {x \nin B}\}$.
+          \obj{La diferencia de $A$ con $B$}, representada con
+          cualquiera de los símbolos $A \setminus B \equiv A - B$, y
+          que se lee \quote{A menos B}, es el conjunto
+          $\{x \mid {x \in A} \land {x \nin B}\}$.
         \stopitem
         \startitem
-          \obj{La diferencia simétrica de $A$ con $B$}, denotada con el símbolo $A \triangle B$, es el conjunto $\{x \mid (x \in A \land x \nin B) \lor (x \in B \land x \nin A)\} = (A \setminus B) \cup (B \setminus A)$.  
+          \obj{La diferencia simétrica de $A$ con $B$}, denotada con
+          el símbolo $A \triangle B$, es el conjunto
+          $\{x \mid (x \in A \land x \nin B) \lor (x \in B \land x
+          \nin A)\} = (A \setminus B) \cup (B \setminus A)$.
         \stopitem
         \startitem
-          Si $U$ es un conjunto universo de $A$, el \obj{complemento de $A$}, denotado por cualquiera de los símbolos $A' \equiv A^c \equiv \bar{A}$, es el conjunto $U \setminus A = \{x \mid x \in U \land x \nin A\}$.
+          Si $U$ es un conjunto universo de $A$, el \obj{complemento
+            de $A$}, denotado por cualquiera de los símbolos
+          $A' \equiv A^c \equiv \bar{A}$, es el conjunto
+          $U \setminus A = \{x \mid x \in U \land x \nin A\}$.
         \stopitem
       \stopitemizer
     \stopdefinicion
 
     \startejemplos
       \margindata[youtube]{\from[AE15B]}
-      Considere los conjuntos $A = \{1,2,3,4,5\}, B = \{3,4,5,a,b\}, C = \{5,a,b\}$ y $D =\{3,4,c,d,9\}$ y suponga que $U = \{1,2,3,\dots,10,a,b,c,\dots,h\}$.
+
+      Considere los conjuntos
+      $A = \{1,2,3,4,5\}, B = \{3,4,5,a,b\}, C = \{5,a,b\}$ y
+      $D =\{3,4,c,d,9\}$ y suponga que
+      $U = \{1,2,3,\dots,10,a,b,c,\dots,h\}$.
 
       \startitemejem[columns]
         \startitem
@@ -529,10 +675,12 @@
           $\ini{D \setminus B} = \{c,d,9\}$
         \stopitem
         \startitem
-          $\ini{A \triangle D} = (A \setminus D) \cup (D \setminus A) = \{1,2,5\} \cup \{c,d,9\} = \{1,2,5,c,d,9\}$
+          $\ini{A \triangle D} = (A \setminus D) \cup (D \setminus A)
+          = \{1,2,5\} \cup \{c,d,9\} = \{1,2,5,c,d,9\}$
         \stopitem
         \startitem
-          $\ini{B \triangle C} = (B \setminus C) \cup (C \setminus B) = \{3,4\} \cup \{\} = \{3,4\}$
+          $\ini{B \triangle C} = (B \setminus C) \cup (C \setminus B)
+          = \{3,4\} \cup \{\} = \{3,4\}$
         \stopitem
         \startitem
           $\ini{D'} = U - D = \{1,2,5,6,7,8,10,a,b,e,f,g,h\}$
@@ -544,121 +692,157 @@
       \stopitemejem
     \stopejemplos
 
-    \margindata[comentario]{En expresiones con más de una operación, los signos de agrupación nos dirán lo primero que efectuar.}
-    \startejemplos
-      \startitemejem
-        \startitem
-          $\ini{(C \cap D) \cup A} = \{ \} \cup \{1,2,3,4,5\} = \{1,2,3,4,5\}$
-        \stopitem
-        \startitem
-          $\ini{B \cap (C \cup A)} = \{3,4,5,a,b\} \cap \{3,4,c,d,9,1,2,5\} = \{3,4,5\}$
-        \stopitem
-        \startitem
-          $\ini{A - (C \cap D)} = \{1,2,3,4,5\} \setminus \{5,a,b\} = \{1,2,3,4\}$
-        \stopitem
-        \startitem
-          $\ini{(D \triangle B) \setminus C} = \{c,d,9,5,a,b\} \setminus \{5,a,b\} = \{c,d,9\}$
-        \stopitem
-        \startitem
-          $\ini{(A \cup B)'} = \{1,2,3,4,5,a,b\}' = \{6,7,8,9,10,c,d,e,f,g,h\}$
-        \stopitem
-        \margindata[youtube]{\from[AE17A]}
-        \startitem
-          $\ini{[(A \triangle C) \cap (B \cup D)]^c} = [\{1,2,3,4,a,b\} \cap \{3,4,5,a,b,c,d,9\}]^c$ \par$ = [\{3,4,a,b\}]^c = \{1,2,5,6,7,8,9,10,c,d,e,f,g,h\}$
-        \stopitem
-      \stopitemejem
-    \stopejemplos
+%    \comentario{En expresiones con más de una operación, los signos de agrupación nos dirán lo primero que efectuar.}
+    % \startejemplos
+    %   \startitemejem
+    %     \startitem
+    %       $\ini{(C \cap D) \cup A} = \{ \} \cup \{1,2,3,4,5\} = \{1,2,3,4,5\}$
+    %     \stopitem
+    %     \startitem
+    %       $\ini{B \cap (C \cup A)} = \{3,4,5,a,b\} \cap \{3,4,c,d,9,1,2,5\} = \{3,4,5\}$
+    %     \stopitem
+    %     \startitem
+    %       $\ini{A - (C \cap D)} = \{1,2,3,4,5\} \setminus \{5,a,b\} = \{1,2,3,4\}$
+    %     \stopitem
+    %     \startitem
+    %       $\ini{(D \triangle B) \setminus C} = \{c,d,9,5,a,b\} \setminus \{5,a,b\} = \{c,d,9\}$
+    %     \stopitem
+    %     \startitem
+    %       $\ini{(A \cup B)'} = \{1,2,3,4,5,a,b\}' = \{6,7,8,9,10,c,d,e,f,g,h\}$
+    %     \stopitem
+    %     \margindata[youtube]{\from[AE17A]}
+    %     \startitem
+    %       $\ini{[(A \triangle C) \cap (B \cup D)]^c} = [\{1,2,3,4,a,b\} \cap \{3,4,5,a,b,c,d,9\}]^c$ \par$ = [\{3,4,a,b\}]^c = \{1,2,5,6,7,8,9,10,c,d,e,f,g,h\}$
+    %     \stopitem
+    %   \stopitemejem
+    % \stopejemplos
 
     \startdefinicion
-      Dos conjuntos $A$ y $B$ se llaman \obj{conjuntos disjuntos} ssi $A \cap B = \{\} \equiv \emptyset$.
+      Dos conjuntos $A$ y $B$ se llaman \obj{conjuntos disjuntos} ssi
+      $A \cap B = \{\} \equiv \emptyset$.
     \stopdefinicion
 
     \startejemplos
-      $C \cap D = \emptyset$. Luego, $C$ y $D$ son disjuntos; $C \cap B = \{5,a,b\}$. Luego, $C$ y $B$ no son disjuntos. Aunque $C \setminus B = \emptyset$, esto no debe confundirnos.
+      $C \cap D = \emptyset$. Luego, $C$ y $D$ son disjuntos;
+      $C \cap B = \{5,a,b\}$. Luego, $C$ y $B$ no son
+      disjuntos. Aunque $C \setminus B = \emptyset$, esto no debe
+      confundirnos.
     \stopejemplos
   \stopsection
 
-  \margindata[comentario][align=]{
-    Recordemos que:
-    \startitemize[packed,none,joinedup]
-      \startitem
-        $A \subseteq B = B \subseteq A <-> A = B$
-      \stopitem
-      \startitem
-        $A \subseteq B <-> \forall x \in A, x \in B$
-      \stopitem
-      \startitem
-        $A \setminus B = A - B = \{ x \mid x \in A \land x \nin B\}$
-      \stopitem
-      \startitem
-        $A \triangle B = (A \setminus B) \cup (B \setminus A)$
-      \stopitem
-      \startitem
-        $A' \equiv A^c \equiv \bar{A} = U \setminus A$
-      \stopitem
-    \stopitemize
+  % \comentario[align=]{
+  %   Recordemos que:
+  %   \startitemize[packed,none,joinedup]
+  %     \startitem
+  %       $A \subseteq B = B \subseteq A <-> A = B$
+  %     \stopitem
+  %     \startitem
+  %       $A \subseteq B <-> \forall x \in A, x \in B$
+  %     \stopitem
+  %     \startitem
+  %       $A \setminus B = A - B = \{ x \mid x \in A \land x \nin B\}$
+  %     \stopitem
+  %     \startitem
+  %       $A \triangle B = (A \setminus B) \cup (B \setminus A)$
+  %     \stopitem
+  %     \startitem
+  %       $A' \equiv A^c \equiv \bar{A} = U \setminus A$
+  %     \stopitem
+  %   \stopitemize
+  %
+  %   \blank[big]
+  %   Enunciados equivalentes:
+  %   \startitemize[packed,none,joinedup]
+  %     \startitem
+  %       $p \land q\quad$ y $\quad q \land p$
+  %     \stopitem
+  %     \startitem
+  %       $(p \lor q) \lor r\quad$ y $\quad p \lor (q \lor r)$
+  %     \stopitem
+  %     \startitem
+  %       $\neg(p \lor q)\quad$ y $\quad\neg p \land(\neg q)$
+  %     \stopitem
+  %     \startitem
+  %       $\neg(p \land q)\quad$ y $\quad\neg p \lor(\neg q)$
+  %     \stopitem
+  %   \stopitemize
+  % }
 
-    \blank[big]
-    Enunciados equivalentes:
-    \startitemize[packed,none,joinedup]
-      \startitem
-        $p \land q\quad$ y $\quad q \land p$
-      \stopitem
-      \startitem
-        $(p \lor q) \lor r\quad$ y $\quad p \lor (q \lor r)$
-      \stopitem
-      \startitem
-        $\neg(p \lor q)\quad$ y $\quad\neg p \land(\neg q)$
-      \stopitem
-      \startitem
-        $\neg(p \land q)\quad$ y $\quad\neg p \lor(\neg q)$
-      \stopitem
-    \stopitemize
-  }
-  
-  \startsection[title={Demostraciones con operaciones con conjuntos}] 
+  \startsection[title={Demostraciones con operaciones con conjuntos}]
     \margindata[youtube]{\from[AE17B]}
+
     \startejemplos
       \startitemejem
         \startitem
           \ini{$\ini{A \cap B = B \cap A}$}
 
-          Bastará ver que $A \cap B \subseteq B \cap A$ y que $B \cap A \subseteq A \cap B$.
+          Bastará ver que $A \cap B \subseteq B \cap A$ y que
+          $B \cap A \subseteq A \cap B$.
 
-          Para lo primero, tomamos $x \in A \cap B$. Entonces, $x \in A \land x \in B$. Pero esto es equivalente a decir que $x \in B \land x \in A$, lo que significa que $x \in B \cap A$. Luego, $A \cap B \subseteq B \cap A$.
+          Para lo primero, tomamos $x \in A \cap B$. Entonces,
+          $x \in A \land x \in B$. Pero esto es equivalente a decir
+          que $x \in B \land x \in A$, lo que significa que
+          $x \in B \cap A$. Luego, $A \cap B \subseteq B \cap A$.
 
-          Para lo segundo, tomamos $x \in B \cap A$. Entonces, $x \in B \land x \in A$. Pero esto es equivalente a decir que $x \in A \land x \in B$, lo que significa que $x \in A \cap B$. Luego, $B \cap A \subseteq A \cap B$.
+          Para lo segundo, tomamos $x \in B \cap A$. Entonces,
+          $x \in B \land x \in A$. Pero esto es equivalente a decir
+          que $x \in A \land x \in B$, lo que significa que
+          $x \in A \cap B$. Luego, $B \cap A \subseteq A \cap B$.
         \stopitem
         \startitem
           \ini{$(A \cup B) \cup C = A \cup (B \cup C)$}
 
-          Bastará ver que $(A \cup B) \cup C \subseteq A \cup (B \cup C)$ y que $A \cup (B \cup C) \subseteq (A \cup B) \cup C$.
+          Bastará ver que
+          $(A \cup B) \cup C \subseteq A \cup (B \cup C)$ y que
+          $A \cup (B \cup C) \subseteq (A \cup B) \cup C$.
 
-          Para lo primero, tomamos $x \in (A \cup B) \cup C$. Esto significa que $x \in (A \cup B) \lor x \in C$. Pero significa que $(x \in A \lor x \in B) \lor x \in C$, y esto es equivalente a decir, $x \in A \lor (x \in B \lor x \in C)$, lo que equivale a decir que $x \in A \lor x \in (B \cup C)$, lo que implica que $x \in A \cup (B \cup C)$.
-          
+          Para lo primero, tomamos $x \in (A \cup B) \cup C$. Esto
+          significa que $x \in (A \cup B) \lor x \in C$. Pero
+          significa que $(x \in A \lor x \in B) \lor x \in C$, y esto
+          es equivalente a decir,
+          $x \in A \lor (x \in B \lor x \in C)$, lo que equivale a
+          decir que $x \in A \lor x \in (B \cup C)$, lo que implica
+          que $x \in A \cup (B \cup C)$.
+
           \margindata[youtube]{\from[AE18A]}
-          Para lo segundo, tomamos $x \in A \cup (B \cup C)$. Esto significa que $x \in A \lor x \in (B \cup C)$. Pero esto significa que $x \in A \lor (x \in B \lor x \in C)$ y ello es equivalente a decir, $(x \in A \lor x \in B) \lor x \in C$, lo que equivale a decir que $x \in (A \cup B) \lor x \in C$, lo que implica que $x \in (A \cup B) \cup C$.
+
+          Para lo segundo, tomamos $x \in A \cup (B \cup C)$. Esto
+          significa que $x \in A \lor x \in (B \cup C)$. Pero esto
+          significa que $x \in A \lor (x \in B \lor x \in C)$ y ello
+          es equivalente a decir,
+          $(x \in A \lor x \in B) \lor x \in C$, lo que equivale a
+          decir que $x \in (A \cup B) \lor x \in C$, lo que implica
+          que $x \in (A \cup B) \cup C$.
         \stopitem
         \startitem
           \ini{$x \nin A \cup B -> x \nin A \land x \nin B$}
 
-          Por hipótesis, $x \nin A \cup B$. De aquí, tiene que ocurrir que $\neg(x \in A \lor x \in B)$. Esto euqivale a decir $\neg(x \in A) \land [\neg(x \in B)]$. Esto es lo mismo que decir que  $x \nin A \land x \nin B$.
+          Por hipótesis, $x \nin A \cup B$. De aquí, tiene que ocurrir
+          que $\neg(x \in A \lor x \in B)$. Esto equivale a decir
+          $\neg(x \in A) \land [\neg(x \in B)]$. Esto es lo mismo que
+          decir que $x \nin A \land x \nin B$.
         \stopitem
-
         \margindata[youtube]{\from[AE18B]}
         \startitem
           \ini{$x \nin A \setminus B -> x \nin A \lor x \in B$}
 
-          Por hipótesis, $x \nin A \setminus B$. Entonces ocurre que $\neg(x \in A \land x \nin B)$. Esto equivale a decir, $\neg(x \in A) \lor [\neg(x \nin B)]$. En consecuencia, $x \nin A \lor x \in B$.
+          Por hipótesis, $x \nin A \setminus B$. Entonces ocurre que
+          $\neg(x \in A \land x \nin B)$. Esto equivale a decir,
+          $\neg(x \in A) \lor [\neg(x \nin B)]$. En consecuencia,
+          $x \nin A \lor x \in B$.
         \stopitem
         \startitem
           \ini{$A \setminus B = A \cap B' = B' \setminus A'$}
 
-          $A \setminus B = \{x \mid x \in A \land x \nin B\} = \{x \mid x \in A \land x \in B'\} = A \cap B' = \{x \mid {x \in A} \land {x \in B'}\} = \{x \mid x \nin A' \land x \in B'\} = \{x \mid x \in B' \land x \nin A'\} = B' \setminus A'$.
+          $A \setminus B = \{x \mid x \in A \land x \nin B\} = \{x
+          \mid x \in A \land x \in B'\} = A \cap B' = \{x \mid {x \in
+            A} \land {x \in B'}\} = \{x \mid x \nin A' \land x \in
+          B'\} = \{x \mid x \in B' \land x \nin A'\} = B' \setminus
+          A'$.
         \stopitem
       \stopitemejem
     \stopejemplos
-    
+
   \stopsection
 
   \startsection[title={Diagramas de Venn}]
@@ -718,7 +902,8 @@
     \stopejemplos
 
     \startejemplos
-      Sombree la región indicada en los siguientes diagrama de Venn, dadas las condiciones indicadas.
+      Sombree la región indicada en los siguientes diagrama de Venn,
+      dadas las condiciones indicadas.
 
       \blank
       \setupTABLE[frame=off]
@@ -782,7 +967,7 @@
       \eTR
 
       \eTABLE
-    \stopejemplos    
+    \stopejemplos
 
   \stopsection
 

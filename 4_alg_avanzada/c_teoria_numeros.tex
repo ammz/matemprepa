@@ -1,0 +1,954 @@
+\startcomponent c_teoria_numeros
+\project project_matemprepa
+% \product prod_algebra_avanzada
+
+\youtube{\from[AA16A]}
+\startchapter[title={Elementos de la teoría de números}]
+  \startsection[title={Divisibilidad}]
+    Recuerde que para $x, y \in \integers$, diremos que $x \mid y$ ssi $\exists\, c \in \integers$ de modo que $y = xc$.
+
+    \startteorema
+      Sea $a \in \integers$. Entonces
+      \startitemizer
+        \startitem
+          $0 \mid 0$
+        \stopitem
+        \startitem
+          $0 \nmid a$, si $a \neq 0$
+        \stopitem
+        \startitem
+          $-1 \mid a$
+        \stopitem
+        \startitem
+          $-a \mid a$
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $i)$ Sabemos, por la propiedad multiplicativa del cero, que $0 = 0\cdot a,\, \forall\, a \in \integers$. Luego, el número $c$ que buscamos puede ser cualquier número entero.
+
+      $ii)$ Queda como ejercicio
+
+      $iii)$ Sabemos que $a = (-1)(-a)$. Por lo tanto, el número $c \in \integers$ que buscamos en este caso el $-a$. 
+
+      $iv)$ Queda como ejercicio
+    \stopdemop
+
+    \startteorema{las reglas de divisibilidad para los primos 2, 3 y 5}
+      Sea $a \in \naturalnumbers$. Entonces,
+      \startitemizer
+        \startitem
+          $2 \mid a$ si el dígito en la posición de las unidades en el numeral que lo representa es o 0 o 2 o 4 o 5 u 8;
+        \stopitem
+        \startitem
+          $3 \mid a$ si la suma de los dígitos del numeral que lo representa lo es;
+        \stopitem
+        \startitem
+          $5 \mid a$ si el último dígito del numeral que lo representa es o 0 o 5.
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $i)$ y $iii)$ quedan como ejercicios.
+
+      $ii)$ Suponga que $a$ tiene la siguiente representación decimal:
+      \startformula
+        a = a_n \cdot 10^n + a_{n-1} \cdot 10^{n-1} + a_{n-2} \cdot 10^{n-2} + \dots + a_0
+      \stopformula
+      Entonces, por la ley de división de las igualdades:
+      \startformula
+        \dfrac{a}{3} = \dfrac{a_n \cdot 10^n + a_{n-1} \cdot 10^{n-1} + a_{n-2} \cdot 10^{n-2} + \dots + a_0}{3}
+      \stopformula
+      y vea que el lado derecho de la igualdad anterior se puede reescrbir del siguiente modo
+      \startformula
+         =\dfrac{a_n (10^n -1 +1) + a_{n-1} (10^{n-1} -1 +1) + \dots + a_0}{3}
+      \stopformula
+      \startformula
+        =\dfrac{a_n \left[(10^n -1) +1\right] + a_{n-1} \left[(10^{n-1} -1) +1\right] + \dots + a_0}{3}
+      \stopformula
+      \startformula
+        =\dfrac{a_n (10^n -1) + a_n + a_{n-1} (10^{n-1} -1) + a_{n-1} + \dots + a_0}{3}
+      \stopformula
+      \startformula
+        =\dfrac{a_n (10^n -1) + a_{n-1} (10^{n-1} -1) + \cdots + a_n + a_{n-1} + \dots + a_0}{3}
+      \stopformula
+      \startformula
+        =\dfrac{\left[a_n (10^n -1) + a_{n-1} (10^{n-1} -1) + \cdots\right] + (a_n + a_{n-1} + \dots + a_0)}{3}
+      \stopformula
+      \startformula
+        =\dfrac{\left[a_n (10^n -1) + a_{n-1} (10^{n-1} -1) + \cdots\right]}{3} +\dfrac{(a_n + a_{n-1} + \dots + a_0)}{3}
+      \stopformula
+      \startformula
+        =\left[\dfrac{a_n (10^n -1)}{3} + \dfrac{a_{n-1} (10^{n-1} -1)}{3} + \cdots\right] +\dfrac{(a_n + a_{n-1} + \dots + a_0)}{3}
+      \stopformula
+      \comentario{Por un problema de prácticas en la inducción matemática sabemos que los factores fraccionarios que aparecen en el corchete son naturales.}
+      \startformula
+        =\left[a_n\dfrac{10^n -1}{3} + a_{n-1}\dfrac{10^{n-1} -1}{3} + \cdots\right] + \dfrac{(a_n + a_{n-1} + \dots + a_0)}{3}
+      \stopformula
+      Luego, por las leyes de clausura de la multiplicación y la suma en los naturales, lo que aparece en el corchete es un número natural. Entonces, para que $\dfrac{a}{3}$ sea, finalmente, otro número natural, tendrá que ocurrir que $\dfrac{(a_n + a_{n-1} + \dots + a_0)}{3}$ sea también natural. Es decir, que la suma de los dígitos del numeral que representa al número $a$ sea divisible entre 3.
+    \stopdemop
+
+    \startteorema
+      Sean $a, b \in \integers$ con $a \mid b$ y $b \neq 0$. Entonces $\abs{b} \geq \abs{a}$.
+    \stopteorema
+
+    \youtube{\from[AA16B]}
+    \startdemo
+      Por hipótesis, $a \mid b$. Entonces $\exists, c \in \integers$, de modo que $b = a c$. Como, por hipótesis también, $b \neq 0$, entonces $a, c \neq 0$.
+
+      Luego, por sustitución,
+
+      \startplaceformula
+        \startformula
+          \abs{b} = \abs{ac} = \abs{a} \abs{c}
+        \stopformula
+      \stopplaceformula
+
+      Como $c \neq 0$, entonces $\abs{c} > 0$. En consecuencia, hay dos posibilidades o $\abs{c} > 1$ o $\abs{c} = 1$ (no puede ocurrir que $\abs{c} < 1$, ya que 1 es el natural más pequeño).
+
+      Si consideramos la posibilidad de que $\abs{c} > 1$, por la ley de multplicación positiva de las desigualdades, tenemos que
+      \startformula
+        \abs{a} \abs{c} > \abs{a} \cdot 1 = \abs{a}
+      \stopformula
+      Entonces, por (1) y la ley de sustitución,
+      \startplaceformula
+        \startformula
+          \abs{b} > \abs{a}
+        \stopformula
+      \stopplaceformula
+      Si consideramos que $\abs{c} = 1$, por la ley de multiplicación de las igualdades,
+      \startformula
+        \abs{a} \abs{c} = \abs{a} \cdot 1 = \abs{a}
+      \stopformula
+    \stopdemo
+
+    \startejemplo
+      \comentario{Llamamos a la expresión $my + nz$ una \obj{combinación lineal de las variables $y$ y $z$}}
+      \ini{Demuestre que si $x,y,z \in \integers$, con $x \mid y,z$, entonces $x \mid (my + nz), \, \forall\, m,n \in \integers$.}
+
+      Por hipótesis $x \mid y,z$. Entonces, existirán $p,q \in \integers$, de modo que
+      \startformula
+        y = xp \quad\text{ y }\quad z =xq.
+      \stopformula
+      Entonces, por la ley de multiplicación de las igualdades
+      \startformula
+        my = m(xp) \quad\text{ y }\quad nz =n(xq)
+      \stopformula
+      donde $m,n \in \integers$. Luego,
+      \startformula
+        \startalign
+          \NC my + nz \NC = mxp + nxq  \NR
+          \NC         \NC = x(mp + nq) \NR[+]
+        \stopalign
+      \stopformula
+      Pero, por la ley de clausura de la multiplicación y la suma en $\integers, \; \mp + nq = s \in \integers$. Luego, sustituyendo en (1), tenemos que
+      \startformula
+        my + nz = xs
+      \stopformula
+      En consecuencia $x \mid (my + nz)$.
+    \stopejemplo
+
+    \startlema
+      Sean $x,y,z \in \naturalnumbers$ con $x \mid y\;$ y $\;x \nmid z$. Entonces, $x \nmid (y+z)$.
+    \stoplema
+
+    \youtube{\from[AA17A]}
+    \startdemo{(por contradicción)\\}
+      Suponga que $x \mid (y+z)$. Entonces $\exists\, m \in \naturalnumbers$, de modo que
+      \startplaceformula
+        \startformula
+          y + z = xm  
+        \stopformula
+      \stopplaceformula
+      Como, por hipótesis $x \mid y$, entonces $\exists\, n \in \naturalnumbers$, de modo que $y = xn$. Sustituyendo en (1), tenemos que $xn + z = xm$, de donde, al resolver para $z$, tenemos que
+      \startplaceformula
+        \startformula
+          z = xm - xn = x(m- n)
+        \stopformula
+      \stopplaceformula
+      Alegamos que $m -n >0$. Demostraremos esta alegación también por contradicción.
+
+      Si ocurriera que $n - n < 0$, entonces por la ley de suma de las desigualdades,
+      \startformula
+        \startalign
+          \NC m - n + n \NC < 0 + n \NR
+          \NC m \NC < n \NR
+        \stopalign
+      \stopformula
+      Como, por hipótesis, $x \in \naturalnumbers$, entonces, $x > 0$ y, por la ley de multiplicación positiva de las desigualdades
+      \startformula
+        \startalign
+          \NC xm \NC < xn \NR
+        \stopalign
+      \stopformula
+      Como $xn = y$, al sustituir en la desigualdad anterior
+      \startplaceformula
+        \startformula
+          \startalign
+            \NC xm \NC < y \NR[+]
+          \stopalign
+        \stopformula
+      \stopplaceformula
+      Como $z \in \naturalnumbers$, también, entonces $z > 0$, lo que equivale a
+      \startformula
+        0 < z
+      \stopformula
+      En consecuencia, debido a la ley de suma de las desigualdades,
+      \startplaceformula
+        \startformula
+          \startalign
+            \NC y + 0 \NC < y + z \NR
+            \NC y \NC < y + z \NR[+]
+          \stopalign
+        \stopformula
+      \stopplaceformula
+      Luego, según (3), (4) y la ley transitiva de las desigualdades,
+      \startformula
+        xm < y + z
+      \stopformula
+      Esto contradice a (1).
+
+      Por lo tanto, $m -n = M \in \naturalnumbers$. Entonces, sustituyendo en (2) tenemos que $z = xM$, lo que implica que $x \mid z$. (contradicción)
+    \stopdemo
+  \stopsection
+  \startsection[title={El algoritmo de la división}]
+    \startteorema
+      Sean $a,b \in \integers$, con $b \neq 0$. Entonces $\exists\, q \in \integers$ y $r \in \mathbb{W}$ únicos, de manera que $a = bq + r$, donde $0 \leq r < \abs{b}$.
+    \stopteorema
+
+    \startdemo
+      Vemos primero la existencia de esos dos números $p$ y $r$.
+
+      Por hipótesis $b \in \integers,\, b \neq 0$. Entonces, por la ley de tricotomía, o $b > 0$ o $b < 0$.
+
+      Si $b > 0$, considere el conjunto $S = \{a - bx \mid x \in \integers, \text{ con } a - bx \geq 0\}$. Comenzamos viendo que $S \neq \emptyset$.
+
+      Si ocurre que $a \geq 0$, vea que podemos escribir $a$ en la forma siguiente: $a - b \cdot 0 = a - 0 = a$. Luego, $a \in S$, ya que pudimos escribir a $a$ en la forma $a-bx$, con $x = 0;$ y $a \geq 0$. Luego, $S \neq \emptyset$ en el caso enque $b > 0$ y $a \geq 0$.
+
+      Si ocurre que $a < 0$, como $b > 0$, entonces, $b \geq 1$. Entonces, por la ley de multiplicación negativa de las desigualdades,
+      \startformula
+        ba \leq 1 \cdot a = a,
+      \stopformula
+      de donde,
+      \startformula
+        a - ba \geq 0,
+      \stopformula
+      por lo que $a -ba \in S$, al tener la forma de los números que pertenecen a $S$ y ser $a - ba \geq 0$. Luego, $S \neq \emptyset$ tampoco es nulo, cuanto $b > 0$ y $a < 0$ con $x = a$.
+
+      Luego $S$ es un conjunto no vacío compuesto por cardinales. Así, por el p.b.o. $S$ contendrá un elemento menor. Llamémoslo $r \geq 0$. Luego, si $r \in S$. Luego existirá $x = q \in \integers$ de modo que
+      \startplaceformula
+        \startformula
+          r = a - bq. 
+        \stopformula
+      \stopplaceformula
+      De aquí tenemos que
+      \startformula
+        a = bq +r.
+      \stopformula
+
+      \youtube{\from[AA17B]}
+      Para verificar que $r < \abs{b}$, lo haremos por contradicción.
+
+      Suponga que $r \geq \abs{b} = b$. Entonces, $r = b + c$, donde $0 \leq c < r$. Luego, al sustituir en (5), tenemos que
+      \startformula
+        b + c = a - bq,
+      \stopformula
+      de donde
+      \startformula
+        \startalign
+          \NC c \NC = a - bq - b\NR
+          \NC   \NC = a - b(q + 1).\NR
+        \stopalign
+      \stopformula
+      Luego, $c \in S$, al tener la forma $a - bx$ y al ser $c \geq 0$. Pero $c < r$. Luego, tenemos una contradicción pues $r$ era el elemento más pequeño en $S$.
+
+      Si $b < 0$, entonces $-b > 0$ y por lo visto para el caso en que $b > 0$, existirán $q_1 \in \integers$ y $r_1 \in \mathbb{W}$ de modo que $a = (-b)q_1 + r_1 = b(-q_1) + r_1$, con $0 \leq r_1 < \abs{b }$. Si dejamos que $q =q_1$, y que $r = r_1$, al sustituir en la última ecuación tenemos que $a = bq + r$, donde $ 0 \leq r < \abs{b}$.
+
+      Segundo, demostramos la unicidad de $q$ y de $r$.
+
+      Suponga que existen $q_1 \in \integers$ y $r_2 \in \mathbb{W}$ con $q_1 \neq q$ y $r_1 \neq r$, de modo que $a = bq + r = bq_1 + r_1$, donde $0 \leq r, r_1 < \abs{b}$. Entonces $bq = a -r$ y $bq_1 = a - r_1$.
+
+      En consecuencia, restando los lados correspondientes de las dos ecuacioines anteriores tenemos que
+      \startformula
+        \startalign
+          \NC  bq - bq_1 \NC = r_1 - r \NR
+          \NC  b(q - q_1) \NC = r_1 - r \NR
+        \stopalign
+      \stopformula
+      \startformula
+        \therefore b \mid (r_1 - r)
+      \stopformula
+      Por un teorema previo tenemos
+      \startplaceformula
+        \startformula
+          \therefore \abs{r_1 - r} \geq \abs{b}
+        \stopformula
+      \stopplaceformula
+      Pero como
+      \startformula
+        0 \leq r < \abs{b} \text{ y}
+      \stopformula
+      \startformula
+        0 \leq r_1 < \abs{b},
+      \stopformula
+      Entonces, por un problema de práctica (el 7) en la primera parte de este tema:
+      \startplaceformula
+        \startformula
+          \abs{r_1 - r} < \abs{b}
+        \stopformula
+      \stopplaceformula
+      Pero vea que (6) y (7) se contradicen. Luego, $r_1 = r$.
+
+      Entonces
+      \startformula
+        b(q - q_1) = r_1 - r = 0
+      \stopformula
+      Como $b \neq 0$, por hipótesis,
+      \startformula
+        \dfrac{1}{b}\left[b(q - q_1) = 0\right]
+      \stopformula
+      \startformula
+        q - q_1 = 0
+      \stopformula
+      \startformula
+        q = q_1
+      \stopformula
+    \stopdemo
+  \stopsection
+
+  \startsection[title={Bases numéricas}]
+    \startobservacion{Notaciones decimales}
+      \startformula
+        \startalign
+          \NC 583 \NC = 500 + 80 + 3 \NR
+          \NC     \NC =  5 \times 100 + 8 \times 10 + 3 \NR
+          \NC     \NC =  5 \times 10^2 + 8 \times 10^1 + 3 \NR
+          \NC 24.873 \NC =  20.000 + 4.000 + 800 + 70 + 3 \NR
+          \NC     \NC = 2 \times 10.000 + 4 \times 1.000 + 8 \times 100 + 7 \times 10 + 3 \NR
+          \NC     \NC = 2 \times 10^4 + 4 \times 10^3 + 8 \times 10^2 + 7 \times 10 + 3 \NR
+        \stopalign
+      \stopformula
+    \stopobservacion
+    
+    \youtube{\from[AA18A]}
+    \startdefinicion
+      Si un sistema de numeración usa un conjunto de $b$ dígitos para formar los numerales que representan a sus números, se dice que están expresados en la base $b$. Si $x$ es un numeral expresado en la base $b$, se escribe $(x)_b$. Si $b=10$, no se escribe, esto es $(x)_{10} \equiv x$.
+    \stopdefinicion
+
+    \startejemplos
+      Escriba en forma expandida
+      \startitemejem
+        \startitem
+          $\ini{(10)_3} = \inframed{1 \times 3 + 0} = 3 + 0 = 3$
+        \stopitem
+        \startitem
+          $\ini{(21)_2} = \inframed{2 \times 2 + 1 = 4 + 1} = 5$
+        \stopitem
+        \startitem
+          $\ini{(334)_5} = \inframed{2 \times 5^2 + 3 \times 5 + 4 = 3 \times 25 + 15 + 4} = 75 + 19 = 94$
+        \stopitem
+        \startitem
+          $\ini{(6743)_8} = 6 \times 8^3 + 7 \times 8^2 + 4 \times 8 + 3$
+        \stopitem
+        \startitem
+          $\ini{(84068)_{11}} = 8 \times 11^4 + 4 \times 11^3 + 9 \times 11^2 + 6 \times 11 + 5$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      Sean $b \in \naturalnumbers$ con $b \geq 2$, $a \in \naturalnumbers$ y $m \in \mathbb{W}$. Entonces, $a$ se puede expresar del siguiente modo:
+      \startformula
+        a = r_m b^m + r_{m-1} b^{m-1} + r_{m-2} b^{m-2} + \dots + r_1 b + r_0,
+      \stopformula
+      donde $0 < r_m < b$ y $0 \leq r_i < b$, para $i = 0, 1, 2, \dots\, , m-1$ y $r_i \in \mathbb{W}$ para $i = 0, 1, 2, \dots\, , m$.
+    \stopteorema
+
+    \startdemo
+      Aplicaremos, repetidamente, el algoritmo de la división.
+
+      Si $a < b$, entonces llamaremos $a = r_0$, logrando expresar al número $a$ en la forma en que indica el teorema con $m = 0$.
+
+      Si $a \geq b$, por el algoritmo de la división, como $a,b \in \naturalnumbers$, existirán $q_0 \in \naturalnumbers$ y $r_0 \in \mathbb{W}$ únicos, de modo que
+      \startplaceformula
+        \startformula
+          a = bq_0 + r_0 = q_0 b + r_0,
+        \stopformula
+      \stopplaceformula
+      donde $0 \leq r_0 < \abs{b} = b$ (pues $b \geq 2 >0$) y $a > q_0 > 0$.
+
+      \youtube{\from[AA18B]}
+      Si ocurre que $q_0 < b$, entonces llamamos $q_0 = r_1$ y al sustituir en (1), obtendremos
+      \startformula
+        a = r_1 b + r_0,
+      \stopformula
+      expresando a $a$ como indica el teorema con $m = 1$.
+
+      Si $q_0 \geq b$, existirán $q_1 \in \naturalnumbers$ y $r_1 \in \mathbb{W}$, únicos, de manera que
+      \startplaceformula
+        \startformula
+          q_0 = q_1 b + r_1,
+        \stopformula
+      \stopplaceformula
+      donde $0 \leq r_1 < b$ y $q_1 > q_0 > q_1 > 0$.
+
+      Si $q_1 < b$, llamamos $q_1 = r_2$ y al sustituir en (2) tenemos que
+      \startformula
+        q_0 = r_2 b + r_1,
+      \stopformula
+      y al sustituir en (1), obtenemos que
+      \startformula
+        \startalign
+          \NC a \NC = (r_2 b + r_1)b + r_0 \NR
+          \NC   \NC = r_2 b^2 + r_1 b + r_0, \NR
+        \stopalign
+      \stopformula
+      logrando expresar al número tal como indica el teorema con $m = 2$.
+
+      Si $q_1 \geq b$, existen $q_2 \in \naturalnumbers$ y $r_2 \in \mathbb{W}$, únicos, con
+      \startplaceformula
+        \startformula
+          q_1 = q_2 b + r_2
+        \stopformula
+      \stopplaceformula
+      donde $0 \leq r_2 < b$ y $q_1 > q_2 > 0$.
+
+      Si $q_2 < b$, llame $q_2 = r_3$ y al sustituir en (3), obtenemos que
+      \startformula
+        q_1 = r_3 b + r_2,
+      \stopformula
+      y al sustituir esto en (2), tendremos que
+      \startformula
+        \startalign
+          \NC q_0 \NC = (r_3 b + r_2) b + r_1 \NR
+          \NC     \NC = r_3 b^2 + r_2 b + r_1 \NR
+        \stopalign
+      \stopformula
+      Entonces, sustituyendo por $q_0$ en (1), obtenemos
+      \startformula
+        \startalign
+          \NC a \NC = (r_3 b^2 + r_2 b + r_1) b + r_0\NR
+          \NC   \NC = r_3 b^3 + r_2 b^2 + r_1 b + r_0,\NR
+        \stopalign
+      \stopformula
+      obteniendo al número $a$ escrito en la forma en que indica el teorema con $m = 3$.
+
+      Vea que este proceso continuará mientras los valores $q_k$ que obtengamos sigan cumpliendo con $q_k \geq b$.
+
+      Pero como $q_k \in \naturalnumbers$ con
+      \startformula
+        a > q_0 > q_1 > q_2 > \dots
+      \stopformula
+      llegará un punto en donde $q_{m-1} < b$. En este caso, llamamos $q_{m-1} = r_m$ y al sustituir, repetidamente, hasta sustituir en (1), obtenemos que $a = r_m b^m + r_{m-1}b^{m-1} + r_{m-2}b^{m-2}+ \dots + r_1b + r_0$, y esto es lo indica el teorema.
+
+      La unicidad de la forma anterior está asegurada por la unicidad de los valores $r_0, r_1, r_2, \dots\,, r_m$, indicada por el algoritmo de la división.
+    \stopdemo
+
+    \startejemplos
+      Exprese los siguientes números naturales dados en la base 10, a la base indicada
+      \startitemejem
+          \comentario{\obj{Forma condensada del proceso}\\
+            Usaremos un esquema parecido al que utilizamos cuando buscábamos la factorización prima de números naturales.
+            \startformula
+              \startalign[n=5, align={left,right,center,left,right}]
+                \NC     \NC 474 \NC ( \NC 5 \NC  \NR
+                \NC q_0 \quad\leftarrow\NC 94 \NC ( \NC 5 \NC \qquad 4 \rightarrow r_0 \NR
+                \NC q_1 \quad\leftarrow\NC 18 \NC ( \NC 5 \NC \qquad 4 \rightarrow r_1 \NR
+                \NC q_2 \quad\leftarrow\NC 3 \NC  \NC  \NC \qquad 3 \rightarrow r_2 \NR
+                \NC r_3 = q_2 = 3\quad \NC  \NC  \NC  \NC   \NR
+              \stopalign
+            \stopformula
+          }
+        \startitem
+          \youtube{\from[AA19A]}
+          \ini{474, a la base 5.}
+
+          Como $a = 474 \geq 5 = b$, efectuamos la división $474 \div 5$ para hallar a $q_0$ y $r_0$.
+          \startformula
+            474 \div 5 = 94 \times 5 + 4
+          \stopformula
+          $r_0 = 4$ y como $q_0 = 94 \geq 5$, efectuamos también la división $94 \div 5$.
+          \startformula
+            94 \div 5 = 19 \times 5 + 4
+          \stopformula
+          $r_1 = 4$ y como $q_1 = 18 \geq 5$, efectuamos también la división $18 \div 5$.
+          \startformula
+            18 \div 5 = 3 \times 5 + 3
+          \stopformula
+          $r_2 = 3$ y como $q_2 = 3 < 5$, entonces $q_2 = q_{m-1}$ y $r_3 = q_2 = 3$.
+
+          Luego, $(474) = (3344)_ 5 = (r_3r_2r_1r_0)$
+
+          Vea que
+          \startformula
+            (3344)_5 = 2 \times 5^3 + 3 \times 5^2 + 4 \times 5 + 4 = 3 \times 125 + 3 \times 25 + 20 + 4 = 474
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{305 en la base 2.}
+            \startformula
+              \startalign[n=5, align={left,right,center,left,right}]
+                \NC     \NC 308 \NC ( \NC 2 \NC  \NR
+                \NC q_0 \quad\leftarrow\NC 154 \NC ( \NC 2 \NC \qquad 0 \rightarrow r_0 \NR
+                \NC q_1 \quad\leftarrow\NC 77  \NC ( \NC 2 \NC \qquad 0 \rightarrow r_1 \NR
+                \NC q_2 \quad\leftarrow\NC 38  \NC ( \NC 2 \NC \qquad 1 \rightarrow r_2 \NR
+                \NC q_3 \quad\leftarrow\NC 19  \NC ( \NC 2 \NC \qquad 0 \rightarrow r_3 \NR
+                \NC q_4 \quad\leftarrow\NC 9   \NC ( \NC 2 \NC \qquad 1 \rightarrow r_4 \NR
+                \NC q_5 \quad\leftarrow\NC 4   \NC ( \NC 2 \NC \qquad 1 \rightarrow r_5 \NR
+                \NC q_6 \quad\leftarrow\NC 2   \NC ( \NC 2 \NC \qquad 0 \rightarrow r_6 \NR
+                \NC q_7 \quad\leftarrow\NC 1   \NC    \NC  \NC \qquad 0 \rightarrow r_7 \NR
+                \NC r_8 = q_7 = 1\quad \NC     \NC    \NC  \NC                          \NR
+              \stopalign
+            \stopformula
+            $308 = (100110100)_2$
+        \stopitem
+        \startitem
+          \ini{8 en la base 11.}
+
+          Como $8 < 11,\quad 8 = (8)_{11}$ 
+        \stopitem
+        \startitem
+          \ini{511 en la base 8.}
+            \startformula
+              \startalign[n=5, align={left,right,center,left,right}]
+                \NC     \NC 511 \NC ( \NC 8 \NC  \NR
+                \NC q_0 \quad\leftarrow\NC 63 \NC ( \NC 8 \NC \qquad 7 \rightarrow r_0 \NR
+                \NC q_1 \quad\leftarrow\NC 7  \NC   \NC   \NC \qquad 7 \rightarrow r_1 \NR
+                \NC r_2 = q_1 = 7\quad \NC    \NC   \NC   \NC                          \NR
+              \stopalign
+            \stopformula
+          $511 = (777)_8$
+        \stopitem
+        \startitem
+          \ini{8519 en la base 13.}
+            \startformula
+              \startalign[n=5, align={left,right,center,left,right}]
+                \NC                    \NC 8519 \NC ( \NC 13 \NC                           \NR
+                \NC q_0 \quad\leftarrow\NC 655  \NC ( \NC 13 \NC \qquad 4  \rightarrow r_0 \NR
+                \NC q_1 \quad\leftarrow\NC 50   \NC ( \NC 13 \NC \qquad 5  \rightarrow r_1 \NR
+                \NC q_2 \quad\leftarrow\NC 3    \NC   \NC    \NC \qquad 11 \rightarrow r_2 \NR
+                \NC r_3 = q_2 = 1\quad \NC      \NC   \NC    \NC                           \NR
+              \stopalign
+            \stopformula
+            \comentario{ 0, 1, 2, 3, 4, 6, 7, 8, 9, A, B, C}
+            $8519 = (3B54)_{13}$
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+    \startsubject[title={Aritmética en otras bases}]
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{Sume $(3142)_5 + (1224)_5$}
+            \youtube{\from[AA19B]}
+            \startformula
+              \startalign
+                \NC   (3142)_5 \NC\NR
+                \NC + (1224)_5 \NC\NR
+                \NC \overbar{\quad (4421)_5} \NC\NR
+              \stopalign
+            \stopformula
+          \stopitem
+          \startitem
+            \ini{Multiplique $(3204)_5 \times (23)_5$}
+            \startformula
+              \startalign
+                \NC   (3204)_5 \NC\NR
+                \NC \times (23)_5 \NC\NR
+                \NC \overbar{\quad (20122)_5} \NC\NR
+                \NC               (11413)_5\;\; \NC\NR
+                \NC \overbar{\quad (134302)_5} \NC\NR
+              \stopalign
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubject
+
+    \obj{Cómo cambiar un numeral expresado en cierta base a otro numeral expresado en otra base, ambas bases diferentes de la base 10.}
+
+    \startejemplo
+      \ini{Exprese el numeral $(3302)_4$ en la base 7.}
+      
+      Comenzamos cambiando $(3302)_4$ a la base 10:
+      \startformula
+        \startalign
+          \NC = \NC 3 \times 4^3 + 3 \times 4^2 + 0 \times 4^1 + 2 \NR
+          \NC = \NC 3 \times 64 + 3 \times 16 + 0 + 2 \NR
+          \NC = \NC 192 + 48 + 0 + 2 \NR
+          \NC = \NC 242 \NR
+        \stopalign
+      \stopformula
+      Ahora expresamos el numeral 242, que está en la base 10, a la base 7.
+      \startformula
+        \startalign[n=5, align={left,right,center,left,right}]
+          \NC                    \NC 242 \NC ( \NC 7 \NC                          \NR
+          \NC q_0 \quad\leftarrow\NC 34  \NC ( \NC 7 \NC \qquad 4 \rightarrow r_0 \NR
+          \NC q_1 \quad\leftarrow\NC 4   \NC   \NC   \NC \qquad 6 \rightarrow r_1 \NR
+          \NC r_2 = q_1 = 4\quad \NC     \NC   \NC   \NC                          \NR
+        \stopalign
+      \stopformula
+      $242 = (464)_7$
+      \therefore $(3302)_4 = (464)_7$.
+    \stopejemplo
+  \stopsection
+  \startsection[title={El máximo común divisor (mcd)}]
+    \startdefinicion
+      \startitemizer
+        \startitem
+          Sean $a, b \in \naturalnumbers$ y si $c \mid a,b$ decimos que \obj{$a$ es un factor o divisor común de $a$ y $b$.}
+        \stopitem
+        \startitem
+          \obj{El máximo común divisor de $a$ y $b$} es aquel número $c \in \mathbb{W}$ de suerte que
+          \startitemize[a][stopper=)]
+            \startitem
+              $c \mid a,b$
+            \stopitem
+            \startitem
+              Si $d \mid a, b$, tambien, entonces $d \mid c$.
+            \stopitem
+          \stopitemize
+          Denotamos al mcd de $a$ y $b$ con el símbolo $(a, b)$.
+        \stopitem
+        \startitem
+          Si $c \in \naturalnumbers$ con $a, b \mid c$, entonces decimos que \obj{$c$ es un múltiplo común de $a$ y $b$}. 
+        \stopitem
+        \startitem
+          \obj{El máximo común múltiplo (mcm) de $a$ y $b$} es aquel número $c \in \naturalnumbers$, de modo que
+          \startitemize[a][stopper=)]
+            \startitem
+              $a,b \mid c$
+            \stopitem
+            \startitem
+              si $a,b \mid d$, entonces $c \mid d$.
+            \stopitem
+          \stopitemize
+          Denotamos al mcm de $a$ y $b$ con el símbolo $[a,b]$.
+        \stopitem
+      \stopitemizer
+    \stopdefinicion
+
+    \startteorema
+      Sean $x, y \in \mathbb{W}$. Entonces $(x,y)$ existe. Más aún, existen $m,n \in \integers$, de modo que $(x,y) = mx + my$. Es decir, podemos expresar el mcd de dos números como una combinación lineal de dichos dos números.
+    \stopteorema
+
+    \youtube{\from[AA20A]}
+    \startdemo
+      Sabemos que $0 \mid 0$, luego si $x = y = 0$, etonces $0 \mid x,y$. También sabemos que si  $c \mid x,y$, entonces $c \mid 0$. En consecuencia $0 = (0,0)$. Es decir, el teorema es cierto si $x = y = 0$.
+
+      También vea que $0 = m \cdot 0 + n \cdot 0$, para cua lesquiera $m,n \in \integers$. Si $x \neq 0$, considere el conjunto $S = \{t\cdot x + s \cdot y \mid\, t, s \in \integers$ y con $tx + sy > 0\}$. Sabemos que $x^2 > 0$, lo que podemos escribir como $0 < x \cdot x$.
+
+      También sabemos que $0 = 0 \cdot y$. Luego, por la ley des uma de las desigualdades y la ley de sustitución, $0 + 0 = 0 < x \cdot x + 0 \cdot y$. Esta última desigualdad se puede expresar como $x \cdot x + 0 \cdot y > 0$, por lo que $x \cdot x + 0 \cdot y \in S$ con $t = x$ y $s = 0$. Luego, $S \neq \emptyset$ y como está compuesto por números naturales, entonces el p.b.o. asegura que existirá un elemento menor en $S$ que llamaremos $d$. Luego, existirán $m,n \in \integers$ de manera que
+      \startplaceformula
+        \startformula
+          d = mx + ny
+        \stopformula
+      \stopplaceformula
+      Alegamos que $d = (x,y)$.
+
+      Por el algoritmo de la división, para $x, d \in \naturalnumbers$, existirán $q \in \integers$ y $r \in \mathbb{W}$, únicos, de modo que
+      \startplaceformula
+        \startformula
+          x = d q + r,
+        \stopformula
+      \stopplaceformula
+      \startplaceformula
+        \startformula
+          0 \leq r < \abs{d} = d
+        \stopformula
+      \stopplaceformula
+      Vea que si resolvemos a (2) para $r$, obtenemos que $r=x - dq$. Entonces, si sustituimos por $d$, como se indica en (1), tenemos que
+      \startformula
+        \startalign
+          \NC r \NC = x - (mx + ny) q = x - mxq - nyq \NR
+          \NC   \NC= (x - mqx) + (-nqy) = (1-mq)x + (-nq)y.\NR
+        \stopalign
+      \stopformula
+      Por lo tanto,
+      \startplaceformula
+        \startformula
+          r = (1-mq)x + (-nq)y
+        \stopformula
+      \stopplaceformula
+      Entonces, por la ley de cierre de la suma y la multiplicación en $\integers$.  $1-mq = t \in \integers$ y $-nq = 0 \in \integers$. Luego, al sustituir, (4) se convierte en
+      \startformula
+        r = tx + sy
+      \stopformula
+      Si ocurre que $x > 0$, entonces $r \in S$. Esto, según (3), contradice el hecho de que $d$ es el elemento más pequeño en $S$. Luego, según (3), la posibilidad que queda para $r$ es que $r = 0$. Entonces, (2) se convierte en $x = dq + 0 = dq$. Esto implica que $d \mid x$.
+
+      Si ahora suponemos que $y \neq 0$ veremos que $d \mid y$, también. Luego, hemos encontrado que $d \mid x,y$.
+
+      Como establecimos que $d = mx + ny$, si tenemos que $c \mid x,y$, este número $c$, también será factor de cualquier combinación lineal de $x$ y de $y$. En particular, $c \mid mx + ny$. Pero, (1) indica que $d = mx + ny$. Luego, $c \mid d$. Por lo tanto, $d = (x,y)$.
+    \stopdemo
+    
+    \startobservacion
+      Ya que sabemos que $(x,y)$ existe veamos cómo determinarlo. Para ello usaremos lo que se conoce como el algoritmo de Euclides.
+    \stopobservacion
+
+    \youtube{\from[AA20B]}
+    \startsubject[title={El algoritmo de Euclides}]
+      Sean $a,b \in \naturalnumbers$ con $a \geq b$. Entonces existen $q \in \naturalnumbers$ y $r \in \mathbb{W}$, únicos, de modo que
+      \resetnumber[formula]
+      \startplaceformula
+        \startformula
+          a = bq + r, 
+        \stopformula
+      \stopplaceformula
+      donde $0 \leq r < b$. Si ocurriera que $r = 0$, entonces $a = bq$, por lo que $b \mid a$. Como, también, $b \mid b$, entonces $b \mid a,b$. Si $c \in \naturalnumbers$ con $c \mid a,b$, entonces $a,b \geq c$. Por lo tanto, $b = (c, b)$.
+
+      Si ocurre que $r \neq 0$, como $b > r$, existen $q_1 \in \integers$ y $r_1 \in \mathbb{W}$, únicos, con
+      \startplaceformula
+        \startformula
+          b = rq_1 + r_1
+        \stopformula
+      \stopplaceformula
+      donde $0 \leq r_1 < r$.
+
+      Si ocurre que $r_1 = 0$, entonces $b = rq_1$, por lo que $r \mid b$. Luego, $r \mid bq$, también, y como $r \mid r$, entonces $r \mid bq + r$. Es decir, que $r \mid a$, según (1). Luego $r \mid b,a$
+
+      Entonces, si
+      \startplaceformula
+        \startformula
+          c \mid a,b
+        \stopformula
+      \stopplaceformula
+      entonces
+      \startplaceformula
+        \startformula
+          c \mid bq.
+        \stopformula
+      \stopplaceformula
+      Luego, $c$ será factor de cualquier combinación lineal de $a$ y de $bq$.
+
+      Así,
+      \startplaceformula
+        \startformula
+          c \mid a - bq.
+        \stopformula
+      \stopplaceformula
+      Es decir, según (1), que
+      \startplaceformula
+        \startformula
+          c \mid r.
+        \stopformula
+      \stopplaceformula
+      Luego, $r = (a, b)$.
+
+      Si $r_1 \neq 0$, como $r > r_1$, existen $q_2 \in \integers$ y $r_2 \in \mathbb{W}$, únicos, de manera que
+      \startplaceformula
+        \startformula
+          r = r_1 q_2 + r_2,
+        \stopformula
+      \stopplaceformula
+      donde $0 \leq r_2 < r_1$.
+
+      Repitiendo el análisis hecho ya dos veces, previamente, encontraremos que $r_1 = (a,b)$, si $r_2 = 0$. Y si $r_2 \neq 0$, encontraremos, entonces, que habrá un $r_3$ de modo que si $r_3 = 0$, entonces $r_2 = (a,b)$, etc.
+
+      Vea que el proceso anterior genera una secuencia de residuos de unas divisiones de modo que
+      \startformula
+        r > r_1 > r_2 > r_3 > \dots > r_{k-1} > r_k = 0,
+      \stopformula
+      donde aparecerá, necesariamente, el residuo  $r_k = 0$. Entonces, $r_{k-1} = (a,b)$.
+
+      \startejemplos
+        Determine el máximo común divisor de entre las siguientes parejas de números
+        \startitemejem
+          \startitem
+            \ini{(320,112)}
+
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 320  \eTD \bTD  \eTD \bTD 112 \eTD \bTD $\rightarrow q$ \eTD \eTR
+              \bTR \bTD -224 \eTD \bTD  \eTD \bTD 2   \eTD \bTD               \eTD \eTR
+              \bTR \bTD  96  \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            Como $r \neq 0$, dividimos
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 112 \eTD \bTD  \eTD \bTD 96 \eTD \bTD $\rightarrow q_1$ \eTD  \eTR
+              \bTR \bTD -96 \eTD \bTD  \eTD \bTD 1  \eTD \bTD               \eTD  \eTR
+              \bTR \bTD  16 \eTD \bTD  \eTD \bTD    \eTD \bTD $\rightarrow r_1 \neq 0$ \eTD  \eTR
+              \eTABLE
+            \stopformula
+            Volvemos a dividir
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 96 \eTD \bTD  \eTD \bTD 16 \eTD \bTD $\rightarrow q_2$ \eTD  \eTR
+              \bTR \bTD -96 \eTD \bTD  \eTD \bTD 6  \eTD \bTD               \eTD  \eTR
+              \bTR \bTD  0 \eTD \bTD  \eTD \bTD    \eTD \bTD $\rightarrow r_2$ \eTD  \eTR
+              \eTABLE
+            \stopformula
+            Como $r_2 = 0$, entonces
+            \startformula
+              r_1 = 16 = (320, 112)
+            \stopformula 
+          \stopitem
+          \startitem
+            \ini{(2.387, 7.469)}
+
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 7\,469  \eTD \bTD  \eTD \bTD 2\,387 \eTD \bTD $\rightarrow q$ \eTD \eTR
+              \bTR \bTD -7\,161 \eTD \bTD  \eTD \bTD 3   \eTD \bTD               \eTD \eTR
+              \bTR \bTD  308  \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 2\,387  \eTD \bTD  \eTD \bTD 308 \eTD \bTD $\rightarrow q_1$ \eTD \eTR
+              \bTR \bTD -2\,156 \eTD \bTD  \eTD \bTD 7   \eTD \bTD               \eTD \eTR
+              \bTR \bTD  231  \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r_1 \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 308  \eTD \bTD  \eTD \bTD 231 \eTD \bTD $\rightarrow q_2$ \eTD \eTR
+              \bTR \bTD -231 \eTD \bTD  \eTD \bTD 1   \eTD \bTD               \eTD \eTR
+              \bTR \bTD   77 \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r_2 \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 231  \eTD \bTD  \eTD \bTD 77 \eTD \bTD $\rightarrow q_3$ \eTD \eTR
+              \bTR \bTD -231 \eTD \bTD  \eTD \bTD 3   \eTD \bTD               \eTD \eTR
+              \bTR \bTD   0 \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r_3$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            $\therefore 77 = (2.387, 7469)$            
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+      \youtube{\from[AA21A]}
+      \startejemplos
+        Determine el máximo común divisor de entre las siguientes parejas de números.
+        \startitemejem
+          \startitem
+            \ini{$(382, 26)$}
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][{1}][leftframe=on, bottomframe=on]
+              \setupTABLE[1][{3,5}][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD  382 \eTD \bTD  \eTD \bTD 26 \eTD \bTD $\rightarrow q$ \eTD \eTR
+              \bTR \bTD  -26\_ \eTD \bTD  \eTD \bTD 14 \eTD \bTD               \eTD \eTR
+              \bTR \bTD  122 \eTD \bTD  \eTD \bTD    \eTD \bTD               \eTD \eTR
+              \bTR \bTD -104 \eTD \bTD  \eTD \bTD    \eTD \bTD               \eTD \eTR
+              \bTR \bTD   18 \eTD \bTD  \eTD \bTD    \eTD \bTD $\rightarrow r \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 26  \eTD \bTD  \eTD \bTD 18 \eTD \bTD $\rightarrow q_1$ \eTD \eTR
+              \bTR \bTD -18 \eTD \bTD  \eTD \bTD 1   \eTD \bTD               \eTD \eTR
+              \bTR \bTD   8 \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r_1 \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 18  \eTD \bTD  \eTD \bTD 8 \eTD \bTD $\rightarrow q_2$ \eTD \eTR
+              \bTR \bTD -16 \eTD \bTD  \eTD \bTD 2   \eTD \bTD               \eTD \eTR
+              \bTR \bTD   2 \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r_2 \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][1][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD 8  \eTD \bTD  \eTD \bTD 2 \eTD \bTD $\rightarrow q_3$ \eTD \eTR
+              \bTR \bTD -8 \eTD \bTD  \eTD \bTD 4   \eTD \bTD               \eTD \eTR
+              \bTR \bTD  0 \eTD \bTD  \eTD \bTD     \eTD \bTD $\rightarrow r_3$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            $\therefore (382, 26) = 2$
+          \stopitem
+          \startitem
+            \ini{$(-780, 7\,007)$} $=(780, 7\,007)$
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][{1}][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD  7\,007 \eTD \bTD  \eTD \bTD 780 \eTD \bTD $\rightarrow q$ \eTD \eTR
+              \bTR \bTD -6\,240 \eTD \bTD  \eTD \bTD   8 \eTD \bTD               \eTD \eTR
+              \bTR \bTD     767 \eTD \bTD  \eTD \bTD    \eTD \bTD $\rightarrow r \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][{1}][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD  780 \eTD \bTD  \eTD \bTD 767 \eTD \bTD $\rightarrow q_1$ \eTD \eTR
+              \bTR \bTD -767 \eTD \bTD  \eTD \bTD   1 \eTD \bTD               \eTD \eTR
+              \bTR \bTD   13 \eTD \bTD  \eTD \bTD    \eTD \bTD $\rightarrow r_1 \neq 0$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \startformula
+              \setupTABLE[r][each][frame=off]
+              \setupTABLE[c][1][align=flushright]
+              \setupTABLE[3][{1}][leftframe=on, bottomframe=on]
+              \setupTABLE[1][3][topframe=on, align=flushright]
+              \bTABLE
+              \bTR \bTD  767 \eTD \bTD  \eTD \bTD 13 \eTD \bTD $\rightarrow q_2$ \eTD \eTR
+              \bTR \bTD  -65\_ \eTD \bTD  \eTD \bTD 59 \eTD \bTD               \eTD \eTR
+              \bTR \bTD  117 \eTD \bTD  \eTD \bTD    \eTD \bTD               \eTD \eTR
+              \bTR \bTD  -117 \eTD \bTD  \eTD \bTD    \eTD \bTD               \eTD \eTR
+              \bTR \bTD   0 \eTD \bTD  \eTD \bTD    \eTD \bTD $\rightarrow r_2$ \eTD \eTR
+              \eTABLE
+            \stopformula
+            \therefore (-780, 7\,007) = 13
+          \stopitem
+          \startitem
+            
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubject
+
+  \stopsection
+\stopchapter
+\stopcomponent

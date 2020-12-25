@@ -1,0 +1,3455 @@
+\startcomponent c_ecuaciones
+\project project_matemprepa
+% \product prod_algebra_intermedia
+
+\youtube{\from[AI31A]}
+\startchapter[title={Ecuaciones y problemas verbales}]
+
+  \startsection[title={Ecuaciones fraccionarias y literales}]
+
+    Repasamos algunas de las ecuaciones que ya se han visto en el álgebra elemental.
+
+    \obj{Una ecuación literal} es aquélla que contiene más de una variable. La variable para la cual decidamos o nos piden que resolvamos una ecuación literal se llama \obj{la incógnita de ésta}.
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          Resuelva la ecuación $A = xy + xz$, para $x$.
+
+          \startformula
+            A = x(y+z)
+          \stopformula
+          \startformula
+            \dfrac{A}{y+z} = \dfrac{x(y+z)}{(y+z)}
+          \stopformula
+          \startformula
+            \dfrac{A}{y+z} = x
+          \stopformula
+        \stopitem
+
+        \startitem
+          Resuelva la ecuación
+          \startformula
+            ax + b^2 = bx + a^2
+          \stopformula
+          para $x$.
+
+          \startformula
+            ax - bx = a^2 - b^2
+          \stopformula
+          \startformula
+            x(a - b) = a^2 - b^2
+          \stopformula
+          \startformula
+            \dfrac{x(a-b)}{(a-b)} = \dfrac{a^2 - b^2}{a-b}
+          \stopformula
+          \startformula
+            x = \dfrac{(a + b)(a - b)}{(a-b)} = a - b
+          \stopformula
+        \stopitem
+
+      \stopitemejem
+    \stopejemplos
+
+    \obj{Una ecuación fraccionaria} es aquélla que contiene fracciones.
+
+    Recuerde que una vez dada una ecuación fraccionaria, lo primero que procedemos a hacer es eliminar todas las fracciones que contiene. Esto se logra, aplicando la ley de multiplicación de las igualdades, multiplicando ambos lados de la ecuación por el mínimo denominador común (m.d.c) de entre todas las fracciones en la ecuación fraccionaria.
+
+    \youtube{\from[AI31B]}
+    \startejemplos
+      Resuelva las siguientes ecuaciones
+      \startitemejem
+        \startitem
+          $\ini{\dfrac{y-3}{y-1} = \dfrac{y-5}{y-2}}$
+
+          Multiplicamos ambos lados de la ecuación fraccionaria por el mínimo denominador común que haya entre las fracciones que contenga esa ecuación fraccionaria.
+
+          \startcomentario
+Para buscar el mínimo denominador común:
+            \startitemize
+              \startitem
+                Factorizamos los denominadores:
+                \startformula
+                  (y-1), (y-2)
+                \stopformula
+              \stopitem
+              \startitem
+                Elegimos las potencias más altas a las que aparecen elevados esos factores
+                \startformula
+                  (y-1), (y-2)
+                \stopformula
+              \stopitem
+              \startitem
+                Multiplicamos las potencias más altas
+                \startformula
+                  (y-1) (y-2) <- \text{m.d.c.}
+                \stopformula
+              \stopitem
+            \stopitemize
+          \stopcomentario
+
+          \startformula
+            \left[ \dfrac{y-3}{y-1} = \dfrac{y-5}{y-2}\right] (y-1)(y-2)
+          \stopformula
+          \startformula
+            (y-3)(y-2) = (y-5)(y-1)
+          \stopformula
+
+          Ahora simplificamos cada lado
+          \startformula
+            y^2 -5y +6 = y^2 -6y + 5
+          \stopformula
+          \startformula
+            y^2 - 5y - y^2 + 6y = 5 - 6
+          \stopformula
+          \startformula
+            y = -1
+          \stopformula
+
+          Tenemos que realizar la comprobración obligatoriamente si la ecuación fraccionaria que tenemos contiene la incógnita en el denominador de alguna de las fracciones que contiene la ecuación fraccionaria.
+
+          Vemos que ninguno de los denominadores es cero:
+          \startformula
+            y-1 = -1 -1 = -2 \neq 0
+          \stopformula
+          \startformula
+            y-2 = -1 -2 = -3 \neq 0
+          \stopformula
+
+        \stopitem
+
+        \startitem
+          $\ini{\dfrac{3}{2x-2} + \dfrac{5}{x+2} = \dfrac{4}{x-1}}$
+
+          \startcomentario
+          Cálculo del m.d.c.
+            \startformula
+              2(x-1),\, (x+1),\, (x-1)
+            \stopformula
+            \startformula
+              2(x-1)(x+1) <- \text{m.d.c}
+            \stopformula
+          \stopcomentario
+
+          \youtube{\from[AI32A]}
+          \startformula
+            \left[\dfrac{3}{2(x-1)} + \dfrac{5}{(x+1)} = \dfrac{4}{x-1}\right] 2(x-1)(x+1)
+          \stopformula
+          \startformula
+            3(x+1) + 5 \cdot 2(x-1) = 4 \cdot 2 (x+1)
+          \stopformula
+          \startformula
+            3x + 3 + 10x -10 = 8x +8
+          \stopformula
+          \startformula
+            13x - 8x = 8 + 7
+          \stopformula
+          \startformula
+            5x = 15
+          \stopformula
+          \startformula
+            \dfrac{5x}{5} = \dfrac{15}{5}
+          \stopformula
+          \startformula
+            x = 3
+          \stopformula
+
+          Prueba (denominadores no nulos):
+          \startformula
+            2x-2 = 2 \cdot 3 - 2 = 6 - 2 = 4 \neq 0
+          \stopformula
+          \startformula
+            x + 1 = 3 + 1 = 4 \neq 0
+          \stopformula
+          \startformula
+            x - 1 = 3 - 1 = 2 \neq 0
+          \stopformula
+        \stopitem
+
+        \startitem
+          $\ini{\dfrac{2}{t+1} - \dfrac{1}{t} = \dfrac{-2}{t^2 + t}}$
+        \stopitem
+
+        \startcomentario
+          m.d.c.
+          \startformula
+            (t+1),\, t,\, t(t+1)
+          \stopformula
+          \startformula
+            (t+1)t <- \text{m.d.c.}
+          \stopformula
+        \stopcomentario
+
+        \startformula
+          \left[ \dfrac{2}{t+1} - \dfrac{1}{t} = \dfrac{-2}{t(t+1)} \right] t(t+1)
+        \stopformula
+        \startformula
+          2t - 1(t+1) = -2
+        \stopformula
+        \startformula
+          2t -t - 1 = -2
+        \stopformula
+        \startformula
+          t = -2 + 1
+        \stopformula
+        \startformula
+          t = -1
+        \stopformula
+
+        Prueba (denominadores no nulos):
+        \startformula
+          t + 1 = -1 + 1 = 0
+        \stopformula
+        La solución no es válida y se le llama \obj{solución o raíz extraña}. Por tanto, el conjunto solución
+        \startformula
+          X = \{\} = \emptyset
+        \stopformula
+      \stopitemejem
+    \stopejemplos
+  \stopsection
+
+  \youtube{\from[AI32B]}
+  \startsection[title={Ecuaciones cuadráticas}]
+
+    Estas ecuaciones no se habían visto en el álgebra elemental.
+
+    \startdefinicion
+      Una ecuación en la forma $ax^2 +bx +c = 0$, donde $a,b,c \in \reals$ fijos, y donde $a \neq 0$, se llama \obj{una ecuación cuadrática (o de grado dos o de segundo grado) en la incógnita $x$}. Si $b=0$, la ecuación cuadrática se llama \obj{pura o incompleta}. De lo contrario, esto es, si $b \neq 0$, se llama \obj{completa}.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          $\ini{3x^2-x+2 = 0}$, es una ecuación cuadrática en la incógnita $x$, donde $a = 3$, $b = -1$ y $c = 2$. Vea que también es completa.
+        \stopitem
+        \startitem
+          $\ini{-y^2+5 = -3y}$. Primero la vamos a reescribir
+
+          \startformula
+            -y^2+3y +5 = 0
+          \stopformula
+          y se trata de una ecuación cuadrática en la incógita $y$, donde $a = -1$, $b = 3$ y $c = 5$. Observemos que es completa.
+        \stopitem
+
+        \startitem
+          $\ini{3x^2-5z = 0}$, es una ecuación cuadrática en la incógnita $z$, donde $a = 3$, $b = -5$ y $c = 0$. Observamos que es completa.
+        \stopitem
+
+        \startitem
+          $\ini{x^2= 8}$. Primero la reescribimos como $x^2 - 8 = 0$, y vemos que es una ecuación cuadrática o de segundo grado, donde $a = 1$, $b = 0$ y $c = -8$. Observamos que es imcompleta o pura.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startsubsection[title={Solución de la ecuación cuadrática incompleta o pura}]
+      \startejemplo
+        Resuelva la siguiente ecuación
+        \startcomentario
+          Una ecuación cuadrática puede tener dos soluciones diferentes
+        \stopcomentario
+
+        $\ini{x^2 = 16} -> (x^2-16 = 0)$
+        \startformula
+          \sqrt{x^2} = \sqrt{16}
+        \stopformula
+        \startformula
+          \abs{x} = 4
+        \stopformula
+        \startformula
+          x = \pm 4\, \text{ o también }\, X = \{4, -4\}
+        \stopformula
+
+      \stopejemplo
+
+      \youtube{\from[AI33A]}
+      \startejemplos
+        Resuelva las siguientes ecuaciones
+        \startitemejem
+          \startitem
+            $\ini{x^2-4 = 0}$
+            \startformula
+              x^2 = 4
+            \stopformula
+            \startformula
+              \sqrt{x^2} = \sqrt{4}
+            \stopformula
+            \startformula
+              \abs{x} = 2
+            \stopformula
+            \startformula
+              x = \pm 2\, \text{ o también }\, X = \{2, -2\}
+            \stopformula
+          \stopitem
+
+          \startitem
+            $\ini{y^2-5 = 0}$
+            \startformula
+              y^2 = 5
+            \stopformula
+            \startformula
+              \sqrt{y^2} = \sqrt{5}
+            \stopformula
+            \startformula
+              \abs{y} = \sqrt{5}
+            \stopformula
+            \startformula
+              y = \pm \sqrt{5}\, \text{ o también }\, X = \{\sqrt{5}, -\sqrt{5}\}
+            \stopformula
+          \stopitem
+
+          \startitem
+            $\ini{4z^2-30 = 2}$
+
+            \startformula
+              4z^2 = 2 + 30
+            \stopformula
+            \startformula
+              4z^2 = 32
+            \stopformula
+            \startformula
+              \dfrac{4z^2}{4} = \dfrac{32}{4}
+            \stopformula
+            \startformula
+              z^2 = 8
+            \stopformula
+            \startformula
+              \sqrt{z^2} = \sqrt{8}
+            \stopformula
+            \startformula
+              \abs{z} = \sqrt{4 \cdot 2}
+            \stopformula
+            \startformula
+              z = \pm 2\sqrt{2}\, \text{ o también }\, X = \{2\sqrt{2}, -2\sqrt{2}\}
+            \stopformula
+          \stopitem
+          \startitem
+            $\ini{3x^2 = 28}$
+            \startformula
+              \dfrac{3x^2}{3} = \dfrac{28}{3}
+            \stopformula
+            \startformula
+              x^2 = \dfrac{28}{3}
+            \stopformula
+            \startformula
+              \sqrt{x^2} = \sqrt{\dfrac{28}{3}}
+            \stopformula
+            \startformula
+              \abs{x} = \dfrac{\sqrt{28}}{\sqrt{3}}
+            \stopformula
+            \startformula
+              x = \pm \dfrac{\sqrt{4 \cdot 7}}{\sqrt{3}}
+            \stopformula
+            \startformula
+              x = \pm \dfrac{2\sqrt{7}}{\sqrt{3}}
+            \stopformula
+            Ahora racionalizamos el denominador
+            \startformula
+              x = \pm \dfrac{2\sqrt{7}}{\sqrt{3}} \dfrac{\sqrt{3}}{\sqrt{3}}
+            \stopformula
+            \startformula
+              x = \pm \dfrac{2\sqrt{21}}{3}\, \text{ o también }\, X = \left{\dfrac{2\sqrt{21}}{3}, -\dfrac{2\sqrt{21}}{3}\right}
+            \stopformula
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubsection
+
+    \youtube{\from[AI33B]}
+    \startsubsection[title={Solución de la ecuación cuadrática completa}]
+
+      \startdiscusion{{\bf Método I:} {\em Por factorización}}
+        Este método consiste en factorizar el trinomio cuadrático, mónico o no mónico, que aparezca en el lado izquierdo de una ecuación cuadrática completa, teniendo cero (0) en el lado derecho. O extrayendo a la incógnita como factor común en el binomio que aparezca en el lado izquierdo (si es que la constante es cero) teniendo cdero en el lado derecho. Entonces, aplicando el teorema visto en el Álgebra Elemental:
+        \startformula
+          ab = 0 <--> a = 0 \vee b = 0
+        \stopformula
+
+        \startejemplos
+          Resuelva las siquientes ecuaciones
+          \startitemejem
+            \startitem
+              $\ini{x^2-5x+4=0}$
+
+              Primero factorizamos
+              \startformula
+                \startcases[right=\right\}]
+                  \NC P=4 \NR
+                  \NC S=-5 \NR
+                \stopcases = -1,\, -4
+              \stopformula
+              \startformula
+                (x - 1)(x - 4) = 0
+              \stopformula
+              Concluimos que
+              \startformula
+                x -1 = 0 \;\vee\; x - 4 = 0
+              \stopformula
+              \startformula
+                x = 1 \;\vee\; x = 4
+              \stopformula
+              \startformula
+                X = \{1, 4\}
+              \stopformula
+            \stopitem
+
+            \startitem
+              $\ini{x(x-1) + 1 = x(4-x)-1}$
+
+              Primeros vamos a simplificar
+
+              \startformula
+                x^2 - x + 1 = 4x - x^2 -1
+              \stopformula
+              \startformula
+                x^2 - x - 4x + x^2 +2= 0
+              \stopformula
+              \startformula
+                2x^2 -5x +2 = 0
+              \stopformula
+              \startformula
+                \startcases[right=\right\}]
+                  \NC P=2 \cdot 2 = 4 \NR
+                  \NC S=-5 \NR
+                \stopcases = -1,\, -4
+              \stopformula
+              \startformula
+                2x^2 - x -4x + 2 = 0
+              \stopformula
+              \startformula
+                x(2x - 1) - 2(2x-1) = 0
+              \stopformula
+              \startformula
+                (2x-1)(x -2) = 0
+              \stopformula
+              \startformula
+                2x - 1 = 0 \;\vee\; x - 2 = 0
+              \stopformula
+              \startformula
+                2x = 1 \;\vee\;  x = 2
+              \stopformula
+              \startformula
+                x = \dfrac{1}{2} \;\vee\; x = 2
+              \stopformula
+              \startformula
+                X = \left{\dfrac{1}{2}, 2\right}
+              \stopformula
+            \stopitem
+          \stopitemejem
+        \stopejemplos
+
+        \youtube{\from[AI34A]}
+        \startejemplos
+          Resuelva las siguientees ecuaciones cuadráticas por factorización
+          \startitemejem
+            \startitem
+              $\ini{y^2  +6y  +9 = 0}$
+
+              Como es un trinomio cuadrado perfecto tenemos
+              \startformula
+                (y + 3)^2 = 0
+              \stopformula
+              Observamos que esto se parece a una ecuación cuadrática incompleta. Por tanto,
+              \startformula
+                \sqrt{(y+3)^2} = \sqrt{0}
+              \stopformula
+              \startformula
+                \abs{y + 3}  = 0
+              \stopformula
+              \startformula
+                y + 3 = 0
+              \stopformula
+              \startformula
+                y = -3
+              \stopformula
+            \stopitem
+
+            \startitem
+              $\ini{3x^2 + x = 0}$
+
+              Lo factorizamo extrayendo factor común
+              \startformula
+                x(3x + 1) = 0
+              \stopformula
+              \startformula
+                x = 0 \,\vee\, 3x + 1 = 0
+              \stopformula
+              \startformula
+                x = 0 \,\vee\, 3x = -1
+              \stopformula
+              \startformula
+                x = 0 \,\vee\, \dfrac{3x}{3} = \dfrac{-1}{3}
+              \stopformula
+              \startformula
+                x = 0 \,\vee\, x = -\dfrac{1}{3}
+              \stopformula
+            \stopitem
+
+            \startitem
+              $\ini{x^2 = 16}$
+
+              \startformula
+                x^2 - 16 = 0
+              \stopformula
+              \startformula
+                (x + 4)(x - 4) = 0
+              \stopformula
+              \startformula
+                x + 4 = 0 \,\vee\, x - 4 = 0
+              \stopformula
+              \startformula
+                x = -4 \,\vee\, x = 4
+              \stopformula
+            \stopitem
+          \stopitemejem
+        \stopejemplos
+
+        \startobservacion
+          Puede ocurrir que la expresión que tengamos que factorizar para poder resolver una ecuación cuadrática por el método de factorización, no sea factorizable. O sea, que el método de factorización para resolver ecuaciones cuadráticas no siempre funciona. Para esos casos se han desarrollado dos métodos.
+        \stopobservacion
+      \stopdiscusion
+
+      \startdiscusion{{\bf Método II:} {\em Completando un (trinomio) cuadrado (perfecto)}}
+
+        \youtube{\from[AI34B]}
+        \startejemplo
+          \ini{Resuelva la ecuación: $3x^2-2 = 2x$}
+
+          \startcomentario
+            a) colocamos los términos con la incógnita en el lado izquierdo
+          \stopcomentario
+          \startformula
+            3x^2 -2x = 2
+          \stopformula
+
+          \startcomentario
+            b) convertimos el coeficiente del término de segundo grado en 1
+          \stopcomentario
+          \startformula
+            \left[3x^2-2x=2\right]\dfrac{1}{3}
+          \stopformula
+          \startformula
+            x^2 -\dfrac{2}{3}x = \dfrac{2}{3}
+          \stopformula
+
+          \startcomentario
+            c) determinamos el tercer término que necesitamos añadir a los dos términos en el lado izquierdo para convertirlo en un trinomio cuadrado perfecto. $c = \dfrac{b^2}{4a},\; b = -\dfrac{2}{3},\; a = 1$
+            \stopcomentario
+          \startformula
+            c = \dfrac{\left(-\dfrac{2}{3}\right)^2}{4 \cdot 1} = \dfrac{4}{9} \div 4
+          \stopformula
+          \startformula
+            = \dfrac{4}{9} \cdot \dfrac{1}{4} = \dfrac{1}{9}
+          \stopformula
+
+          \startcomentario
+            d) sumamos lo obtenido en el paso anterior en los dos lados de la ecuación
+          \stopcomentario
+          \startformula
+            x^2-\dfrac{2}{3} + \dfrac{1}{9} = \dfrac{2}{3} + \dfrac{1}{9}
+          \stopformula
+
+          \startcomentario
+            e) simplificamos cada lado de la ecuación
+          \stopcomentario
+          \startformula
+            \left(x - \dfrac{1}{3}\right)^2 = \dfrac{6}{9} + \dfrac{1}{9} = \dfrac{7}{9}
+          \stopformula
+
+          \startcomentario
+            f) extraemos la raíz cuadrada en ambos lados de la ecuación
+          \stopcomentario
+          \startformula
+            \sqrt{\left(x -\dfrac{2}{3}\right)^2} = \sqrt{\dfrac{7}{9}}
+          \stopformula
+          \startformula
+            \left|\,x -\dfrac{1}{3}\,\right| = \dfrac{\sqrt{7}}{\sqrt{9}}
+          \stopformula
+          \startformula
+            x -\dfrac{1}{3} = \pm\dfrac{\sqrt{7}}{3}
+          \stopformula
+          \startcomentario
+            g) resolvemos la ecuación lineal en el paso anterior para la incógnita
+          \stopcomentario
+          \startformula
+            x + \dfrac{1}{3} \pm \dfrac{\sqrt{7}}{3}
+          \stopformula
+          \startformula
+            x = \dfrac{1 \pm \sqrt{7}}{3} \;\text{ o bien }\; X = \left{ \dfrac{1 +\sqrt{7}}{3}, \dfrac{1 - \sqrt{7}}{3}\right}
+          \stopformula
+        \stopejemplo
+
+        \youtube{\from[AI35A]}
+        \startejemplo
+          \ini{Resuelva la ecuación $x^2 +4x +2 = 0$, completando el cuadrado.}
+
+          \startformula
+            x^2 + 4x = -2
+          \stopformula
+          \startformula
+            b = 4, \; a = 1 \; c = \dfrac{b^2}{4a} = \dfrac{4^2}{4 \cdot 1} = \dfrac{15}{4} = 4
+          \stopformula
+          \startformula
+            x^2 + 4x + 4 = -2 +4
+          \stopformula
+          \startformula
+            (x + 2)^2 = 2
+          \stopformula
+          \startformula
+            \sqrt{(x + 2)^2} = \sqrt{2}
+          \stopformula
+          \startformula
+            |\, x + 2 \,| = \sqrt{2}
+          \stopformula
+          \startformula
+            x + 2 = \pm \sqrt{2}
+          \stopformula
+          \startformula
+            x = -2 \pm \sqrt{2} \;\text{ o bien }\; X = \left\{ -2+\sqrt{2}, -2-\sqrt{2} \right\}
+          \stopformula
+        \stopejemplo
+
+        \youtube{\from[AI35B]}
+        \startejemplo
+          \ini{Resuelva la ecuación $2x^2-5x+2=0$, completando el cuadrado.}
+
+          \startformula
+            2x^2 - 5x = -2
+          \stopformula
+          \startformula
+            \dfrac{1}{2}\left[2x^2 - 5x = -2\right]
+          \stopformula
+          \startformula
+            x^2-\dfrac{5}{2}x = -1
+          \stopformula
+          \startformula
+            b = -\dfrac{5}{2}, \, c = 1, \, c = \dfrac{b^2}{4a} = \dfrac{\left(-\dfrac{5}{2}\right)^2}{4 \cdot 1} = \dfrac{25}{4} \div 4 = \dfrac{25}{4} \cdot \dfrac{1}{4} = \dfrac{25}{16}
+          \stopformula
+          \startformula
+            x^2 -\dfrac{5}{2}x + \dfrac{25}{16} = -1 + \dfrac{25}{16}
+          \stopformula
+          \startformula
+            \left(x - \dfrac{5}{4}\right)^2 = \dfrac{-1}{16} + \dfrac{25}{16}
+          \stopformula
+          \startformula
+            (x - \dfrac{5}{4})^2 = \dfrac{9}{16}
+          \stopformula
+          \startformula
+            \sqrt{\left(x - \dfrac{5}{4}\right)^2} = \sqrt{\dfrac{9}{16}}
+          \stopformula
+          \startformula
+            \left|\,x - \dfrac{5}{4} \,\right| = \dfrac{\sqrt{9}}{\sqrt{16}}
+          \stopformula
+          \startformula
+            x - \dfrac{5}{4} = \pm \dfrac{3}{4}
+          \stopformula
+          \startformula
+            x = \dfrac{5}{4} \pm \dfrac{3}{4}
+          \stopformula
+          \startformula
+            x = \dfrac{5+3}{4} \,\vee\, x = \dfrac{5-3}{4}
+          \stopformula
+          \startformula
+            x = \dfrac{8}{4} \,\vee\, x = \dfrac{2}{4}
+          \stopformula
+          \startformula
+            x = 2 \,\vee\, x = \dfrac{1}{2} \;\text{ o bien }\; X = \left\{ 2, \dfrac{1}{2}\right\}
+          \stopformula
+        \stopejemplo
+      \stopdiscusion
+
+      \startdiscusion{{\bf Método III:} {\em La fórmula cuadrática}}
+        \startteorema {la fórmula cuadrática}
+          \startcomentario
+            La ecuación lineal $ax + b = 0$ se resolvía aplicando la fórmula lineal $x = -\dfrac{b}{a}$
+          \stopcomentario
+          Sea $ax^2 + bx + c = 0$, una ecuación cuadrática. Entonces, las soluciones son:
+          \startformula
+            x_1 = \dfrac{-b + \sqrt{b^2 -4ac}}{2a} \,\text{ y }\, x_2 = \dfrac{-b - \sqrt{b^2 -4ac}}{2a}
+          \stopformula
+        \stopteorema
+        \youtube{\from[AI36A]}
+        \startdemo
+          Resolvemos la ecuación literal cuadrática $a^2+bx+c = 0$, por el método de completar cuadrados.
+          \startformula
+            ax^2 + bx = -c
+          \stopformula
+          \startformula
+            \dfrac{1}{a}\left\[ax^2 + bx = -c\right\]
+          \stopformula
+          \startformula
+            x^2 + \dfrac{b}{a}x = -\dfrac{c}{a}
+          \stopformula
+          Tenemos que calcular el tercer término $c_1$ para formar un trinominio cuadrado perfecto en el lado izquierdo
+          \startformula
+            c_1 = \dfrac{b_1^2}{4a_1},\, \text{ donde }\, b_1 = \dfrac{b}{a},\; a = 1
+          \stopformula
+          Luego,
+          \startformula
+            c_1 = \dfrac{\left(\dfrac{b}{a}\right)^2}{4 \cdot 1} = \dfrac{b^2}{a^2} \div 4 = \dfrac{b^2}{a^2} \dfrac{1}{4} = \dfrac{b^2}{4a^2}
+          \stopformula
+          Ahora tenemos que sumar esta misma cantidad en el lado derecho
+          \startformula
+            x^2 + \dfrac{b}{a} + \dfrac{b^2}{4c^2} = - \dfrac{c}{a} + \dfrac{b^2}{4a^2}
+          \stopformula
+          \startformula
+            \left(x + \dfrac{b}{2a}\right)^2 = \dfrac{4ac}{4a^2} + \dfrac{b^2}{4a^2} = \dfrac{-4ac + b^2}{4a^2}
+          \stopformula
+          \startformula
+            \left(x + \dfrac{b}{2a}\right)^2 = \dfrac{b^2 - 4ac}{4a^2}
+          \stopformula
+          \startformula
+            \sqrt{\left(x+\dfrac{b}{2a}\right)^2} = \sqrt{\dfrac{b^2 - 4ac}{4a^2}}
+          \stopformula
+          \startformula
+            \left|\, x + \dfrac{b}{2a} \,\right| = \dfrac{\sqrt{b^2 - 4ac}}{\sqrt{4a^2}}
+          \stopformula
+          \startformula
+            x + \dfrac{b}{2a} = \pm \dfrac{\sqrt{b^2 - 4ac}}{2a}
+          \stopformula
+          \startformula
+            x = -\dfrac{b}{2a} \pm \dfrac{\sqrt{b^2 - 4ac}}{2a}
+          \stopformula
+          \startformula
+            \mframed{x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}}
+          \stopformula
+          Luego, las soluciones de nuestra ecuación serán:
+          \startformula
+            x_1 = \dfrac{-b + \sqrt{b^2 - 4ac}}{2a}; \; x_2 = \dfrac{-b - \sqrt{b^2 - 4ac}}{2a}
+          \stopformula
+        \stopdemo
+
+        \youtube{\from[AI36B]}
+        \startejemplos
+          Resuleva las siguientes ecuaciones cuadráticas por medio de la fórmula cuadrática
+          \startitemejem
+            \startitem
+              \ini{$-6x^2 + 8 = 8\left(x-x^2\right)+5$}
+              \startformula
+                -6x^2 + 8 = 8x - 8x^2 + 5
+              \stopformula
+              \startformula
+                -6x^2 + 8 - 8x + 8x^2 - 5 = 0
+              \stopformula
+              \startformula
+                2x^2 -8x +3 = 0
+              \stopformula
+              \startformula
+                x = \dfrac{-(-8) \pm \sqrt{(-8)^2 - 4\cdot 2 \cdot 3}}{2 \cdot 2} = \dfrac{8 + \sqrt{64 -24}}{4} = \dfrac{8 \pm \sqrt{40}}{4} = \dfrac{8 \pm \sqrt{4 \cdot 10}}{4} = \dfrac{8 \pm 2\sqrt{10}}{4} = \dfrac{2(4 \pm \sqrt{10})}{4} = \dfrac{4 \pm \sqrt{10}}{2}
+              \stopformula
+              Luego,
+              \startformula
+                X = \left\{\dfrac{4 + \sqrt{10}}{2}, \, \dfrac{4 - \sqrt{10}}{2}\right\}
+              \stopformula
+            \stopitem
+            \startitem
+              \ini{$3x^2 -5x + 2 = 0$}
+              \startformula
+                x = \dfrac{8 \pm \sqrt{25 - 24}}{6} = \dfrac{5 \pm \sqrt{1}}{6} = \dfrac{5 \pm 1}{6}
+              \stopformula
+              \startformula
+                x = \dfrac{6}{6}; \; x = \dfrac{2}{3}
+              \stopformula
+            \stopitem
+          \stopitemejem
+        \stopejemplos
+
+        \youtube{\from[AI37A]}
+        \startobservacion
+          Vea que la ecuación cuadrática $3x^2-5x+2 = 0$, considerada en el último ejemplo de la lección anterior pudo haberse resuelto por el método de factorización ya que para el trinomio cuadratico no mónico en su lado izquierdo ocurre que:
+          \startformula
+            \startcases[right=\right\}]
+              \NC P=3 \cdot 2 = 6 \NR
+              \NC S=-5 \NR
+            \stopcases = -3,\, -2
+          \stopformula
+          Pero la resolvimos por medio de la fórmula cuadrática.
+        \stopobservacion
+
+        \startejemplos
+          Resuelva las siguientes ecuaciones por medio de la fórmula cuadrática
+          \startitemejem
+            \startitem
+              \ini{$y^2+2y-3=0$}
+              \startformula
+                y = \dfrac{-2 \pm \sqrt{4 + 12}}{2} = \dfrac{-2 \pm \sqrt{16}}{2} = \dfrac{-2 \pm 4}{2}
+              \stopformula
+              \startformula
+                y = 1, \; y = -3
+              \stopformula
+            \stopitem
+            \startitem
+              \ini{$3x^2 - 2 = 0$}
+              \startformula
+                x = \dfrac{0 \pm \sqrt{0 + 24}}{2 \cdot 3} = \dfrac{\pm\sqrt{24}}{6} = \pm \dfrac{\sqrt{4 \cdot 6}}{6} = \pm\dfrac{2\sqrt{6}}{6} = \pm\dfrac{\sqrt{6}}{3}
+              \stopformula
+              \startformula
+                X = \left\{\dfrac{\sqrt{6}}{3},\;-\dfrac{\sqrt{6}}{3} \right\}
+              \stopformula
+            \stopitem
+            \startitem
+              Resuelva la ecuación literal \ini{$2x^2 + y^2 + 2xy -2x = 0$} para $y$.
+              \startformula
+                2x^2 + 2xy + \underbrace{2x^2 - 2x}_{c} = 0
+              \stopformula
+              \startformula
+                y = \dfrac{-2xy \pm \sqrt{(2xy)^2 - 4 \cdot 1 \cdot (2x^2 - 2x)}}{2 \cdot 1} = \dfrac{-2x \pm \sqrt{4x^2-8x^2+8x}}{2} = \dfrac{-2x \pm \sqrt{-4x^2+8x}}{2} = \dfrac{-2x \pm \sqrt{(8x-4x^2}}{2} = \dfrac{-2x \pm \sqrt{4x(2-x)}}{2} = \dfrac{-2x \pm 2\sqrt{x(2-x)}}{2} = \dfrac{2\Big(-x \pm \sqrt{2x - x^2}\Big)}{2} = -x \pm \sqrt{2x - x^2}
+              \stopformula
+              \startformula
+                X = \Big\{-x+\sqrt{2x-x^2}, \; -x-\sqrt{2x-x^2}\Big\}
+              \stopformula
+            \stopitem
+          \stopitemejem
+        \stopejemplos
+      \stopdiscusion
+
+    \stopsubsection
+
+  \stopsection
+
+  \youtube{\from[AI37B]}
+  \startsection[title={Ecuaciones puras}]
+    \startdefinicion
+      Una ecuación en la forma $ax^n + c = 0$, donde $a, c \in \reals$, fijos, y $n \in \naturalnumbers$ fijo, se llama \obj{una ecuación pura o incompleta en la incógnita $x$ de grado $n$}. Si $n \in \rationals \setminus \integers$, fijo, o si $n \in \integers^{-}$, fijo, la ecuación se llama, simplemente, \obj{una ecuación pura con incórgnita $x$}.
+    \stopdefinicion
+
+    \startmetodo{\bf Método de solución:}
+      Si $n \in \naturalnumbers$ fijo, entonces resolvemos la ecuación del siguiente modo:
+      \startformula
+        ax^n + c = 0
+      \stopformula
+      \startformula
+        \dfrac{1}{a}\big[ax^n = -c\big]
+      \stopformula
+      \startformula
+        x^n = -\dfrac{c}{a}
+      \stopformula
+      \startformula
+        \sqrt[n]{x^n} = \sqrt[n]{-\dfrac{c}{a}}
+      \stopformula
+      \startformula
+        |\,x\,| = \sqrt[n]{-\dfrac{c}{a}}, \text{ si $n$ es par.}
+      \stopformula
+      Es decir,
+      \startformula
+        x = \pm \sqrt[n]{-\dfrac{c}{a}}, \text{ si $n$ es par.}
+      \stopformula
+      Por otro lado,
+      \startformula
+        x = \sqrt[n]{-\dfrac{c}{a}}, \text{ si $n$ es impar.}
+      \stopformula
+    \stopmetodo
+
+    \startmetodo{\bf Método de solución:}
+      Si $n \in \integers^{-}$ fijo, entonces podemos expresar la $n = -m, m \in \naturalnumbers$ fijo. Luego la ecuación se transforma en:
+      \startformula
+        ax^{-m} + c = 0,
+      \stopformula
+      al sustituir por $n$. Y resolvemos del siguiente modo:
+      \startformula
+        \big\[ax^{-m} = -c \big\] \dfrac{1}{a}
+      \stopformula
+      \startformula
+        x^{-m} = -\dfrac{c}{a}
+      \stopformula
+      \startformula
+        \dfrac{1}{x^m} = -\dfrac{c}{a}
+      \stopformula
+      \startformula
+        x^m = -\dfrac{a}{c}
+      \stopformula
+      \startformula
+        \sqrt[m]{x^m} = \sqrt[m]{-\dfrac{a}{c}}
+      \stopformula
+      \startformula
+        |\,x\,| = \sqrt[m]{-\dfrac{a}{c}}, \, \text{ si $m$ es par.}
+      \stopformula
+      Es decir,
+      \startformula
+        x = \pm \sqrt[m]{-\dfrac{a}{c}}, \, \text{ si $m$ es par.}
+      \stopformula
+      Por otro lado,
+      \startformula
+        x = \sqrt[m]{-\dfrac{a}{c}}, \, \text{ si $m$ es impar.}
+      \stopformula
+    \stopmetodo
+
+    \startmetodo{\bf Método de solución:}
+      Si $n \in \rationals^{+} \setminus \naturalnumbers$, entonces $n$ tiene la forma $p/q$, donde $p, q \in \naturalnumbers$ fijos, y la ecuación pura original se convierte en la siguiente:
+      \startformula
+        ax^{p/q} + c = 0,
+      \stopformula
+      que se resuelve:
+      \startformula
+        \big[ax^{p/q} = -c \big]\dfrac{1}{a}
+      \stopformula
+      \startformula
+        x^{p/q} = -\dfrac{c}{a}
+      \stopformula
+        \startcomentario
+        $\big(x^m\big)^n = x^{mn}$
+        \stopcomentario
+
+      \startformula
+        \big(x^{p/q}\big)^{q/p} = \Big(-\dfrac{c}{a}\Big)^{q/p}
+      \stopformula
+      \startformula
+        x^{p/q \cdot q/p} = \Big(-\dfrac{c}{a}\Big)^{q/p}
+      \stopformula
+      \startformula
+        x^{p/p} = \Big(-\dfrac{c}{a}\Big)^{q/p}
+      \stopformula
+      \startformula
+        \sqrt[p]{x^p} = \Big(-\dfrac{c}{a}\Big)^{q/p}
+      \stopformula
+      \startformula
+        |\,x\,| = \Big(-\dfrac{c}{a}\Big)^{q/p}, \, \text{ si $p$ es par.}
+      \stopformula
+      Es decir,
+      \startformula
+        x = \pm \Big(-\dfrac{c}{a}\Big)^{q/p}, \, \text{ si $p$ es par y si la exponenciación a la derecha está definida.}
+      \stopformula
+      Por otro lado,
+      \startformula
+        x = \Big(-\dfrac{c}{a}\Big)^{q/p}, \, \text{ si $p$ es impar.}
+      \stopformula
+    \stopmetodo
+
+    \startmetodo{\bf Método de solución:}
+      Finalmente, si $n \in \rationals^{-} \setminus \integers^{-}$, entonces $n$ tiene la forma $-p/q$, y la ecuación pura se convierte en:
+      \startformula
+        ax^{-p/q} + c = 0,
+      \stopformula
+      al sustituirlo por $n$, que se resuelve:
+      \startformula
+        \dfrac{1}{a}\big[ax^{-p/q} + c = 0\big]
+      \stopformula
+      \startformula
+        x^{-p/q} = -\dfrac{c}{a}
+      \stopformula
+      \startformula
+        \dfrac{1}{x^{p/q}} = -\dfrac{c}{a}
+      \stopformula
+      \startformula
+        x^{p/q} = -\dfrac{a}{c}
+      \stopformula
+      \startformula
+        \big\(x^{p/q}\big\)^{q/p} = \Big\(-\dfrac{a}{c}\Big\)^{q/p}
+      \stopformula
+      \startformula
+        x^{p/p} = \Big\(-\dfrac{a}{c}\Big\)^{q/p}
+      \stopformula
+      \startformula
+        \sqrt[q]{x^p} = \Big\(-\dfrac{a}{c}\Big\)^{q/p}
+      \stopformula
+      \startformula
+        |\,x\,| = \Big\(-\dfrac{a}{c}\Big\)^{q/p}, \text{ si $p$ es par.}
+      \stopformula
+      Es decir,
+      \startformula
+        x = \pm \Big\(-\dfrac{a}{c}\Big\)^{q/p}, \text{ si $p$ es par y si la exponenciación está definida.}
+      \stopformula
+      Por otro lado,
+      \startformula
+        x = \Big\(-\dfrac{a}{c}\Big\)^{q/p}, \, \text{ si $p$ es impar.}
+      \stopformula
+    \stopmetodo
+
+    \youtube{\from[AI38A]}
+    \startejemplos
+      Resuelva las siguientes ecuaciones
+      \startitemejem
+        \startitem
+          \ini{$2x^3 + 5 = 0$}
+          \startformula
+            \dfrac{1}{2}\Big[2x^3 = -5\Big]
+          \stopformula
+          \startformula
+            x^3 = -\dfrac{5}{2}
+          \stopformula
+          \startformula
+            \sqrt[3]{x^3} = \sqrt[3]{-\dfrac{5}{2}}
+          \stopformula
+          \startformula
+            x = \sqrt[3]{(-1)\dfrac{5}{2}} = -\sqrt[3]{\dfrac{5}{2}} = -\dfrac{\sqrt[3]{5}}{\sqrt[3]{2}} \cdot \dfrac{\sqrt[3]{4}}{\sqrt[3]{2^2}} = -\dfrac{\sqrt[3]{20}}{\sqrt[3]{2^3}}
+            \stopformula
+            \startformula
+              x = -\dfrac{\sqrt[3]{20}}{2}
+            \stopformula
+        \stopitem
+        \startitem
+          \ini{$4x^4 - 6 = 0$}
+          \startformula
+            \dfrac{1}{4}\Big(4^4 = 6\Big)
+          \stopformula
+          \startformula
+            x^4 = \dfrac{6}{4} = \dfrac{3}{2}
+          \stopformula
+          \startformula
+            \sqrt[4]{x^4} = \sqrt[4]{\dfrac{3}{2}}
+          \stopformula
+          \startformula
+            |\,x\,| = \dfrac{\sqrt[4]{3}}{\sqrt[4]{2}} \cdot \dfrac{\sqrt[4]{8}}{\sqrt[4]{2^3}} = \dfrac{\sqrt[4]{24}}{\sqrt[4]{2^4}}
+          \stopformula
+          \startformula
+            x = \pm \dfrac{\sqrt[4]{24}}{2}
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$x^5 - 3 = 0$}
+          \startformula
+            x^5 = 3
+          \stopformula
+          \startformula
+            \sqrt[5]{x^5} = \sqrt[5]{3}
+          \stopformula
+          \startformula
+            x = \sqrt[3]{3}
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$x^6 = 27$}
+          \startformula
+            \sqrt[6]{x^6} = \sqrt[6]{27}
+          \stopformula
+          \startformula
+            |\,x\,| = \sqrt{\sqrt[3]{3^3}}
+          \stopformula
+          \startformula
+            x = \pm \sqrt{3}
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$x^{5/4} + 2 = 0$}
+          \startformula
+            x^{5/4} = -2
+          \stopformula
+          \startformula
+            \Big(x^{5/4}\Big)^{4/5} = \Big(-2\Big)^{4/5}
+          \stopformula
+          \startformula
+            x^{5/4} = \sqrt[5]{(-2)^4}
+          \stopformula
+          \startformula
+            \sqrt[5]{x^5} = \sqrt[5]{16}
+          \stopformula
+          \startformula
+            x = \sqrt[5]{16}
+          \stopformula
+        \stopitem
+        \youtube{\from[AI38B]}
+        \startitem
+          \ini{$-3x^{-2/3} + 4 = 3$}
+          \startformula
+            -3x^{-2/3} = 3 - 4
+          \stopformula
+          \startformula
+            \Big[-3x^{-2/3} = -1\Big] \Big(-\dfrac{1}{3}\Big)
+          \stopformula
+          \startformula
+            x^{-2/3} = \dfrac{1}{3}
+          \stopformula
+          \startformula
+            \dfrac{1}{x^{2/3}} = \dfrac{1}{3}
+          \stopformula
+          \startformula
+            x^{2/3} = 3
+          \stopformula
+          \startformula
+            \Big(x^{2/3}\Big)^{3/2} = (3)^{3/2}
+          \stopformula
+          \startformula
+            \Big(x^{2/2}\Big) = \sqrt{3^3}
+          \stopformula
+          \startformula
+            \sqrt{x^2} = \sqrt{3^3} = \sqrt{3^2 \cdot 3}
+          \stopformula
+          \startformula
+            |\,x\,| = 3\sqrt{3}
+          \stopformula
+          \startformula
+            x = \pm 3\sqrt{3}
+          \stopformula
+          En este caso hay que hacer la prueba para ver que está definido: $\dfrac{1}{x^{2/3}}$
+          \startformula
+            x = 3\sqrt{3}  --> \Big(3\sqrt{3}\Big)^{2/3} \neq 0
+          \stopformula
+          \startformula
+            x = -3\sqrt{3}  --> \Big(-3\sqrt{3}\Big)^{2/3} \neq 0
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$x^{1/4} = -3$}
+          \startformula
+            \big(x^{1/4}\big)^4 = (-3)^4
+          \stopformula
+          \startformula
+            x = 81
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$-3x^{4/3} = - 48$}
+          \startformula
+            \big[-3x^{4/3} = - 48\big]\Big(-\dfrac{1}{3}\Big)
+          \stopformula
+          \startformula
+            x^{4/3} = 16
+          \stopformula
+          \startformula
+            \big(x^{4/3}\big)^{3/4} = 16^{3/4}
+          \stopformula
+          \startformula
+            x^{4/4} = \big(\sqrt[4]{2}\big)^3
+          \stopformula
+          \startformula
+            \sqrt[4]{x^4} = 2^3
+          \stopformula
+          \startformula
+            \abs{x} = 8
+          \stopformula
+          \startformula
+            x = \pm 8
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+  \stopsection
+
+  \youtube{\from[AI39A]}
+  \startsection[title={Ecuaciones de tipo cuadrático}]
+    \startdefinicion
+      Una ecuación en la forma $ax^{2n} + b^{n} + c = 0$, donde $a, b, c \in \reals$ fijos, con $a,b \neq 0$, y donde $n \in \rationals$, fijo, se llama \obj{una ecuación de tipo cuadrático con la incógnita $x$.}
+    \stopdefinicion
+
+    \startmetodo{\bf Método de solución:}
+      Efectuamos la sustitución auxiliar (se hace un cambio de variables conveniente) $u = x^n$, entonces tenemos que $u^2 =\big(x^n\big)^2 = x^{2n}$. Luego, al sustituir por $u$ en la ecuación original, obtenemos: $au^2 + bu + c =0$, que es la ecuación cuadrática con la incógnita $u$, por lo cual la podemos resolver para $u$, por cualquiera de los métodos que conocemos. Una vez hallados los valores de $u$, recordamos que $x^n = u$, y ésta es una ecuación pura con incógnita $x$, que resolvermos hallando la raíz enésima en ambos lados:
+      \startformula
+        \sqrt[n]{x^n} = \sqrt[n]{u}
+      \stopformula
+      \startformula
+        \abs{x} = \sqrt[n]{u}; \quad x = \pm \sqrt[n]{u}, \; \text{ si $n$ fuera par y la raíz está definida}
+      \stopformula
+      \startformula
+        x = \sqrt[n]{u}, \; \text{ si $n$ fuera impar,}
+      \stopformula
+      todo lo anterior, si $n \in \naturalnumbers$ fijo. En cualquier otro caso, se procede a resolver la ecuación pura $x^n = u$, como vimos en la lección previa.
+    \stopmetodo
+
+    \startejemplos
+      Resuelva las suguientes ecuaciones
+      \startitemejem
+        \startitem
+          \ini{$3x^6 + 5 = 8x^3$}
+
+          Resolvemos la ecuación como indica la definición
+          \startformula
+            2x^6 - 8x^3 + 5 = 0
+          \stopformula
+          Vea que ésta es una ecuación de tipo cuadrático polinómica de grado seis con la incógnita $x$.
+          \startformula
+            u = x^3; \; u^2 = (x^3)^2 = x^6
+          \stopformula
+          Sustituimos
+          \startformula
+            2u^2 - 8u + 5 = 0
+          \stopformula
+          que es una ecuación cuadrática con la incógnita $u$.
+
+          Resolvermos usando el método de factorización
+          \startformula
+            \startcases[right=\right\}]
+              \NC P = 3 \cdot 5 = 15 \NR
+              \NC S = -8 \NR
+            \stopcases
+            = -3, -5
+          \stopformula
+          \startformula
+            3u^2 -3u -5u + 5 = 0
+          \stopformula
+          \startformula
+            3u(u-1) - 5(u-1) = 0
+          \stopformula
+          \startformula
+            (u-1)(3u-5) = 0
+          \stopformula
+          \startformula
+            u-1 = 0 \quad \vee \quad 3u-5 = 0
+          \stopformula
+          \startformula
+            u = 1 \quad \vee \quad \dfrac{1}{3}(3u = 5)
+          \stopformula
+          \startformula
+            u = 1 \quad \vee \quad u = \dfrac{5}{3}
+          \stopformula
+          Ahora sustituimos $u = x^3$
+          \startformula
+            x^3 = 1 \quad \vee \quad x^3 = \dfrac{5}{3}
+          \stopformula
+          \startformula
+            \sqrt[3]{x^3} = \sqrt[3]{1} \quad \vee \quad \sqrt[3]{x^3} = \sqrt[3]{\dfrac{5}{3}}
+          \stopformula
+          \startformula
+            x = 1 \quad \vee \quad x = \dfrac{\sqrt[3]{5}}{\sqrt[3]{3}} \cdot  \dfrac{\sqrt[3]{9}}{\sqrt[3]{3^2}}
+          \stopformula
+          \startformula
+            x = 1 \quad \vee \quad x = \dfrac{\sqrt[3]{5 \cdot 9}}{\sqrt[3]{3^3}}
+          \stopformula
+          \startformula
+            x = 1 \quad \vee \quad x = \dfrac{\sqrt[3]{45}}{3}
+          \stopformula
+          \startformula
+            X = \left\{1, \dfrac{\sqrt[3]{45}}{3}\right\}
+          \stopformula
+        \stopitem
+        \youtube{\from[AI39B]}
+        \startitem
+          \ini{$\dfrac{9}{x^4} - \dfrac{10}{x^2} + 2 = 0$}
+          \startformula
+            \left\[\dfrac{9}{x^4} - \dfrac{10}{x^2} + 2 = 0\right\] x^4
+          \stopformula
+          \startformula
+            9 - 10x^2 + 2x^4 = 0
+          \stopformula
+          \startformula
+            2x^4 - 10x^2 + 9 = 0
+          \stopformula
+          Sustituimos $u = x^2$
+          \startformula
+            2u^2 - 10u + 9 = 0
+          \stopformula
+          Resolvemos usando la fórmula cuadrática
+          \startformula
+            u = \dfrac{10 \pm \sqrt{100 - 72}}{4} = \dfrac{10 \pm \sqrt{28}}{4} = \dfrac{10 \pm 2\sqrt{7}}{4} = \dfrac{2\big(5 \pm \sqrt{7}\big)}{4} = \dfrac{5 \pm \sqrt{7}}{2}
+          \stopformula
+          \startformula
+            \therefore u = \dfrac{5 + \sqrt{7}}{2} \vee u = \dfrac{5 - \sqrt{7}}{2}
+          \stopformula
+          Luego, tenemos que cuando $u = \dfrac{5 + \sqrt{7}}{2}$ entonces
+          \startformula
+            x^2 = \dfrac{5 + \sqrt{7}}{2}
+          \stopformula
+          \startformula
+            \sqrt{x^2} = \sqrt{\dfrac{5 + \sqrt{7}}{2}}
+          \stopformula
+          \startformula
+            \abs{x} = \dfrac{\sqrt{5 + \sqrt{7}}}{\sqrt{2}}
+          \stopformula
+          \startformula
+            x = \pm \dfrac{\sqrt{5 + \sqrt{7}}}{\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} =\pm \dfrac{\sqrt{\big(5 + \sqrt{7}\big) 2}}{\big(\sqrt{2}\big)^2}
+          \stopformula
+          \startformula
+            x = \pm \dfrac{\sqrt{10 + 2\sqrt{7}}}{2}
+          \stopformula
+          Ahora, cuando $u = \dfrac{5 + \sqrt{7}}{2}$ tenemos
+          \startformula
+            x^2 = \dfrac{5 - \sqrt{7}}{2}
+          \stopformula
+          \startformula
+            \sqrt{x^2} = \sqrt{\dfrac{5 - \sqrt{7}}{2}}
+          \stopformula
+          \startformula
+            \abs{x} = \dfrac{\sqrt{5 - \sqrt{7}}}{\sqrt{2}}
+          \stopformula
+          \startformula
+            x = \pm \dfrac{\sqrt{5 - \sqrt{7}}}{\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} =\pm \dfrac{\sqrt{\big(5 - \sqrt{7}\big) 2}}{\big(\sqrt{2}\big)^2}
+          \stopformula
+          \startformula
+            x = \pm \dfrac{\sqrt{10 - 2\sqrt{7}}}{2}
+          \stopformula
+          Se han obtenido cuatro soluciones
+          \startformula
+            X = \Bigg\{\dfrac{\sqrt{10 + 2\sqrt{7}}}{2}, -\dfrac{\sqrt{10 + 2\sqrt{7}}}{2}, \dfrac{\sqrt{10 - 2\sqrt{7}}}{2}, -\dfrac{\sqrt{10 - 2\sqrt{7}}}{2} \Bigg\}
+          \stopformula
+          Como ninguna de las soluciones dio el valor de cero, ninguna de ellas es extraña
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+    \youtube{\from[AI40A]}
+    \startejemplos
+      Resuelva las siguientes ecuaciones
+      \startitemejem
+        \startitem
+          \ini{$-y^{1/2} -3y^{1/4} + 2 = 0$}
+
+          Vemos que $\dfrac{1}{4} = = \dfrac{1}{4} \div 2 = \dfrac{1}{2} \cdot \dfrac{1}{2}$. Luego, esta ecuación es de tipo cudrático con incógnita $y$.
+
+          Dejamos que $u = y^{1/4}$, por lo que $u^2 = \Big(y^{1/4}\Big)^2 = y^{1/2}$
+
+          Sustituimos en la ecuación original, obteniendo
+          \startformula
+            -u^2 -3u + 2 = 0,
+          \stopformula
+          y resolvemos esta ecuación cuadrática en la incógnita $u$ por la fórmula cuadrática
+          \startformula
+            u = \dfrac{3 \pm \sqrt{9 + 8}}{-2} = \dfrac{3 \pm \sqrt{17}}{-2}
+          \stopformula
+          \startformula
+            \therefore u =  \dfrac{3 + \sqrt{17}}{-2} \;\vee\; u =  \dfrac{3 - \sqrt{17}}{-2}
+          \stopformula
+          Como $u = y^{1/4}$, sustituimos
+          \startformula
+            y^{1/4} =  \dfrac{3 + \sqrt{17}}{-2} \;\vee\; y^{1/4} =  \dfrac{3 - \sqrt{17}}{-2}
+          \stopformula
+          \startformula
+            \Big(y^{1/4}\Big)^4 = \left(\dfrac{3 + \sqrt{17}}{-2}\right)^4 \quad\vee\quad \Big(y^{1/4}\Big)^4 =  \left(\dfrac{3 - \sqrt{17}}{-2}\right)^4
+          \stopformula
+          \startformula
+            y = \dfrac{\big(3 + \sqrt{17}\big)^4}{(-2)^4} \quad\vee\quad y = \dfrac{\big(3 - \sqrt{17}\big)^4}{(-2)^4}
+          \stopformula
+          \startformula
+            y = \dfrac{\left[\big(3 + \sqrt{17}\big)^2\right]^2}{16} \quad\vee\quad y = \dfrac{\left[\big(3 - \sqrt{17}\big)^2\right]^2}{16}
+          \stopformula
+          \startformula
+            y = \dfrac{\Big[9 + 6\sqrt{17} + 17\Big]^2}{16} \quad\vee\quad y = \dfrac{\Big[9 - 6\sqrt{17} + 17\Big]^2}{16}
+          \stopformula
+          \startformula
+            y = \dfrac{\Big[26 + 6\sqrt{17} \Big]^2}{16} \quad\vee\quad y = \dfrac{\Big[26 - 6\sqrt{17}\Big]^2}{16}
+          \stopformula
+          \startformula
+            y = \dfrac{676 + 312\sqrt{17} + 36 \cdot 17}{16} \quad\vee\quad y = \dfrac{676 - 312\sqrt{17} + 36 \cdot 17}{16}
+          \stopformula
+          \startformula
+            y = \dfrac{676 + 312\sqrt{17} + 612}{16} \quad\vee\quad y = \dfrac{676 - 312\sqrt{17} + 612}{16}
+          \stopformula
+          \startformula
+            y = \dfrac{1288 + 312\sqrt{17}}{16} \quad\vee\quad y = \dfrac{1288 - 312\sqrt{17}}{16}
+          \stopformula
+          \startformula
+            y = \dfrac{2\big(644 + 156\sqrt{17}\big)}{16} \quad\vee\quad y = \dfrac{2\big(644 - 156\sqrt{17}\big)}{16}
+          \stopformula
+          \startformula
+            y = \dfrac{644 + 156\sqrt{17}}{8} \quad\vee\quad y = \dfrac{644 - 156\sqrt{17}}{8}
+          \stopformula
+          \startformula
+            y = \dfrac{2\big(322 + 78\sqrt{17}\big)}{8} \quad\vee\quad y = \dfrac{2\big(322 - 78\sqrt{17}\big)}{8}
+          \stopformula
+          \startformula
+            y = \dfrac{322 + 78\sqrt{17}}{4} \quad\vee\quad y = \dfrac{322 - 78\sqrt{17}}{4}
+          \stopformula
+          \startformula
+            y = \dfrac{2\big(161 + 39\sqrt{17}\big)}{4} \quad\vee\quad y = \dfrac{2\big(161 - 39\sqrt{17}\big)}{4}
+          \stopformula
+          \startformula
+            y = \dfrac{161 + 39\sqrt{17}}{2} \quad\vee\quad y = \dfrac{161 - 39\sqrt{17}}{2}
+          \stopformula
+          \startformula
+            X = \left\{\dfrac{161 + 39\sqrt{17}}{2}, \dfrac{161 - 39\sqrt{17}}{2} \right\}
+          \stopformula
+        \stopitem
+
+        \youtube{\from[AI40B]}
+        \startitem
+          \ini{$2\left(\dfrac{y}{2}-1\right)^4 -3 \left(\dfrac{y}{2}-1\right)^2 = -1$}
+          \startformula
+            2\left(\dfrac{y}{2}-1\right)^4 -3 \left(\dfrac{y}{2}-1\right)^2 + 1 = 0
+          \stopformula
+          Vemos que debemos sustituir una expresión que contiene a la variable, $u = \left(\dfrac{y}{2}-1\right)^2$. Y nos queda
+          \startformula
+           2u^2 - 3u + 1 = 0,
+         \stopformula
+         que resolvemos por la fórmula cuadrática
+         \startformula
+           u = \dfrac{3 \pm \sqrt{9-8}}{4} = \dfrac{3 \pm \sqrt{1}}{4} = \dfrac{3 \pm 1}{4}
+         \stopformula
+         \startformula
+           u = \dfrac{4}{4} = 1 \quad\vee\quad u = \dfrac{2}{4} = \dfrac{1}{2}
+         \stopformula
+         Tenemos que  $u = \left(\dfrac{y}{2}-1\right)^2$ y para $u = 1$ resulta
+         \startformula
+           \left(\dfrac{y}{2}-1\right)^2 = 1
+         \stopformula
+         \startformula
+           \sqrt{\left(\dfrac{y}{2}-1\right)^2} = \sqrt{1}
+         \stopformula
+         \startformula
+           \abs{\dfrac{y}{2}-1} = 1
+         \stopformula
+         \startformula
+           \dfrac{y}{2}-1 = \pm 1
+         \stopformula
+         \startformula
+           \left[\dfrac{y}{2}-1 = \pm 1\right]2
+         \stopformula
+         \startformula
+           y-2 = \pm 2
+         \stopformula
+         \startformula
+           y = 2 \pm 2
+         \stopformula
+         \startformula
+           y = 4 \quad\vee\quad y = 0
+         \stopformula
+         Ahora, para $u = \dfrac{1}{2}$
+         \startformula
+           \left(\dfrac{y}{2}-1\right)^2 = \dfrac{1}{2}
+         \stopformula
+         \startformula
+           \sqrt{\left(\dfrac{y}{2}-1\right)^2} = \sqrt{\dfrac{1}{2}}
+         \stopformula
+         \startformula
+           \abs{\dfrac{y}{2}-1} = \dfrac{\sqrt{1}}{\sqrt{2}}
+         \stopformula
+         \startformula
+           \dfrac{y}{2}-1 = \pm\dfrac{\sqrt{1}}{\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} = \pm \dfrac{\sqrt{2}}{2}
+         \stopformula
+         \startformula
+           \left[\dfrac{y}{2}-1 = \pm\dfrac{\sqrt{2}}{2}\right]2
+         \stopformula
+         \startformula
+           y-2 = \pm \sqrt{2}
+         \stopformula
+         \startformula
+           y = 2 \pm \sqrt{2}
+         \stopformula
+         \startformula
+           y = 2+\sqrt{2} \quad\vee\quad y = 2-\sqrt{2}
+         \stopformula
+         Se han obtenido cuatro soluciones
+         \startformula
+           X = \left{4, 0, 2+\sqrt{2}, 2-\sqrt{2} \right}
+         \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \youtube{\from[AI41A]}
+    \startobservacion
+      Al resolver ecuaciones fraccionarias en el proceso de eliminar las fracciones que contienen dichas ecuaciones se pueden convertir en ecuaciones cuadráticas o de tipo cuadrático.
+    \stopobservacion
+
+    \startejemplo
+      Resuelva la ecuación siguiente: \ini{$\;\dfrac{4}{x+1}+\dfrac{3}{x} = 2$}
+
+      \startformula
+        \left[\dfrac{4}{x+1}+\dfrac{3}{x} = 2\right] x(x+1)
+      \stopformula
+      \startformula
+        4x +3(x+1) = 2x(x+1)
+      \stopformula
+      \startformula
+        4x + 3x + 3 = 2x^2 + 2x
+      \stopformula
+      \startformula
+        -2x^2 + 4x + 3x - 2x + 3 = 0
+      \stopformula
+      \startformula
+        -2x^2 + 5x + 3 = 0
+      \stopformula
+      Resolvemos aplicando la fórmula cuadrática
+      \startformula
+        x = \dfrac{-5 \pm \sqrt{25 + 24}}{-4} = \dfrac{-5 \pm \sqrt{49}}{-4} =  \dfrac{-5 \pm 7}{-4}
+      \stopformula
+      \startformula
+        x = \dfrac{2}{-4} = -\dfrac{1}{2} \quad\vee\quad x = \dfrac{-12}{-4} = 3
+      \stopformula
+      Tenemos que ver que ninguna solución es extraña.
+
+      Si $x = -\dfrac{1}{2}$, vemos que los denominadores no se anulan.
+      \startformula
+        x + 1 = -\dfrac{1}{2} + 1 = -\dfrac{1}{2} + \dfrac{2}{2} = \dfrac{1}{2} \neq 0 \quad\text{ y }\quad x = 3 \neq 0
+      \stopformula
+      Si $x = 3$, los denominadores tampoco se anulan.
+      \startformula
+        x + 1 = 3 + 1 = 4 \neq 0 \quad\text{ y }\quad x = 3 \neq 0
+      \stopformula
+    \stopejemplo
+  \stopsection
+
+  \startsection[title={Ecuaciones irracionales o radicales}]
+    \startdefinicion
+      Una ecuación cuya incógnita forme parte de algún radicando (dentro de algún radical) se llama \obj{una ecuación irracional o radical}.
+    \stopdefinicion
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{$\sqrt{x-3} +2x^2 = 5$}, es irracional.
+        \stopitem
+        \startitem
+          \ini{$\sqrt{5} x^5 + 8x + \sqrt{3} = 0$}, no es irracional.
+        \stopitem
+        \startitem
+          La ecuación literal \ini{$2a\sqrt[5]{x^2 + 5} = 0$}, no es irracional si la incógnita es $a$; pero es radical o irracional si la incógnita es $x$.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+    \startmetodo{\bf Método de solución}
+      Eliminamos todos los radicales (de uno en uno) que contengan a la incógnita. El radical que vayamos a eliminar se deja solo en uno de los dos lados de la ecuación. Entonces aplicamos el teorema de radicales: $\left(\sqrt[n]{a}\right)^n = a$.
+    \stopmetodo
+
+    \youtube{\from[AI41B]}
+    \startejemplos
+      Resuelva las siguientes ecuaciones
+
+      \startitemejem
+        \startitem
+          \ini{$\sqrt{x-2} -7 = 0$}
+          \startformula
+            \sqrt{x-2} = 7
+          \stopformula
+            \startcomentario
+              Aplicamos la propiedad $\left(\sqrt[n]{x}\right)^n = x$
+            \stopcomentario
+          \startformula
+            \left(\sqrt{x-2}\right)^2 = 7^2
+          \stopformula
+          \startformula
+            x - 2 = 49
+          \stopformula
+          \startformula
+            x = 49 + 2
+          \stopformula
+          \startformula
+            x = 51
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$\sqrt{y-3}  = -3$}
+          \startformula
+            \left(\sqrt{y-3}\right)^2 = (-3)^2
+          \stopformula
+          \startformula
+            y - 3 = 9
+          \stopformula
+          \startformula
+            y = 9 + 3
+          \stopformula
+          \startformula
+            y = 12
+          \stopformula
+          \startcomentario
+            En este tipo de ecuaciones es necesario hacer siempre la prueba porque pueden aparecer raíces o soluciones extrañas.
+          \stopcomentario
+          Sin embargo, resulta ser una raíz o solución extraña, ya que al hacer la prueba obtenemos lo siguiente
+          \startformula
+            \sqrt{12 - 3} = -3
+          \stopformula
+          \startformula
+            \sqrt{9} = -3
+          \stopformula
+          \startformula
+            3 \neq -3
+          \stopformula
+          El conjunto solución será
+          \startformula
+            \therefore X = \{\} = \emptyset
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startobservacion
+      Vemos que ecuaciones irracionales que contengan la incógnita dentro de algún radical de orden par, requerirán la prueba obligatoriamente. Esto es así, pues recordemos que todo número real tiene dos raíces de orden par iguales en valor absoluto pero con signo diferente. Luego, es posible que como esté planteada la ecuación funcione una de esas dos raíces pero no la otra. En el ejemplo anterior, observamos que nos pedían la raíz cuadrada principal (la positiva) en el lado izquierdo, pero nos daban la raíz negativa en el lado derecho.
+    \stopobservacion
+
+    \youtube{\from[AI42A]}
+    \startejemplos
+      Resuelva las siguientes ecuaciones
+      \startitemejem
+        \startitem
+          \ini{$2\sqrt{x+6} + 3\sqrt{x+1} = 0$}
+          \startformula
+            2\sqrt{x+6} = -3\sqrt{x+1}
+          \stopformula
+          \startformula
+            \left(2\sqrt{x+6}\right)^2 = \left(-3\sqrt{x+1}\right)^2
+          \stopformula
+          \startformula
+            4(x+6) = 9(x+1)
+          \stopformula
+          \startformula
+            4x + 24 = 9x + 9
+          \stopformula
+          \startformula
+            4x -9x = 9 -24
+          \stopformula
+          \startformula
+            -5x = -15
+          \stopformula
+          \startformula
+            -\dfrac{1}{5}[-5x = -15]
+          \stopformula
+          \startformula
+            x = 3
+          \stopformula
+          Hacemos la prueba, ya que partimos de ecuación con una incógnita dentro de un radical de orden par.
+          \startformula
+            2\sqrt{3+6} + 3\sqrt{3+1} = 0
+          \stopformula
+          \startformula
+            2\sqrt{9}  + 3\sqrt{4} = 0
+          \stopformula
+          \startformula
+            2 \cdot 3 + 3\cdot 2 = 0
+          \stopformula
+          \startformula
+            6 + 6 = 0
+          \stopformula
+          \startformula
+            12 \neq 0
+          \stopformula
+          Hemos obtenido una raíz extraña.
+          \startformula
+            \therefore X = \{\} = \emptyset
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$\sqrt{4x - 11} = 2\sqrt{x} - 1$}
+          \startformula
+            \left(\sqrt{4x - 11}\right)^2 = \left(2\sqrt{x} -1\right)^2
+          \stopformula
+          \startformula
+            4x -11 = 4x -4\sqrt{x} +1
+          \stopformula
+          \startformula
+            4x - 11 -4x - 1 = -4\sqrt{x}
+          \stopformula
+          \startformula
+            (-12)^2 = \left(-4\sqrt{x}\right)^2
+          \stopformula
+          \startformula
+            \dfrac{1}{16} [144 = 16x]
+          \stopformula
+          \startformula
+            9 = x
+          \stopformula
+          Realizamos la prueba:
+          \startformula
+            \sqrt{4 \cdot 9 -11}  = 2\sqrt{9} -1
+          \stopformula
+          \startformula
+            \sqrt{36 - 11} = 2\sqrt{9} - 1
+          \stopformula
+          \startformula
+            \sqrt{25} = 2 \cdot 3 - 1
+          \stopformula
+          \startformula
+            5 = 6 - 1
+          \stopformula
+          \startformula
+            5 = 5
+          \stopformula
+          \startformula
+            \therefore X = \{9\}
+          \stopformula
+        \stopitem
+
+
+        \startitem
+          \ini{$\sqrt{2x + 3} - \sqrt{x-2} = 2$}
+
+          \startformula
+            \sqrt{2x + 3} = 2 + \sqrt{x-2} = 2
+          \stopformula
+          \startformula
+            \left(\sqrt{2x + 3}\right)^2 = \left(2 + \sqrt{x-2} \right)^2
+          \stopformula
+          \startformula
+            2x + 3 = 4 + 4\sqrt{x-2} + x-2
+          \stopformula
+          \youtube{\from[AI42B]}
+          \startformula
+            2x + 3 - 4 - x + 2 = 4\sqrt{x-2}
+          \stopformula
+          \startformula
+            x + 1 = 4\sqrt{x-2}
+          \stopformula
+          \startformula
+            (x + 1)^2 = \left(4\sqrt{x-2}\right)^2
+          \stopformula
+          \startformula
+            x^2 + 2x + 1 = 16(x-2)
+          \stopformula
+          \startformula
+            x^2 +2x +1 = 16x - 32
+          \stopformula
+          \startformula
+            x^2 +2x +1 - 16x + 32 = 0
+          \stopformula
+          \startformula
+            x^2 -14x + 33 = 0
+          \stopformula
+          Resolvemos por factorización
+          \startformula
+            \startcases[right=\right\}]
+              \NC P = 33\NR
+              \NC S = -14\NR
+            \stopcases
+              = -3, -11
+          \stopformula
+          \startformula
+            (x - 3)(x - 11) = 0
+          \stopformula
+          \startformula
+            x - 3 = 0 \vee x - 11 = 0
+          \stopformula
+          \startformula
+            x = 3 \vee x = 11
+          \stopformula
+          Ahora realizamos la prueba. Para la solución $x = 3$
+          \startformula
+            \sqrt{2 \cdot 3 + 3} - sqrt{3 - 2} = 2
+          \stopformula
+          \startformula
+            \sqrt{9} - \sqrt{1} = 2
+          \stopformula
+          \startformula
+            3 - 1 = 2
+          \stopformula
+          \startformula
+            2 = 2
+          \stopformula
+          Ahora probemos para $x = 11$
+          \startformula
+            \sqrt{2 \cdot 11 + 3} - \sqrt{11 - 2} = 2
+          \stopformula
+          \startformula
+            \sqrt{25} - \sqrt{9} = 2
+          \stopformula
+          \startformula
+            5 - 3 = 2
+          \stopformula
+          \startformula
+            2 = 2
+          \stopformula
+          Por tanto,
+          \startformula
+            \therefore X = \{3, 11\}
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{$\sqrt[3]{3x^2 - 1} - 2 = 0$}
+          \startformula
+            \sqrt[3]{3x^2 - 1} =  2
+          \stopformula
+          \startformula
+            \Big(\sqrt[3]{3x^2 - 1}\Big)^3 =  2^3
+          \stopformula
+          \startformula
+            3x^2 - 1 = 8
+          \stopformula
+          \startformula
+            3x^2 = 8 + 1
+          \stopformula
+          \startformula
+            \big[3x^2 = 9\big] \dfrac{1}{3}
+          \stopformula
+          \startformula
+            x^2 = 3
+          \stopformula
+          \startformula
+            \sqrt{x^2} = \sqrt{3}
+          \stopformula
+          \startformula
+            \abs{x} = \sqrt{3}
+          \stopformula
+          \startformula
+            x = \pm\sqrt{3}
+          \stopformula
+          \startformula
+            X = \left\{\sqrt{3}, -\sqrt{3}\right\}
+          \stopformula
+          Observamos que en esta ecuación irracional no es requisito realizar la prueba obligatoriamente, ya que el único radical que contiene a la incógntia es de orden impar.
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+    \youtube{\from[AI43A]}
+    \startejemplo
+      Resuelva la ecuación \ini{$x - \sqrt{x -1} - 3 = 0$}
+      \startformula
+        x -3 = \sqrt{x -1}
+      \stopformula
+      \startformula
+        (x -3)^2 = \big(\sqrt{x -1}\big)^2
+      \stopformula
+      \startformula
+        x^2 -6x + 9  = x -1
+      \stopformula
+      \startformula
+        x^2 -6x + 9 -x +1 = 0
+      \stopformula
+      \startformula
+        x^2 -7x +10 = 0
+      \stopformula
+      \startformula
+        \startcases[right=\right\}]
+          \NC P = 10 \NR
+          \NC S = -7\NR
+        \stopcases
+        = -2, -5
+      \stopformula
+      \startformula
+        (x - 2)(x - 5) = 0
+      \stopformula
+      \startformula
+        x - 2 = 0 \vee x - 5 = 0
+      \stopformula
+      \startformula
+        x = 2 \vee x = 5
+      \stopformula
+      Ahora efectuamos la prueba. Primero para $x = 2$
+      \startformula
+        2 - \sqrt{2 -1} -3 = 0
+      \stopformula
+      \startformula
+        2 - 1 -3 = 0
+      \stopformula
+      \startformula
+        -2 \neq 0
+      \stopformula
+      Luego, $x = 2$ es una solución extraña.
+
+      Probemos ahora para $x = 5$
+      \startformula
+        5 - \sqrt{5 - 1} -3 = 0
+      \stopformula
+      \startformula
+        5 - \sqrt{4} -3 = 0
+      \stopformula
+      \startformula
+        5 - 2 - 3 = 0
+      \stopformula
+      \startformula
+        0 \neq 0
+      \stopformula
+      Esta solución no es extraña. Luego, el conjunto solución es
+      \startformula
+        X = \{5\}
+      \stopformula
+    \stopejemplo
+  \stopsection
+
+  \startsection[title={Problemas verbales}]
+
+    Repasemos algunos problemas verbales que ya vimos en el álgebra elemental pero que ahora requieren la resolución de ecuaciones fraccionarias, cuadráticas, etc.
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{Un número al aumentarse por 17 es 60 veces su recíproco. ¿Cuál es el número?}
+
+          Se trata de un problema numérico.
+
+          $x$ es el número que buscamos. Escribimos ahora la ecuación que tendremos que resolver.
+          \startformula
+            x + 17 = 60\left(\dfrac{1}{x}\right)
+          \stopformula
+          Resolvemos
+          \startformula
+            x\left(x + 17 = \dfrac{60}{x}\right)
+          \stopformula
+          \startformula
+            x^2 + 17x = 60
+          \stopformula
+          \startformula
+            x^2 + 17x - 60 = 0
+          \stopformula
+          \startformula
+            \startcases[right=\right\}]
+              \NC P = -60 \NR
+              \NC S = 17\NR
+            \stopcases
+            = 20, -3
+          \stopformula
+          \startformula
+            (x + 20 )(x - 3) = 0
+          \stopformula
+          \startformula
+            x + 20 = 0 \vee x - 3 = 0
+          \stopformula
+          \startformula
+            x = -20 \vee x = 3
+          \stopformula
+          Probamos la ecuación fraccionaria que plantemaos
+          \startformula
+            x = 20 \neq 0 \vee x = -3 \neq 0
+          \stopformula
+          Luego, las dos soluciones funcionan. Ahora tenemos que compromar si las dos soluciones satisfacen las condiciones dadas en el problema.
+
+          Probemos primero con $x = -20$
+          \startformula
+            -20 + 17 = \left(\dfrac{60}{-20}\right)
+          \stopformula
+          \startformula
+            -3 = -3
+          \stopformula
+          Satisface las condiciones del problema. Probemos ahora para $x = 3$.
+          \startformula
+            3 + 17 = \dfrac{60}{3}
+          \stopformula
+          \startformula
+            20 = 20
+          \stopformula
+          que también satisface las condiciones del problema.
+
+          Por tanto, el número puede ser -20 ó 3.
+        \stopitem
+
+        \youtube{\from[AI43B]}
+        \startitem
+          \ini{El dígito que ocupa las decenas en un numeral de dos dígitos es dos veces más que el que ocupa la posición de las unidades. Si el mismo número es uno más la suma de los cuadrados de sus dígitos, halle el número representado por este numeral.}
+
+          Se trata de un problema digital.
+          \startformula
+            \underbrace{x + 2}_{decenas} \quad \underbrace{x}_{unidades}
+          \stopformula
+          \startformula
+            10(x+2) + x = 1 + (x + 2)^2 + x^2
+          \stopformula
+          Resolvemos la ecuación
+          \startformula
+            10x + 20 + x = 1 + x^2 + 4x + 4 + x^2
+          \stopformula
+          \startformula
+            11x + 20 = 2x^2 + 4x + 5
+          \stopformula
+          \startformula
+            11x + 20  -2x^2 - 4x - 5 = 0
+          \stopformula
+          \startformula
+            -2x^2 +7x + 15 = 0
+          \stopformula
+          \startformula
+            2x^2 -7x - 15 = 0
+          \stopformula
+          \startformula
+            \startcases[right=\right\}]
+              \NC P = -30  \NR
+              \NC S = -7 \NR
+            \stopcases
+            = 3, -10
+          \stopformula
+          \startformula
+            2x^2 +3x -10x -15 = 0
+          \stopformula
+          \startformula
+            \big(2x^2 + 3x\big) + (-10x - 15) = 0
+          \stopformula
+          \startformula
+            x(2x + 3) -5(2x + 3) = 0
+          \stopformula
+          \startformula
+            (2x + 3)(x -5) = 0
+          \stopformula
+          \startformula
+             2x + 3 = 0 \vee x - 5 = 0
+          \stopformula
+          \startformula
+            x = -\dfrac{3}{2} \vee x = 5
+          \stopformula
+          La solución $x = -\dfrac{3}{2}$ no tiene ningún sentido en este problema ya que necesitamos un dígito y no una fracción. El 5, la otra solución de la ecuación establecida, es un dígito. Veamos si cumple con las condiciones del problema.
+
+          Aparentemente, nuestro número será el 75. Comprobamos
+          \startformula
+            75 = 1 + 7^2 + 5^2
+          \stopformula
+          \startformula
+            75 = 1 + 49 + 25 = 75
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \youtube{\from[AI44A]}
+    \startejemplo
+      \ini{Enrique es cuatro años mayor que Luis y el producto de sus edades actuales es tres veces lo que el producto de sus edades hace cuatro años. Determine sus edades actuales.}
+
+      Notamos que se trata de un problema de edades.
+
+      La edad de Luis será $x$ y la edad de Enrique $x + 4$
+
+      \startformula
+        x(x+4) = 3\big[(x-4)x\big]
+      \stopformula
+      \startformula
+        x^2 + 4x = 3\big[x^2 -4x\big]
+      \stopformula
+      \startformula
+        x^2 + 4x = 3x^2 -12x
+      \stopformula
+      \startformula
+        x^2 + 4x - 3x^2 + 12x = 0
+      \stopformula
+      \startformula
+        -2x^2 + 16x = 0
+      \stopformula
+      \startformula
+        -2x(x -8) = 0
+      \stopformula
+      \startformula
+        -2x = 0 \vee x - 8 = 0
+      \stopformula
+      \startformula
+        x = 0 \vee x = 8
+      \stopformula
+      La solución $x = 0$ no hace sentido.
+
+      Verificamos que $x = 8$ cumple con las condiciones del problema
+      \startformula
+        8(8 + 4) = 3[8 - 4) 8]
+      \stopformula
+      \startformula
+        8 \cdot 12 = 3 \cdot 32
+      \stopformula
+      \startformula
+        96 = 96
+      \stopformula
+      Luego, actualmente Luis tiene 8 años y Enrique tiene 12 años.
+    \stopejemplo
+
+    \startsubsection[title={Problemas geométricos}]
+      En estos problemas se establecen relaciones entre cantidades geométricas. Basándonos en nuestros conocimientos de geometría prodremos establecer las ecuaciones que se ajusten a la situación geométrica establecida en el problema.
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{En el $\triangle ABC$, $m(\angle A) = 3m(\angle B)$ y $\angle C \cong \angle B$. Hallar la medida de los tres ángulos de este triángulo.}
+
+            \youtube{\from[AI44B]}
+            Preparamos un diagrama (figura geométrica) que nos ilustre la situación.
+
+            $x$ es la medida de $\angle B$. \par
+            $3x$ es la medida de $\angle A$. \par
+            $x$ es la medida de $\angle C$ (al ser congruente con $\angle B)$. \par
+            Recordamos que la suma de las medidas de los tres ángulos de un triángulo totalizan $180^{\circ}$. Con todo lo anterior obtenemos la siguiente ecuación:
+            \startformula
+              3x + x + x = 180
+            \stopformula
+            Ahora resolvemos la ecuación
+            \startformula
+              5x = 180
+            \stopformula
+            \startformula
+              \dfrac{5x}{5} = \dfrac{180^{\circ}}{5}
+            \stopformula
+            \startformula
+              x = 36^{\circ}
+            \stopformula
+            Entonces
+            \startformula
+              3x = 3(36^{\circ}) = 108^{\circ}
+            \stopformula
+            Verificamos lo establecido en el problema
+            \startformula
+              36^{\circ} + 36^{\circ} + 108^{\circ} =  180^{\circ}
+            \stopformula
+            La medida de $\angle A$ es $108^{\circ}$, y la medida de los ángulos $B$ y $C$ es $36^{\circ}$.
+          \stopitem
+          \startitem
+            \ini{Una cuerda en un círculo, cuyo radio mide 4cm, mide 6 cm. ¿Cuál es la distancia entre el centro del círculo y esa cuerda?}
+
+            Por el teorema de Pitágoras tendremos
+            \startformula
+              3^2 +x^2 = 4^2
+            \stopformula
+            \startformula
+              x^2 = 16 - 9 = 7
+            \stopformula
+            \startformula
+              \sqrt{x^2} = \sqrt{7}
+            \stopformula
+            \startformula
+              \abs{x} = \sqrt{7}
+            \stopformula
+            \startformula
+              x = \pm\sqrt{7}
+            \stopformula
+            Vemos que la solución $-\sqrt{7}$ no hace sentido ya que estamos buscando una medida. Luego, la solución $\sqrt{7}$ puede ser nuestra respuesta.
+
+            Veamos si se cumple con la condición dada en este problema
+            \startformula
+              3^2 + \left(\sqrt{7}\right)^2 = 4^2
+            \stopformula
+            \startformula
+              9 + 7 = 16
+            \stopformula
+            \startformula
+              16 = 16
+            \stopformula
+            Luego la distancia desde el centro del círculo hasta la cuerda es $\sqrt{7}$ cm.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AI45A]}
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{El perímetro de una cancha de tenis es 160 pies. Halle las dimensiones de ésta si el largo es cinco pies más que dos veces el ancho.}
+
+            Dejamos que $x$ sea la medida del ancho de la cancha, por lo que el largo se representa por la expresión $2x + 5$, cumpliendo con la condición que da el problema.
+
+            Sabemos que el perímetro de un rectángulo está dado por la fórmula $p = 2l + 2w$.
+
+            Luego, en este problema:
+            \startformula
+              2(2x+5) +2x = 160
+            \stopformula
+            Resolvemos la ecuación
+            \startformula
+              4x + 10 + 2x = 160
+            \stopformula
+            \startformula
+              6x = 160 -10
+            \stopformula
+            \startformula
+              6x = 150
+            \stopformula
+            \startformula
+              x = \dfrac{150}{6}
+            \stopformula
+            \startformula
+              x = 25 \quad\text{lado corto}
+            \stopformula
+            \startformula
+              \therefore 2x + 5 = 2(25) + 5 = 50 + 5 = 55 \quad\text{lado largo}
+            \stopformula
+            Vemos que esta solución satisface las condiciones del problema.
+            \startformula
+              2(55) + 2(5) = 160
+            \stopformula
+            \startformula
+              110 + 50 = 160
+            \stopformula
+            \startformula
+              160 = 160
+            \stopformula
+            El ancho mide 25 pies y el largo mide 55 pies.
+          \stopitem
+          \startitem
+            \ini{En un jardín, un cesped mide 40 pies de largo y 26 pies de ancho. Si este cesped está rodeado por una acera de ancho uniforme y el área de dicha acera es 432 pies cuadrados, determine el ancho de dicha acera.}
+
+            Llamamos $x$ al ancho de la acera.
+
+            Notamos que si restamos el área de rectángulo mayor (que incluye al cesped y la acera) menos el área del cesped nos dará el área de la acera (432 pies cuadrados).
+
+            Sabemos que el área del rectángulo está dada por la fórumla $A = l w$.
+
+            Claramente, el área del cesped será 40(26) = 1.040 pies cuadrados. Mientras que el área del rectángulo mayor será $(40 + 2x)(26 + 2x)$
+
+            \youtube{\from[AI45B]}
+            Según el análisis hecho previamente, podemos establecer la ecuación
+            \startformula
+              (40 + 2x)(26 + 2x) - 1.040 = 432
+            \stopformula
+            y procemos a resolver esta ecuación
+            \startformula
+              1.040 + 132x + 4x^2 - 1.040 = 432
+            \stopformula
+            \startformula
+              4x^2 - 132x - 432 = 0
+            \stopformula
+            \startformula
+              \big\[4x^2 - 132x - 432 = 0\big\]\dfrac{1}{4}
+            \stopformula
+            \startformula
+              x^2 - 33x -108 = 0
+            \stopformula
+            \startformula
+              \startcases[right=\right\}]
+                \NC P = -108 \NR
+                \NC S = -33 \NR
+              \stopcases
+              = 36, -3
+            \stopformula
+            \startformula
+              (x + 36)(x - 3) = 0
+            \stopformula
+            \startformula
+              x + 36 = 0 \quad\vee\quad x - 3 = 0
+            \stopformula
+            \startformula
+              x = -36 \quad\vee\quad x = 3
+            \stopformula
+            Claramente la solución $x = -36$ no hace sentido, pues buscamos una medida.
+
+            Vemos si la solución 3 pies cumple con las condiciones del problema
+            \startformula
+              40 + 2x = 40 + 2(3) = 46
+            \stopformula
+            \startformula
+              26 + 2x = 26 + 2(3) = 32
+            \stopformula
+            \startformula
+              46 \cdot 32 - 1.040 = 432
+            \stopformula
+            \startformula
+              1.472 - 1.040 = 432
+            \stopformula
+            \startformula
+              432 = 432
+            \stopformula
+            La acera tiene un ancho de tres pies.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubsection
+    \startsubsection[title={Problemas de inversiones}]
+      En estos problemas trabajamos cantidades de dinero invertidos a una determinada tasa de interés simple anual.
+
+      Recordamos que $I = P \, r\%$ es la fórmula para hallar el interés simple devengado (o ganado) por un principal $P$ colocado en una cuenta que paga una tasa de $r\%$ anual.
+
+      En nuestros problemas verbales buscaremos o el interés o el principal o la tasa (o razón) o el monto $(M = P + I)$.
+
+      \youtube{\from[AI46A]}
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{El señor García tiene parte de \$3.000 invertidos al 5,5\%, de interés simple anual, y el resto al 4\%. Si el total de ingresos debido a dichas inversiones al cabo de un año es de \$139,50, ¿cuánto dinero tiene invertido en cada una de esas dos tasas de interés?}
+
+            $x <--$ cantidad de dinero invertido al 5,5\% \par
+            $3.000 - x <--$ cantidad de dinero invertido al 4\%
+
+            Se debe construir una tabla
+
+            \starttabulate[|c|c|c|c|]
+              \NC inversión \VL cantidad \VL tasa de interés \VL interés devengado \NC\NR
+              \HL
+              \NC al 5,5\% \VL $x$ \VL 0,055 \VL $0.055x$ \NC\NR
+              \NC al 4\% \VL $3000 - x$ \VL 0,04 \VL $0.04(3000 - x)$ \NC\NR
+            \stoptabulate
+
+            La siguiente ecuación corresponde a la situación planteada en el problema:
+            \startformula
+              0,055x + 0,04(3000 - x) = 139,
+            \stopformula
+
+            Procedemos a resolver la ecuación
+            \startformula
+              0,055x + 120 + 0,04x = 139,50
+            \stopformula
+
+            \startformula
+              0,015x = 139,50 - 120
+            \stopformula
+
+            \startformula
+              0,015x = 19,50
+            \stopformula
+
+            \startformula
+              x = \dfrac{19,50}{0,015} = 1.300
+            \stopformula
+
+            \startformula
+              3.000 - 1.300 = 1.700
+            \stopformula
+
+            \ \inframed{El señor García tiene \$1.300 invertidos al 5,5\% y \$1.700 invertidos al 4\%.}
+
+            Verificamos que se cumple las condiciones del problema:
+
+            Primero: \$1.300 + \$1.700 = \$3.000.
+
+            Segundo: 0,55(1.300) + 0,4(1.700) = 71,50 + 68 = 139,50
+          \stopitem
+          \startitem
+            \ini{Gloria tiene $6 500$ más invertidos al 3\% que lo que tiene invertido al 6\%. El ingreso que devenga por concepto de estas inversiones es equivalente a lo que obtendría si la cantidad total estuviera invertida al 4\%. ¿Cuánto dinero tiene invertido en cada una de las razones?}
+
+            $x <--$ cantidad invertida al 6\% \par
+            $x + 6500 <--$ cantidad invertida al 3\% \par
+
+            Preparamos la tabla:
+            \youtube{\from[AI46B]}
+
+            \starttabulate[|c|c|c|c|]
+              \NC inversión \VL cantidad \VL tasa de interés \VL interés devengado \NC\NR
+              \HL
+              \NC al 6\% \VL $x$ \VL 0,06 \VL $0.06x$ \NC\NR
+              \NC al 3\% \VL $x + 6500$ \VL 0,03 \VL $0.03(x + 6500)$ \NC\NR
+              \NC al 4\% \VL $2x + 6500$ \VL 0,04 \VL $0.04(2x + 6500)$ \NC\NR
+            \stoptabulate
+
+            La siguiente ecuación corresponde a la situación planteada en el problema:
+            \startformula
+              0.06x + 0.03(x + 6500) = 0.04(2x + 6500)
+            \stopformula
+
+            que resolvemos a continuación
+            \startformula
+              0.06x + 0.03x + 195 = 0.8x + 260
+            \stopformula
+            \startformula
+              0.09x + 195 = 0.08x + 260
+            \stopformula
+            \startformula
+              0.09x - 0.08x = 260 - 195
+            \stopformula
+            \startformula
+              0.01x = 65
+            \stopformula
+            \startformula
+              x = \dfrac{65}{0.01}
+            \stopformula
+            \startformula
+              x = 6500
+            \stopformula
+            \startformula
+              x + 6500 = 6500 + 6500 = 13000
+            \stopformula
+            \ \inframed{Gloria tiene \$6 500 invertidos al 6\% y \$13 000 invertidos al 3\%.}
+            \par
+            Verificamos que esta solución de la ecuación cumple con las condiciones del problema.
+
+            Interés devengado la inversión al 6\%: 6500(0.06) = \$390.
+
+            Interés devengado por la inversión al 3\%: 13000(0.03) = \$390.
+
+            Gloria devenga: $\$390 + \$390 = \$780$, en intereses en un año.
+
+            Si Gloria hubiese invertido todo el dinero (\$6500 + \$13000), \$19500 en una inversión al 4\%, obtiene en intereses: 19500(0.04) = \$780.
+          \stopitem
+          \startitem
+            \ini{Pedro tiene \$8000 invertido al r\% de interés simple anual y \$5000 al (r + 1)\%. Si su interés devengado por los \$8000 es \$55 más que lo devengado por los \$5000, determine las tasas de interés en cada una de esas dos inversiones.}
+
+            Preparamos la tabla:
+
+            \starttabulate[|c|c|c|c|]
+              \NC inversión \VL cantidad \VL tasa de interés \VL interés devengado \NC\NR
+              \HL
+              \NC al r\% \VL 8000 \VL $\dfrac{r}{100}$ \VL $\dfrac{r}{100}(8000) = 80r$ \NC\NR
+              \NC al (r+1)\% \VL 5000 \VL $\dfrac{r+1}{100}$ \VL $\dfrac{r+1}{100}(5000) = 50(r+1)$ \NC\NR
+            \stoptabulate
+
+            \youtube{\from[AI47A]}
+            Establecemos la ecuación que describe lo planteado en el problema.
+
+            \startformula
+              80r = 50(r+1) + 55
+            \stopformula
+            \startformula
+              80r = 50r + 50 + 55
+            \stopformula
+            \startformula
+              80r - 50r = 50 + 55
+            \stopformula
+            \startformula
+              30r = 105
+            \stopformula
+            \startformula
+              r = \dfrac{105}{30}
+            \stopformula
+            \startformula
+              r = 3.5
+            \stopformula
+
+            \ \inframed{Luego, 3.5\% es una de las tasas de interés. La otra tasa será (3.5 + 1)\% = 4.5\%}
+
+            Verificamos que la solución dada satisface las condiciones del problema.
+
+            Pedro devenga $(8000)(0.035) = \$280$, por los \$8000.
+
+            Pedro devenga $(5000)(0.045) = \$225$, por los \$5000.
+
+            Observe que $\$280 - \$225 = \$55$, lo que cumple con las condiciones del problema.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+    \stopsubsection
+
+    \startsubsection[title={Problemas de mezcla}]
+
+      En este tipo de problemas se trabaja con ingredientes que forman una mezcla final. A veces, conociendo las características de los ingredientes podemos determinar las características de la mezcla. Otras veces conociendo las características de la mezcla, podemos determinar las características de los ingredientes.
+
+      Los tipos de mezcla que consideraremos serán soluciones y compuestas por provisiones.
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{Un detallista tiene té valorado a 60c la libra y té valorado a 90c la libra. ¿Cuánto de cada clase deberá usar si quiere preparar una mezcla de 40 libras que pueda vender a 72c la libra?}
+
+            $x <--$ cantidad de libras a usar del té de 60c la libra \par
+            $40 - x <--$ cantidad de libras a usar del té de 90c la libra \par
+
+            \youtube{\from[AI47B]}
+            Preparamos la tabla:
+
+            \starttabulate[|c|c|c|c|]
+              \NC ingrediente \VL cantidad \VL precio \VL valor \NC\NR
+              \HL
+              \NC té barato \VL $x$ \VL 60 \VL $60x$ \NC\NR
+              \NC té caro \VL $40 - x$ \VL 90 \VL $90(40 - x)$ \NC\NR
+              \NC mezcla \VL $40$ \VL 72 \VL $72 \cdot 40 = 2880$ \NC\NR
+            \stoptabulate
+
+            \startcomentario
+              \ini{Principio fundamental en los problemas de mezcla}\par la suma de los valores (o cantidades) de los ingredientes totaliza el valor (o cantidad) de la mezcla.
+            \stopcomentario
+
+            Siguiendo este principio, la ecuación que plantea este problema es:
+
+            \startformula
+              60x + 90(40 -x) = 2880
+            \stopformula
+
+            Resolvemos esta ecuación:
+            \startformula
+              60x + 3600 - 90x = 2880
+            \stopformula
+            \startformula
+              60x -90x = 2880 - 3600
+            \stopformula
+            \startformula
+              -30x = -720
+            \stopformula
+            \startformula
+              x = \dfrac{-720}{-30}
+            \stopformula
+            \startformula
+              x = 24
+            \stopformula
+            \startformula
+              40 - x = 40 - 24 = 16
+            \stopformula
+
+            \inframed{El detallista deberá usar 24 libras del té de 60c la libra y 16 libras del té de 90c la libra.}
+
+            Verificamos que se cumplen las condiciones del problema:
+
+            Primero: vea que $24 + 16 0= 40 <--$ total de libras en la mezcla.\par
+            Segundo: $24(60) = 1440 <--$ valor del té barato.\par
+            Tercero: $16(90) = 1440 <--$ valor del té caro.\par
+
+            $\therefore 1440 + 1440 = 2880 <--$ vea que ése es el valor de la mezcla determinado en la tabla.
+          \stopitem
+          \startitem
+            \ini{¿Cuántos litros de leche con 30\% de grasa debe mezclarse con leche con 3\% de grasa para obtener 720 litros de leche que sea 4.5\% de grasa?}
+
+            $x <--$ litros de leche con 30\% de grasa a usarse \par
+            $720 - x <--$ litros de leche con 3\% de grasa a usarse \par
+
+            Preparamos la tabla:
+
+            \starttabulate[|c|c|c|c|]
+              \NC ingrediente \VL cantidad \VL concentración de grasa \VL cantidad de grasa \NC\NR
+              \HL
+              \NC leche al 30\% \VL $x$ \VL 0.30 \VL $0.30x$ \NC\NR
+              \NC leche al 3\% \VL $720 - x$ \VL 0.03 \VL $0.03(720 - x)$ \NC\NR
+              \NC leche al 4.5\% \VL $720$ \VL 0.045 \VL $720(0.045) = 32.4$ \NC\NR
+            \stoptabulate
+
+            Establecemos la ecuación que debemos de responder para encontrar los valores pedidos:
+
+            \startformula
+              0.30x + 0.03(720 - x) = 32.4
+            \stopformula
+
+            \youtube{\from[AI48A]}
+            Procedemos a resolver la ecuación:
+
+            \startformula
+              0.30x + 21.6  - 0.03x = 32.4
+            \stopformula
+            \startformula
+              0.30x - 0.03x = 32.4 - 21.6
+            \stopformula
+            \startformula
+              0.27x = 10.8
+            \stopformula
+            \startformula
+              x = \dfrac{10.8}{0.27}
+            \stopformula
+            \startformula
+              x = 40
+            \stopformula
+            \startformula
+              720 - x = 720 - 40 = 680
+            \stopformula
+
+            \inframed{Se deberán mezclar 40 litros de leche al 30\% de grasa con 680 litros de leche con 3\% de grasa.}
+
+            Verificamos que se cumplen las condiciones del problema:
+
+            Primero: vea que $40 + 680 = 720$ litros.\par
+            Segundo: cantidad de grasa en los 40 litros al 30\% de grasa: $0.30(40) = 12$ litros.\par
+            cantidad de grasa en los 680 litros con 3\% de grasa:$0.03(680) = 20.4$ litros.\par
+            Tercero: ahora vea que la suma de las cantidades de grasa en esos litros de leche totalizan
+            $12 + 20.4 = 32.4$ litros.
+          \stopitem
+          \startitem
+            \ini{Una solución contiene seis partes de alcohol y tres partes de agua. Una segunda solución contiene tres partes de alcohol y siete de agua. ¿Cuántas de onzas de cada solución debe mezclarse para obtener 110 onzas de una solución que sea mitad alcohol y mitad agua?}
+
+            $x <--$ cantidad de onzas de la primera solución \par
+            $110 - x <--$ cantidad de onzas de la segunda solución \par
+
+            Organizamos los datos en una tabla:
+
+            \starttabulate[|c|c|c|c|]
+              \NC  \VL  \VL concentración de alcohol \VL cantidad de alcohol \NC\NR
+              \NC ingredientes \VL cantidad \VL (o de agua) \VL (o de agua) \NC\NR
+              \HL
+              \NC 1ª solución \VL $x$ \VL $6/9 = 2/3$ o $3/9 = 1/3$ \VL $\dfrac{2}{3}x$ o $\dfrac{1}{3}x$ \NC\NR
+              \NC 2ª solución \VL $110 - x$ \VL $3/10$ o $7/10$ \VL $\dfrac{3}{10}(110-x)$ o $\dfrac{7}{10}(110-x)$ \NC\NR
+              \NC mezcla           \VL $110$ \VL $1/2$ o $1/2$ \VL $110\left(\dfrac{1}{2}\right) = 55$ \NC\NR
+            \stoptabulate
+
+            Vea que en la primera solución hay nueve partes, seis de ellas de alcohol y tres de agua y que en la segunda solución hay diez partes, tres de las cuales son de alcohol y siete de agua.
+
+            \youtube{\from[AI48B]}
+            Siguiendo el principio fundamental de los problemas de mezcla, vemos que la ecuación que nos ayudará a resolver este problema podría ser:
+
+            \startformula
+              \dfrac{2}{3}x + \dfrac{3}{10}(110 - x) = 55
+            \stopformula
+
+            Resolvemos la ecuación
+
+            \startformula
+              \left\[\dfrac{2}{3}x + \dfrac{3}{10}(110 - x) = 55\right\]30
+            \stopformula
+            \startformula
+              20x + 9(110 - x) = 1650
+            \stopformula
+            \startformula
+              20x + 990 - 9x = 1650
+            \stopformula
+            \startformula
+              20x - 9x = 1650 - 990
+            \stopformula
+            \startformula
+              11x = 660
+            \stopformula
+            \startformula
+              x = \dfrac{600}{11}
+            \stopformula
+            \startformula
+              x = 60
+            \stopformula
+            \startformula
+              110 - x = 110 - 60 = 50
+            \stopformula
+            \ \inframed{Se necesitan usar 60 onzas de la primera solución y 50 onzas de la segunda.}
+
+            Verificamos que se cumplen las condiciones del problema:
+
+            Primero observe que $60 + 50 = 110$, el total de onzas que queríamos tener de solución.
+
+            Segundo: Cantidad de alcohol es cada solución:
+            \startitemize
+              \startitem
+                $\dfrac{2}{3}(60) = 40$ onzas
+              \stopitem
+              \startitem
+                $\dfrac{3}{10}(50) = 15$ onzas
+              \stopitem
+            \stopitemize
+            y si sumamos estas cantidades: $40 + 15 = 55$ onzas, que es la cantidad de onzas de alcohol en la mezcla.
+
+            ¿Qué hubiese ocurrido si usáramos las cantidades de agua en vez de la de alcohol?
+
+            La ecuación a resolver será:
+
+            \startformula
+              \dfrac{1}{3}x + \dfrac{7}{10}(110 - x) = 55
+            \stopformula
+            Vamos a resolverla
+            \startformula
+              \left\[\dfrac{1}{3}x + \dfrac{7}{10}(110 - x) = 55\right\]30
+            \stopformula
+            \startformula
+              10x + 21(110 - x) = 1650
+            \stopformula
+            \startformula
+              10x + 2310 - 21x = 1650
+            \stopformula
+            \startformula
+              10x - 21x = 1650 - 2310
+            \stopformula
+            \startformula
+              -11x = -660
+            \stopformula
+            \startformula
+              x = \dfrac{-660}{-11}
+            \stopformula
+            \startformula
+              x = 60
+            \stopformula
+            \startformula
+              110 - x = 110 - 60 = 50
+            \stopformula
+            Hemos obtenido las mismas soluciones que antes.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AI49A]}
+      \startejemplo
+        \ini{Se quiere diluir una solución salina (que contiene sal) de ocho pintas que tiene una concentración de 25\% (de sal) de manera que ésta se reduzca a 20\%. ¿Cuánta agua deberá ser añadida a esta solución?}
+
+        $x <--$ cantidad de pintas de agua que tenemos que añadir \par
+
+        Organizamos los datos en una tabla:
+
+        \starttabulate[|c|c|c|c|]
+          \NC ingredientes \VL cantidad \VL concentración \VL cantidad de sal \NC\NR
+          \HL
+          \NC solución inicial \VL $8$ \VL $0.25$ \VL $2$ \NC\NR
+          \NC solución final   \VL $8 + x$ \VL $0.20$ \VL $0.2(8 + x)$ \NC\NR
+        \stoptabulate
+
+        La ecuación que describe lo que plantea este problema es:
+
+        \startformula
+          2 = 0.2(8 + x)
+        \stopformula
+
+        Resolvemos la ecuación
+
+        \startformula
+          2 = 1.6 + 0.2x
+        \stopformula
+        \startformula
+          2 - 1.6 = 0.2x
+        \stopformula
+        \startformula
+          0.4 = 0.2x
+        \stopformula
+        \startformula
+          \dfrac{0.4}{0.2} = x
+        \stopformula
+        \startformula
+          2 = x
+        \stopformula
+
+        \ \inframed{Tendremos que añadir dos pintas de agua a la solución inicial}
+
+        Verificamos que se satisfacen las condiciones del problema.
+
+        En la solución inicial teníamos 8 pintas con 25\% del sal, que son $8(0.25)=2$ pintas de sal.\par
+        En la solución final tenemos $8 + 2 = 10$ pintas, que son 2 pintas de sal.
+
+        Vemos que la concentración de sal final será $\dfrac{2}{10} = 0.20 = 20\%$.
+      \stopejemplo
+    \stopsubsection
+    \startsubsection[title={Problemas de movimiento}]
+
+      En este tipo de problemas se presentan objetos que se están moviendo de alguna manera. De las ciencias físicas recordamos que la distancia ($d$) que recorre un objeto en movimiento que se mueve con una rapidez ($v$) durante cierto periodo de tiempo ($t$), están relacionados con la fórmula $d = vt$.
+
+      En estos problemas verbales (de movimiento) nos interesará determinar o la distancia o la rapidez o el tiempo asociado a dicho movimiento.
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{Dos automóviles parten del mimso lugar y a la misma hora en direcciones opuestas. Uno de ellos está moviéndose a 10 km/h más rápido que el otro. Al cabo de ocho horas se encuentran separados por una distancia de 440 km. ¿Con qué rapidez están viajando cada carro?}
+
+            \youtube{\from[AI49B]}
+            $x <--$ rapidez del auto más lento \par
+            $x + 10 <--$ rapidez del auto más rápido \par
+
+            \starttabulate[|c|c|c|c|]
+              \NC objetos \VL rapidez  \VL tiempo \VL distancia \NC\NR
+              \HL
+              \NC auto lento  \VL $x$ \VL $8$ \VL $8x$ \NC\NR
+              \NC auto rápido \VL $x + 10$ \VL $8$ \VL $8(x + 10)$ \NC\NR
+            \stoptabulate
+
+            Preparamos un dibujo que nos ilustre la situación.
+
+            \startcenteraligned
+              \definecolor[cqcqcq][r=0.7529411764705882,g=0.7529411764705882,b=0.7529411764705882]
+              \definecolor[wqwqwq][r=0.3764705882352941,g=0.3764705882352941,b=0.3764705882352941]
+              \definecolor[aqaqaq][r=0.6274509803921569,g=0.6274509803921569,b=0.6274509803921569]
+              \definecolor[yqyqyq][r=0.5019607843137255,g=0.5019607843137255,b=0.5019607843137255]
+              \starttikzpicture[line cap=round,line join=round,>=triangle 45,x=0.40cm,y=0.40cm]
+                  \clip(-1.22185,8.444337757620842) rectangle (23.27328255534626,13.674014753428022);
+                  \draw [line width=0.8pt,color=aqaqaq] (-0.32052859844072934,10.217481448231597)-- (14.59115574146365,10.217481448231597);
+                  \draw [color=wqwqwq](5.694819660944881,12.020762025721236) node[anchor=north west] {$8(x + 10)$};
+                  \draw [line width=0.8pt,color=aqaqaq] (14.59115574146365,10.217481448231597)-- (22.14596196241321,10.217481448231597);
+                  \draw [color=wqwqwq](17.976125790622618,11.95328232254953) node[anchor=north west] {$8x$};
+                  \draw [color=yqyqyq](4.07530676472364,9.827671672640804) node[anchor=north west] {Auto más rápido};
+                  \draw [color=yqyqyq](16.187913634378333,9.861411524226657) node[anchor=north west] {Auto más lento};
+                  \draw [->,line width=0.4pt,color=cqcqcq] (4.592206624705826,11.098941399971267) -- (-0.32052859844072934,11.099651448231597);
+                  \draw [->,line width=0.4pt,color=cqcqcq] (9.501508094754312,11.10036470629801) -- (14.625761401559263,11.047481448231597);
+                  \draw [->,line width=0.4pt,color=cqcqcq] (19.59647257463213,11.046774767662868) -- (22.187587202997754,11.046774767662868);
+                  \draw [->,line width=0.4pt,color=cqcqcq] (17.269757398140555,11.093894877288061) -- (14.678688632231841,11.07847840354275);
+                  \draw [->,line width=0.4pt,color=cqcqcq] (8.861854828545964,12.368772027033073) -- (-0.32052859844072934,12.422361448231593);
+                  \draw [->,line width=0.4pt,color=cqcqcq] (14.096963975652017,12.42165191740788) -- (22.240467093372565,12.42165191740788);
+                  \draw [color=yqyqyq](10.452138793594774,12.695559057438292) node[anchor=north west] {440 km};
+                  \draw [color=yqyqyq] (14.59115574146365,10.217481448231597)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+                  \draw [color=aqaqaq] (-0.32052859844072934,10.217481448231597)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+                  \draw [color=aqaqaq] (22.14596196241321,10.217481448231597)-- ++(-2.0pt,0 pt) -- ++(4.0pt,0 pt) ++(-2.0pt,-2.0pt) -- ++(0 pt,4.0pt);
+                \stoptikzpicture
+              \stopcenteraligned
+
+            El diagrama nos sugiere la ecuación que nos ayudará a eresolver el problema:
+            \startformula
+              8(x + 10) + 8x = 440
+            \stopformula
+            que resolvemos
+            \startformula
+              8x + 80 + 8x = 440
+            \stopformula
+            \startformula
+              8x + 8x = 440 - 80
+            \stopformula
+            \startformula
+              16x = 360
+            \stopformula
+            \startformula
+              x = \dfrac{360}{16}
+            \stopformula
+            \startformula
+              x = 22.5
+            \stopformula
+            \startformula
+              x + 10 = 22.5 + 10 = 32.5
+            \stopformula
+
+            \inframed{El automóvil más lento se mueve a 22.5 km/h mientras que el más rápido lo hace 32.5 km/h}
+
+            Verificamos que se cumplen las condiciones dadas en el problema:
+            \startitemize
+              \startitem
+                el auto más lento recorre una distancia de: $(22.5)8 = 180.0$ km
+              \stopitem
+              \startitem
+                el auto más rápido recorre una distancia de: $(32.5)8 = 260.0$ km
+              \stopitem
+            \stopitemize
+            Ahora vea que $180.0 + 260.0 = 440$, la separación de ambos autos al cabo de ocho horas.
+          \stopitem
+          \startitem
+            \ini{Un ciclista viaja con una rapidez promedio de 8 km/h. Sale de una ciudad y tres horas más tarde, un motociclista, que viaja con una rapidez promedio de 40 km/h, sale de la misma ciudad a alcanzarlo. ¿A qué distancia de la ciudad alcanzará al motociclista?}
+
+            Preparamos la tabla donde organizar los datos
+
+            \starttabulate[|c|c|c|c|]
+              \NC objetos \VL rapidez  \VL tiempo \VL distancia \NC\NR
+              \HL
+              \NC ciclista     \VL $8$  \VL $x + 3$ \VL $8(x + 3)$ \NC\NR
+              \NC motociclista \VL $40$ \VL $x$     \VL $40x$      \NC\NR
+            \stoptabulate
+
+            Obseve que en el momento en que el motociclista alcanza al ciclista, la distancia hasta la ciudad es la misma. Luego, la ecuación que describe lo establecido en el problema es:
+            \startformula
+              8(x + 3) = 40x,
+            \stopformula
+
+            \youtube{\from[AI50A]}
+            que procedemos a resolver:
+            \startformula
+              8x + 24 = 40x
+            \stopformula
+            \startformula
+              8x - 40x = -24
+            \stopformula
+            \startformula
+              -32x = -24
+            \stopformula
+            \startformula
+              x = \dfrac{-24}{-32}
+            \stopformula
+            \startformula
+              x = \dfrac{3}{4}
+            \stopformula
+
+            Este resultado significa que el motociclista tarda 3/4 de hora en alcanzar al ciclista. Para determinar la distancia desde la ciudad de donde salen hasta el momento en que ocurre el alcance, hacemos uso de la fórmula $d = vt$. Luego, para el motociclista $d = 40(3/4) = 30$ km.
+
+            \ \inframed{El motociclista alcanza al ciclista a 30 km de la ciudad desde donde partieron}
+
+            Para ver que se satisfacen las concidiciones del problema, vemos que el ciclista también ha viajado 30 km hasta que lo alcanza el motociclista.
+
+            Primero: el tiempo que está viajando el ciclista antes de que lo alcancen es: $3 + 3/4 = 15/4$ de hora. Luego la distancia que recorre en ese tiempo está dada por $d = 8(15/4) = 30$ km, la misma distancia que recorre el motociclista.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{Un muchacho corrió al campo a una razón de 8 km/h. Regresó en una motocicleta que viajaba a 40 km/h. Si regresó al cabo de tres horas a partir de su salida, ¿qué distancia corrió?}
+
+            Vea que si determinamos el tiempo que él corrió, podremos determinar la distancia que recorrió, usando la fórmula $d = vt$. Por eso nuesta incógnita, en este ejemplo al igual que en el anterior, no representa lo que buscamos.
+
+            $x <--$ tiempo que muchacho corrió \par
+            $3 - x <--$ tiempo que el muchacho estuvo sobre la motora \par
+
+            \starttabulate[|c|c|c|c|]
+              \NC objetos \VL rapidez  \VL tiempo \VL distancia \NC\NR
+              \HL
+              \NC muchacho corriendo \VL $8$  \VL $x3$    \VL $8x$       \NC\NR
+              \NC muchacho en motora \VL $40$ \VL $3 - x$ \VL $40(3 -x)$ \NC\NR
+            \stoptabulate
+
+            Vea que la distancia corrida es igual a la distancia recorrido en motora. O sea, nuesta ecuación será:
+            \startformula
+              8x = 40(3 - x)
+            \stopformula
+
+            \youtube{\from[AI50B]}
+            Procedemos a resolverla
+            \startformula
+              8x = 120 - 40x
+            \stopformula
+            \startformula
+              8x + 40x = 120
+            \stopformula
+            \startformula
+              48x = 120
+            \stopformula
+            \startformula
+              x = \dfrac{120}{48}
+            \stopformula
+            \startformula
+              x = \dfrac{5}{2} = 2 1/2
+            \stopformula
+            El muchacho corrió durante 2 horas y media. Para determinar la distancia, hacemos el cómputo: $d = 8\left(\dfrac{5}{2}\right) = 20$ km.
+
+            \ \inframed{El muchacho corrió 20 km.}
+
+            Vea que si resolvemos la ecuación literal $d = vt$, para el tiempo, $t = \dfrac{d}{v}$. Luego, el tiempo que el muchacho viajó en motora será $t = \dfrac{20}{40} = \dfrac{1}{2}$ hora. Luego, vea que el tiempo total de este viaje será: $2 1/2 + 1/2 = 3$ horas. El tiempo que dice el problema que tardó dicho viaje.
+          \stopitem
+          \startitem
+            \ini{Un tren de pasajeros y uno de carga salen de la misma estación a la misma hora. El tren de pasajeros viaja a 60 km/h y el de carga a 40 km/h. ¿En cuánto tiempo estarán a 300 km de separación, si parten en direcciones opuestas?}
+
+            $x <--$ tiempo que ambos trenes están viajando, hasta que se separan por 300 km
+
+            \starttabulate[|c|c|c|c|]
+              \NC objetos \VL rapidez  \VL tiempo \VL distancia \NC\NR
+              \HL
+              \NC tren de pasajeros \VL $60$ \VL $x$ \VL $60x$ \NC\NR
+              \NC tren de carga     \VL $40$ \VL $x$ \VL $40x$ \NC\NR
+            \stoptabulate
+            Como la suma de los segmentos que sólo tienen un punto en común da la medida del segmento total, la ecuación que representa esta situación es:
+            \startformula
+              40x + 60x = 300
+            \stopformula
+            \startformula
+              100x = 300
+            \stopformula
+            \startformula
+              x = \dfrac{300}{100}
+            \stopformula
+            \startformula
+              x = 3
+            \stopformula
+
+           \ \inframed{Ambos trenes están viajando durante tres horas antes de estar separados por 300 km.}
+
+           Observe que el tren de pasajeros habrá recorrido una distancia de: $(60)3 = 180$ km. El tren de carga habrá recorrido $40(3) = 120$ km. Y que la suma de ambas distancias es: $180 + 120 = 300$ km, la distancia que nos indica el problema que dichos trenes van a estar separados.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AI51A]}
+      \startejemplo
+        \ini{Un tren viaja, uniformemente, una distancia de 150 km. Si su rapidez hubiese sido 5 km/h más veloz, el viaje hubiese tomado una hora menos de duración. Halle la rapidez de dicho tren.}
+
+        $x <--$ rapidez actual del tren
+
+        \starttabulate[|c|c|c|c|]
+          \NC objetos \VL rapidez  \VL tiempo \VL distancia \NC\NR
+          \HL
+          \NC tren más lento \VL $x$     \VL $150/x$      \VL $150$ \NC\NR
+          \NC tren más veloz \VL $x + 5$ \VL $150(x + 5)$ \VL $150$ \NC\NR
+        \stoptabulate
+
+        Vea que la ecuación que describe lo planteado en el problema sería:
+
+        \startformula
+          \dfrac{150}{x} - 1 = \dfrac{150}{x+5}
+        \stopformula
+        Procedemos a resolverla
+        \startformula
+          \left\[\dfrac{150}{x} - 1 = \dfrac{150}{x+5}\right\]x(x+5)
+        \stopformula
+        \startformula
+          150(x+5) - x(x+5) = 150x
+        \stopformula
+        \startformula
+          150x + 750 - x^2 -5x = 150x
+        \stopformula
+        \startformula
+          -x^2 -150x -5x +750 - 150x = 0
+        \stopformula
+        \startformula
+          -x^2 -5x + 750 = 0
+        \stopformula
+        Resolvemos aplicando la fórmula cuadrática
+        \startformula
+          x = \dfrac{5 \pm \sqrt{25 + 3000 }}{-2} = \dfrac{5 \pm \sqrt{3025}}{-2} = \dfrac{5 \pm 55}{-2}
+        \stopformula
+        \startformula
+          x = \dfrac{5 + 55}{-2} \quad\text{ o }\quad x = \dfrac{5 - 55}{-2}
+        \stopformula
+        \startformula
+          x = -30 \quad\text{ o }\quad x = 25
+        \stopformula
+        Vea que la solución negativa obtenida no hace sentido ya que estamos buscando una rapidez.
+
+        \ \inframed{El tren viaja a 25 km/h}
+
+        Vea que el tiempo que tarda el tren en recorrer los 150 km viajando a 25 km/h es $t = \dfrac{150}{25} = 6$ horas. Si el tren hubiera viajado a $25 + 5 = 30$ km el tiempo que tardaría en recorrer los 150 km sería $\dfrac{150}{30} = 5$ horas, una hora menos que lo que le tomó a la rapidez actual del tren.
+      \stopejemplo
+    \stopsubsection
+
+    \youtube{\from[AI51B]}
+    \startsubsection[title={Problemas de trabajo}]
+
+      En este tipo de problemas se nos presentan un grupo de trabajadores (humanos o mecánicos) en donde se nos informa lo que tardan en realizar una determinada tarea o trabajo. Entonces se nos puede preguntar el tiempo que pueden tardar si trabajaran juntos o, viceversa, si conocemos cuánto tardan trabajando juntos, qué tiempo le tomará a cada uno trabajando por separado.
+
+      \startobservacion
+        Si un trabajador completa un trabajo en $t$ unidades de tiempo, su \ini{razón de trabajo es $1/t$}, y se refiere a la porción de la cantidad del trabajo que se efectúa en cada unidad de tiempo.
+      \stopobservacion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            A completa un trabajo en seis horas; su razón de trabajo es $1/6$.
+          \stopitem
+          \startitem
+            B completa una tarea en cuatro días. Su razón de trabajo será $1/4$.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startobservacion
+        Si un trabajador que trabaja a razón de $1/t$, trabaja durante $x$ unidades de tiempo, la \ini{fracción de trabajo hecho} es $x (1/t) = x/t$.
+      \stopobservacion
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            Sabemos, de los ejemplos anteriores, que A trabaja a razón de $1/6$ (cada hora). Si trabajara cuatro horas, su fracción de trabajo hecho es $4(1/6) = 2/3$.
+          \stopitem
+          \startitem
+            Sabemos, de los ejemplos anteriores, que B trabaja a razón de $1/4$ (por día). Si trabaja tres días, su fracción de trabajo hecho es $3(1/4) = 3/4$.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \startcomentario
+      \ini{Principio fundamental de los problemas de trabajo}\par
+      La suma de las fracciones de trabajo hecho totaliza la cantidad de trabajo completado, donde al trabajo completo se le asigna el valor 1.
+      \stopcomentario
+
+      \startejemplos
+        \startitemejem
+          \startitem
+            \ini{Pedro puede realizar un trabajo en quince días y Gabriel lo puede hacer en diez. ¿Cuánto tiempo demorarán trabanjando juntos?}
+
+            $x <--$ tiempo que necesitan trabajar Pedro y Gabriel juntos para completar el trabajo
+
+            \starttabulate[|c|c|c|c|]
+              \NC trabajadores \VL razón de trabajo  \VL tiempo \VL fracción de trabajo \NC\NR
+              \HL
+              \NC Pedro   \VL $1/15$ \VL $x$ \VL $x/15$ \NC\NR
+              \NC Gabriel \VL $1/10$ \VL $x$ \VL $x/10$ \NC\NR
+            \stoptabulate
+            donde $x$ es el número de días que ambos trabajarán juntos.
+
+            Por el principio fundamental de los problemas de trabajo, la ecuación que nos representa la descrito en este problema es:
+
+            \startformula
+              \dfrac{x}{15} + \dfrac{x}{10} = 1,
+            \stopformula
+
+            \youtube{\from[AI52A]}
+            que es fraccionaria. Procedemos a resolverla.
+
+            \startformula
+              \left\[\dfrac{x}{15} + \dfrac{x}{10} = 1\right\]30
+            \stopformula
+            \startformula
+              2x + 3x = 30
+            \stopformula
+            \startformula
+              5x = 30
+            \stopformula
+            \startformula
+              x = \dfrac{30}{5}
+            \stopformula
+            \startformula
+              x = 6
+            \stopformula
+
+            \ \inframed{Pedro y Gabriel necesitarán trabajar seis días juntos para completar el trabajo.}
+
+            Verificamos que se cumplen las condiciones del problema.
+
+            \startitemize
+              \startitem
+                fracción de trabajo de Pedro: $\dfrac{6}{15} = \dfrac{2}{5}$
+              \stopitem
+              \startitem
+                fracción de trabajo de Gabriel: $\dfrac{6}{10} = \dfrac{3}{5}$
+              \stopitem
+            \stopitemize
+            y vemos si la suma de esas fracciones de trabajo totalizan 1:
+            \startformula
+              \dfrac{2}{5} + \dfrac{3}{5} = 1
+            \stopformula
+          \stopitem
+
+          \startitem
+            \ini{Un tanque es llenado por dos plumas de agua. Una de ellas lo llena en quince horas. Luego de ésta estar abierta durante tres horas, la segunda es abierta llenando el tanque entre ambas en cuatro horas más. ¿En cuánto tiempo llenaría la segunda llave ese tanque?}
+
+            $x <--$ tiempo en horas que tarda la segunda pluma en llenar el tanque
+
+            \starttabulate[|c|c|c|c|]
+              \NC trabajadores \VL razón de trabajo  \VL tiempo \VL fracción de trabajo \NC\NR
+              \HL
+              \NC primera pluma \VL $1/15$ \VL $7$ \VL $7/15$ \NC\NR
+              \NC segunda pluma \VL $1/x$  \VL $4$ \VL $4/x$ \NC\NR
+            \stoptabulate
+
+            La ecuación que nos ayuda a resolver el problema es:
+            \startformula
+              \dfrac{7}{15} + \dfrac{4}{x} = 1
+            \stopformula
+            La resolvemos
+            \startformula
+              \left\[\dfrac{7}{15} + \dfrac{4}{x} = 1\right\]15x
+            \stopformula
+            \startformula
+              7x + 60 = 15x
+            \stopformula
+            \startformula
+              7x - 15x = -60
+            \stopformula
+            \startformula
+              -8x = -60
+            \stopformula
+            \startformula
+              x = \dfrac{-8}{-60}
+            \stopformula
+            \startformula
+              x = \dfrac{15}{2} = 7 1/2
+            \stopformula
+
+            \ \inframed{La segunda pluma llena el tanque en 7 horas y media.}
+
+            Vea que la solución obetenida no es extraña, pues no hace que el denominador que contiene a la incógnita valga cero.
+
+            \youtube{\from[AI52B]}
+            Vea que la fracción de trabajo de la segunda pluma: $\dfrac{4}{15/2} = 4 \cdot \dfrac{2}{15} = \dfrac{8}{15}$ y que la suma de las fracciones de trabajo totalizan 1:
+            \startformula
+              \dfrac{7}{15} + \dfrac{8}{15} = 1
+            \stopformula
+          \stopitem
+
+          \startitem
+            \ini{Un tanque puede ser llenado por una pluma de agua en treinta minutos y vaciado por un desagüe en cincuenta. Si tanto la pluma como el desagüe están abiertos, ¿en cuánto tiempo el tanque está lleno a dos terceras partes de su capacidad?}
+
+            $x <--$ tiempo en minutos en que tienen que estar abiertos la pluma y el desagüe
+
+            \starttabulate[|c|c|c|c|]
+              \NC trabajadores \VL razón de trabajo  \VL tiempo \VL fracción de trabajo \NC\NR
+              \HL
+              \NC grifo   \VL $1/30$ \VL $x$ \VL $x/30$ \NC\NR
+              \NC desagüe \VL $1/50$ \VL $x$ \VL $x/50$ \NC\NR
+            \stoptabulate
+            La ecuación que nos ayuda a resolver el problema es:
+
+            \startformula
+              \dfrac{x}{30} - \dfrac{x}{50} = \dfrac{2}{3},
+            \stopformula
+            donde las fracciones de trabajo hecho ahora se restan ya que cada trabajador (la pluma de agua y el desagüe) deshace lo que hace el otro. El total será $2/3$ pues no es el trabajo completo de llenar el tanque, si no llenarlo a dos terceras partes de su capacidad.
+
+            Procedemos a resolver la ecuación
+            \startformula
+              \left\[\dfrac{x}{30} - \dfrac{x}{50} = \dfrac{2}{3}\right\]150
+            \stopformula
+            \startformula
+              5x - 3x = 100
+            \stopformula
+            \startformula
+              2x = 100
+            \stopformula
+            \startformula
+              x = \dfrac{100}{2}
+            \stopformula
+            \startformula
+              x = 50
+            \stopformula
+
+            \framed{El grifo y el desagüe tendrán que estar abiertos por 50 minutos para que el tanque se llena a dos terceras partes de su capacidad}
+
+            Vea que la fracción de trabajo hecha por el grifo es $50/30$ y la fracción de trabajohecho por el desagüe es $50/50$ y observamos que la diferencia de las dos es $2/3$
+
+            \startformula
+              \dfrac{50}{30} - \dfrac{50}{50} = \dfrac{5}{3} - 1 = \dfrac{2}{3}
+            \stopformula
+            por lo que se cumplen las condiciones del problema.
+          \stopitem
+        \stopitemejem
+      \stopejemplos
+
+      \youtube{\from[AI53A]}
+      \startejemplo
+        \ini{A, solo, puede hacer un trabajo en cinco días menos que los días que le toma a B completarlo. Trabajando juntos, ellos completan el trabajo en seis días. ¿Cuánto tiempo le toma a cada uno hacer el trabajo?}
+
+        $x <--$ días que tarda B en hacer el trabajo solo
+        $x - 5<--$ días que tarda A en hacer el trabajo solo
+
+        \starttabulate[|c|c|c|c|]
+          \NC trabajadores \VL razón de trabajo  \VL tiempo \VL fracción de trabajo \NC\NR
+          \HL
+          \NC A \VL $1/x-5$ \VL $6$ \VL $6/x-5$ \NC\NR
+          \NC B \VL $1/x$   \VL $6$ \VL $6/x$   \NC\NR
+        \stoptabulate
+
+        La ecuación que nos ayuda a resolver el problema es:
+        \startformula
+          \dfrac{6}{x-5} + \dfrac{6}{x} = 1,
+        \stopformula
+        que resolvemos
+        \startformula
+          \left\[\dfrac{6}{x-5} + \dfrac{6}{x} = 1\right\](x-5)x
+        \stopformula
+        \startformula
+          6x + 6(x-5) = (x-5)x
+        \stopformula
+        \startformula
+          6x + 6x - 30 = x^2 - 5x
+        \stopformula
+        \startformula
+          -x^2 + 12x + 5x - 30 = 0
+        \stopformula
+        \startformula
+          -x^2 + 17x -30 = 0
+        \stopformula
+        \startformula
+          \left\[ -x^2 + 17x -30 = 0\right\](-1)
+        \stopformula
+        \startformula
+          x^2 - 17x + 30 = 0
+        \stopformula
+        \startformula
+          \startcases[right=\right\}]
+            \NC P = 30 \NR
+            \NC S = -17 \NR
+          \stopcases
+          = -2, -15
+        \stopformula
+        \startformula
+          (x - 2)(x - 15) = 0
+        \stopformula
+        \startformula
+          x - 2 = 0 \quad\vee\quad x - 15 = 0
+        \stopformula
+        \startformula
+          x = 2 \quad\vee\quad x = 15
+        \stopformula
+        Verificamos que no son raíces extrañas
+        \startformula
+          \text{Para } x = 2 --> x - 5 = 2 - 5 = -3 \neq 0 \quad\vee\quad x = 2 \neq 0
+        \stopformula
+        \startformula
+          \text{Para } x = 15 --> x - 5 = 15 - 5 = 10 \neq 0 \quad\vee\quad x = 15 \neq 0
+        \stopformula
+
+        Vea que la solución $x = 2$, hace que los días en que A completa el trabajo solo sean $x - 5 = 2- 5 = -3$, que no hace sentido.
+
+        \ \inframed{El trabajador B completa el trabajo solo en quince días y el A lo completa en (15 - 5 =) diez días}
+
+        Verificamos que se cumplen las condiciones del problema.
+
+        \startitemize
+          \startitem
+            fracción de trabajo de A: $dfrac{6}{x-5} = \dfrac{6}{15 - 5} = \dfrac{3}{5}$
+          \stopitem
+          \startitem
+            fracción de trabajo de B: $dfrac{6}{x} = \dfrac{6}{15} = \dfrac{2}{5}$
+          \stopitem
+        \stopitemize
+        Entonces, $\dfrac{3}{5} + \dfrac{2}{5} = 1$, por lo que se cumplen las condiciones del problema.
+      \stopejemplo
+    \stopsubsection
+  \stopsection
+
+  \youtube{\from[AI53B]}
+  \startsection[title={Variaciones}]
+
+    En las variaciones estudiamos cómo el valor de una variable cambia o {\sl varía} el valor de otra variable.
+
+    \startdefinicion
+      Sean $x, y \in \reals \setminus \{0\}$. Decimos que $y$ \ini{varía directamente} con $x$ o que $y$ es \ini{directamente proporcional} a $x$, denotado con el símbolo $y \propto x$, si y solamente si existe $k \in \reals$, fijo, llamado la \ini{constante o factor de variación o de proporcionalidad}, de modo que $y = kx$.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          El perímetro, $p$, de un cuadrado es directamente proporcinal a la medida de los lados de ese cuadrado, $s$ ya que $p = 4s$. Vea que $4$ es la constante de proporcionalidad o de varación.
+        \stopitem
+        \startitem
+          \ini{Si $y$ varía directamente con $x$ y si $y=4$ cuando $x=8$, halle la constante de proporcionalidad}.
+          \startformula
+            y =kx
+          \stopformula
+          \startformula
+            4 = k8
+          \stopformula
+          Ecuación que resolvermos
+          \startformula
+            k = \dfrac{4}{8} = \dfrac{1}{2}.
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{Si $y$ es directamente con $x$,q y si $y$ vale 8 cuando la $x$ vale 2, busque el valor de $y$ cuando la $x$ vale 5}.
+          \startformula
+            y = kx
+          \stopformula
+          Sustituimos los valores dados en el problema par $x$ y para $y$
+          \startformula
+            8 = k2
+          \stopformula
+          Resolvemos la ecuación anterior para hallar el valor de la constante de proporcionalidad.
+          \startformula
+            k = \dfrac{8}{2} = 4
+          \stopformula
+          Sustituimos en la ecuación de variación el valor de $k$
+          \startformula
+            y = 4x
+          \stopformula
+          Sustituimos el otro valor dado para $x$ en la ecuación anterior, para determinar el valor $y$
+          \startformula
+            y = 4 \cdot 5 = 20
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \youtube{\from[AI54A]}
+    \startejemplo
+      \ini{El peso de una esfera sólida con densidad homogénea es directamente proporcional al cubo de su diámetro. Si una esfera con 3 cm de radio peso 2 g, ¿cuánto pesará otra hecha del mismo material que tenga 4 cm de diámetro?}
+
+      Sea $W$ el peso de la esfera y $d$ su diámetro.
+
+      Tenemos que $W \propto d^3$. Esto significa que $W = kd^3$, donde $k$ es la constante de proporcionalidad.
+
+      Tenemos que $r = 3$ cm, $W = 2$ g. Recuerde que el radio es la mitad de la medida del diámetro de una esfera. O sea, que $d = 2r = 2(3 \text{cm})$ = 6 cm. Luego,
+      \startformula
+        2 = k 6^3 = 216k
+      \stopformula
+      \startformula
+        k = \dfrac{2}{216} = \dfrac{1}{108}
+      \stopformula
+      Luego, la ecuación de variación de este problema es $W = \dfrac{1}{108}d^3$. Y la otra esfera pesará:
+      \startformula
+        W = \dfrac{1}{108}(4)^3
+      \stopformula
+
+      \ \inframed{La segunda esfera pesa $W = \dfrac{16}{27} \text{g}$.}
+    \stopejemplo
+
+    \startdefinicion
+      Sean $x,y \in \reals \setminus \{0\}$. Se dice que \obj{$y$ varía inversamente proporcional con $x$} o \obj{$y$ es inversamente proporcional a $x$}, denotado con el símbolo $y \propto \dfrac{1}{x}$, si y sólo si existe $k \in \reals$, fijo, llamado la \obj{la constante de proporcionalidad o de variación}, de manera que $y = \dfrac{k}{x}$.
+    \stopdefinicion
+
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{Si $p$ varía inversamente con $q$, y si $p$ vale 6 cuando $q$ vale 1/2, determine el valor $q$ cuando $p$ vale 3/8.}
+
+          \startformula
+            p = \dfrac{k}{q}
+          \stopformula
+          \startformula
+            6 = \dfrac{k}{\dfrac{1}{2}}
+          \stopformula
+          \startformula
+            6 = 2k
+          \stopformula
+          \startformula
+            k = \dfrac{6}{2} = 3
+          \stopformula
+          Nuestra ecuación de variación será:
+          \startformula
+            p = \dfrac{3}{q}
+          \stopformula
+          Sustituimos el valor dado para $p$ en esta ecuación
+          \startformula
+            \dfrac{3}{8} = \dfrac{3}{q}
+          \stopformula
+          y resolvemos para $q$,
+          \startformula
+            \therefore q = 8
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{Si $y$ es inversamente proporcional a la raíz cuadrada de $x$, y si $y$ vale 3 cuando la $x$ tiene un valor de 25, busque el valor de $y$ cuando la $x$ vale 12.}
+
+          \youtube{\from[AI54B]}
+          \startformula
+            y \propto \dfrac{1}{\sqrt{x}}; \qquad y = \dfrac{k}{\sqrt{x}}
+          \stopformula
+          \startformula
+            3 = \dfrac{k}{\sqrt{25}}
+          \stopformula
+          \startformula
+            5\left\[3 = \dfrac{k}{25}\right\]
+          \stopformula
+          \startformula
+            15 = k
+          \stopformula
+          \startformula
+            \therefore y = \dfrac{15}{k}
+          \stopformula
+          \startformula
+            \therefore y = \dfrac{15}{\sqrt{12}} = \dfrac{15}{\sqrt{4 \cdot 3}} = \dfrac{15}{2\sqrt{3}}\cdot \dfrac{\sqrt{3}}{\sqrt{3}} = \dfrac{15\sqrt{3}}{2 \cdot 3} = \dfrac{5\sqrt{3}}{2}
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startteorema
+      Sean $x,y \in \reals$.
+      \startitemizer
+        \startitem
+          Si $y \propto x$, y si $y = y_1$ cuando $x = x_1$, y si $y = y_2$ cuando $x = x_2$, entonces $\dfrac{y_1}{y-2} = \dfrac{x_1}{x_2}$.
+        \stopitem
+        \startitem
+          Si $y \propto \dfrac{1}{x}$, y si $y = y_1$ cuando $x = x_1$, y si $y = y_2$ cuando $x = x_2$, entonces $\dfrac{y_1}{y-2} = \dfrac{x_2}{x_1}$.
+        \stopitem
+      \stopitemizer
+    \stopteorema
+
+    \startdemop
+      $i)$
+      Por hipótesis $y \propto x$. Esto significa que $y = kx,\; k \in \reals$ fijo. Por hipótesis, también, $y_1 = kx_1$ y $y_2 = kx_2$. Luego, por un teorema que se demuestra como un problema en álgebra elemental,
+      \startcomentario
+        Si $x = y \wedge w = z  \longrightarrow \dfrac{x}{w} = \dfrac{y}{z}$
+      \stopcomentario
+      $\dfrac{y_1}{y_2} = \dfrac{kx_1}{kx_2}$. Es decir, que $\dfrac{y_1}{y_2} = \dfrac{x_1}{x_2}$.
+
+      $ii)$
+      Por hipótesis $y \propto \dfrac{1}{x}$. Esto significa que $y = \dfrac{k}{x}$, donde $k \in \reals$ fijo. Por hipótesis, también, $y_1 = \dfrac{k}{x_1}$ y $y_2 = \dfrac{k}{x_2}$. Luego, por el mismo teorema del algebra elemental,
+      \startformula
+        \dfrac{y_1}{y_2} = \dfrac{k}{x_1} \div \dfrac{k}{x_2} = \dfrac{k}{x_1} \cdot \dfrac{x_2}{k} = \dfrac{x_2}{x_1}
+      \stopformula
+      Es decir
+      \startformula
+        \dfrac{y_1}{y_2} = \dfrac{x_2}{x_1}
+      \stopformula
+    \stopdemop
+
+    \startdefinicion
+      Sean $x, y, z \in \reals \setminus \{0\}$. Decimos que \obj{$y$ varía conjuntamente con $x$ y con $x$} si y solamente si $y \propto x \cdot z$
+    \stopdefinicion
+
+    \startobservacion
+      Vea que decir que $y \propto x \cdot z$ equivale a decir que existe $k \in \reals$ fijo, de modo que $y = kxz$, y ésta se llama la ecuación de variación conjunta.
+    \stopobservacion
+
+    Hasta ahora tenemos tres tipos de variación:
+    \startitemize
+      \startitem
+        ecuación de variación directa: $y = kx$
+      \stopitem
+      \startitem
+        ecuación de variación inversa: $y =\dfrac{k}{x}$
+      \stopitem
+      \startitem
+        ecuación de variación conjunta: $y = kxz$
+      \stopitem
+    \stopitemize
+
+    \youtube{\from[AI55A]}
+    \startejemplos
+      \startitemejem
+        \startitem
+          Si $y$ varía conjuntamente con $x$ y el cuadrado de $z$, entonces $y \propto z^2$. Esto a su vez significa que $y = kxz^2$, donde $k \in \reals$, fijo, llamado la constante o el factor de proporcionalidad o de variación.
+        \stopitem
+        \startitem
+          Si $a$ varía conjuntamente con $b + 2d$ y con $c$, e inversamente con la raíz cúbica de $d$, entonces $a \propto (b + 2d)c,\, \dfrac{1}{\sqrt[3]{d}}$. Lo que significa que existe $k \in \reals$, fijo, de manera que
+          \startformula
+            a = k \dfrac{(b+2d)c}{\sqrt[3]{d}} =  \dfrac{k(b+2d)c}{\sqrt[3]{d}}
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{Si $y$ varía conjuntamente con el cubo de $x$, con el cuadrado de $z$ y con $w+z$, y si $y$ vale 80 cuando $x$ vale 2, $z$ vale 1 y $w$ vale 4, halle el valor de $y$ cuando $x = 1,\, z= 2$ y $w = 3$.}
+          \startformula
+            y \propto x^3z^2(w+z)
+          \stopformula
+          \startformula
+            y = kx^3z^2(w+z)
+          \stopformula
+          \startformula
+            80 = k\cdot 2^3 \cdot 1^2 (4 + 1)
+          \stopformula
+          \startformula
+            80 = k \cdot 8 \cdot 1 (5)
+          \stopformula
+          \startformula
+            \dfrac{1}{40 }\left[80 = 40k\right]
+          \stopformula
+          \startformula
+            \dfrac{80}{40} = k
+          \stopformula
+          \startformula
+            k = 2
+          \stopformula
+          \startformula
+            y = 2x^3z^2(w +z)
+          \stopformula
+          \startformula
+            y = 2 \cdot 1^3 \cdot 2^2 (3 + 2)
+          \stopformula
+          \startformula
+            y = 2 \cdot 1 \cdot 4(5) = 2 \cdot 1 \cdot 4 (5)
+          \stopformula
+          \startformula
+            y = 40
+          \stopformula
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+    \startdefinicion
+      Sean $x, y, z \in \reals \setminus \{0\}$. Decimos que \obj{$y$ varía combinadamente con $x$ y con $z$} si y solamente si $y$ varía directamente con $x$ e inversamente con $z$. Es decir, $y \propto x,\, \dfrac{1}{z}$.
+    \stopdefinicion
+
+    \startobservacion
+      Decir que $y \propto x,\, \dfrac{1}{z}$ significa que existe $k \in \reals$, fijo, de modo que $y = k \cdot x \cdot \dfrac{1}{z}$. O sea que $y = \dfrac{kx}{z}$, es la ecuación de variación combinada.
+    \stopobservacion
+
+    \youtube{\from[AI55B]}
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{Si $w$ varía combinadamente con $p$ y con $q$, y si $w$ vale 6 cuando $p = \dfrac{1}{2}$ y $q = 3$, halle $w$ cuando $p$ vale 6 y $q$ vale $\dfrac{2}{5}$.}
+
+          \startformula
+            w = k \dfrac{p}{q}
+          \stopformula
+          \startformula
+            6 = k \dfrac{1/2}{3} = k \dfrac{1}{6}
+          \stopformula
+          \startformula
+            \left[6 = \dfrac{k}{6}\right] 6
+          \stopformula
+          \startformula
+            36 = k
+          \stopformula
+          \startformula
+            w = 36 \dfrac{p}{q} = \dfrac{36p}{q}
+          \stopformula
+          \startformula
+            w = \dfrac{36 \cdot 6}{2/5} = 216 \div \dfrac{2}{5} = 540
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{La ecuación Maxwell-Boltzmann establece que la rapidez promedio, $\bar{v}$, de una molécula varía combinadamente con la raíz cuadrada de la temperatura absoluta T, del medio ambiente y con la raíz cuadrada de su peso molecular $m$. ¿Cómo se afecta su rapidez, si la temperatura absoluta del ambiente se cuadruplica?}
+
+          \startformula
+            \bar{v} = k \dfrac{\sqrt{\text{T}}}{\sqrt{m}}
+          \stopformula
+          Suponga ahora que T se convierte en 4T
+          \startformula
+            \bar{v} = k \dfrac{\sqrt{\text{4T}}}{\sqrt{m}}
+          \stopformula
+          \startformula
+            = k \dfrac{2 \sqrt{\text{T}}}{\sqrt{m}} = 2 \underbrace{\left(k \dfrac{\sqrt{\text{T}}}{\sqrt{m}}\right)}_{\text{(1)}}
+          \stopformula
+        \stopitem
+        \startcomentario
+          (1) rapidez promedio con la temperatura\par absoluta de medio ambiente valiendo T
+        \stopcomentario
+          O sea, el efecto en la rapidez promedio de la molécula de cuadruplicar la temperatura absoluta, es duplicar dicha rapidez promedio.
+      \stopitemejem
+    \stopejemplos
+
+  \stopsection
+\stopchapter
+\stopcomponent
+%%% Local Variables:
+%%% mode: context
+%%% TeX-master: t
+%%% End:

@@ -1,885 +1,864 @@
 \startcomponent c_factorizacion
 \project project_matemprepa
-%\product prod_algebra_intermedia
+% \product prod_algebra_intermedia
 
-
-\margindata[youtube]{\from[AI10A]}
+\youtube{\from[AI10A]}
 \startchapter[title={Factorización}]
 
   Factorizar en este tema consiste en escribir expresiones algebraicas, que son multinomios (sumas o rectas de términos) como una multiplicación de otras dos expresiones algebraicas.
 
 
-  \startsection[title={El factor común}]
+\startsection[title={El factor común}]
 
-    Esta técnica de factorización se fundamenta en las leyes distributivas:
+  Esta técnica de factorización se fundamenta en las leyes distributivas:
 
-    \startformulas
-      \startformula
+  \startformulas
+    \startformula
+      \startalign
+        \NC xy + xz \NC = x(y + z) \NR
+        \NC xz + yz \NC = (x + y)z \NR
+      \stopalign
+    \stopformula
+
+    \startformula
+      \startalign
+        \NC xy - xz \NC = x(y - z) \NR
+        \NC xz - yz \NC = (x - y)z \NR
+      \stopalign
+    \stopformula
+  \stopformulas
+
+  Así, al observar un factor que aparezca en todos los términos de un multinomio, podremos extraer a éste como \obj{un factor común}, dejando dentro de un segundo factor a la suma o resta del resto de los términos consistente del resto de los factores que aparecían en cada uno de ellos inicialmente.
+
+  \startejemplos
+    Factorice completamente (o primamente)
+
+    \startitemejem
+      \startitem
+        $\ini{3x + 6y} = 3(x + 2y)$
+      \stopitem
+
+      \startitem
+        $\ini{30x + 25y^2 - 10z^3} = 5\big(6x + 5y^2 - 2z^3\big)$
+      \stopitem
+
+      \startitem
+        $\ini{-6x^2 + 9y^3x} = 3x\big(-2x +3y^3\big)$
+      \stopitem
+
+      \startitem
+        $\ini{8x^3y^2- 6x^2y -4x^2z +12x^5yz^2} = 2x^2\big(4xy^2  -3y -2z +6x^3yz^2\big)$
+      \stopitem
+
+      \startitem
+        $\ini{-2(x+y) + 5z^2(x+y)} = (x + y)\big(-2 + 5z^2\big)$
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \startobservacion
+    Note que el factor variable común consiste de aquella letra que aparezca elevada al menor de los exponentes entre todos los términos del multinomio original.
+  \stopobservacion
+
+\stopsection
+
+\youtube{\from[AI10B]}
+\startsection[title={Factorización por agrupación}]
+
+  Cualquier multinomio de cuatro o más términos se puede tratar de factorizar mediante la técnica de factorización por agrupación. Ésta se fundamenta en la ley asociativa de la suma de números reales. Se procede a agrupar varios términos para ver si de entre ellos se puede extraer algún factor común, o si los términos agrupados pueden ser factorizados por cualquier otro método de factorización que conozcamos. A veces, aplicando la ley conmutativa de la suma de números reales, puede ser conveniente cambiar el orden de los térnimos en el multinomio antes de proceder a efectuar la agrupación. Una vez extraído el posible factor común de entre los términos agrupados, entonces se ve si se puede extraer otro factor común que puede contener más de un término.
+
+  Un último comentario, antes de proceder a ver ejemplos, es que siempre lo primero que hay que hacer al intentar factorizar un multinomio es ver si entre los términos de éste hay algún factor común.
+
+  \startejemplos
+    Factorice completamente (o primamente)
+
+    \startitemejem
+      \startitem
+        $\ini{3x + 3y + ax + ay} = 3(x + y) + a(x + y) = (x + y)(3 + a)$
+      \stopitem
+
+      \startitem
+        $\ini{3x^2 + x^3 + 3 + x} = x^2(3 + x) + (3 + x) = (3 + x)\big(x^2 + 1\big)$
+      \stopitem
+
+      \head
+      $\ini{3a^2x^2 - 18bc^3y + 36bc^3xz + 12a^2xz + 9bc^3x^2 - 6a^2y}$
+      
+      sacamos factor común
+
+      $= 3\big(a^2x^2 - 6bc^3y + 12bc^3xz + 4a^2xz + 3bc^3x^2 - 2a^2y\big)$
+
+      Reordenamos los monomios
+
+      $= 3\big(a^2x^2 + 4a^2xz - 2a^2y -6bc^3y + 12bc^3xz + 3bc^3x^2\big)$
+      
+      $= 3\Big[a^2\big(x^2 + 4xz - 2y\big) - 3bc^3\big(2y - 4xz - x^2\big)\Big]$
+
+      cambiamos el signo del último factor
+
+      $= 3 \Big[a^2\big(x^2 + 4xz - 2y\big) + 3bc^3\big(x^2 + 4xz - 2y\big)\Big]$
+
+      $= 3 \Big[\big(x^2 + 4xz - 2y\big) \big(a^2 +3bc^3\big)\Big]$
+
+      $= 3 \big(x^2 + 4xz - 2y\big) \big(a^2 +3bc^3\big)$
+    \stopitemejem
+  \stopejemplos
+
+\stopsection
+
+
+\youtube{\from[AI11A]}
+\startsection[title={Diferencia de cuadrados perfectos}]
+% \comentario{En general, el binomio que es la suma de dos cuadrados no es factorizable.}
+
+  Recordemos que, por un producto especial,
+  \startformula
+    x^{2m} - y^{2n} = (x^m + y^n)(x^m - y^n) = (x^m)^2 - (y^n)^2
+  \stopformula
+
+  \startejemplos
+    Factorice primamente
+
+    \startplaceformula
+      \startejerformula
         \startalign
-          \NC xy + xz \NC = x(y + z) \NR
-          \NC xz + yz \NC = (x + y)z \NR
+          \NC \NC \ini{\frac{9}{x^4} - .16y^6} = \bigg(\frac{3}{x^2} + .4y^3\bigg)\bigg(\frac{3}{x^2} - .4y^3\bigg) \NR[+]
+          \NC \NC \text{Puesto que }\quad\sqrt{\frac{9}{x^4}} = \frac{3}{x^2}; \quad\sqrt{.16y^6} = .4y^3 \NR
         \stopalign
-      \stopformula
-
-      \startformula
+      \stopejerformula
+    \stopplaceformula
+    
+    \startplaceformula
+      \startejerformula
         \startalign
-          \NC xy - xz \NC = x(y - z) \NR
-          \NC xz - yz \NC = (x - y)z \NR
+          \NC \NC \ini{3x^2y^4 - 27x^4z^8}\NR[+]
+          \NC \NC = 3x^2\big(y^4 - 9x^2z^8\big)\NR
+          \NC \NC \text{puesto que el segundo factor es diferencia de cuadrados perfectos}\NR
+          \NC \NC = 3x^2 \big(y^2 + 3xz^4\big)\big(y^2 - 3xz^4\big) \NR
         \stopalign
-      \stopformula
-    \stopformulas
+      \stopejerformula
+    \stopplaceformula
 
-    Así, al observar un factor que aparezca en todos los términos de un multinomio, podremos extraer a éste como \obj{un factor común}, dejando dentro de un segundo factor a la suma o resta del resto de los términos consistente del resto de los factores que aparecían en cada uno de ellos inicialmente.
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \NC \ini{2xy^6 - 8x^3z^6a^2} \NR[+]
+          \NC \NC = 2x\big(y^2 - 4x^2z^6a^2\big) \NR
+          \NC \NC \text{puesto que el segundo factor es diferencia de cuadrados perfectos}\NR
+          \NC \NC = 2x\big(y^2 + 2xz^3a\big)\big(y^2 - 2xz^3a\big)
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+  \stopejemplos
 
-    \startejemplos
-      Factorice completamente (o primamente)
+\stopsection
 
-      \startitemejem
-        \startitem
-          $\ini{3x + 6y} = 3(x + 2y)$
-        \stopitem
+\startsection[title={Suma o diferencia de cubos perfectos}]
 
-        \startitem
-          $\ini{30x + 25y^2 - 10z^3} = 5\big(6x + 5y^2 - 2z^3\big)$
-        \stopitem
+  \startteorema
+     Sean $m, n \in \integers$ y $x, y \in \reals$. Entonces:
 
-        \startitem
-          $\ini{-6x^2 + 9y^3x} = 3x\big(-2x +3y^3\big)$
-        \stopitem
+    \startitemizer
+      \startitem
+        $x^{3m} + y^{3n} = \big(x^m + y^n\big)\big(x^{2m} - x^my^n + y^{2n}\big)$
+      \stopitem
+      \startitem 
+        $x^{3m} - y^{3n} = \big(x^m - y^n\big)\big(x^{2m} + x^my^n + y^{2n}\big)$
+      \stopitem
+    \stopitemizer
+  \stopteorema
 
-        \startitem
-          $\ini{8x^3y^2- 6x^2y -4x^2z +12x^5yz^2} = 2x^2\big(4xy^2  -3y -2z +6x^3yz^2\big)$
-        \stopitem
+  \youtube[method=top]{\from[AI11B]}
+  \startdemo
+    El apartado {\it (i)} queda como ejercicio.
+    
+    {\it (ii)} Comenzamos reescribiendo la primera expresión de forma conveniente, introduciendo dos parejas de térnimos formadas por una expresión algebraica y su inverso aditivo, que al sumarse dan cero.
 
-        \startitem
-          $\ini{-2(x+y) + 5z^2(x+y)} = (x + y)\big(-2 + 5z^2\big)$
-        \stopitem
-      \stopitemejem
-    \stopejemplos
+    \startformula
+      \startalign[n=3]
+        \NC x^{3m} - y^{3n} = \NC x^{3m} + \Big[ \overbrace{x^{2m}y^n+\big( -x^{2m}y^n\big)}^{0} \Big] + \Big[ \overbrace{x^{m}y^{2n}+\big( -x^{m}y^{2n} \big)}^{0} \Big] - y^{3n} \NR
+        \NC \NC \text{Por la ley asociativa de } \reals \text{ y la equivalencia de la resta} \NR
+        \NC = \NC x^{3m} + x^{2m}y^n - x^{2m}y^n + x^{m}y^{2n} - x^{m}y^{2n} - y^{3n} \NR
+        \NC \NC \text{Por la ley conmutativa de la suma} \NR
+        \NC = \NC x^{3m} + x^{2m}y^n + x^{m}y^{2n} - x^{2m}y^n - x^{m}y^{2n} - y^{3n} \NR
+        \NC \NC \text{Aplicando la técnica de factorización por agrupación} \NR
+        \NC = \NC x^m \big( x^{2m} + x^my^n + y^{2n} \big) - y^n \big( x^{2m} + x^my^n + y^{2n} \big) \NR
+        \NC \NC \text{Sacando factor común y aplicando la ley conmutativa del producto} \NR
+        \NC = \NC \big( x^{2m} + x^my^n + y^{2n} \big)\big( x^m - y^n \big) = \big( x^m - y^n \big)\big( x^{2m} + x^my^n + y^{2n} \big) \NR
+      \stopalign
+    \stopformula
 
-    \startobservacion
-      Note que el factor variable común consiste de aquella letra que aparezca elevada al menor de los exponentes entre todos los términos del multinomio original.
-    \stopobservacion
+    Por la ley transitiva de la igualdad
 
-  \stopsection
-
-  \margindata[youtube]{\from[AI10B]}
-  \startsection[title={Factorización por agrupación}]
-
-    Cualquier multinomio de cuatro o más términos se puede tratar de factorizar mediante la técnica de factorización por agrupación. Ésta se fundamenta en la ley asociativa de la suma de números reales. Se procede a agrupar varios términos para ser si de entre ellos se puede extraer algún factor común, o si los términos agrupados pueden ser factorizados por cualquier otro método de factorización que conozacamos. A veces, aplicando la ley conmutativa de la suma de números reales, puede ser conveniente cambiar el orden de los térnimos en el multinomio antes de proceder a efectuar la agrupación. Una vez extraído el posible factor común de entre los términos agrupados, entonces se ve si se puede extraer otro factor común que puede contener más de un término.
-
-    Un último comentario, antes de proceder a ver ejemplos, es que siempre lo primero que hay que hacer al intentar factorizar un multinomio es ver si entre los términos de éste hay algún factor común.
-
-    \startejemplos
-      Factorice completamente (o primamente)
-
-      \startitemejem
-        \startitem
-          $\ini{3x + 3y + ax + ay} = 3(x + y) + a(x + y) = (x + y)(3 + a)$
-        \stopitem
-
-        \startitem
-          $\ini{3x^2 + x^3 + 3 + x} = x^2(3 + x) + (3 + x) = (3 + x)\big(x^2 + 1\big)$
-        \stopitem
-
-        \head
-        $\ini{3a^2x^2 - 18bc^3y + 36bc^3xz + 12a^2xz + 9bc^3x^2 - 6a^2y}$
-        
-        sacamos factor común
-
-        $= 3\big(a^2x^2 - 6bc^3y + 12bc^3xz + 4a^2xz + 3bc^3x^2 - 2a^2y\big)$
-
-        Reordenamos los monomios
-
-        $= 3\big(a^2x^2 + 4a^2xz - 2a^2y -6bc^3y + 12bc^3xz + 3bc^3x^2\big)$
-        
-        $= 3\Big[a^2\big(x^2 + 4xz - 2y\big) - 3bc^3\big(2y - 4xz - x^2\big)\Big]$
-
-        cambiamos el signo del último factor
-
-        $= 3 \Big[a^2\big(x^2 + 4xz - 2y\big) + 3bc^3\big(x^2 + 4xz - 2y\big)\Big]$
-
-        $= 3 \Big[\big(x^2 + 4xz - 2y\big) \big(a^2 +3bc^3\big)\Big]$
-
-        $= 3 \big(x^2 + 4xz - 2y\big) \big(a^2 +3bc^3\big)$
-      \stopitemejem
-    \stopejemplos
-
-  \stopsection
-
+    $\therefore\; x^{3m} - y^{3n} = \big( x^m - y^n \big)\big( x^{2m} + x^my^n + y^{2n} \big)$
+  \stopdemo
   
-  \margindata[youtube]{\from[AI11A]}
-  \startsection[title={Factorización de binomios}]
+  \startejemplos
+    Factorice completamente.
 
-    \startsubsection[title={Binomio que es la diferencia de dos cuadrados perfectos}]
+    \startitemejem
+      \startitem
+        $\ini{8x^3 + 27y^6}$
 
-      Recordemos que, por un producto especial,
-      \startformula
-        x^{2m} - y^{2n} = (x^m + y^n)(x^m - y^n) = (x^m)^2 - (y^n)^2
-      \stopformula
+        Comprobamos si fuera una suma de cubos perfectos. Puesto que $\sqrt[3]{8x^3} = 2x$ y $\sqrt[3]{27y^6} = 3y^2$, podemos poner
 
-      \startejemplos
-        Factorice primamente
+        $ = \big( 2x + 3y^2 \big)\big( 4x^2 -  6xy^2 + 9y^4 \big)$.
+      \stopitem
 
-        \startplaceformula
-          \startejerformula
-            \ini{\frac{9}{x^4} - .16y^6} = \bigg(\frac{3}{x^2} + .4y^3\bigg)\bigg(\frac{3}{x^2} - .4y^3\bigg)
-          \stopejerformula
+      \startitem
+        $\ini{x^{12} - 64y^9}$
 
-          Puesto que $\quad\sqrt{\frac{9}{x^4}} = \frac{3}{x^2}; \quad\sqrt{.16y^6} = .4y^3$
-        \stopplaceformula
+        Comprobamos si fuera una diferencia de cubos perfectos. Puesto que $\sqrt[3]{x^{12}} = x^4$ y $\sqrt[3]{64y^9} = 4y^3$, podemos poner
+
+        $= \big( x^4 - 4y^3 \big)\big( x^8 + 4x^4y^3 + 16y^6 \big).$
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+  \youtube{\from[AI12A]}
+  \startejemplos
+    Factorice primamente:
+    \startitemejem
+      \startitem
+        $\ini{3x - 24x^4y^6} = 3x\big(1 - 8x^3y^6\big) = 3x\big( 1 - 2xy^2 \big)\big( 1 +2xy^2 + 4x^2y^4 \big)$
+      \stopitem
+
+      \startitem
+        $\ini{2a^3 + 54b^{15}} = 2\big(a^3 + 27b^{15}\big) = 2\big(a + 3b^5 \big)\big( a^2 - 3ab^5 + 9b^{10} \big)$
+      \stopitem
+
+      \startitem
+        $\ini{x^{12} - y^6} = \NC \big( x^6 + y^3 \big) \big( x^6 - y^3 \big)$
+
+        $= \NC \big( x^2 + y \big)\big( x^4 - x^2y + y^2 \big) \big( x^2 - y \big)\big( x^4 + x^2y + y^2 \big)$
+
+        Lo hemos factorizado como una diferencia de cuadrados perfectos. Pero observamos que también son una diferencia de cubos perfectos. Si lo factorizamos como diferencia de cubos perfectos tendríamos
+
+        $= \big( x^4 - y^2\big) \big(x^8 + x^4y^2 + y^4 \big) = \big( x^2 - y \big)\big( x^2 + y \big)\big(x^8 + x^4y^2 + y^4 \big)$
       
-        \startplaceformula
-          \startejerformula
-            \startalign
-              \NC \NC \ini{3x^2y^4 - 27x^4z^8}\NR[+]
-              \NC \NC = 3x^2\big(y^4 - 9x^2z^8\big)\NR
-              \NC \NC \text{puesto que el segundo factor es diferencia de cuadrados perfectos}\NR
-              \NC \NC = 3x^2 \big(y^2 + 3xz^4\big)\big(y^2 - 3xz^4\big) \NR
-            \stopalign
-          \stopejerformula
-        \stopplaceformula
+      \stopitem
+    \stopitemejem
+  \stopejemplos
 
-        \startplaceformula
-          \startejerformula
-            \startalign
-              \NC \NC \ini{2xy^6 - 8x^3z^6a^2} \NR[+]
-              \NC \NC = 2x\big(y^2 - 4x^2z^6a^2\big) \NR
-              \NC \NC \text{puesto que el segundo factor es diferencia de cuadrados perfectos}\NR
-              \NC \NC = 2x\big(y^2 + 2xz^3a\big)\big(y^2 - 2xz^3a\big)
-            \stopalign
-          \stopejerformula
-        \stopplaceformula
-      \stopejemplos
+  \startobservacion
+    Cuando se trata como una diferencia de cuadrados perfectos salen más factores que cuando lo tratamos como una diferencia de cubos perfectos. Para factorizar primamente siempre que tengamos una diferencia de dos términos que sean a la vez diferencia de cuadrados perfectos y de cubos perfectos, lo factorizaremos como diferencia de cuadrados perfectos.
+  \stopobservacion
 
-      \startobservacion
-        En general, el binomio que es la suma de dos cuadrados no es factorizable.
-      \stopobservacion
-      
-    \stopsubsection
+\youtube[method=top]{\from[AI12B]}
 
-    \startsubsection[title={Binomio que es la suma o la resta de dos cubos perfectos}]
+\startdiscusion{Racionalización del denominador de una fracción común con binomio surdo de orden tres}
+  Presentamos ahora un resumen de las fórmulas que tenemos para factorizar binomios que son sumas o diferencias de cubos
 
-      \startteorema
-        Sean $m, n \in \integers$ y $x, y \in \reals$. Entonces:
+  \startformula
+    \big( x^m \pm y^n\big)\underbracket{\big(x^{2m} \mp x^my^n + y^{2n}\big)} = \ini{x^{3m} \pm y^{3n}} = \big(x^m\big)^3 \pm \big(y^n\big)^3
+  \stopformula
 
-        \startitemizer
-          \startitem
-            $x^{3m} + y^{3n} = \big(x^m + y^n\big)\big(x^{2m} - x^my^n + y^{2n}\big)$
-          \stopitem
-          \startitem 
-            $x^{3m} - y^{3n} = \big(x^m - y^n\big)\big(x^{2m} + x^my^n + y^{2n}\big)$
-          \stopitem
-        \stopitemizer
-      \stopteorema
+  Vemos que podemos pasar de un binomio que tiene dos términos elevados a una potencia a un binonio que tiene esos mismos dos términos elevados al cubo multiplicando ese binomio por un trinomio como el marcado arriba.
+  
+  Supongamos que tenemos un denominador de una fracción común con binomio surdo de orden tres, $a\sqrt[3]{x} \pm b\sqrt[3]{y}$. ¿Cómo lo racionalizaríamos? Pues, vemos que, teniendo en cuenta lo señalado anteriormente, si multiplicamos por el trinomio $\big( a\,\sqrt[3]{x} \big)^2 \mp ab\,\sqrt[3]{xy} + \big(a\,\sqrt[3]{x}\big)^2$ obtenemos:
 
-      \margindata[youtube][method=top]{\from[AI11B]}
-      \startdemo
-        El apartado {\it (i)} queda como ejercicio.
-        
-        {\it (ii)} Comenzamos reescribiendo la primera expresión de forma conveniente, introduciendo dos parejas de térnimos formadas por una expresión algebraica y su inverso aditivo, que al sumarse dan cero.
+  \startformula
+    \big(a\,\sqrt[3]{x} \pm b\,\sqrt[3]{y}\big)\Big(a^2\,\sqrt[3]{x^2} \mp ab\,\sqrt[3]{xy} + b^2\,\sqrt[3]{y^2}\Big) = \big( a\,\sqrt[3]{x}\big)^3 \pm  \big(b\,\sqrt[3]{y} \big)^3 = a^3x \pm b^3y,
+  \stopformula
 
-        \startformula
-          \startalign[n=3]
-            \NC x^{3m} - y^{3n} = \NC x^{3m} + \Big[ \overbrace{x^{2m}y^n+\big( -x^{2m}y^n\big)}^{0} \Big] + \Big[ \overbrace{x^{m}y^{2n}+\big( -x^{m}y^{2n} \big)}^{0} \Big] - y^{3n} \NR
-            \NC \NC \text{Por la ley asociativa de } \reals \text{ y la equivalencia de la resta} \NR
-            \NC = \NC x^{3m} + x^{2m}y^n - x^{2m}y^n + x^{m}y^{2n} - x^{m}y^{2n} - y^{3n} \NR
-            \NC \NC \text{Por la ley conmutativa de la suma} \NR
-            \NC = \NC x^{3m} + x^{2m}y^n + x^{m}y^{2n} - x^{2m}y^n - x^{m}y^{2n} - y^{3n} \NR
-            \NC \NC \text{Aplicando la técnica de factorización por agrupación} \NR
-            \NC = \NC x^m \big( x^{2m} + x^my^n + y^{2n} \big) - y^n \big( x^{2m} + x^my^n + y^{2n} \big) \NR
-            \NC \NC \text{Sacamos factor común y aplicamos la ley conmutativa del producto} \NR
-            \NC = \NC \big( x^{2m} + x^my^n + y^{2n} \big)\big( x^m - y^n \big) = \big( x^m - y^n \big)\big( x^{2m} + x^my^n + y^{2n} \big) \NR
-          \stopalign
-        \stopformula
+  una expresión sin radicales.
+\stopdiscusion
 
-        Por la ley transitiva de la igualdad
+  \startejemplos
+    Racionalice los denominadores de las siguientes fracciones.
 
-        $\therefore\; x^{3m} - y^{3n} = \big( x^m - y^n \big)\big( x^{2m} + x^my^n + y^{2n} \big)$
-      \stopdemo
-      
-      \startejemplos
-        Factorice completamente.
-
-        \startplaceformula
-          \startejerformula
-            \ini{8x^3 + 27y^6}
-          \stopejerformula              
-
-          Comprobamos si fuera una suma de cubos perfectos. Puesto que $\sqrt[3]{8x^3} = 2x$ y $\sqrt[3]{27y^6} = 3y^2$, podemos poner
-
-          \startformula
-            = \big( 2x + 3y^2 \big)\big( 4x^2 -  6xy^2 + 9y^4 \big).
-          \stopformula
-        \stopplaceformula
-
-        \startplaceformula
-          \startejerformula
-            \ini{x^{12} - 64y^9}
-          \stopejerformula
-
-          Comprobamos si fuera una diferencia de cubos perfectos. Puesto que $\sqrt[3]{x^{12}} = x^4$ y $\sqrt[3]{64y^9} = 4y^3$, podemos poner
-
-          \startformula
-            = \big( x^4 - 4y^3 \big)\big( x^8 + 4x^4y^3 + 16y^6 \big).
-          \stopformula
-        \stopplaceformula
-      \stopejemplos
-
-      \margindata[youtube]{\from[AI12A]}
-      \startejemplos
-
-        Factorice primamente:
-        
-        \startplaceformula
-          \startejerformula
-            \ini{3x - 24x^4y^6} = 3x\big(1 - 8x^3y^6\big) = 3x\big( 1 - 2xy^2 \big)\big( 1 +2xy^2 + 4x^2y^4 \big)
-          \stopejerformula
-        \stopplaceformula
-
-        \startplaceformula
-          \startejerformula
-            \ini{2a^3 + 54b^{15}} = 2\big(a^3 + 27b^{15}\big) = 2\big(a + 3b^5 \big)\big( a^2 - 3ab^5 + 9b^{10} \big)
-          \stopejerformula
-        \stopplaceformula
-
-        \startplaceformula
-          \startejerformula
-            \startalign
-              \NC \ini{x^{12} - y^6} = \NC \big( x^6 + y^3 \big) \big( x^6 - y^3 \big) \NR[+]
-              \NC = \NC \big( x^2 + y \big)\big( x^4 - x^2y + y^2 \big) \big( x^2 - y \big)\big( x^4 + x^2y + y^2 \big)\NR
-          \stopalign
-          \stopejerformula
-
-
-          Lo hemos factorizado como una diferencia de cuadrados perfectos. Pero observamos que también son una diferencia de cubos perfectos. Si lo factorizamos como diferencia de cubos perfectos tendríamos
-
-          \startejerformula
-            = \big( x^4 - y^2\big) \big(x^8 + x^4y^2 + y^4 \big) = \big( x^2 - y \big)\big( x^2 + y \big)\big(x^8 + x^4y^2 + y^4 \big)
-          \stopejerformula
-
-          Cuando se trata como una diferencia de cuadrados perfectos salen más factores que cuando lo tratamos como una diferencia de cubos perfectos. Para factorizar primamente siempre que tengamos una diferencia de dos términos que sean a la vez diferencia de cuadrados perfectos y de cubos perfectos, lo factorizaremos como diferencia de cuadrados perfectos.
-        \stopplaceformula
-      \stopejemplos
-
-    \stopsubsection
-
-    \margindata[youtube][method=top]{\from[AI12B]}
-    \startsubsection[title={Factorización de un binomio que tiene dos términos elevados a una potencia}]
-
-      Presentamos ahora un resumen de las fórmulas que tenemos para factorizar binomios que son sumas o diferencias de cubos
-
-      \startformula
-        \big( x^m \pm y^n\big)\underbracket{\big(x^{2m} \mp x^my^n + y^{2n}\big)} = \ini{x^{3m} \pm y^{3n}} = \big(x^m\big)^3 \pm \big(y^n\big)^3
-      \stopformula
-
-      Vemos que podemos pasar de un binomio que tiene dos términos elevados a una potencia a un binonio que tiene esos mismos dos términos elevados al cubo multiplicando ese binomio por un trinomio como el marcado arriba.
-      
-      Supongamos que tenemos un denominador de una fracción común con binomio surdo de orden tres, $a\sqrt[3]{x} \pm b\sqrt[3]{y}$. ¿Cómo lo racionalizaríamos? Pues, vemos que, teniendo en cuenta lo señalado anteriormente, si multiplicamos por el trinomio $\big( a\sqrt[3]{x} \big)^2 \mp ab\sqrt[3]{xy} + \big(a\sqrt[3]{x}\big)$ obtenemos:
-
-      \startformula
-        \big(a\sqrt[3]{x} \pm b\sqrt[3]{y}\big)\Big(a^2\sqrt[3]{x^2} \mp ab\sqrt[3]{xy} + b^2\sqrt[3]{y^2}\Big) = \big( a\sqrt[3]{x}\big)^3 \pm  \big(b\sqrt[3]{y} \big)^3 = a^3x \pm b^3y,
-      \stopformula
-
-      una expresión sin radicales.
-
-      \startejemplos
-        Racionalice los denominadores de las siguientes fracciones.
-
-        \startplaceformula
-          \startejerformula
-            \startalign
-              \NC \ini{\frac{20}{\sqrt[3]{9} - \sqrt[3]{4}}} =
-              \NC \frac{20}{\sqrt[3]{9} - \sqrt[3]{4}} \cdot \frac{\sqrt[3]{9^2} + \sqrt[3]{9\cdot4} + \sqrt[3]{4^2}}{\sqrt[3]{9^2} + \sqrt[3]{9\cdot4} +  \sqrt[3]{4^2}} \NR[+]
-
-              \NC =
-              \NC \frac{20\Big(\sqrt[3]{81} + \sqrt[3]{36} + \sqrt[3]{16} \Big)}{\Big( \sqrt[3]{9}\Big)^3 - \Big( \sqrt[3]{4}\Big)^3} = \frac{20\Big(\sqrt[3]{27 \cdot 3} + \sqrt[3]{36} + \sqrt[3]{8 \cdot 2} \Big)}{9 - 4}\NR
-
-              \NC =
-              \NC \frac{20\Big(3\sqrt[3]{3} + \sqrt[3]{36} + 2\sqrt[3]{2} \Big)}{5} = 12\sqrt[3]{3} + 4\sqrt[3]{36} + 8\sqrt[3]{2} \NR
-            \stopalign
-          \stopejerformula
-        \stopplaceformula
-
-        \startplaceformula
-          \startejerformula
-            \startalign
-              \NC \ini{\frac{1}{1 + 2\sqrt[3]{a^2}}} = \NC \frac{1}{1 + 2\sqrt[3]{a^2}} \cdot \frac{1 - 2\sqrt[3]{a^2} + 4\sqrt[3]{a^4}}{1 - 2\sqrt[3]{a^2} + 4\sqrt[3]{a^4}}\NR[+]
-              \NC = \NC \frac{1 - 2\sqrt[3]{a^2} + 4\sqrt[3]{a^3 a}}{1 + 8a^2} = \frac{1 - 2\sqrt[3]{a^2} + 4a\sqrt[3]{a}}{1 + 8a^2}\NR
-            \stopalign
-          \stopejerformula
-        \stopplaceformula
-      \stopejemplos
-
-    \stopsubsection
-
-  \stopsection
-
-  \margindata[youtube][method=top]{\from[AI13A]}
-  \startsection[title={Factorización de trinomios}]
-
-    \startsubsection[title={El trinomio cuadrado perfecto}]
-      \startdefinicion
-        Un trinomio en la forma $ax^{2m} + bx^my^n + cy^{2n}$, donde $m,n \in \integers$ fijos y $a,b,c \in \reals$ fijos, de modo que $\sqrt{a}, \sqrt{c} \in \rationals$ (o sea son cuadrados perfectos) y donde $|b| = 2\sqrt{a}\sqrt{c}$, se llama \obj{un trinomio cuadrado perfecto}.
-      \stopdefinicion
-
-      \startdiscusion{Características del trinomio cuadrado perfecto}
-        \startitemize[n]
-          \startitem
-            El primero y el tercer término son cuadrados perfectos. Esto es, se les puede extraer la raíz cuadrada exacta.
-          \stopitem
-          \startitem
-            El término del medio sin contar su signo, es el doble del producto de la raíz cuadrada del primero por la raíz cuadrada del tercero.
-          \stopitem
-        \stopitemize
-      \stopdiscusion
-
-      \startejemplos
-        Los siguientes trinomios son cuadrados perfectos.
-        \margindata[comentario]{En los ejemplos que siguen vamos a suponer que las variables representan números reales positivos}
-
-        \startplaceformula
-          \startejerformula
-            \ini{4x^2 - 16xy^3 + 16y^6}
-          \stopejerformula
-
-          Tenemos que ver que el primer y tercer términos tiene raíces cuadradas exactas.
-
-          \startformula
-            \sqrt{4x^2} = 2x, \quad \sqrt{16y^6} = 4y^3
-          \stopformula
-
-          Además, hay que ver que el término de enmedio sin contar el signo es dos veces el producto de esas dos raíces cuadradas.
-
-          \startformula
-            2(2x)(4y^3) = 16xy^3 = \big|-16xy^3\big| 
-          \stopformula
-        \stopplaceformula
-
-        \startplaceformula
-          \startejerformula
-            \ini{x^6y^2 + 6x^3yz^4 + 9z^8}
-          \stopejerformula
-
-          Comprobamos el primer y tercer término.
-
-          \startformula
-            \sqrt{x^6y^2} = x^3y, \quad \sqrt{9x^8} = 3z^4
-          \stopformula
-
-          Veamos ahora el término del medio.
-
-          \startformula
-            2\big( x^3y \big)\big( 3z^4 \big) = 6x^3yz^4 = \big|6x^3yz^4\big|
-          \stopformula
-        \stopplaceformula
-      \stopejemplos
-
-      \startejemplos
-        Los siguientes trinomios no son cuadrados perfectos.
-        \startitemejem
-          \head
-          \ini{$3x^4 - 6x^2y + 9y^2$}
-
-          Vemos que $\sqrt{3x^4}$ no es exacta.
-
-          \head
-          \ini{$9a^2 - 10a + 4$}
-
-          Tenemos que $\sqrt{9a^2} = 3a, \quad \sqrt{4} = 2$. Sin embargo, la segunda condición no se cumple, ya que $2(3a)(2) = 12a \neq |-10a|$.
-
-          \head
-          \ini{$4p^2 + 20pq^3 + 25q^5$}
-
-          Resulta que $\sqrt{4p^2} = 2p$, pero $\sqrt{25q^5}$ no es exacta.
-
-          \head
-          \ini{$x^6 - 12x^2y^4 + 36y^8$}
-
-          Comprobamos que $\sqrt{x^6}=x^3, \quad \sqrt{36y^8} = 6y^4$. Pero, $2\big(x^3\big)\big(6y^4\big) = 12x^3y^4 \neq \big|-12x^2y^4\big|$.
-        \stopitemejem
-      \stopejemplos
-
-      \margindata[youtube][method=top]{\from[AI13B]}
-      \startejemplo
-        \ini{Si $4x^2 + 9y^6$ son el primero y tercer término de un trinomio cuadrado perfecto, ¿cuál podrá ser el término del medio?}
-
-        Primeramente, verificamos que estos dos términos son cuadrados perfectos:
-
-        \startformula
-          \sqrt{4x^2} = 2x \;\text{ y }\; \sqrt{9y^6} = 3y^3.
-        \stopformula
-
-        Luego, por la segunda característica de un trinomio cuadrado perfecto, el término del medio podrá ser: $2(2x)\big(3y^3\big) = 12xy^3$ o $-12xy^3$, recordando que éste puede ser positivo o negativo.
-      \stopejemplo
-
-      \startdiscusion{Cálculo del coeficiente numérico del tercer término de un trinomio cuadrado perfecto}
-        
-        Consideremos, ahora, los primeros dos términos de un trinomio cuadrado perfecto: $ax^{2m} + bx^my^n$. ¿Cuál será el tercer término?
-
-        En cuanto a coeficiente literal vemos que $x^m$ corresponderá a $\sqrt{x^{2m}}$, la raíz cuadrada del coeficiente literal del primer término. Luego, $y^n$ tiene que corresonder a la raíz cuadrada del coeficiente literal del tercer término. Esto es, $y^n = \sqrt{y^{2n}}$, por lo que $y^{2n}$ es el coeficiente literal del tercer término que estamos buscando.
-
-        En cuanto al coeficiente numérico del tercer término, por la definición de trinomio cuadrado perfecto,
-
-        \startformula
-          |b| = 2\sqrt{a}\sqrt{c}
-        \stopformula
-
-        donde $c$ es el coeficiente numérico del tercer término. De esta igualdad, veamos cómo podemos obtener $c$.
-
-        \startformula
-          \frac{|b|}{2\sqrt{a}}  = \frac{\sqrt{a}\sqrt{c}}{2\sqrt{a}}
-        \stopformula
-        \startformula
-          \frac{|b|}{2\sqrt{a}}  = \sqrt{c}
-        \stopformula
-        \startformula
-          \left(\frac{|b|}{2\sqrt{a}} \right)^2  = c
-        \stopformula
-        \startformula
-          \frac{|b|^2}{\big(2\sqrt{a}\big)^2}  = c 
-        \stopformula
-        \startformula
-          \frac{b^2}{4a}  = c 
-        \stopformula
-
-        Por la ley transitiva de la igualdad tenemos
-
-        \startformula
-          c = \frac{b^2}{4a} 
-        \stopformula
-
-        que se conoce como la \obj{fórmula para hallar el coeficiente numérico del tercer término de un trinomio cuadrado perfecto}.
-      \stopdiscusion
-
-      \startejemplos
-        \startitemejem
-          \startitem
-            \ini{Si $4x^4 -5x^2$ son los primeros dos términos de un trinomio cuadrado perfecto, ¿cuál será el tercer término?}
-
-            Como en el segundo término sólo hay una variable y ésta corresponde a la raíz cuadrada del coeficiente literal del primer término, entonces el tercer término no tiene variables.
-
-            Para determinar el coeficiente numérico del tercer término, hacemos uso de la fórmula
-
-            \startformula
-              c = \frac{b^2}{4a}, \;\text{ donde }\; b = -5 \text{ y } a = 4
-            \stopformula
-
-            \startformula
-              c = \frac{(-5)^2}{4 \cdot 4} = \frac{25}{16}
-            \stopformula
-
-            Luego, el trinomio que buscamos es
-
-            \startformula
-              4x^4 -5x^2 + \frac{25}{16}
-            \stopformula
-
-            Podemos verificar si el resultado es correcto, comprobando si el resultado cumple con las caracteríticas de un trinomio cuadrado perfecto.
-
-            Vemos que $\displaymath{\sqrt{4x^4} = 2x^2}$ y $\sqrt{\frac{25}{16}} = \frac{\sqrt{5}}{\sqrt{4}} = \frac{5}{4}$.
-
-            Además, $2\big(2x^2\big)\Big(\frac{5}{4}\Big) = 5x^2 = \big|-5x^2\big|$
-          \stopitem
-
-          \margindata[youtube][method=top]{\from[AI14A]}
-          \startitem
-            \ini{Si $c^2 + 2xy^3$ son los primeros dos términos de un trinomio cuadrado perfecto determine el tercer término.}
-
-            Recordemos que en el segundo término tiene que aparecer el doble de las raíces cuadradas del primer término y del tercero. Vemos que $x = \sqrt{x^2}$. Luego, $y^3$ tiene que ser la raíz cuadrada de la variable que va a aparecer en el tercer término. Por tanto, si la cuadramos 
-
-            \startformula
-              (y^3)^2 = y^6
-            \stopformula 
-
-            obtenemos el coeficiente literal del tercer término.
-
-            Para obtener el coeficiente numérico, utilizamos la fórmula: $c = \dfrac{b^2}{4a},\;$ con $b=2$, $a=1$. Resultando
-            \startformula
-              c = \frac{2^2}{4 \cdot 1} =\frac{4}{4} = 1
-            \stopformula
-
-            Luego, el término cuadrado perfecto que buscamos es:
-
-            \startformula
-              x^2 + 2xy^3 + y^6
-            \stopformula
-          \stopitem
-        \stopitemejem
-      \stopejemplos
-
-      \startteorema
-        Sea $ax^{2m} \pm bx^ny^n + cy^{2n}$, un trinomio cuadrado perfecto. Entonces
-        \startformula
-          ax^{2m} \pm bx^ny^n + cy^{2n} = \big( \sqrt{a}\,x^m \pm \sqrt{c}\,y^n \big)^2.
-        \stopformula
-      \stopteorema
-
-      \startdemo
-        Por el producto especial del cuadrado de un binomio,
-        \startformula
-          \startalign
-            \NC \big( \sqrt{a}\,x^m \pm \sqrt{c}\,y^n \big)^2 =
-            \NC \big( \sqrt{a}\,x^m \big)^2 \pm 2\sqrt{a}\sqrt{c}\,x^m y^n + \big(\sqrt{c}\,y^n\big)^2 \NR
-
-            \NC =
-            \NC ax^{2m} \pm bx^my^n + cy^{2n},\NR
-        \stopalign
-
-        \stopformula
-        pues, por definición del trinomio cuadrado perfecto, $b=2\sqrt{a}\sqrt{c}$.
-
-        Finalmente, por las leyes transitiva y simétrica de la igualdad, tenemos
-
-        \startformula
-          ax^{2m} \pm b x^m y^n + c y^{2n} = \big(\sqrt{a}\,x^m \pm \sqrt{c}\, y^n\big)^2
-        \stopformula
-      \stopdemo
-
-      \startejemplos
-        Factorice primamente
-        \startitemejem
-          \startitem
-            $\ini{x^2 + 4x + 4} = (x + 2)^2$
-          \stopitem
-          \startitem
-            $\ini{72a^2 + x^6 y^4 -24x^3y^2za^2 + 2a^2z^2}$\par
-            $= 2a^2\big(36x^6y^4 - 12x^3y^2z + z^2\big)$\par
-            $= 2a^2\big(6x^3y^2 - z\big)^2$
-          \stopitem
-
-        \stopitemejem
-      \stopejemplos
-    \stopsubsection
-    \margindata[youtube]{\from[AI14B]}
-    \startsubsection[title={El trinomio cuadrático o de tipo cuadrático mónico y no mónico}]
-
-      \startdefinicion
-        Un trinomio en la forma $ax^{2m} + bx^my^n + cy^{2n}$, donde $m,n \in \integers$ fijos y $a,b,c \in \reals$ fijos, que no cumplen, necesariamente, con las condiciones de un trinomio cuadrado perfecto, se llama \obj{un trinomio de tipo cuadrático}. Si $m, n <= 1$, el trinomio se llama \obj{cuadrático}. Si $|a| = 1$ o si $|c| = 1$, el trinomio cuadrático o de tipo cuadrático se llama \obj{mónico}, de lo contrario se llama \obj{no mónico}.
-      \stopdefinicion
-
-      \startobservacion
-        \startitemize[packed][before=,after=]
-          \startitem
-            Vea que un trinomio cuadrado perfecto es un trinomio de tipo cuadrático o cuadrático, mónico o no mónico.
-          \stopitem
-
-          \startitem
-            La característica fundamental de un trinomio cuadrático o de tipo cuadrático es que sus variables aparecen elevadas a exponentes pares en el primer y tercer términos (aunque pueden ser en cualquiera dos de los tres términos) y que esas mismas variables aparecen en el término del medio elevadas a exponentees que son la mitad de aquéllos a los que aparecen elevadas en el primero y tercer términos (en general, en los otros dos términos).
-          \stopitem
-        \stopitemize
-      \stopobservacion
-
-      \startdiscusion{Factorización del trinomio cuadrático o de tipo cuadrático}
-        \margindata[comentario]{Por un producto especial del álgebra elemental sabemos que si multiplicamos dos binomios cuyos términos correspondientes son semejantes el resultado tiene tres términos}
-
-        \startformula
-          \startalign
-            \NC x^{2m} + b x^m y^n +c y^{2n} \NC = (x^m + d y^n)(x^m + e y^n) \NR
-            \NC \NC = x^{2m} + e x^m y^n + d x^m y^n + d e y^n \NR
-            \NC \NC = x^{2m} + (e+d) x^m y^n + d e y^n \NR
-            \NC \NC = x^{2m} + (d+e) x^m y^n + d e y^n \NR
-          \stopalign
-        \stopformula
-
-        Resumiendo:
-        \startformula
-          \startalign
-            \NC c \NC = d e \NR
-            \NC b \NC = d + e \NR
-          \stopalign
-        \stopformula
-
-        \margindata[youtube]{\from[AI15A]}
-        
-        \startejemplos
-          Factorice primamente
-          \startitemejem
-            \startitem
-              $\ini{x^2 + 5x + 6} = (x + 3)(x + 2)$
-
-              Vemos que no tiene ningún factor común. Tampoco se trata de un trinomio cuadrado perfecto. Se trata de un trinomio cuadrático, ya que la potencia más alta es 2, luego $n = 1$ y además la misma variable aparece en el segundo término elevada a 1.
-
-              Recordemos que $de = 6$ y $d + e = 5$. Estudiamos el signo y vemos que ambos tienen que ser positivos. Vemos los factores del 6 hasta ver que ellos suman 5. Al final los número que buscamos son 3 y 2.
-            \stopitem
-
-            \startitem
-              $\ini{5x^2y + x^4 + 4y^2} = x^4 + 5x^2y + 4y^2 = (x^2 + 4y)(x^2 + y)$
-
-              En este caso lo primero que hacemos es ordenar el trinomio.
-            \stopitem
-
-            \margindata[youtube]{\from[AI15B]}
-            \startitem
-              $\ini{-40z^4 + 3x^4 y^3 z^2 + x^8 y^ 6} = x^8 y^6 + 3x^4 y^3 z^2 - 40z^4 = (x^4 y^3 + 8z^2)(x^4 y^3 - 5z^2)$
-
-              Se trata de un trinomio de tipo cuadrático mónico.
-            \stopitem
-
-            \startitem
-              $\ini{x^6 - 10x^3 y^5 - 24y^{10}} = (x^3 + 2y^5)(x^3 - 12y^5)$
-            \stopitem
-          \stopitemejem
-        \stopejemplos
-
-      \stopdiscusion
-
-
-      \margindata[youtube]{\from[AI16A]}
-      \startdiscusion[title={El trinomio cuadrático o de tipo cuadrático no mónico}]
-
-        \placeformula[eq1]
-        \startformula
-          \startalign
-            \NC a x^{2m} + b x^m y^n - c y^{2n} \NC = (px^m +qy^n)(r x^m + s y^n)\NR
-            \NC \NC = prx^{2m} + psx^my^n +qry^nx^m + q s y^{2n} \NR
-            \NC \NC = prx^{2m} + (ps + qr) x^my^n + q s y^{2n} \NR[+]
-          \stopalign
-        \stopformula
-
-        \startformula
-          \therefore pr = a,\; ps + qr = b,\; qs = c
-        \stopformula
-
-        Si ahora consideramos el producto
-        \startformula
-          P = ac = (pr)(qs) = prqs = psqr = (ps)(qr),
-        \stopformula
-        y la suma
-        \startformula
-          S = b = ps + qr,
-        \stopformula
-        y nos preguntamos, ¿qué dos números tienen como producto a: $ac = (ps)(qr)$; y como suma a: $b = ps+qr$?, la respuesta es, obviamente, $ps$ y $pr$.
-
-        Vea que podemos reescribir a \ineq[eq1] como:
-
-        \startformula
-          pr x^{2m} + \underbracket{ps} x^m y^n + \underbracket{qr} x^m y^n + qs y^{2n},
-        \stopformula
-
-        y, además, observamos que ambos números están en los dos términos marcados.
-
-        Si ahora aplicamos factorización por agrupación al multinomio anterior, obtenemos:
-
-        \startformula
-          \startalign
-            \NC = \NC p x^m\left(r x^m + s y^n\right) + q y^n\left(r x^m + s y^n \right) \NR
-            \NC = \NC \left(r x^m + s y ^n \right) \left(p x^m + q y^n \right) \NR
-            \NC = \NC \left(p x^m + q y ^n \right) \left(r x^m + s y^n \right) \NR 
-          \stopalign
-        \stopformula
-
-        Resumiendo: dado el trinomio cuadrático o de tipo cuadrático no mónico $ax^{2m} + bx^m y^n + c y^{2n}$, bucamos qué dos números multiplicados producen
-        \startformula
-          P = ac
-        \stopformula
-        y que al sumarlos totalizan
-        \startformula
-          S = b.
-        \stopformula
-
-        Vimos que eran los números que hemos identificado como $ps$ y $qr$.
-
-        Reescribimos el trinomio cuadrático o de tipo cuadrático no mónico dado, $ax^{2m} + bx^m y^n + c y^{2n}$ en la forma:
-
-        \startformula
-          a x^{2m} + ps x^m y^n + qr x^m y^n + c y^{2n}
-        \stopformula
-
-        y procedemos a aplicar factorización por agrupación a este tetranomio obtenido.
-
-        \margindata[youtube]{\from[AI16B]}
-        \startejemplo
-          Factorice completamente
-
-          \startplaceformula
-            \startejerformula
-              \startalign
-                \NC \ini{15x^4 - 13x^2y^3 - 6y^6} = \NC 15x^4 + 5x^2 y^3 - 18x^2 y^3 - 6y^6\NR[+]
-                \NC = \NC 5x^2\left(3x^2 + y^3 \right) - 6y^3\left(3x^2 + y^3 \right)\NR
-                \NC = \NC \left(3x^2 + y^3\right) \left(5x^2 - 6y^3\right)\NR
-              \stopalign
-            \stopejerformula
-          \stopplaceformula
-
-          Se trata de un trinomio de tipo cuadrático no mónico.
-          Partimos de:
-          \startformula
-            \startalign
-              \NC P = \NC 15(-6) = -90 = ac \NR
-              \NC S = \NC -13 = b \NR
-            \stopalign
-          \stopformula
-          y hallamos $a = 5$ y $c = -18$
-        \stopejemplo
-        
-        \margindata[youtube]{\from[AI17A]} 
-        \startejemplos
-
-          \startplaceformula
-            \startejerformula
-              \startalign
-                \NC \ini{12x^2 - 28x + 15} = \NC 12x^2 - 18x -10x + 15\NR[+]
-                \NC = \NC 6x (2x - 3) - 5(2x - 3)\NR
-                \NC = \NC (2x - 3) (6x - 5)\NR
-              \stopalign
-            \stopejerformula
-          \stopplaceformula
-
-          Se trata de un trinomio cuadrático no mónico.
-
-          Partimos de:
-          \startformula
-            \startalign
-              \NC P = \NC 12(15) = 180 = ac \NR
-              \NC S = \NC -28 = b \NR
-            \stopalign
-          \stopformula
-          y hallamos $a = -18$ y $c = -10$
-
-          \startplaceformula
-            \startejerformula
-              \startalign
-                \NC \ini{20x^2a^2 + 18xa^2y^4 - 126y^8a^2} = \NC\NR[+] 
-              \stopalign
-            \stopejerformula
-          \stopplaceformula
-          \startformula
-            \startalign
-              \NC = \NC 2a^2\left(10x^2 + 9xy^4 - 63y^8\right)\NR
-              \NC = \NC 2a^2\left(10x^2 -21x y^4 + 50x y^4 -63y^8 \right)\NR
-              \NC = \NC 2a^2\left[x\left(10x - 21y^4\right) + 3y^4\left(10 x - 21y^4\right)\right] \NR
-              \NC = \NC 2a^2\left(10x - 21y^4\right) \left(x + 3y^4\right) \NR
-            \stopalign
-          \stopformula
-
-          Después de sacar factor común aparece un trinomio de tipo cuadrático no mónico.
-
-          Partimos de:
-          \startformula
-            \startalign
-              \NC P = \NC 10(-63) = -630 = ac \NR
-              \NC S = \NC 9 = b \NR
-            \stopalign
-          \stopformula
-          y hallamos $a = 30$ y $c = -21$
-
-          \margindata[youtube][method=top]{\from[AI17B]}
-          \startplaceformula
-            \startejerformula
-              \startalign
-                \NC \ini{3z + 20xyz + 12x^2 y^2 z} = \NC z\left(3 + 20xy + 12x^2 y^2\right) \NR[+]
-                \NC = \NC z\left(3 + 2xy +18xy + 12x^2 y^2\right) \NR
-                \NC = \NC z\left[(3 + 2xy) + 6xy (3 + 2xy)\right] \NR
-                \NC = \NC z (3 + 2xy)(1+ 6xy) \NR
-              \stopalign
-            \stopejerformula
-          \stopplaceformula
-
-          Después de sacar factor común aparece un trinomio de tipo cuadrático no mónico.
-
-          Partimos de:
-          \startformula
-            \startalign
-              \NC P = \NC 3(12) = 36 = ac \NR
-              \NC S = \NC  = 20 \NR
-            \stopalign
-          \stopformula
-          y hallamos $a = 2$ y $c = 18$
-
-          \startplaceformula
-            \startejerformula
-              \startalign
-                \NC \ini{4x^2 + 12xy + 9y^2} = \NC (2x + 3y)^2 \NR[+]
-              \stopalign
-            \stopejerformula
-          \stopplaceformula
-
-          Se trata de un trinomio cuadrático no mónico. Sin embargo, comprobamos que también se trata de un trinomio cuadrado perfecto y lo factorizamos como tal.
-
-          \startplaceformula
-            \startejerformula
-              \startalign
-                \NC \ini{3p^2 + 22p + 8} \NC \NR[+]
-              \stopalign
-            \stopejerformula
-          \stopplaceformula
-
-          Se trata de un trinomio cuadrático no mónico.
-
-          Partimos de:
-          \startformula
-            \startalign
-              \NC P = \NC 3(8) = 24 = ac \NR
-              \NC S = \NC b = 22 \NR
-            \stopalign
-          \stopformula
-          pero no existen valores de $a$ y $c$ que cumplan las restricciones.
-
-          Decimos, entonces, que el trinomio dado \obj{no es factorizable, es primo o es irreducible}.
-
-        \stopejemplos
-      \stopdiscusion
-    \stopsubsection
-
-  \stopsection
-
-  \margindata[youtube]{\from[AI18A]}
-  \startsection[title={Otras técnicas de factorización}]
-
-    Se trata de variantes o combinaciones de las técnicas que hemos visto hasta ahora.
-
-    \startejemplos
-      \startplaceformula
-        \startejerformula
-          \startalign
-            \NC \ini{16x^6 - 25y^2 + 9 z^4 - 24x^3z^2} = \NC 16x^6 - 24x^3z^2 + 9z^4 - 25y^2\NR[+]
-            \NC = \NC \left(4x^3 - 3z^2\right)^2 - 25y^2 \NR
-            \NC = \NC \left[\left(4x^3 - 3z^2\right) + 5y\right]\left[\left(4x^3 - 3z^2\right) - 5y\right] \NR
-            \NC = \NC \left(4x^3 - 3x^2 + 5y\right) - \left(4x^3 - 3z^2 - 5y\right) \NR
-          \stopalign
-        \stopejerformula
-      \stopplaceformula
-
-      \startplaceformula
-        \startejerformula
-          \startalign
-            \NC \ini{x^2 + 2xy + y^2 - u^2 + 2uv - v^2} = \NC \left(x^2 + 2xy + y^2\right) - \left(u^2 - 2uv + v^2\right) \NR[+]
-            \NC = \NC (x + y)^2 - (u - v)^2 \NR
-            \NC = \NC [(x + y) + (u -v)][(x + y) - (u - v)] \NR
-            \NC = \NC (x + y + u - v)(x + y - u + v) \NR
-          \stopalign
-        \stopejerformula
-      \stopplaceformula
-
-      \startplaceformula
-        \startejerformula
-          \startalign
-            \NC \ini{a^2 + ab - 2b^2 + 2a - 2b} = \NC (a + 2b)(a - b) + 2(a - b)\NR[+]
-            \NC = \NC (a - b)(a + 2b +2)\NR
-          \stopalign
-        \stopejerformula
-      \stopplaceformula
-
-      Los primeros tres términos forman un trinomio cuadrático mónico. Para resolverlo partimos de:
-      \startformula
+    \startplaceformula
+      \startejerformula
         \startalign
-          \NC P = \NC -2  \NR
-          \NC S = \NC  1 \NR
+          \NC \ini{\frac{20}{\sqrt[3]{9} - \sqrt[3]{4}}} =
+          \NC \frac{20}{\sqrt[3]{9} - \sqrt[3]{4}} \cdot \frac{\sqrt[3]{9^2} + \sqrt[3]{9\cdot4} + \sqrt[3]{4^2}}{\sqrt[3]{9^2} + \sqrt[3]{9\cdot4} +  \sqrt[3]{4^2}} \NR[+]
+
+          \NC =
+          \NC \frac{20\Big(\sqrt[3]{81} + \sqrt[3]{36} + \sqrt[3]{16} \Big)}{\Big( \sqrt[3]{9}\Big)^3 - \Big( \sqrt[3]{4}\Big)^3} = \frac{20\Big(\sqrt[3]{27 \cdot 3} + \sqrt[3]{36} + \sqrt[3]{8 \cdot 2} \Big)}{9 - 4}\NR
+
+          \NC =
+          \NC \frac{20\Big(3\sqrt[3]{3} + \sqrt[3]{36} + 2\sqrt[3]{2} \Big)}{5} = 12\sqrt[3]{3} + 4\sqrt[3]{36} + 8\sqrt[3]{2} \NR
         \stopalign
-      \stopformula
-      Obtenemos los valores 2 y -1.
+      \stopejerformula
+    \stopplaceformula
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{\frac{1}{1 + 2\sqrt[3]{a^2}}} = \NC \frac{1}{1 + 2\sqrt[3]{a^2}} \cdot \frac{1 - 2\sqrt[3]{a^2} + 4\sqrt[3]{a^4}}{1 - 2\sqrt[3]{a^2} + 4\sqrt[3]{a^4}}\NR[+]
+          \NC = \NC \frac{1 - 2\sqrt[3]{a^2} + 4\sqrt[3]{a^3 a}}{1 + 8a^2} = \frac{1 - 2\sqrt[3]{a^2} + 4a\sqrt[3]{a}}{1 + 8a^2}\NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+  \stopejemplos
+
+\stopsection
+
+\youtube[method=top]{\from[AI13A]}
+\startsection[title={El trinomio cuadrado perfecto}]
+
+  \startdefinicion
+    Un trinomio en la forma $ax^{2m} + bx^my^n + cy^{2n}$, donde $m,n \in \integers$ fijos y $a,b,c \in \reals$ fijos, de modo que $\sqrt{a}, \sqrt{c} \in \rationals$ (o sea son cuadrados perfectos) y donde $|\,b\,| = 2\sqrt{a}\sqrt{c}$, se llama \obj{un trinomio cuadrado perfecto}.
+  \stopdefinicion
+
+  \startdiscusion{Características del trinomio cuadrado perfecto}
+    \startitemize[n]
+      \startitem
+        El primero y el tercer término son cuadrados perfectos. Esto es, se les puede extraer la raíz cuadrada exacta.
+      \stopitem
+      \startitem
+        El término del medio sin contar su signo, es el doble del producto de la raíz cuadrada del primero por la raíz cuadrada del tercero.
+      \stopitem
+    \stopitemize
+  \stopdiscusion
+
+  \startejemplos
+    Los siguientes trinomios son cuadrados perfectos.
+    % \comentario{En los ejemplos que siguen vamos a suponer que las variables representan números reales positivos}
+
+    \startitemejem
+      \startitem
+        $\ini{4x^2 - 16xy^3 + 16y^6}$
+
+        Tenemos que ver que el primer y tercer términos tiene raíces cuadradas exactas.
+
+        $\sqrt{4x^2} = 2x, \quad \sqrt{16y^6} = 4y^3$
+
+        Además, hay que ver que el término de enmedio sin contar el signo es dos veces el producto de esas dos raíces cuadradas.
+
+        $ = 2(2x)(4y^3) = 16xy^3 = \big|-16xy^3\big\,|$
+      \stopitem
+
+      \startitem
+        $\ini{x^6y^2 + 6x^3yz^4 + 9z^8}$
+
+        Comprobamos el primer y tercer término.
+
+        $\sqrt{x^6y^2} = x^3y, \quad \sqrt{9x^8} = 3z^4$
+
+        Veamos ahora el término del medio.
+
+        $ = 2\big( x^3y \big)\big( 3z^4 \big) = 6x^3yz^4 = \big|\,6x^3yz^4\,\big|$
+      \stopitem
+    \stopitemejem
+
+  \stopejemplos
+
+  \startejemplos
+    Los siguientes trinomios no son cuadrados perfectos.
+    \startitemejem
+      \head
+      \ini{$3x^4 - 6x^2y + 9y^2$}
+
+      Vemos que $\sqrt{3x^4}$ no es exacta.
+
+      \head
+      \ini{$9a^2 - 10a + 4$}
+
+      Tenemos que $\sqrt{9a^2} = 3a,\; \sqrt{4} = 2$. Sin embargo, la segunda condición no se cumple, ya que $2(3a)(2) = 12a \neq 10a$.
+
+      \head
+      \ini{$4p^2 + 20pq^3 + 25q^5$}
+
+      Resulta que $\sqrt{4p^2} = 2p$, pero $\sqrt{25q^5}$ no es exacta.
+
+      \head
+      \ini{$x^6 - 12x^2y^4 + 36y^8$}
+
+      Comprobamos que $\sqrt{x^6}=x^3, \quad \sqrt{36y^8} = 6y^4$.
+
+      Pero, $2\big(x^3\big)\big(6y^4\big) = 12x^3y^4 \neq 12x^2y^4$.
+    \stopitemejem
+  \stopejemplos
+
+  \youtube[method=top]{\from[AI13B]}
+  \startejemplo
+    \ini{Si $4x^2 + 9y^6$ son el primero y tercer término de un trinomio cuadrado perfecto, ¿cuál podrá ser el término del medio?}
+
+    Primeramente, verificamos que estos dos términos son cuadrados perfectos:
+
+    \startformula
+      \sqrt{4x^2} = 2x \;\text{ y }\; \sqrt{9y^6} = 3y^3.
+    \stopformula
+
+    Luego, por la segunda característica de un trinomio cuadrado perfecto, el término del medio podrá ser: $2(2x)\big(3y^3\big) = 12xy^3$ o $-12xy^3$, recordando que éste puede ser positivo o negativo.
+  \stopejemplo
+
+  \startdiscusion{Cálculo del coeficiente literal del tercer término de un trinomio cuadrado perfecto}
+    
+    Consideremos, ahora, los primeros dos términos de un trinomio cuadrado perfecto: $ax^{2m} + bx^my^n$. ¿Cuál será el tercer término?
+
+    En cuanto a coeficiente literal vemos que $x^m$ corresponderá a $\sqrt{x^{2m}}$, la raíz cuadrada del coeficiente literal del primer término. Luego, $y^n$ tiene que corresponder a la raíz cuadrada del coeficiente literal del tercer término. Esto es, $y^n = \sqrt{y^{2n}}$, por lo que
+
+    \startformula
+      \mframed[offset=3pt]{y^{2n}}
+    \stopformula
+
+    es el coeficiente literal del tercer término que estamos buscando.
+
+  \stopdiscusion
+
+  \startdiscusion{Cálculo del coeficiente numérico del tercer término de un trinomio cuadrado perfecto}
+
+    En cuanto al coeficiente numérico del tercer término, por la definición de trinomio cuadrado perfecto,
+
+    \startformula
+      |\,b\,| = 2\sqrt{a}\sqrt{c}
+    \stopformula
+
+    donde $c$ es el coeficiente numérico del tercer término. De esta igualdad, veamos cómo podemos obtener $c$.
+
+    \startformula
+      \frac{|\,b\,|}{2\sqrt{a}}  = \frac{\sqrt{a}\sqrt{c}}{2\sqrt{a}}
+    \stopformula
+    \startformula
+      \frac{|\,b\,|}{2\sqrt{a}}  = \sqrt{c}
+    \stopformula
+    \startformula
+      \left(\frac{|\,b\,|}{2\sqrt{a}} \right)^2  = c
+    \stopformula
+    \startformula
+      \frac{|\,b\,|^2}{\big(2\sqrt{a}\big)^2}  = c 
+    \stopformula
+    \startformula
+      \frac{b^2}{4a}  = c 
+    \stopformula
+
+    Por la ley transitiva de la igualdad tenemos
+
+    \startformula
+      \mframed[offset=3pt]{c = \frac{b^2}{4a}}
+    \stopformula
+
+    que se conoce como la \,\obj{fórmula para hallar el coeficiente numérico del tercer término de un trinomio cuadrado perfecto}.
+  \stopdiscusion
+
+  \startejemplos
+    \startitemejem
+      \startitem
+        \ini{Si $4x^4 -5x^2$ son los primeros dos términos de un trinomio cuadrado perfecto, ¿cuál será el tercer término?}
+
+        Como en el segundo término sólo hay una variable y ésta corresponde a la raíz cuadrada del coeficiente literal del primer término, entonces el tercer término no tiene variables.
+
+        Para determinar el coeficiente numérico del tercer término, hacemos uso de la fórmula
+
+        \startformula
+          c = \frac{b^2}{4a}, \;\text{ donde }\; b = -5 \text{ y } a = 4
+        \stopformula
+
+        \startformula
+          c = \frac{(-5)^2}{4 \cdot 4} = \frac{25}{16}
+        \stopformula
+
+        Luego, el trinomio que buscamos es
+
+        \startformula
+          4x^4 -5x^2 + \frac{25}{16}
+        \stopformula
+
+        Podemos verificar si el resultado es correcto, comprobando si el resultado cumple con las caracteríticas de un trinomio cuadrado perfecto.
+
+        Vemos que $\sqrt{4x^4} = 2x^2$ y $\sqrt{\dfrac{25}{16}} = \dfrac{\sqrt{25}}{\sqrt{16}} = \dfrac{5}{4}$.
+
+        Además, $2\big(2x^2\big)\Big(\dfrac{5}{4}\Big) = 5x^2$
+      \stopitem
+
+      \youtube[method=top]{\from[AI14A]}
+      \startitem
+        \ini{Si $c^2 + 2xy^3$ son los primeros dos términos de un trinomio cuadrado perfecto determine el tercer término.}
+
+        Recordemos que en el segundo término tiene que aparecer el doble de las raíces cuadradas del primer término y del tercero. Vemos que $x = \sqrt{x^2}$. Luego, $y^3$ tiene que ser la raíz cuadrada de la variable que va a aparecer en el tercer término. Por tanto, si la cuadramos 
+
+        \startformula
+          \big(y^3\big)^2 = y^6
+        \stopformula 
+
+        obtenemos el coeficiente literal del tercer término.
+
+        Para obtener el coeficiente numérico, utilizamos la fórmula: $c = \dfrac{b^2}{4a},\;$ con $b=2$, $a=1$. Resultando
+        \startformula
+          c = \frac{2^2}{4 \cdot 1} =\frac{4}{4} = 1
+        \stopformula
+
+        Luego, el trinomio cuadrado perfecto que buscamos es:
+
+        \startformula
+          x^2 + 2xy^3 + y^6
+        \stopformula
+      \stopitem
+    \stopitemejem
+  \stopejemplos
+
+\stopsection
+
+\startsection[title=Factorización del trinomio cuadrado perfecto]
+
+  \startteorema
+    Sea $ax^{2m} \pm bx^my^n + cy^{2n}$, un trinomio cuadrado perfecto. Entonces
+    \startformula
+      ax^{2m} \pm bx^my^n + cy^{2n} = \big( \sqrt{a}\,x^m \pm \sqrt{c}\,y^n \big)^2.
+    \stopformula
+  \stopteorema
+
+  \startdemo
+    Por el producto especial del cuadrado de un binomio,
+    \startformula
+      \startalign
+        \NC \big( \sqrt{a}\,x^m \pm \sqrt{c}\,y^n \big)^2 =
+        \NC \big( \sqrt{a}\,x^m \big)^2 \pm 2\sqrt{a}\sqrt{c}\,x^m y^n + \big(\sqrt{c}\,y^n\big)^2 \NR
+
+        \NC =
+        \NC ax^{2m} \pm bx^my^n + cy^{2n},\NR
+      \stopalign
+
+    \stopformula
+    pues, por definición del trinomio cuadrado perfecto, $b=2\sqrt{a}\sqrt{c}$.
+
+    Finalmente, por las leyes transitiva y simétrica de la igualdad, tenemos
+
+    \startformula
+      ax^{2m} \pm b x^m y^n + c y^{2n} = \big(\sqrt{a}\,x^m \pm \sqrt{c}\, y^n\big)^2
+    \stopformula
+  \stopdemo
+
+  \startejemplos
+    Factorice primamente
+    \startitemejem
+      \startitem
+        $\ini{x^2 + 4x + 4} = (x + 2)^2$
+      \stopitem
+      \startitem
+        $\ini{72a^2 + x^6 y^4 -24x^3y^2za^2 + 2a^2z^2}$\par
+        $= 2a^2\big(36x^6y^4 - 12x^3y^2z + z^2\big)$\par
+        $= 2a^2\big(6x^3y^2 - z\big)^2$
+      \stopitem
+
+    \stopitemejem
+  \stopejemplos
+\stopsection
+
+\youtube[method=top]{\from[AI14B]}
+\startsection[title={El trinomio cuadrático o de tipo cuadrático mónico}]
+
+  \startdefinicion
+    Un trinomio en la forma $ax^{2m} + bx^my^n + cy^{2n}$, donde $m,n \in \integers$ fijos y $a,b,c \in \reals$ fijos, que no cumplen, necesariamente, con las condiciones de un trinomio cuadrado perfecto, se llama \obj{un trinomio de tipo cuadrático}. Si $m, n <= 1$, el trinomio se llama \obj{cuadrático}. Si $|\,a\,| = 1$ o si $|\,c\,| = 1$, el trinomio cuadrático o de tipo cuadrático se llama \obj{mónico}, de lo contrario se llama \obj{no mónico}.
+  \stopdefinicion
+
+  \startobservacion
+    \startitemize[packed][before=,after=]
+      \startitem
+        Vea que un trinomio cuadrado perfecto es un trinomio de tipo cuadrático o cuadrático, mónico o no mónico.
+      \stopitem
+
+      \startitem
+        La característica fundamental de un trinomio cuadrático o de tipo cuadrático es que sus variables aparecen elevadas a exponentes pares en el primer y tercer términos (aunque pueden ser en cualquiera dos de los tres términos) y que esas mismas variables aparecen en el término del medio elevadas a exponentees que son la mitad de aquéllos a los que aparecen elevadas en el primero y tercer términos (en general, en los otros dos términos).
+      \stopitem
+    \stopitemize
+  \stopobservacion
+
+  \startdiscusion{Factorización del trinomio cuadrático o de tipo cuadrático mónico}
+    % \comentario{Por un producto especial del álgebra elemental sabemos que si multiplicamos dos binomios cuyos términos correspondientes son semejantes el resultado tiene tres términos}
+
+    \startformula
+      \startalign
+        \NC x^{2m} + b x^m y^n +c y^{2n} \NC = (x^m + d y^n)(x^m + e y^n) \NR
+        \NC \NC = x^{2m} + e x^m y^n + d x^m y^n + d e y^n \NR
+        \NC \NC = x^{2m} + (e+d) x^m y^n + d e y^n \NR
+        \NC \NC = x^{2m} + (d+e) x^m y^n + d e y^n \NR
+      \stopalign
+    \stopformula
+
+    Resumiendo:
+    \startformula
+      \mframed[offset=3pt]{
+        \startalign
+          \NC c \NC = d e \NR
+          \NC b \NC = d + e \NR
+        \stopalign
+      }
+    \stopformula
+
+    \youtube{\from[AI15A]}
+    \startejemplos
+      Factorice primamente
+      \startitemejem
+        \startitem
+          $\ini{x^2 + 5x + 6} = (x + 3)(x + 2)$
+
+          Vemos que no tiene ningún factor común. Tampoco se trata de un trinomio cuadrado perfecto. Se trata de un trinomio cuadrático, ya que la potencia más alta es 2, luego $n = 1$ y además la misma variable aparece en el segundo término elevada a 1.
+
+          Recordemos que $de = 6$ y $d + e = 5$. Estudiamos el signo y vemos que ambos tienen que ser positivos. Vemos los factores del 6 hasta ver que ellos suman 5. Al final los número que buscamos son 3 y 2.
+        \stopitem
+
+        \startitem
+          $\ini{5x^2y + x^4 + 4y^2} = x^4 + 5x^2y + 4y^2 = (x^2 + 4y)(x^2 + y)$
+
+          En este caso lo primero que hacemos es ordenar el trinomio.
+        \stopitem
+
+        \youtube{\from[AI15B]}
+        \startitem
+          $\ini{-40z^4 + 3x^4 y^3 z^2 + x^8 y^ 6} = x^8 y^6 + 3x^4 y^3 z^2 - 40z^4 = (x^4 y^3 + 8z^2)(x^4 y^3 - 5z^2)$
+
+          Se trata de un trinomio de tipo cuadrático mónico.
+        \stopitem
+
+        \startitem
+          $\ini{x^6 - 10x^3 y^5 - 24y^{10}} = (x^3 + 2y^5)(x^3 - 12y^5)$
+        \stopitem
+      \stopitemejem
     \stopejemplos
 
-    \margindata[youtube]{\from[AI18B]}
+  \stopdiscusion
+\stopsection
+
+\youtube{\from[AI16A]}
+\startsection[title={El trinomio cuadrático o de tipo cuadrático no mónico}]
+
+  \placeformula[eq1]
+  \startformula
+    \startalign
+      \NC a x^{2m} + b x^m y^n + c y^{2n} \NC = (px^m +qy^n)(r x^m + s y^n)\NR
+      \NC \NC = prx^{2m} + psx^my^n +qry^nx^m + q s y^{2n} \NR
+      \NC \NC = prx^{2m} + (ps + qr) x^my^n + q s y^{2n} \NR[+]
+    \stopalign
+  \stopformula
+
+  \startformula
+    \therefore pr = a,\; ps + qr = b,\; qs = c
+  \stopformula
+
+  Si ahora consideramos el producto
+  \startformula
+    P = ac = (pr)(qs) = prqs = psqr = (ps)(qr),
+  \stopformula
+  y la suma
+  \startformula
+    S = b = ps + qr,
+  \stopformula
+  y nos preguntamos, ¿qué dos números tienen como producto a: $ac = (ps)(qr)$; y como suma a: $b = ps+qr$?, la respuesta es, obviamente, $ps$ y $pr$.
+
+  Vea que podemos reescribir a \ineq[eq1] como:
+
+  \startformula
+    pr x^{2m} + \underbracket{ps} x^m y^n + \underbracket{qr} x^m y^n + qs y^{2n},
+  \stopformula
+
+  y, además, observamos que ambos números están en los dos términos marcados.
+
+  Si ahora aplicamos factorización por agrupación al multinomio anterior, obtenemos:
+
+  \startformula
+    \startalign
+      \NC = \NC p x^m\left(r x^m + s y^n\right) + q y^n\left(r x^m + s y^n \right) \NR
+      \NC = \NC \left(r x^m + s y ^n \right) \left(p x^m + q y^n \right) \NR
+      \NC = \NC \left(p x^m + q y ^n \right) \left(r x^m + s y^n \right) \NR 
+    \stopalign
+  \stopformula
+
+  Resumiendo: dado el trinomio cuadrático o de tipo cuadrático no mónico $ax^{2m} + bx^m y^n + c y^{2n}$, buscamos qué dos números multiplicados producen
+  \startformula
+    P = ac
+  \stopformula
+  y que al sumarlos totalizan
+  \startformula
+    S = b.
+  \stopformula
+
+  Vimos que eran los números que hemos identificado como $ps$ y $qr$.
+
+  Reescribimos el trinomio cuadrático o de tipo cuadrático no mónico dado, $ax^{2m} + bx^m y^n + c y^{2n}$ en la forma:
+
+  \startformula
+    a x^{2m} + ps x^m y^n + qr x^m y^n + c y^{2n}
+  \stopformula
+
+  y procedemos a aplicar factorización por agrupación a este tetranomio obtenido.
+
+  \youtube{\from[AI16B]}
+  \startejemplo
+    Factorice completamente
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{15x^4 - 13x^2y^3 - 6y^6} = \NC 15x^4 + 5x^2 y^3 - 18x^2 y^3 - 6y^6\NR[+]
+          \NC = \NC 5x^2\left(3x^2 + y^3 \right) - 6y^3\left(3x^2 + y^3 \right)\NR
+          \NC = \NC \left(3x^2 + y^3\right) \left(5x^2 - 6y^3\right)\NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    Se trata de un trinomio de tipo cuadrático no mónico.
+    Partimos de:
+    \startformula
+      \startalign
+        \NC P = \NC 15(-6) = -90 = ac \NR
+        \NC S = \NC -13 = b \NR
+      \stopalign
+    \stopformula
+    y hallamos $a = 5$ y $c = -18$
+  \stopejemplo
+  
+  \youtube{\from[AI17A]} 
+  \startejemplos
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{12x^2 - 28x + 15} = \NC 12x^2 - 18x -10x + 15\NR[+]
+          \NC = \NC 6x (2x - 3) - 5(2x - 3)\NR
+          \NC = \NC (2x - 3) (6x - 5)\NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    Se trata de un trinomio cuadrático no mónico.
+
+    Partimos de:
+    \startformula
+      \startalign
+        \NC P = \NC 12(15) = 180 = ac \NR
+        \NC S = \NC -28 = b \NR
+      \stopalign
+    \stopformula
+    y hallamos $a = -18$ y $c = -10$
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{20x^2a^2 + 18xa^2y^4 - 126y^8a^2} = \NC 2a^2\left(10x^2 + 9xy^4 - 63y^8\right) \NR[+] 
+          \NC = \NC 2a^2\left(10x^2 -21x y^4 + 50x y^4 -63y^8 \right)\NR
+          \NC = \NC 2a^2\left[x\left(10x - 21y^4\right) + 3y^4\left(10 x - 21y^4\right)\right] \NR
+          \NC = \NC 2a^2\left(10x - 21y^4\right) \left(x + 3y^4\right) \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    Después de sacar factor común aparece un trinomio de tipo cuadrático no mónico.
+
+    Partimos de:
+    \startformula
+      \startalign
+        \NC P = \NC 10(-63) = -630 = ac \NR
+        \NC S = \NC 9 = b \NR
+      \stopalign
+    \stopformula
+    y hallamos $a = 30$ y $c = -21$
+    \youtube[method=top]{\from[AI17B]}
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{3z + 20xyz + 12x^2 y^2 z} = \NC z\left(3 + 20xy + 12x^2 y^2\right) \NR[+]
+          \NC = \NC z\left(3 + 2xy +18xy + 12x^2 y^2\right) \NR
+          \NC = \NC z\left[(3 + 2xy) + 6xy (3 + 2xy)\right] \NR
+          \NC = \NC z (3 + 2xy)(1+ 6xy) \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    Después de sacar factor común aparece un trinomio de tipo cuadrático no mónico.
+
+    Partimos de:
+    \startformula
+      \startalign
+        \NC P = \NC 3(12) = 36 = ac \NR
+        \NC S = \NC  = 20 \NR
+      \stopalign
+    \stopformula
+    y hallamos $a = 2$ y $c = 18$
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{4x^2 + 12xy + 9y^2} = \NC (2x + 3y)^2 \NR[+]
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    Se trata de un trinomio cuadrático no mónico. Sin embargo, comprobamos que también se trata de un trinomio cuadrado perfecto y lo factorizamos como tal.
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{3p^2 + 22p + 8} \NC \NR[+]
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    Se trata de un trinomio cuadrático no mónico.
+
+    Partimos de:
+    \startformula
+      \startalign
+        \NC P = \NC 3(8) = 24 = ac \NR
+        \NC S = \NC b = 22 \NR
+        \stopalign
+      \stopformula
+      pero no existen valores de $a$ y $c$ que cumplan las restricciones.
+
+      Decimos, entonces, que el trinomio dado \obj{no es factorizable, es primo o es irreducible}.
+
+    \stopejemplos
   \stopsection
 
-  \startsection[title={Factorización del tetranomio cúbido}]
+\youtube{\from[AI18A]}
+\startsection[title={Otras técnicas de factorización}]
+
+  Se trata de variantes o combinaciones de las técnicas que hemos visto hasta ahora.
+
+  \startejemplos
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{16x^6 - 25y^2 + 9 z^4 - 24x^3z^2} = \NC 16x^6 - 24x^3z^2 + 9z^4 - 25y^2\NR[+]
+          \NC = \NC \left(4x^3 - 3z^2\right)^2 - 25y^2 \NR
+          \NC = \NC \left[\left(4x^3 - 3z^2\right) + 5y\right]\left[\left(4x^3 - 3z^2\right) - 5y\right] \NR
+          \NC = \NC \left(4x^3 - 3x^2 + 5y\right) - \left(4x^3 - 3z^2 - 5y\right) \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{x^2 + 2xy + y^2 - u^2 + 2uv - v^2} = \NC \left(x^2 + 2xy + y^2\right) - \left(u^2 - 2uv + v^2\right) \NR[+]
+          \NC = \NC (x + y)^2 - (u - v)^2 \NR
+          \NC = \NC [(x + y) + (u -v)][(x + y) - (u - v)] \NR
+          \NC = \NC (x + y + u - v)(x + y - u + v) \NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    \startplaceformula
+      \startejerformula
+        \startalign
+          \NC \ini{a^2 + ab - 2b^2 + 2a - 2b} = \NC (a + 2b)(a - b) + 2(a - b)\NR[+]
+          \NC = \NC (a - b)(a + 2b +2)\NR
+        \stopalign
+      \stopejerformula
+    \stopplaceformula
+
+    Los primeros tres términos forman un trinomio cuadrático mónico. Para resolverlo partimos de:
+    \startformula
+      \startalign
+        \NC P = \NC -2  \NR
+        \NC S = \NC  1 \NR
+      \stopalign
+    \stopformula
+    Obtenemos los valores 2 y -1.
+  \stopejemplos
+
+  \youtube{\from[AI18B]}
+  \startdiscusion{Factorización del tetranomio cúbido}
     Consideremos el tetranomio de tercer grado $ax^3 + bx^2 + cx + d$. Se puede demostrar que si los coeficientes numéricos $a, b, c, d \in \integers$, el polinomio indicado puede factorizar en la forma
 
     \startplaceformula[eq2]
       \startformula
-        (ex + f)(gx^2 + hx + j),
+        \startalign
+        \NC (ex + f)(gx^2 + hx + j), \NC\NR[+]
+        \stopalign
       \stopformula
     \stopplaceformula
 
@@ -898,13 +877,14 @@
     \stoptabulate
 
     de donde al compararlo con el polinomio dado inicialmente, vemos que:
+
     \startformula
       eg = a,\; eh + fg = b,\; ej + fh = c\; \text{ y }\; fj = d.
     \stopformula
     
     Si simplifiamos el resultado de la multiplicación anterior, obtenemos $egx^3 + ehx^2 + fgx^2 + ejx + fhx + fj$, que puede ser reescrito en la siguiente forma
     \startformula
-      egx^3 + fgx^2 + ehx^2 + fhx + ejx + fj.
+      egx^3 + fgx^2 + ehx^2 + fhx + ejx + fj
     \stopformula
     al aplicar la ley conmutativa de la suma. Si lo factorizamos, agrupando cada dos términos, obtenemos
     \startformula
@@ -921,8 +901,17 @@
     \stopformula
     donde los cuatro términos nuevos que hemos escrito ($e,f,g,h$) deben ser tales que haya factores comunes cada dos términos que agrupemos entonces.
 
-    \comentario{Factorización del tetranomio cúbico \par
-    $ax^3 + bx^2 + cx + d = (ex +f)(gx^2 + hx + j)$ donde $a =eg$, $b = eh + fg$, $c = ej + fh$ y $d = fj$.}
+    % \comentario{$ax^3 + bx^2 + cx + d = (ex +f)(gx^2 + hx + j)$ donde
+    %   \startformula[packed]
+    %     \startalign
+    %       \NC a = \NC eg,\NR
+    %       \NC b = \NC eh + fg,\NR
+    %       \NC c = \NC ej + fh \NR
+    %       \NC d = \NC fj\NR
+    %     \stopalign
+    %   \stopformula}
+
+    \youtube{\from[AI19A]}
     \startejemplo
       \ini{Factorice completamente $2x^3 + 6 - 7x - x^2$}
 
@@ -955,11 +944,13 @@
       \stopformula
     \stopejemplo
 
-  \stopsection
+  \stopdiscusion
 
-  \startsection[title={Factorización de otros binomios}]
+  \youtube{\from[AI19B]}
+  \startdiscusion{Factorización de otros binomios}
 
     \startteorema
+      % \comentario{Este teorema no se demuestra en este curso}
       Si $x,y \in \reals$, entonces:
       \startitemizer
         \startitem
@@ -982,23 +973,358 @@
 
       \startitemejem
         \startitem
-          \ini{x^5 + y^5}
+          $\ini{x^5 + y^5}$
 
           Por la parte $iv)$ del teorema anterior,
           \startformula
-            (x + y) \mid (x + y)
+            (x + y) \mid \big(x^5 + y^5\big)
+          \stopformula
+          
+          Efectuamos la división larga de $x^5 + y^5 \div (x + y)$ y obtenemos
+
+          \startformula
+            x^5 + y^5 = (x+y)\big(x^4 -x^3y + x^2y^2 -xy^3 + y^4\big)
           \stopformula
         \stopitem
 
-        Efectuamos la división larga de $x^5 + y^5 \div (x + y)$
+        \startitem
+          $\ini{a^5 - b^5}$
 
-        
-        \stopitemejem
-          
+          Por la parte $iii)$ del teorema anterior,
+          \startformula
+            (a - b) \mid \big(a^5 - b^5\big)
+          \stopformula
 
+          Efectuamos la división larga de $x^5 - y^5 \div (x - y)$ y obtenemos
+
+          \startformula
+            a^5 - a^5 = (a-b)\big(a^4 +a^3b + a^2b^2 +ab^3 + b^4\big)
+          \stopformula
+        \stopitem
+
+        \youtube{\from[AI20A]}
+        \startitem
+          $\ini{x^5 + 32y^5} = x^5 + (2y)^5$
+
+          Por la parte $iv)$ del teorema anterior,
+          \startformula
+            (x+2y) \mid \big(x^5 + 32y^5\big)
+          \stopformula
+
+          Efectuamos la división larga de $x^5 + 32y^5 \div (x + 2y)$ y obtenemos
+
+          \startformula
+            x^5 +32y^5 = (x+2y)\big(x^4 +2x^3y + 4x^2y^2 - 8xy^3 + 16y^4\big)
+          \stopformula
+        \stopitem
+
+        \startitem
+          $\ini{x^{21} + 128y^7} = \big(x^3\big)^7 + (2y)^7$
+
+          Por la parte $iv)$ del teorema anterior,
+          \startformula
+            \big(x^3+2y\big) \mid \big(x^{21} + 128y^7\big)
+          \stopformula
+
+          Efectuamos la división larga de $x^{21} + 128y^7 \div (x^3 + 2y)$ y obtenemos
+
+          \startformula
+            x^{21} +128y^7 = (x^3+2y)\big(x^{18} +2x^{15}y + 4x^{12}y^2 - 8x^9y^3 + 16x^6y^4 -32x^3y^3 + 64y^6\big)
+          \stopformula
+        \stopitem
+
+      \stopitemejem
     \stopejemplos
-    
-  \stopsection
+
+  \stopdiscusion  
+
+  \youtube{\from[AI20B]}
+  \startdiscusion{Trinomio de tipo cuadrático}
+    Considere el trinomio de tipo cuadrático, $ax^{2m} + bx^my^n +cy^{2n}$, que es irreducible por el método que conocemos para factorizar este tipo de trinomios, pero que ahora se dan las siguientes condiciones: $\sqrt{a}, \; \sqrt{b}, \; \sqrt{c} \in \rationals$ (esto es, los tres coeficientes numéricos son cuadrados perfectos), $\,b = \sqrt{a}\,\sqrt{b}\,$ y $\,m, n \in \mathbb{W}$ fijos y pares. Entonces si reescribimos el trinomio dado en la forma: $ax^{2m} + 2bx^my^n +cy^{2n} - bx^my^n$, vea que los primeros tres términos forman un trinomio cuadrado perfecto y $bx^my^n$ es un cuadrado perfecto. Luego, factorizando lo que tenemos, obtenemos
+
+    \startformula
+      = \big(\sqrt{a}\,x^m + \sqrt{c}\,y^n\big)^2 - bx^my^n
+    \stopformula
+
+    que es un binomio que es la resta de dos cuadrados perfectos. Luego, si factorizamos lo anterior, obtenemos
+
+    \startformula
+      = \big[\big(\sqrt{a}\,x^m + \sqrt{c}\,y^n + \sqrt{b}\,x^{m/2}y^{n/2}\big)\big]
+      \big[\big(\sqrt{a}\,x^m + \sqrt{c}\,y^n - \sqrt{b}\,x^{m/2}y^{n/2}\big)\big]
+    \stopformula
+
+    que puede reescribirse como
+
+    \startformula
+    = \big(\sqrt{a}\,x^m + \sqrt{c}\,y^n + \sqrt{b}\,x^{m/2}y^{n/2}\big)
+      \big(\sqrt{a}\,x^m + \sqrt{c}\,y^n - \sqrt{b}\,x^{m/2}y^{n/2}\big)
+    \stopformula
+
+    \startejemplo
+      \ini{Factorice primamente: $16x^{12} + 4x^6y^4 + y^8$}
+
+      Partimos de
+      \startformula
+        \startalign
+          \NC P = \NC 16 \NR
+          \NC S = \NC  4 \NR
+        \stopalign
+      \stopformula
+      No encontramos ningún valor que satisfaga lo anterior. Por lo que no podemos factorizarlo como sabemos para los trinomios cuadráticos mónicos. Sin embargo, notamos que
+      \startformula
+        \startalign
+          \NC \sqrt{16} = \NC 4 \in \rationals \NR
+          \NC \sqrt{4} = \NC  2 \in \rationals \NR
+          \NC \sqrt{1} = \NC  1 \in \rationals \NR
+          \NC 4 = \sqrt{16}\sqrt{1} = \NC 4 \cdot 1 = 4 \NR
+        \stopalign
+      \stopformula
+      Además, n = 6 y m = 7 son pares. Por lo que como se cumplen todas las condiciones dadas en la información anterior, el trinomio de tipo cuadrático mónico dado, que es irreducible por los métodos que conocemos, se podrá factorizar si hacemos lo siguiente
+
+      \startformula
+        \startalign
+          \NC = \NC \underbrace{16x^{12} + 8x^6y^4 + y^8}_{\text{trinomio cuadrático perfecto}} -4x^6y^4 \NR
+          \NC = \NC \big(4x^6+y^4\big)^2 - 4x^6y^4 \NR
+          \NC = \NC \Big[\big(4x^6+y^4\big) + 2x^3y^2\Big]\Big[\big(4x^6+y^4\big) - 2x^3y^2\Big] \NR
+          \NC = \NC \big(4x^6+y^4+2x^3y^2\big)\big(4x^6+y^4-2x^3y^2\big) \NR
+        \stopalign
+      \stopformula
+
+    \stopejemplo
+
+    \youtube{\from[AI21A]}
+    \startejemplo
+      \ini{Factorice primamente: $x^{12} - y^6$}
+
+      Ya tratamos este caso como una diferencia de cuadrados perfectos, que es como se debe tratar. Pero, ¿qué ocurriría si lo factorizamos como una diferencia de cubos perfectos, cosa que también es?
+
+      $ = \big(x^4-y^2\big)\big(x^8+x^4y^2+y^4\big) = \big(x^2+y\big)\big(x^2-y\big)\big(x^8+x^4y^2 +y^4\big)$
+
+      En el trinomio observamos que se cumplen todas las condiciones que habían expuesto anteriormente:
+
+      $\sqrt{a} = \sqrt{1} = 1 \in \rationals$
+
+      $\sqrt{a} = \sqrt{1} = 1 \in \rationals$
+
+      $\sqrt{c} = \sqrt{1} = 1 \in \rationals$
+
+      $b = \sqrt{a}\sqrt{b} = 1 \cdot 1 = 1$
+
+      $m = 4$, par y $n = 2$, par
+
+      Entonces podemos reescribir la expresión anterior como:
+
+      \startformula
+        \startalign
+          \NC = \NC \big(x^2 + y\big)\big(x^2 - y\big)\big(x^8 + 2x^4y^2 +y^4 - x^4y^2\big) \NR
+          \NC = \NC \big(x^2 + y\big)\big(x^2 - y\big)\Big[\big(x^4 +y^2\big)^2 - x^4y^2\Big] \NR
+          \NC = \NC \big(x^2 + y\big)\big(x^2 - y\big)\Big[\big(x^4 + y^2\big) + x^2y\Big]\Big[\big(x^4 + y^2\big) - x^2y\Big] \NR
+          \NC = \NC \big(x^2 + y\big)\big(x^2 - y\big)\big(x^4 + y^2 + x^2y\big)\big(x^4 + y^2 - x^2y\big) \NR
+        \stopalign
+      \stopformula
+    \stopejemplo
+
+    Hay trinomios que no cumplen con las condiciones anteriores, % \comentario{$\sqrt{a}, \; \sqrt{b}, \; \sqrt{c} \in \rationals$ (esto es, los tres coeficientes numéricos son cuadrados perfectos), $\,b = \sqrt{a}\,\sqrt{b}\,$ y $\,m, n \in \mathbb{W}$ fijos y pares}
+    sin embargo, se presta a ser reescrito en forma conveniente para entonces poderse factorizar.
+
+    \startejemplo
+      \ini{Factorice completamente: $x^4-3x^2y^2+y^4$}
+
+      Lo reescribimos como sigue
+
+      \startformula
+        \startalign
+          \NC = \NC x^4 -2x^2y^2 +y^4 - x^2y^2 \NR
+          \NC = \NC \big(x^2 - y^2\big)^2 - x^2y^2 \NR
+          \NC = \NC \Big[\big(x^2 - y^2\big) + xy\Big]\Big[\big(x^2 - y^2\big) - xy\Big] \NR
+          \NC = \NC \big(x^2 - y^2 + xy\big)\big(x^2 - y^2 - xy\big) \NR
+        \stopalign
+      \stopformula
+    \stopejemplo
+
+    \youtube{\from[AI21B]}
+    \startejemplo
+      \ini{Factorice completamente: $x^4 +2x^2 + 9$}
+
+      Vea que este trinomio de tipo cuadrático mónico no contiene factor común. Además, no es un trinomio cuadrado perfecto. Vea que tampo es factorizable por el proceso clásico de producto y suma. Finalmente, note que tampoco cumple con las condiciones requeridas para sustituir su término del medio por su doble, convirtiendo el trinomio en un tetranomio cuyos primeros tres términos forman un trinomio cuadrado perfecto y cuyo cuarto término se resta y es un cuadrado perfecto.
+
+      Observamos, ahora, que si el segundo término hubiera sido $\pm 6x^2$ el trinomio sería cuadrado perfecto. Tratemos con $6x^2$. Vea que trinomio dado se convierte en el tetranomio:
+
+      \startformula
+        \startalign
+          \NC = \NC x^4 + 6x^2 + 9 - 4x^2 \NR
+          \NC = \NC \big(x^2 + 3\big)^2 - 4x^2 \NR
+          \NC = \NC \Big[\big(x^2 + 3\big) + 2x\Big]\Big[\big(x^2 + 3\big) - 2x\Big] \NR
+          \NC = \NC \big(x^2 + 3 + 2x\big)\big(x^2 + 3 - 2x\big) \NR
+        \stopalign
+      \stopformula
+
+
+      Note que si hubiésemos escogido el término $-6x^2$ para completar nuestro trinomio cuadrado perfecto, obtendríamos
+
+      \startformula
+        \startalign
+          \NC = \NC x^4 - 6x^2 + 9 + 8x^2 \NR
+          \NC = \NC \big(x^2 - 3\big)^2 + 8x^2 \NR
+        \stopalign
+      \stopformula
+
+      Pero, el último término impide que se convierta en una resta de cuadrados perfectos. Y no huberamos podido continuar.
+    \stopejemplo  
+  \stopdiscusion
+
+  \youtube{\from[AI22A]}
+  \startdiscusion{Factorización de sumas de cuadrados perfectos}
+
+    % \comentario{Si $x,y \in \reals$, entonces: \\ $iv)$ si $n \in \naturalnumbers$ impar, $(x+y)\bigm| \big(x^n+ y^n\big)$}
+    {\bf Primer Caso:} Si tenemos una suma de cuadrados perfectos $x^{pn} + y^{qn}$, que podemos reescribir como $\big(x^p\big)^n + \big(y^q\big)^n$, donde $p,q \in \naturalnumbers$ pares y $n \in \naturalnumbers$ impar, entonces por la parte $iv)$ del teorema indicado, $\big(x^p+y^q\big) \bigm| \big(x^{pn}+y^{qn}\big)$
+
+    \startejemplo
+      \ini{Factorice primamente: $x^{14} + y^{14}$}
+
+      Vea que $x^{14} + y^{14} = \big(x^2\big)^7 + \big(y^2\big)^7$. Luego, $\big(x^2 + y ^2\big) \bigm| \big(x^{14} + y ^{14}\big)$. Si efectuamos la división $\big(x^{14} + y^{14}\big) \div \big(x^2 + y^2\big)$, veremos que
+      
+      $x^{14 } + y^{14} = \big(x^2 + y^2\big)\big(x^{12}- x^{10}y^2 + x^8y^4 - x^6y^6 + x^4y^8-x^2y^{10} + y^{12}\big)$
+    \stopejemplo
+
+    {\bf Segundo Caso:} Si tenemos el binomio que es la suma de cuadrado perfectos $ax^{2m} + by^{2n}$, donde $\sqrt{a}, \sqrt{b} \in \rationals , \; \sqrt{2\sqrt{a}\sqrt{b}} \in \rationals$ y donde $m,n \in \naturalnumbers$ pares, se podrá factorizar reescribiéndolo en la forma:
+
+    \startformula
+      ax^{2m} + 2\sqrt{a}\sqrt{b}\, x^m y^n + by^{2n} - 2\sqrt{a}\sqrt{b}\, x^m y^n
+    \stopformula
+
+    que es un tetranomio cuyos primeros tres términos forman un trinomio cuadrado perfecto y cuyo cuarto término aparece restado y es cuadrado perfecto, se puede factorizar del siguiente modo
+
+    \startformula
+      = \big(\sqrt{a}\, x^m + \sqrt{b} \, x^n\big)^2 - 2\sqrt{a}\sqrt{b}\, x^m y^n 
+    \stopformula
+
+    que entonces se factoriza como un binomio que es la resta de dos cuadrados perfectos
+
+    \startformula
+      \startalign
+        \NC = \NC \Big[\big(\sqrt{a}\,x^m + \sqrt{b}\, y^n\big) + \sqrt{2\sqrt{a}\sqrt{b}}\, x^{m/2} y^{n/2}\Big]\Big[\big(\sqrt{a}\,x^m + \sqrt{b}\, y^n\big) - \sqrt{2\sqrt{a}\sqrt{b}}\, x^{m/2} y^{n/2}\Big] \NR
+        \NC = \NC \big(\sqrt{a}\,x^m + \sqrt{b}\, y^n + \sqrt{2\sqrt{a}\sqrt{b}}\, x^{m/2} y^{n/2}\big)\big(\sqrt{a}\,x^m + \sqrt{b}\, y^n - \sqrt{2\sqrt{a}\sqrt{b}}\, x^{m/2} y^{n/2}\big) \NR
+    \stopalign
+    \stopformula
+
+    \youtube{\from[AI22B]}
+    \startejemplos
+      Factorice completamente
+      \startitemejem
+        \startitem
+          \ini{$x^4 + 4y^4$}
+
+          Vemos que $\sqrt{1} = 1 \in \rationals$, $\sqrt{4} = 2 \in \rationals$, $\sqrt{2\sqrt{1}\sqrt{4}} = \sqrt{2 \cdot 1 \cdot 2} = \sqrt{4} = 2 \in \rationals$ y $2m = 4, \therefore m = 2 \in \naturalnumbers$ par y $2n = 4, \therefore n=2 \in \naturalnumbers$ par.
+
+          $ = x^4 + x^2y^2 + 4y^4 - 4x^2y^2$
+
+          $ = \big(x^2 + 2y^2\big)^2 - 4x^2y^2$
+
+          $ = \Big[\big(x^2+2y^2\big) + 2xy\Big]\Big[\big(x^2+2y^2\big) - 2xy\Big]$
+
+          $ = \big(x^2+2y^2 + 2xy\big)\big(x^2+2y^2 - 2xy\big)$
+        \stopitem
+        \startitem
+          \ini{$u^8 + 6v^{12}$}
+
+          Vemos que $\sqrt{1} = 1 \in \rationals$, $\sqrt{64} = 8 \in \rationals$, $\sqrt{2\sqrt{1}\sqrt{64}} = \sqrt{2 \cdot 1 \cdot 8} = \sqrt{16} = 4 \in \rationals$ y $2m = 8, \therefore m = 4 \in \naturalnumbers$ par y $2n = 12, \therefore n=6 \in \naturalnumbers$ par.
+
+          $ = u^8 + 16u^4v^6 + 64v^{12} - 16u^4v^6$
+
+          $ = \big(u^4 + 8v^6\big)^2 - 16u^4v^6$
+
+          $ = \Big[\big(u^4 + 8v^6\big) + 4u^2v^3\Big]\Big[\big(u^4 + 8v^6\big) - 4u^2v^3\Big]$
+
+          $ = \big(u^4 + 8v^6 + 4u^2v^3\big)\big(u^4 + 8v^6 - 4u^2v^3\big)$
+
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+
+  \stopdiscusion
+   
+  \youtube{\from[AI23A]}
+  \startdiscusion{Programa de factorización}
+    \startitemize
+      \startitem
+        Nos dan el polinomio.
+      \stopitem
+      \startitem
+        ¿Contiene un factor común? Si no es así, vaya a (1).
+      \stopitem
+      \startitem
+        Extraiga el factor común.
+      \stopitem
+      \startitem
+        (1) ¿Tiene cuatro o más términos? Si es así, vaya a (6).
+      \stopitem
+      \startitem
+        ¿Tiene dos término? Si es así, vaya a (4).
+      \stopitem
+      \startitem
+        ¿Tiene tres términos? Si no es así, vaya a (9).
+      \stopitem
+      \startitem
+        ¿Es un trinomio cuadrado perfecto? Si es así vaya a (3).
+      \stopitem
+      \startitem
+        Es un trinomio cuadrático o de tipo cuadrático mónico? Si es así, vaya a (2).
+      \stopitem
+      \startitem
+        Factorice el trinomio como uno cuadrático o de tipo cuadrático no mónico. Si no es posible factorizarlo así, vaya a (5). Si fue posible, vaya a (9).
+      \stopitem
+      \startitem
+        (2) Factorice el trinomio cuadrático o de tipo cuadrático mónico. Si no fue posible factorizarlo, vaya a 5. Si fue posible, vaya a (9).
+      \stopitem
+      \startitem
+        (3) Factorice el trinomio cuadrado perfecto, completamente Vara a (9).
+      \stopitem
+      \startitem
+        (4) ¿Es un binomio que es la resta de dos cuadrados perfectos? Si es así, vaya a (7).
+      \stopitem
+      \startitem
+        ¿Es un binomio que es la suma o la resta de dos cubos perfectos? Si es así, vaya a (8).
+      \stopitem
+      \startitem
+        (5) Aplique alguna técnica especial de factorización. Vaya a (9).
+      \stopitem
+      \startitem
+        (6) Aplique factorización por agrupación regular. Si no funciona vaya a (5). Si funcionó, vaya a (9).
+      \stopitem
+      \startitem
+        (7) Factorice la resta de dos cuadrados perfectos. Vaya a (9).
+      \stopitem
+      \startitem
+        (8) Factorice la suma o resta de dos cubos perfectos. 
+      \stopitem
+      \startitem
+        (9) Final
+      \stopitem
+    \stopitemize
+
+  \stopdiscusion
+
+  \startdiscusion{Factorización sobre un conjunto particular}
+    Considere los siguientes casos de factorización del número 60.
+
+    \startitemize
+      \startitem
+        $60 = 2^2 \cdot 3 \cdot 5 \quad<--\quad$ factorización sobre el conjunto de los números naturales, y es única.
+      \stopitem
+      \startitem
+        $60 = 2^2 \cdot (-3) \cdot (-5) \quad<--\quad$ factorización sobre el conjunto de los números enteros, y no es única.
+      \stopitem
+      \startitem
+        $60 = \dfrac{2}{5} \cdot \dfrac{25}{3} \cdot \dfrac{9}{6} \cdot \dfrac{-18}{-1} \cdot \dfrac{6}{9} \quad<--\quad$ factorización sobre el conjunto de los números racionales, y no es única.
+      \stopitem
+    \stopitemize
+
+    Un polinomio con coeficientes enteros puede ser factorizable sobre el conjunto de polinomios con coeficientes enteros (en cuyos casos la factorización es única), o sobre el conjunto de polinomios con coeficientes racionales, o con coeficientes numéricos irracionales, o reales, o ni siquiera con coeficientes reales.
+
+  \stopdiscusion
+
+\stopsection
 
 \stopchapter
 

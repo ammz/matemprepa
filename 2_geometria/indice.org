@@ -1,0 +1,214 @@
+* ángulo, 10
+** agudo, 12
+** cuña, 10
+** cóncavo, 12
+** diedro, 60
+*** ángulo plano, 60
+*** arista, 60
+*** caras, 60
+*** medida, 61
+** lado inicial, 11
+** lado terminal, 11
+** lados, 10
+** obtuso, 12
+** poliedro, 62
+*** arista, 62
+*** caras, 62
+*** vértice, 62
+** vértice, 10
+* ángulos
+** adyacentes, 11
+** alternos externos, 37
+** alternos internos, 37
+** complementarios, 13
+** congruentes, 14
+** correspondientes, 37
+** diedros
+*** congruentes, 61
+*** opuestos por la arista, 64
+*** verticales, 64
+** externos, 37
+** internos, 37
+** opuestos por el vértice, 16
+** poliedros
+*** congruentes, 64
+*** iguales, 64
+*** simétricos, 64
+** rectos, 12
+** suplementarios, 13
+** verticales, 16
+* bisectriz, 15
+** de un ángulo, 17
+** perpendicular, 15
+* catetos, 19
+* complemento, 13
+* congruencia
+** a.l.a., 23
+** l.a.l., 21
+* cuadrado, 49
+* cuadrilátero, 48
+** ángulos no consecutivos, 50
+** ángulos opuestos, 50
+** diagonal, 50
+** lados, 48
+** vértices consecutivos, 50
+* cuadriláteros, 48
+* cubo, 70
+* curva, 1
+* decágono, 57
+* distancia
+** desde un punto hasta un plano, 33
+** entre dos líneas paralelas, 52
+** entre un punto y una recta, 28
+* dodecágono, 57
+* eje
+** de simetría, 63
+* espacio, 1
+* geometría, 1
+** plana, 1
+** sólida, 1
+* grado, 11, 13
+* heptágono, 57
+* hexágono, 57
+* hipotenusa, 19
+* línea, 2
+** oblícua a un plano, 18
+** paralela a un plano, 35
+** perpendicular a un plano, 18
+** recta, 2
+** secante, 37
+** transversal, 37
+* líneas
+** alabeadas, 36
+** congruentes, 7
+** intersección de, 7
+** paralelas, 35
+** perpendiculares, 12
+* medida, 3
+** de un ángulo, 11
+** de un segmento, 3
+* medidas, 3
+** conversión de, 3
+* minutos, 13
+* nonágono, 57
+* octógono, 57
+* paralelepípedo, 70
+** oblícuo, 70
+** rectangular, 70
+** recto, 70
+* paralelismo, 35
+* paralelogramo, 49
+** altura, 49
+** bases, 49
+* pentágono, 57
+* perpendicularidad, 25
+* pie de una línea a un plano, 18
+* pirámide, 73
+** altura, 73
+** aristas laterales, 73
+** base, 73
+** caras laterales, 73
+** truncada, 74
+*** altura, 74
+*** base inferior, 74
+*** base superior, 74
+*** bases del tronco, 74
+*** caras, 74
+*** tronco, 74
+** vértice, 73
+* pirámides
+** cuadrangulares, 73
+** pentagonales, 73
+** triangulares, 73
+* plano, 8
+** paralelo a una recta, 35
+* planos
+** oblícuos, 61
+** paralelos, 35
+** perpendiculares, 61
+* poliedro, 68
+** aristas, 68
+** cara, 68
+** sección, 68
+** vértices, 68
+* polígono, 57
+** ángulos, 57
+** cóncavo, 57
+** convexo, 57
+*** diagonales, 59
+** equiángulo, 57
+** equilátero, 57
+** exterior de un, 57
+** interior de un, 57
+** lados, 57
+** regular, 57
+** vértices, 57
+* polígonos, 57
+** congruentes, 57
+* prisma, 68
+** altura, 68
+** aristas laterales, 68
+** bases, 68
+** caras laterales, 68
+** oblícuo, 68
+** recto, 68
+** sección recta, 68
+** tronco de, 68
+** truncado, 68
+* punto, 2
+** de simetría, 63
+** medio, 15
+* puntos
+** colineales, 2
+** coplanares, 8
+** equidistantes, 15
+** iguales, 7
+* rayo, 2
+* recta, 2
+** paralela a un plano, 35
+** perpendicular a un plano, 18
+* rectángulo, 49
+* rombo, 49
+* segmento, 2
+* segundos, 13
+* semilínea, 2
+* semirecta, 2
+* simetría, 63
+** respecto a una recta, 63
+** respecto a un punto, 63
+* superficie, 8
+* suplemento, 13
+* sólido, 68
+* tetraedro
+* trapecio, 48
+** altura, 49
+** bases, 49
+** bases del, 48
+* trapezoide, 48
+** isósceles, 48
+** rectángulo, 48
+* triángulo, 19
+** acutángulo, 19
+** altura sobre un lado, 28
+** ángulo externo de un, 44
+** base, 28
+** equilátero, 19
+** equiángulo, 19
+** escaleno, 19
+** exterior de un, 26
+** interior de un, 26
+** isósceles, 19, 22
+*** ángulo en el vértice, 22
+*** ángulos de la base, 22
+*** base, 22
+** lados, 19
+** mediana sobre un lado, 28
+** oblicuángulo, 19
+** oblícuo, 19
+** obtusángulo, 19
+** rectángulo, 19
+* triángulos
+** congruentes, 20
+** partes correspondientes, 20
+* unidades, 3
+** de medida, 3

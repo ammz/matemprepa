@@ -1,6 +1,4 @@
-
 \startcomponent c_enteros
-
 \project project_matemprepa
 
   \startchapter[title={El conjunto de los números enteros}]
@@ -57,7 +55,7 @@
         \startteorema
           - 0 = 0.
         \stopteorema
-      
+
         \startdemo
           Tiene que ocurrir que $0 + (-0) = 0$. Esto se puede reescribir, por la ley simétrica de la igualdad, como
           \startformula
@@ -140,7 +138,7 @@
 
     \startsection[title={Propiedades de los números enteros}]
       \startaxioma
-        \comentario{Se trata de las mismas leyes que hemos visto para los números cardinales y que se transfieren a los enteros sin discusión.}
+        % \comentario{Se trata de las mismas leyes que hemos visto para los números cardinales y que se transfieren a los enteros sin discusión.}
         Sean $a,b,c \in \integers$. Entonces:
         \startitemizer
 
@@ -175,7 +173,7 @@
                 (\obj{suma}) \quad $(a + b) + c = a (b + c)$
               \stopitem
               \startitem
-                (\obj{multiplicación}) \quad $(a \cdot b) \cdot c = a \cdot (b \cdot c)$             
+                (\obj{multiplicación}) \quad $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
               \stopitem
             \stopitemize
           \stopitem
@@ -193,7 +191,7 @@
           \stopitem
 
           \startitem
-            \obj{Existencia de inversos de la suma} \quad $ a + (-a) = -a + a = 0$
+            \obj{Existencia de inversos de la suma} \quad $a + (-a) = -a + a = 0$
           \stopitem
 
           \startitem
@@ -208,7 +206,6 @@
               (\obj{derecha}) \quad $(a + b) \cdot c = ac + bc$
             \stopitem
           \stopitemize
-
         \stopitemizer
       \stopaxioma
 
@@ -255,26 +252,27 @@
           x + e = e + x = 0
         \stopformula
         Queremos ver que $e = -x$.
-        \comentario{
-          \startitemize
-            \startitem
-              Ley de suma de la igualdad\par
-              $a = b --> a + c = {b + c} \land {c + a = c + b}$
-            \stopitem
-            \startitem
-              Ley asociativa (+)\par
-              $(a + b) + c = a (b + c)$
-            \stopitem
-            \startitem
-              Inversos de la suma\par
-              $a + (-a) = 0$
-            \stopitem
-            \startitem
-              Identidad de la suma\par
-              $a + 0 = a$
-            \stopitem
-          \stopitemize
-        }
+
+        % \comentario{
+        %   \startitemize
+        %     \startitem
+        %       Ley de suma de la igualdad\par
+        %       $a = b --> a + c = {b + c} \land {c + a = c + b}$
+        %     \stopitem
+        %     \startitem
+        %       Ley asociativa (+)\par
+        %       $(a + b) + c = a (b + c)$
+        %     \stopitem
+        %     \startitem
+        %       Inversos de la suma\par
+        %       $a + (-a) = 0$
+        %     \stopitem
+        %     \startitem
+        %       Identidad de la suma\par
+        %       $a + 0 = a$
+        %     \stopitem
+        %   \stopitemize
+        % }
         \startformula
           \startalign
             \NC e + x                     \NC = 0        \NR
@@ -288,7 +286,7 @@
 
       \startteorema
         Sean $a,b \in \integers$. Entonces
-        \comentario{Este teorema permite establecer de otra forma la unicidad del 0 y del inverso aditivo.}
+        % \comentario{Este teorema permite establecer de otra forma la unicidad del 0 y del inverso aditivo.}
         \startitemizer
           \startitem
             $a + b = b + a = a --> b = 0$
@@ -301,26 +299,26 @@
 
       \startdemop
         $i)$
-        \comentario{
-          \startitemize
-            \startitem
-              Ley de suma de la igualdad\par
-              $a = b --> a + c = {b + c} \land {c + a = c + b}$
-            \stopitem
-            \startitem
-              Ley asociativa (+)\par
-              $(a + b) + c = a (b + c)$
-            \stopitem
-            \startitem
-              Inversos de la suma\par
-              $a + (-a) = 0$
-            \stopitem
-            \startitem
-              Identidad de la suma\par
-              $a + 0 = a$
-            \stopitem
-          \stopitemize
-        }
+        % \comentario{
+        %   \startitemize
+        %     \startitem
+        %       Ley de suma de la igualdad\par
+        %       $a = b --> a + c = {b + c} \land {c + a = c + b}$
+        %     \stopitem
+        %     \startitem
+        %       Ley asociativa (+)\par
+        %       $(a + b) + c = a (b + c)$
+        %     \stopitem
+        %     \startitem
+        %       Inversos de la suma\par
+        %       $a + (-a) = 0$
+        %     \stopitem
+        %     \startitem
+        %       Identidad de la suma\par
+        %       $a + 0 = a$
+        %     \stopitem
+        %   \stopitemize
+        % }
         \startformulas
           \startformula
             \startalign
@@ -373,25 +371,26 @@
 
       \startdemo
         Este teorema establece que el negativo de $a + b$ es la suma de los negativos de $a$ y $b$. Luego, bastará ver que
-        \comentario{Existencia de inversos de la suma \par $ a + (-a) = -a + a = 0$}
+        % \comentario{Existencia de inversos de la suma \par $ a + (-a) = -a + a = 0$}
         \startformula
           (a + b) + [-(a + b)] = (a + b) + [-a + (-b)] = 0
         \stopformula
-        \comentario{
-          \startitemize
-            \startitem
-              Ley asociativa general
-            \stopitem
-            \startitem
-              Ley conmutativa general
-            \stopitem
-            \startitem
-              Elemento identidad (+)\par
-              $a + 0 = a$
-            \stopitem
-          \stopitemize
-        }
         Pero,
+
+        % \comentario{
+        %   \startitemize
+        %     \startitem
+        %       Ley asociativa general
+        %     \stopitem
+        %     \startitem
+        %       Ley conmutativa general
+        %     \stopitem
+        %     \startitem
+        %       Elemento identidad (+)\par
+        %       $a + 0 = a$
+        %     \stopitem
+        %   \stopitemize
+        % }
         \startformula
           \startalign
             \NC (a + b) + [-a + (-b)] \NC = a + b + (-a) + (-b)     \NR
@@ -446,29 +445,29 @@
 
       \startdemop
         $i)\quad$ Partimos de
+        % \comentario{
+        %   \startitemize
+        %     \startitem
+        %       Existencia de invesos (+)\par
+        %       $x + (-x) = 0$
+        %     \stopitem
+        %     \startitem
+        %       Ley de la multiplicación de la igualdad\par
+        %       $x = y --> zx = zy $
+        %     \stopitem
+        %     \startitem
+        %       Ley distributiva por la izquierda\par
+        %       $x(y+z) = xy + xz$
+        %     \stopitem
+        %     \startitem
+        %       $x + y = 0 --> y = -x$
+        %     \stopitem
+        %     \startitem
+        %       Ley conmutativa (\times)
+        %     \stopitem
+        %   \stopitemize
+        % }
 
-        \comentario{%
-          \startitemize
-            \startitem
-              Existencia de invesos (+)\par
-              $x + (-x) = 0$
-            \stopitem
-            \startitem
-              Ley de la multiplicación de la igualdad\par
-              $x = y --> zx = zy $
-            \stopitem
-            \startitem
-              Ley distributiva por la izquierda\par
-              $x(y+z) = xy + xz$
-            \stopitem
-            \startitem
-              $x + y = 0 --> y = -x$
-            \stopitem
-            \startitem
-              Ley conmutativa (\times)
-            \stopitem
-          \stopitemize
-        }
         \startformula
           \startalign
             \NC 1 + (-1)\NC = 0 \NR
@@ -482,24 +481,25 @@
 
         $ii)\quad$ Que como ejercicio. Se ha de forma parecida al caso $iii)$.
 
-        \comentario{
-          \startitemize
-            \startitem
-              $(-1) a = -a$
-            \stopitem
-            \startitem
-              Ley asociativa general (\times)
-            \stopitem
-            \startitem
-              Ley conmutativa general (\times)
-            \stopitem
-            \startitem
-              $-(-n) = n$
-            \stopitem
-          \stopitemize
-        }
         \margindata[youtube]{\from[AE37A]}
         $iii)\quad$ Partimos de
+        % \comentario{
+        %   \startitemize
+        %     \startitem
+        %       $(-1) a = -a$
+        %     \stopitem
+        %     \startitem
+        %       Ley asociativa general (\times)
+        %     \stopitem
+        %     \startitem
+        %       Ley conmutativa general (\times)
+        %     \stopitem
+        %     \startitem
+        %       $-(-n) = n$
+        %     \stopitem
+        %   \stopitemize
+        % }
+
         \startformula
           \startalign
             \NC (-a) (-b) \NC = [(-1)a][(-1)b]\NR
@@ -553,7 +553,7 @@
     \stopsection
 
     \startsection[title={Operación de resta de los enteros}]
-      
+
       En los números cardinales habíamos definido la resta así, $a - b = x$ ssi $a = b + x = x + b$. Esta misma definición la aplicamos a la resta de los números enteros.
 
       Así,
@@ -576,39 +576,39 @@
           a - b  = x
         \stopformula
         Entonces,
-        \comentario{Definición de resta\par$a - b = x --> a = x + b$}
+        % \comentario{Definición de resta\par$a - b = x --> a = x + b$}
         \startformula
-          a  = x + b 
+          a  = x + b
         \stopformula
         Luego,
-        \comentario{
-          \startitemize
-            \startitem
-              Ley de suma de la igualdad\par
-              $a = b --> a + c = {b + c} \land {c + a = c + b}$
-            \stopitem
-            \startitem
-              Ley asociativa (+)\par
-              $(a + b) + c = a (b + c)$
-            \stopitem
-            \startitem
-              Inversos de la suma\par
-              $a + (-a) = 0$
-            \stopitem
-            \startitem
-              Identidad de la suma\par
-              $a + 0 = a$
-            \stopitem
-            \startitem
-              Ley de sustitución\par
-             $a - b = x$
-            \stopitem
-            \startitem
-              Ley simétrica de la igualdad\par
-              $x = y --> y = x$
-            \stopitem
-          \stopitemize
-        }
+        % \comentario{
+        %   \startitemize
+        %     \startitem
+        %       Ley de suma de la igualdad\par
+        %       $a = b --> a + c = {b + c} \land {c + a = c + b}$
+        %     \stopitem
+        %     \startitem
+        %       Ley asociativa (+)\par
+        %       $(a + b) + c = a (b + c)$
+        %     \stopitem
+        %     \startitem
+        %       Inversos de la suma\par
+        %       $a + (-a) = 0$
+        %     \stopitem
+        %     \startitem
+        %       Identidad de la suma\par
+        %       $a + 0 = a$
+        %     \stopitem
+        %     \startitem
+        %       Ley de sustitución\par
+        %      $a - b = x$
+        %     \stopitem
+        %     \startitem
+        %       Ley simétrica de la igualdad\par
+        %       $x = y --> y = x$
+        %     \stopitem
+        %   \stopitemize
+        % }
         \startformula
           \startalign
             \NC a + (-b) \NC = x + b + (-b)   \NR
@@ -703,19 +703,19 @@
         \stopitem
       \stopitemizer
     \stopteorema
-    \comentario{%
-      \startitemize
-        \startitem
-          $a - b = a + (-b)$
-        \stopitem
-        \startitem
-          Distributiva por la izquierda / derecha
-        \stopitem
-        \startitem
-          $a (-b) = -ab$
-        \stopitem
-      \stopitemize
-    }
+    % \comentario{%
+    %   \startitemize
+    %     \startitem
+    %       $a - b = a + (-b)$
+    %     \stopitem
+    %     \startitem
+    %       Distributiva por la izquierda / derecha
+    %     \stopitem
+    %     \startitem
+    %       $a (-b) = -ab$
+    %     \stopitem
+    %   \stopitemize
+    % }
     \startdemop
       \startformulas
         \startformula
@@ -767,20 +767,20 @@
 
     \startdemop
       \youtube{\from[AE38B]}
-      \comentario{%
-        Ley de equivalencia de la resta\par
-        $x -y = x +(-y) \in \integers$
-      }
+      % \comentario{%
+      %   Ley de equivalencia de la resta\par
+      %   $x -y = x +(-y) \in \integers$
+      % }
       $i)\quad$ Consideremos el número $a - b$, por la ley de equivalencia de la resta tenemos que
 
       \startformula
         a - b = a + (-b) \in \integers
       \stopformula
 
-      \comentario{%
-        Ley de tricotomía de $\integers$\par
-        $\forall a \in \integers -> a = 0 \veebar a \in \integers^{+} \veebar -a \in \integers^{+}$
-      }
+      % \comentario{%
+      %   Ley de tricotomía de $\integers$\par
+      %   $\forall a \in \integers -> a = 0 \veebar a \in \integers^{+} \veebar -a \in \integers^{+}$
+      % }
       La ley de tricotomía de $\integers$ nos dice que sólo una de las siguientes posibilidades puede ocurrir:
       \startitemizer[a,packed][style=\sl,right=$)$]
         \startitem
@@ -812,29 +812,29 @@
         \stopitem
 
         \startitem
-          \comentario{$a > b <--> a -b \in \integers^{+}$}
+          % \comentario{$a > b <--> a -b \in \integers^{+}$}
           Si ocurre $b)$
           \startformula
             a - b \in \integers^{+} \text{ ssi }\; \graymath{a > b}
           \stopformula
         \stopitem
-      
-        \comentario{%
-          \startitemize[1]
-            \startitem
-              $-(x + y) = -x + (-y)$\par
-            \stopitem
-            \startitem
-              $x - y = x + (-y) \in \integers$\par
-            \stopitem
-            \startitem
-              $a > b <--> a - b \in \integers^{+}$\par
-            \stopitem
-            \startitem
-              $a < b <--> b > a$
-            \stopitem
-          \stopitemize
-        }
+
+        % \comentario{%
+        %   \startitemize[1]
+        %     \startitem
+        %       $-(x + y) = -x + (-y)$\par
+        %     \stopitem
+        %     \startitem
+        %       $x - y = x + (-y) \in \integers$\par
+        %     \stopitem
+        %     \startitem
+        %       $a > b <--> a - b \in \integers^{+}$\par
+        %     \stopitem
+        %     \startitem
+        %       $a < b <--> b > a$
+        %     \stopitem
+        %   \stopitemize
+        % }
         \startitem
           Si ocurre $c)$
           \startformula
@@ -851,26 +851,26 @@
       \stopitemize
 
       $ii)\quad$ Por hipótesis, $a > b \land b > c$. Luego,
-      \comentario{$a > b <-->  a - b \in \integers^{+}$}
+      % \comentario{$a > b <-->  a - b \in \integers^{+}$}
       \startformula
         \startalign[n=1]
           \NC a > b <--> a - b \in \integers^{+} \NR
           \NC b > c <--> b - c \in \integers^{+} \NR
         \stopalign
       \stopformula
-      \comentario{%
-        \startitemize
-          \startitem
-            Ley de clausura (+)\par
-          \stopitem
-          \startitem
-            Ley asociativa general (+)\par
-          \stopitem
-          \startitem
-            $a > b <--> a - b \in \integers^{+}$
-          \stopitem
-        \stopitemize
-      }
+      % \comentario{%
+      %   \startitemize
+      %     \startitem
+      %       Ley de clausura (+)\par
+      %     \stopitem
+      %     \startitem
+      %       Ley asociativa general (+)\par
+      %     \stopitem
+      %     \startitem
+      %       $a > b <--> a - b \in \integers^{+}$
+      %     \stopitem
+      %   \stopitemize
+      % }
       Por tanto,
       \startformula
         \startalign[n=1]
@@ -887,19 +887,19 @@
       \youtube{\from[AE39A]}
 
       $iii)\quad$ Por hipótesis, $a > b$. Luego,
-      \comentario{%
-        \startitemize
-          \startitem
-            $x > y <--> x - y \in \integers^{+}$
-          \stopitem
-          \startitem
-            $x - y = x + (-y)$
-          \stopitem
-          \startitem
-            $-(x + y) = (-x) + (-y)$
-          \stopitem
-        \stopitemize
-      }
+      % \comentario{%
+      %   \startitemize
+      %     \startitem
+      %       $x > y <--> x - y \in \integers^{+}$
+      %     \stopitem
+      %     \startitem
+      %       $x - y = x + (-y)$
+      %     \stopitem
+      %     \startitem
+      %       $-(x + y) = (-x) + (-y)$
+      %     \stopitem
+      %   \stopitemize
+      % }
       \placeformula
       \startformula
         a - b \in \integers^{+}
@@ -936,19 +936,19 @@
       \youtube{\from[AE39B]}
 
       Por lo tanto, $-ac - (-bc) \in \integers^{+}$ y esto se convierte en:
-      \comentario{%
-        \startitemize
-          \startitem
-            $x -y = x + (-y)$
-          \stopitem
-          \startitem
-            $-(-n) = n$
-          \stopitem
-          \startitem
-            $x > y <--> x - y \in \integers^{+}$
-          \stopitem
-        \stopitemize
-      }
+      % \comentario{%
+      %   \startitemize
+      %     \startitem
+      %       $x -y = x + (-y)$
+      %     \stopitem
+      %     \startitem
+      %       $-(-n) = n$
+      %     \stopitem
+      %     \startitem
+      %       $x > y <--> x - y \in \integers^{+}$
+      %     \stopitem
+      %   \stopitemize
+      % }
       \startformula
         \startalign[n=1]
           \NC -ac + [-(-bc)] \in \integers^{+} \NR
@@ -983,7 +983,7 @@
       Bastará ver que $1 > 0$. Lo haremos por contradicción.
 
       Suponemos que $\graymath{1 < 0}$. Esto es equivalente a decir que
-      \comentario{$a > b, c < 0 --> ca < cb$}
+      % \comentario{$a > b, c < 0 --> ca < cb$}
       \startformula
         \startalign[n=1]
           \NC 0 > 1 \NR
@@ -991,20 +991,20 @@
           \NC \graymath{0 < 1} \NR
         \stopalign
       \stopformula
-      \comentario{$a = b \,\veebar\, a > b \,\veebar\, a < b$}
+      % \comentario{$a = b \,\veebar\, a > b \,\veebar\, a < b$}
       Esto contradice la ley de tricotomía.
 
       Ahora, que tenemos que $1 > 0$ y podemos hacer lo siguiente
-      \comentario{%
-        \startitemize
-          \startitem
-            $a > b --> a+c > b+c$
-          \stopitem
-          \startitem
-            $a > b \land b > c --> a > c$
-          \stopitem
-        \stopitemize
-      } 
+      % \comentario{%
+      %   \startitemize
+      %     \startitem
+      %       $a > b --> a+c > b+c$
+      %     \stopitem
+      %     \startitem
+      %       $a > b \land b > c --> a > c$
+      %     \stopitem
+      %   \stopitemize
+      % }
       \startformula
         \startalign[n=1]
           \NC 1 > 0 \NR
@@ -1050,11 +1050,11 @@
         a < b \land c < 0 --> ac > bc \land ca > cb
       \stopformula
     \stopobservacion
-    
+
     \startdefinicion
       Sea $a \in \integers$. El \obj{valor absoluto de $a$}, representado por el símbolo $\abs{a}$, se define como:
       \startformula
-        \abs{a} = 
+        \abs{a} =
         \startcases
           \MC a, \MC \text{si } a \geq 0 \NR
           \MC -a, \MC \text{si } a < 0 \NR
@@ -1104,22 +1104,22 @@
     \startdemop
       $i)\quad$ Como $a,b \in \integers^{+}$, entonces $a + b \in \integers^{+}$ (ley clausura (+) en $\integers^{+}$). Luego, $\graymath{a + b > 0}$. Por lo tanto, $\abs{a + b} = a + b$. Como $a,b > 0$, $\abs{a} = a$  y $\abs{b} = b$. Luego, por sustitución, $\graymath{\abs{a + b} = \abs{a} + \abs{b}}$.
 
-      \comentario{%
-        \startitemize[joinedup]
-          \startitem
-            Equivalencia de la resta\par$x-y = x+ (-y)$
-          \stopitem
-          \startitem
-            $-x + (-y) = -(x+y)$
-          \stopitem
-          \startitem
-            $ a > 0 --> -a < 0'$
-          \stopitem
-          \startitem
-            $-(-n) = n$
-          \stopitem
-        \stopitemize
-        }
+      % \comentario{%
+      %   \startitemize[joinedup]
+      %     \startitem
+      %       Equivalencia de la resta\par$x-y = x+ (-y)$
+      %     \stopitem
+      %     \startitem
+      %       $-x + (-y) = -(x+y)$
+      %     \stopitem
+      %     \startitem
+      %       $ a > 0 --> -a < 0'$
+      %     \stopitem
+      %     \startitem
+      %       $-(-n) = n$
+      %     \stopitem
+      %   \stopitemize
+      %   }
       $ii)\quad$ $-a  - b = -a + (-b) = -(a + b)$. Vimos en el apartado $i)$ que $a + b > 0$. Luego, $-(a + b) = 0$. Por lo tanto $\graymath{-a - b < 0}$, al hacer la sustitución.
 
       Entonces $\abs{-a -b} = - (-a -b) = [-a + (-b)] = -(-a) + [(-b)] = a + b$.
@@ -1127,10 +1127,10 @@
         \therefore \graymath{\abs{-a - b} = \abs{a} + \abs{b}}
       \stopformula
 
-      \comentario{$x > y --> x + z > y + z$}
-      $iii)\quad$ Como $a > b$, entonces 
+      % \comentario{$x > y --> x + z > y + z$}
+      $iii)\quad$ Como $a > b$, entonces
       \startformula
-        a + (-b) > b + (-b) 
+        a + (-b) > b + (-b)
       \stopformula
       \startformula
         \graymath{a + (-b) > 0}
@@ -1164,37 +1164,37 @@
     \stopdemop
 
 
-    \comentario{%
-      \startitemizer
-        \startitem
-          $a + b > 0 \land \abs{a + b} = \abs{a} + \abs{b}$
-        \stopitem
-        \startitem
-          $-a - b < 0 \land \abs{- a - b} = \abs{a} + \abs{b}$
-        \stopitem
-        \startitem
-          $a > b --> a + (-b) > 0 \land \abs{a + (-b)} = \abs{a - b}$
-        \stopitem
-        \startitem
-          $a < b --> a + (-b) < 0 \land \abs{a + (-b)} = \abs{b - a}$
-        \stopitem
-      \stopitemizer
-      \blank
-      Equivalencia de la resta\par$a - b = a + (-b)$
-      \blank
-      $a,b > 0\; (a,b \in \naturalnumbers)$
-    \startitemizer
-      \startitem
-        a \cdot b > 0
-      \stopitem
-      \startitem
-        (-a) (-b) = a \cdot b > 0
-      \stopitem
-      \startitem
-        a(-b) = (-a) b = -ab < 0
-      \stopitem
-    \stopitemizer
-    }
+    % \comentario{%
+    %   \startitemizer
+    %     \startitem
+    %       $a + b > 0 \land \abs{a + b} = \abs{a} + \abs{b}$
+    %     \stopitem
+    %     \startitem
+    %       $-a - b < 0 \land \abs{- a - b} = \abs{a} + \abs{b}$
+    %     \stopitem
+    %     \startitem
+    %       $a > b --> a + (-b) > 0 \land \abs{a + (-b)} = \abs{a - b}$
+    %     \stopitem
+    %     \startitem
+    %       $a < b --> a + (-b) < 0 \land \abs{a + (-b)} = \abs{b - a}$
+    %     \stopitem
+    %   \stopitemizer
+    %   \blank
+    %   Equivalencia de la resta\par$a - b = a + (-b)$
+    %   \blank
+    %   $a,b > 0\; (a,b \in \naturalnumbers)$
+    % \startitemizer
+    %   \startitem
+    %     a \cdot b > 0
+    %   \stopitem
+    %   \startitem
+    %     (-a) (-b) = a \cdot b > 0
+    %   \stopitem
+    %   \startitem
+    %     a(-b) = (-a) b = -ab < 0
+    %   \stopitem
+    % \stopitemizer
+    % }
     \startdiscusion{Resumiendo}
       \startitemize[n, unpacked]
         \startitem
@@ -1278,28 +1278,28 @@
     \youtube{\from[AE42A]}
     % \definemathmatrix[Bmatrix] [left={\left\{\,},right={\,\right\}}]
     \definemathmatrix[Bmatrix] [right={\,\Bigg\}}]
-    \comentario{Reglas de signos
-      \setupformulas[align=right]
-      \startformula
-        (+) + (+) = +
-      \stopformula
-      \startformula
-        (-) + (-) = -
-      \stopformula
-      \startformula
-        \startBmatrix
-          \NC (+) + (-) \NR
-          \NC (-) + (+) \NR
-        \stopBmatrix
-        = \text{signo de mayor valor absoluto}
-      \stopformula
-      \startformula
-        (+)(+) = (-)(-) = +
-      \stopformula
-      \startformula
-        (+)(-) = (-)(+) = -
-      \stopformula
-    }
+    % \comentario{Reglas de signos
+    %   \setupformulas[align=right]
+    %   \startformula
+    %     (+) + (+) = +
+    %   \stopformula
+    %   \startformula
+    %     (-) + (-) = -
+    %   \stopformula
+    %   \startformula
+    %     \startBmatrix
+    %       \NC (+) + (-) \NR
+    %       \NC (-) + (+) \NR
+    %     \stopBmatrix
+    %     = \text{signo de mayor valor absoluto}
+    %   \stopformula
+    %   \startformula
+    %     (+)(+) = (-)(-) = +
+    %   \stopformula
+    %   \startformula
+    %     (+)(-) = (-)(+) = -
+    %   \stopformula
+    % }
 
     \startejemplos
       Efectúe las siguientes restas
@@ -1339,7 +1339,7 @@
         Sean $a,b \in \integers\, b \neq 0$, de modo que las siguientes divisiones están definicidas (tienen resultado en $\integers$). Luego,
         \startitemize[n, stopper=)]
           \startitem
-          Si $a > 0 \land b < 0 --> a \div b < 0$ 
+          Si $a > 0 \land b < 0 --> a \div b < 0$
         \stopitem
         \startitem
           Si $a < 0 \land b > 0 --> a \div b < 0$
@@ -1362,16 +1362,18 @@
         \startformula
           a = (-c) x
         \stopformula
-        \comentario{%
-          \setupformula[align=right]
-          \startformula
-            (-a)b = -ab;\; (-a)(-b) = ab
-          \stopformula
-          \startformula
-            a > 0 --> -a < 0
-          \stopformula
-        }
         Pero, por un teorema previo,
+
+        % \comentario{%
+        %   \setupformula[align=right]
+        %   \startformula
+        %     (-a)b = -ab;\; (-a)(-b) = ab
+        %   \stopformula
+        %   \startformula
+        %     a > 0 --> -a < 0
+        %   \stopformula
+        % }
+
         \startformula
           (-c)x = -cx = a
         \stopformula
@@ -1427,7 +1429,7 @@
           \stopitemejem
         \stopejemplos
 
-        \comentario{Los signos de valor absoluto se consideran como si fueran signos de agrupación en la jerarquía de operaciones.}
+        % \comentario{Los signos de valor absoluto se consideran como si fueran signos de agrupación en la jerarquía de operaciones.}
         \startejemplos
           Evalúe
           \startplaceformula
@@ -1461,7 +1463,7 @@
                 \NC   \NC \ini{-12 + 5 \times(-25) -4^2 + 42/-7} \NR[+]
                 \NC = \NC -12 + 5 \times(-25) -16 + 42/-7 \NR
                 \NC = \NC -12 + (-125) -16 + (-6) \NR
-                \NC = \NC  -137 + (-16) + (-6)\NR   
+                \NC = \NC  -137 + (-16) + (-6)\NR
                 \NC = \NC  159\NR
               \stopalign
             \stopejerformula
@@ -1500,10 +1502,12 @@
             \stopejerformula
           \stopplaceformula
 
-          \ \youtube{\from[AE44A]}
           \startplaceformula
             \startejerformula
               \startalign
+                \startintertext
+                  \youtube{\from[AE44A]}
+                \stopintertext
                 \NC \NC \ini{-6 \cdot 4/3 + \left\{ -4^2 + 2\left[5 - 3^2 \left(9 - 2^2\right) - 6^2\right] +2(4)\right\} -(-5)^2} \NR[+]
                 \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2\left[5 - 3^2 (9 - 4) - 6^2\right] +2(4)\right\} -(-5)^2 \NR
                 \NC = \NC -6 \cdot 4/3 + \left\{ -4^2 + 2\left[5 - 3^2 (5) - 6^2\right] +2(4)\right\} -(-5)^2 \NR
@@ -1524,17 +1528,17 @@
         \stopejemplos
 
         \youtube{\from[AE44B]}
-        \comentario{%
-            \startformula[align=right]
-              x > y --> x - y \in \integers^{+}
-            \stopformula
-            \startformula[align=right]
-              x < y --> y > x
-            \stopformula
-            \startformula[align=right]
-              a > 0 --> -a < 0
-            \stopformula
-        }
+        % \comentario{%
+        %     \startformula[align=right]
+        %       x > y --> x - y \in \integers^{+}
+        %     \stopformula
+        %     \startformula[align=right]
+        %       x < y --> y > x
+        %     \stopformula
+        %     \startformula[align=right]
+        %       a > 0 --> -a < 0
+        %     \stopformula
+        % }
         \startejemplos
           \startitemejem
             \startitem
@@ -1658,7 +1662,7 @@
           \startformula
             \abs{a} = \abs{-a}.
           \stopformula
-          
+
         \stopejemplo
 
       \stopdiscusion
@@ -1717,7 +1721,7 @@
 
       Un subconjutno de números enteros se llamará bien ordena ssi en todo subconjutno de ese subconjutno podemos encontrar su elemento menor.
 
-      \comentario{Para demotrar que un conjutno de número enteros no está bien ordenado, bastará encontrar un subconjunto no vacio de éste, en donde no podamos determinar su elemento más pequeño.}
+      % \comentario{Para demotrar que un conjutno de número enteros no está bien ordenado, bastará encontrar un subconjunto no vacio de éste, en donde no podamos determinar su elemento más pequeño.}
       \startejemplos
         \startitemejem
           \startitem
@@ -1836,7 +1840,7 @@
     \stopsection
 
     \startsection[title={La recta numérica}]
-      $\dots --> -4 --> -3 --> -2 --> -1 --> 0 --> 1 --> 2 --> 3 --> 4 --> \dots$      
+      $\dots --> -4 --> -3 --> -2 --> -1 --> 0 --> 1 --> 2 --> 3 --> 4 --> \dots$
 
       Entre cada número entero y su consecutivo hay la misma distancia, una unidad de distancia.
 
@@ -1878,7 +1882,7 @@
         GRAFICOS
         \startitemejem
           \startitem
-            $\ini{5 - 2 = 3} --> 5 = 2 + 3 \cdot 1$ 
+            $\ini{5 - 2 = 3} --> 5 = 2 + 3 \cdot 1$
           \stopitem
           \startitem
             $\ini{2 - 4 = -2} --> 2 = 4 + (-2) \cdot 1$
@@ -1936,7 +1940,7 @@
       \startobservacion
         \startitemize[n]
           \startitem
-            La distancia entre dos números enteros corresponde al número de largos unitarios que hay entre los putnos que corresponden a esos enteros en una recta numérica. 
+            La distancia entre dos números enteros corresponde al número de largos unitarios que hay entre los putnos que corresponden a esos enteros en una recta numérica.
           \stopitem
           \startitem
             En la notación $a < b < c$, por lo discutido al construir la recta numérica, los puntos que corresponden en ésta a los números $a,b$ y $c$ irán de izquierda a derecha.

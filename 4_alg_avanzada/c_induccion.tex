@@ -1,0 +1,305 @@
+\startcomponent c_induccion
+\project project_matemprepa
+% \product prod_algebra_avanzada
+
+\youtube{\from[AA1A]}
+\startchapter[title={La inducción matemática y el teorema del binomio}]
+  
+  \startsection[title={Fundamentos}]
+    \startsubsection[title={La inducción matemática}]
+      La inducción matemática es un procedimiento para demostrar teoremas que dependen de los números naturales o de un subconjunto de éstos.
+
+      Consiste de dos pasos:
+      \startitemize
+        \startitem
+          Primero. Demostrar que teorema es cierto para un número natural mínimo (generalmente el 1)
+        \stopitem
+        \startitem
+          Segundo. Suponiendo que el teorema es cierto para $k \in \naturalnumbers$, ver que eso implica que el teorema también es cierto para $k + 1 \in \naturalnumbers$.
+        \stopitem
+      \stopitemize
+      A esta suposición que hacemos en el segundo paso se le llama la \obj{hipótesis de inducción}.
+
+      Este procedimiento se fundamenta o justifica en los siguientes tres teroremas:
+
+      \startteorema{el principio de inducción matemática}
+        Sea $S \subseteq \naturalnumbers$ de suerte que $1 \in S$ y de modo que si $s \in S$, entonces $s + 1 \in S$, también. Entonces, $S = \naturalnumbers$.
+      \stopteorema
+
+      \startdemo
+        Consideremos el conjunto $\naturalnumbers \setminus S$. Si logramos demostrar que éste es vacío, entonces $\naturalnumbers \subseteq S$, y como, por hipótesis, $S \subseteq \naturalnumbers$, entonces $S = \naturalnumbers$, que es lo que queremos probar.
+
+        Suponga que $\naturalnumbers \setminus S \neq \emptyset$. Sabemos que $\naturalnumbers \setminus S \subseteq \naturalnumbers$ por lo que, por el principio de buen orden (p.b.o.), contendrá un elemento menor: $a$. Luego, \inmframed{$a \notin S$} y como $1 \in S,\, a \neq 1$ y $a > 1$. En consecuencia, $a - 1 \in \naturalnumbers$.
+
+        Pero sabemos que $-1 < 0$, po lo que $a - 1 < a + 0$; es decir que $a - 1 < a$. Luego, $a - 1 \notin \naturalnumbers \setminus S$. Luego, $a - 1 \in S$. Entonces por hipóstesis, su consecutivo, $a - 1 + 1 = a + 0 = $ \inframed{$a \in S$}.
+
+        Hemos llegado a una contradicción, por lo que hemos marcado. Por tanto, la suposición $\naturalnumbers \setminus S \neq \emptyset$ no es cierta. Es decir, $\naturalnumbers \setminus S = \emptyset$ y, por tanto, $S = \naturalnumbers$.
+      \stopdemo
+
+      \startteorema
+        Suponga que $P(n)$, leído \quote{p de n}, es una proposición que depende del número natural $n$. Si ocurre que
+        \startitemize[a][right=),stopper=]
+          \startitem
+          $P(n)$ es cierto si $n = 1$ y 
+          \stopitem
+          \startitem
+          si el hecho de que $P(n)$ es cierta para $n = k \in \naturalnumbers$, implica que $P(n)$ también es cierto para $n = k + 1 \in \naturalnumbers$, entonces el teorema, $P(n)$, será cierta para todo $n \in \naturalnumbers$.
+        \stopitem
+        \stopitemize
+      \stopteorema
+
+      \startdemo
+        Considere el conjunto $S \subseteq \naturalnumbers$ para el cual $P(n)$ es cierta.
+
+        Vea que $1 \in S$, ya que $P(1)$ es cierto (por lo indicado en $a)$).
+
+        Segundo, si $k \in S$, o sea, si $P(k)$ es cierto, entonces por lo que dice $b)$, $P(k + 1)$ también será cierto. Luego, $k + 1 \in S$, también.
+
+        Resumiendo
+        \startformula
+          1 \in S
+        \stopformula
+        y si $k \in S$, entonces
+        \startformula
+          k + 1 \in S
+        \stopformula
+        Entonces, debido al principio de inducción matemática (p.i.m.) $S = \naturalnumbers$. Esto significa que $P(n)$ es cierto para todo $n \in \naturalnumbers$.
+      \stopdemo
+
+      \startteorema{forma alterna del teorema anterior}
+        Suponga que $P(n)$ es una proposición que depende de un número natural $n$. Entonces, $P(n)$ será cierta para todos los números naturales $n$, si cumple con las siguientes condiciones.
+
+        \startitemize[a][right=),stopper=]
+          \startitem
+            $P(1)$ es cierto
+          \stopitem
+          \startitem
+            para cada $m \in \naturalnumbers$, la veracidad de $P(k)$, para todo $k \in \naturalnumbers$ con $k < m$, implica la veracidad de $P(m)$. 
+          \stopitem
+        \stopitemize
+      \stopteorema
+
+      \youtube{\from[AA1B]}
+      \startdemo
+        Sea $S$ el conjunto de números naturales para los cuales $P(n)$ es falso. Bastará ver que $S = \emptyset$.
+
+        Primero vea que $1 \in S$, debido a la condición $a)$.
+
+        Para ver que ningún otro natural está en $S$, lo haremos por contradicción. Esto es, supondremos que $S \neq \emptyset$.
+
+        Como $S$ consiste de números naturales, por el p.b.o., existirá un elemento menor en $S$. Llámelo $m \in \naturalnumbers$.
+
+        Como $1 \notin S$, entonces $1 < m$. Entonces, si $k \in \naturalnumbers$ con $k < m$, entonces $P(k)$ es cierto ya que $m$ es el número más pequeño para el cual $P(n)$ es falso. Entonces, por la condición $b)$. $P(n)$ es cierto por lo que $m \notin S$. Esto contradice el hecho de que $m$ era el elemento menor de $S$.
+      \stopdemo
+    \stopsubsection
+  \stopsection
+
+  \startsection[title={Demostraciones por la inducción matemática}]
+    \startejemplos
+      \startitemejem
+        \startitem
+          \ini{Demuestre que $1 + 2 + 3 + \dots + n = \dfrac{n(n + 1)}{2},\, \forall n \in \naturalnumbers$}.
+
+          Primero: Verificamos que el teorema es cierto para $n = 1$. Esto es inmediato:
+          \startformula
+            1 = \dfrac{1(1+1)}{2}
+          \stopformula
+          \startformula
+            1 = \dfrac{2}{2} = 1
+          \stopformula
+
+          Segundo: Suponemos que el teorema es cierto para $n = k \in \naturalnumbers$ y vemos que el teorema sea cierto para $n = k + 1 \in \naturalnumbers$. O sea, que nuestra hipótesis de inducción es:
+          \startformula
+            1 + 2 + 3 + \dots + k = \dfrac{k(k + 1)}{2}
+          \stopformula
+          y queremos ver que
+          \startformula
+            1 + 2 + 3 + \dots + (k + 1) = \dfrac{(k+1)\left\[(k + 1) + 1\right\]}{2}.
+          \stopformula
+          Pero,
+          \startformula
+            \underbrace{1 + 2 + 3 + \dots + (k + 1) = 1 + 2 + 3 + \dots + k}_{\text{lado izquierdo de la hipótesis de inducción}} + (k + 1) =
+          \stopformula
+          entonces, por la ley de sustitución
+          \startformula
+            = \dfrac{k(k + 1)}{2} + (k + 1),
+          \stopformula
+          lo que podemos transformar del siguiente modo
+          \startformula
+            = \dfrac{k(k + 1)}{2} + \dfrac{k + 1}{1} = \dfrac{k(k + 1)}{2} + \dfrac{2(k + 1)}{2} = \dfrac{k(k+1)+2(k+1)}{2} = \dfrac{(k + 1)(k + 2)}{2} = \dfrac{(k + 1)(k + 1 + 1)}{2} =
+            \dfrac{(k + 1)\left\[(k + 1) + 1\right\]}{2}.
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{La suma de los primeros $n$ números naturales divisibles entre 3 es $\dfrac{3n(n+1)}{2}$}
+
+          Vea que este teorema se puede reescribir como
+          \startformula
+            3 + 6 + 9 + \dots + 3n = \dfrac{3n(n+1)}{2},\; \forall n \in \naturalnumbers.
+          \stopformula
+          Primero. Verificamos que el teorema es cierto si $n = 1$.
+          \startformula
+            3 = \dfrac{3(1)(1+1)}{2} = \dfrac{3(2)}{2} = 3
+          \stopformula
+          Segundo. Suponemos
+          que el teorema es cierto para $n = k \in \naturalnumbers$ y vemos que, entonces, el teorema también será cierto para $n = k + 1 \in \naturalnumbers$.
+
+          \youtube{\from[AA2A]}
+          Esto es, nuestra hipótesis de inducción es
+          \startformula
+            3 + 6 + 9 + \dots + 3k = \dfrac{3k(k+1)}{2},
+          \stopformula
+          y vemos que esto implica que el teorema es cierto si $n = k + 1$. Es decir, que:
+          \startformula
+            3 + 6 + 9 + \dots + 3(k + 1) = \dfrac{3(k + 1)\left\[(n+1) + 1\right\]}{2}
+          \stopformula
+          Pero,
+          \startformula
+            3 + 6 + 9 + \dots + 3(k + 1) = \underbrace{3 + 6 + 9 + \dots + 3k}_{\text{lado derecho de la hipótesis de inducción}} + 3(k + 1) =
+          \stopformula
+          sustituyéndola, tenemos
+          \startformula
+            = \dfrac{3k(k+1)}{2} + \dfrac{3(k + 1)}{1} = \dfrac{3k(k+1)}{2} + \dfrac{6(k + 1)}{2} = \dfrac{3k(k + 1) + 6(k + 1)}{2} = \dfrac{3(k + 1)(k + 2)}{2} = \dfrac{3(k + 1)(k + 1 + 1)}{2} = \dfrac{3(k + 1)\left\[(n+1) + 1\right\]}{2}
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{Demuestre que $0^n = 0,\; \forall n \in \naturalnumbers$.}
+
+          Primero. Verificamos que el teorema es cierto si $n = 1$.
+          \startformula
+            0^1 = 0
+          \stopformula
+          \startformula
+            0 = 0
+          \stopformula
+          Segundo. Suponemos que el teorema es cierto para $n = k$ y vemos que esto implica que el teorema también será cierto para $n = k + 1,\; k \in \naturalnumbers$.
+
+          O sea, nuestra hipótesis de inducción es:
+          \startformula
+            0^k = 0
+          \stopformula
+          y quermos ver que esto implica que, entonces,
+          \startformula
+            0^{k+1} = 0.
+          \stopformula
+          Pero,
+          \startformula
+            0^{k + 1} = 0^k \cdot 0^1 = 0 \cdot 0 = 0
+          \stopformula
+          Por lo tanto, debido a la ley transitiva de las igualdades,
+          \startformula
+            0^{k+1} = 0.
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{Si $b \in \reals$, con $b > 1$, y si $n \in \naturalnumbers$, entonces $b^n > 1$.}
+
+          Primero. Verificamos que el teorema es cierto si $n = 1$.
+          \startformula
+            b^1 > 1
+          \stopformula
+          \startformula
+            b > 1
+          \stopformula
+          y esto es cierto por la hipótesis del teorema.
+
+          Segundo. Suponemos que el teorema es cierto si $n = k$ y vemos que esto implica que el teorema será cierto si $n = k + 1, \; k \in \naturalnumbers$.
+
+          O sea, que nuestra hipótesis de inducción es que
+          \startformula
+            b^k > 1
+          \stopformula
+          y quermos ver que
+          \startformula
+            b^{k + 1} > 1
+          \stopformula
+          Pero, por la hipótesis de inducción,
+          \placeformula
+          \startformula
+            b^k > 1
+          \stopformula
+          Como, por hipótesis del teorema, $b > 1$ y $1 > 0$, entonces $b > 0$, debido a la ley transitiva de las desigualdades, entonces, $b > 0$. Luego, por la ley de multiplicación positiva aplicada a (1),
+          \startformula
+            b^k b > 1 \cdot b
+          \stopformula
+          \startformula
+            b^{k+1} = b
+          \stopformula
+          Pero, por la hipótesis del teorema, $b > 1$, entonces, debido, nuevamente, a la ley transitiva de las desigualdades:
+          \startformula
+            b^{k+1} > 1.
+          \stopformula
+        \stopitem
+        \startitem
+          \ini{Si $x \in \reals$ con $x <0 $, y si $n \in \naturalnumbers$, impar, entonces $x^n < 0$.}
+
+          Primero. Demostramos que el teorema es cierto para $n = 1$. Esto es, que $x^1 <0$. O sea, $x < 0$ y esto es cierto por la hipótesis del teorema.
+
+          Segundo. Suponemos que el teorema es cierto si $n = k \in \naturalnumbers$ y vemos que esto implica que el teorema será cierto si $n = k + 1 \in \naturalnumbers$, también.
+
+          Esto es, nuestra hipótesis de inducción es:
+          \startformula
+            x^k < 0
+          \stopformula
+          y queremos ver que
+          \startformula
+            x^{k+1} < 0,
+          \stopformula
+          también.
+          \youtube{\from[AA2B]}
+          Pero vea que, en este teorema $n \in \naturalnumbers$ impar, luego $n$ deberá representarse com $2m - 1$, donde $m \in \naturalnumbers$. Esto es importante pues, de la otra forma, el exponente $k$ podría ser impar o par.
+
+          Luego, nuestra hipótesis de inducción se convierte en (dejand ahora que $m = k$)
+          \startformula
+            x^{2k-1} < 0
+          \stopformula
+          y lo que queremos demostrar se convierte en (dejando que $m = k + 1$)
+          \startformula
+            x^{2(k+1)-1} < 0
+          \stopformula
+          Pero,
+          \startformula
+            x^{2(k+1)-1} = x^{2x + 2 + (-1)}
+          \stopformula
+          \startformula
+            =x^{2k + (-1) + 2} = x^{2x-1+2}
+          \stopformula
+          \placeformula
+          \startformula
+            = x^{2k-1}x^2 <0
+          \stopformula
+          pues, por la hipótesis de inducción, $x^{2k-1} < 0$ y, por un teorema visto en los cursos anteriores, $x^2 > 0$. Entonces, por un teorema visto en el álgebra elemental, el producto en (2) es, en efecto, negativo.
+        \stopitem
+        \startitem
+          \ini{Sean $x_1, x_2, x_3, \dots,\, x_n \in \reals^{-}$, donde $n \in \reals$, par. Entonces, $x_1\cdot x_2\cdot x_3 \cdots x_n > 0$}
+        \stopitem
+      \stopitemejem
+    \stopejemplos
+  \stopsection
+  \startsection[title={Otras demostraciones por inducción}]
+    
+  \stopsection
+  \startsection[title={Sumas y multiplicaciones}]
+    
+  \stopsection
+  \startsection[title={La notaación factorial}]
+    
+  \stopsection
+  \startsection[title={La fórmula (el teorema del binomio) de Newton}]
+    
+  \stopsection
+  \startsection[title={Observaciones}]
+    
+  \stopsection
+  \startsection[title={Demostración del teorema del binomio}]
+    
+  \stopsection
+  \startsection[title={La serie binómica}]
+    
+  \stopsection
+  \startsection[title={Aplicaciones}]
+    
+  \stopsection
+
+\stopchapter
+\stopcomponent

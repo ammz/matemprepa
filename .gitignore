@@ -1,6 +1,9 @@
 *.log
 *.tuc
+*.tua
 *.pdf
+*.pgf
+*.tmp
 /auto
 /sandbox
 */img
