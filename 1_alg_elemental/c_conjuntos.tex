@@ -31,7 +31,6 @@
     \stopaxioma
 
     \startobservacion
-
       Si aceptamos como cierta únicamente la ley de sustitución, se
       pueden demostrar las otras tres leyes a partir de ésta.
     \stopobservacion
@@ -221,9 +220,9 @@
           \obj{conteo}.
         \stopitem
         \startitem
-          El conjunto de signos o \obj{dígitos} y la manera de
-          construir los numerales con ellos se conoce como \obj{un
-            sistema de numeración}.
+          El conjunto de signos o \obj{dígitos} y la manera de construir
+          los numerales con ellos se conoce como \obj{un sistema de
+            numeración}.
         \stopitem
       \stopitemizer
     \stopdefinicion
@@ -239,9 +238,11 @@
     \stopdefinicion
 
     \startdefinicion
-      \margindata[youtube]{\from[AE12A]} \obj{El conjunto nulo o
-        vacío} es aquel que no contiene elementos. Se representa por
-      cualquiera de los signos: $\{\,\}$ o $\emptyset$.
+      \margindata[youtube]{\from[AE12A]}
+
+      \obj{El conjunto nulo o vacío} es aquel que no contiene
+      elementos. Se representa por cualquiera de los signos: $\{\,\}$ o
+      $\emptyset$.
     \stopdefinicion
 
     \startejemplos
@@ -333,7 +334,6 @@
           \ini{$P = \{?, 3, q\}$ y $Q$}
           % \inoutermargin[voffset=1cm]{\externalfigure[Q_Venn.png][maxwidth=2.6cm]}}
           \placefigure [none] {} {\externalfigure[Q_Venn.png][maxwidth=2.6cm]}
-
           \startitemize[packed]
             \startitem
               Estos dos conjuntos son iguales. $P = Q$. Aunque están
@@ -345,7 +345,7 @@
             \stopitem
           \stopitemize
         \stopitem
-          
+
         \startitem
           \ini{Sea $M =\{1, 2, 3\}$ y $N =\{1, 2, c\}$.}
           \startitemize[packed]
@@ -436,9 +436,15 @@
     \startdemo{}\\
       \startcenteraligned
         \starttable[|cm|c|c|c|]
-          \NC \VL $p$ \VL $p$ \VL $p \wedge p$ \NC \AR
+          \NC
+          \VL $p$
+          \VL $p$
+          \VL $p \wedge p$ \NC \AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL F \VL F \VL F \NC \AR
         \stoptable
       \stopcenteraligned
@@ -587,11 +593,9 @@
         \stopitem
       \stopitemize
     \stopejemplo
-
   \stopsection
 
   \startsection[title={Operaciones entre conjuntos}]
-
     Las \obj{operaciones} son ejecutorias o actividades que se pueden
     efectuar con dos objetos o cosas para obtener una tercera cosa. A
     las dos primeras cosas se les llama los \obj{operandos de la
@@ -606,29 +610,27 @@
       \startitemizer[unpacked]
         \startitem
           \obj{La unión de $A$ con $B$}, denotada con el símbolo
-          $A \cup B$, es el conjunto
-          $\{x \mid x \in A \lor x \in B\}$.
+          $A \cup B$, es el conjunto $\{x \mid x \in A \lor x \in B\}$.
         \stopitem
         \startitem
-          \obj{La intersección de $A$ con $B$}, denotada con el
-          símbolo $A \cap B$, es el conjunto
-          $\{x \mid x \in A \land x \in B\}$.
+          \obj{La intersección de $A$ con $B$}, denotada con el símbolo
+          $A \cap B$, es el conjunto $\{x \mid x \in A \land x \in B\}$.
         \stopitem
         \startitem
           \obj{La diferencia de $A$ con $B$}, representada con
-          cualquiera de los símbolos $A \setminus B \equiv A - B$, y
-          que se lee \quote{A menos B}, es el conjunto
+          cualquiera de los símbolos $A \setminus B \equiv A - B$, y que
+          se lee \quote{A menos B}, es el conjunto
           $\{x \mid {x \in A} \land {x \nin B}\}$.
         \stopitem
         \startitem
-          \obj{La diferencia simétrica de $A$ con $B$}, denotada con
-          el símbolo $A \triangle B$, es el conjunto
-          $\{x \mid (x \in A \land x \nin B) \lor (x \in B \land x
-          \nin A)\} = (A \setminus B) \cup (B \setminus A)$.
+          \obj{La diferencia simétrica de $A$ con $B$}, denotada con el
+          símbolo $A \triangle B$, es el conjunto
+          $\{x \mid (x \in A \land x \nin B) \lor (x \in B \land x \nin
+          A)\} = (A \setminus B) \cup (B \setminus A)$.
         \stopitem
         \startitem
-          Si $U$ es un conjunto universo de $A$, el \obj{complemento
-            de $A$}, denotado por cualquiera de los símbolos
+          Si $U$ es un conjunto universo de $A$, el \obj{complemento de
+            $A$}, denotado por cualquiera de los símbolos
           $A' \equiv A^c \equiv \bar{A}$, es el conjunto
           $U \setminus A = \{x \mid x \in U \land x \nin A\}$.
         \stopitem
@@ -780,13 +782,13 @@
           $B \cap A \subseteq A \cap B$.
 
           Para lo primero, tomamos $x \in A \cap B$. Entonces,
-          $x \in A \land x \in B$. Pero esto es equivalente a decir
-          que $x \in B \land x \in A$, lo que significa que
+          $x \in A \land x \in B$. Pero esto es equivalente a decir que
+          $x \in B \land x \in A$, lo que significa que
           $x \in B \cap A$. Luego, $A \cap B \subseteq B \cap A$.
 
           Para lo segundo, tomamos $x \in B \cap A$. Entonces,
-          $x \in B \land x \in A$. Pero esto es equivalente a decir
-          que $x \in A \land x \in B$, lo que significa que
+          $x \in B \land x \in A$. Pero esto es equivalente a decir que
+          $x \in A \land x \in B$, lo que significa que
           $x \in A \cap B$. Luego, $B \cap A \subseteq A \cap B$.
         \stopitem
         \startitem
@@ -797,22 +799,20 @@
           $A \cup (B \cup C) \subseteq (A \cup B) \cup C$.
 
           Para lo primero, tomamos $x \in (A \cup B) \cup C$. Esto
-          significa que $x \in (A \cup B) \lor x \in C$. Pero
-          significa que $(x \in A \lor x \in B) \lor x \in C$, y esto
-          es equivalente a decir,
-          $x \in A \lor (x \in B \lor x \in C)$, lo que equivale a
-          decir que $x \in A \lor x \in (B \cup C)$, lo que implica
-          que $x \in A \cup (B \cup C)$.
+          significa que $x \in (A \cup B) \lor x \in C$. Pero significa
+          que $(x \in A \lor x \in B) \lor x \in C$, y esto es
+          equivalente a decir, $x \in A \lor (x \in B \lor x \in C)$, lo
+          que equivale a decir que $x \in A \lor x \in (B \cup C)$, lo
+          que implica que $x \in A \cup (B \cup C)$.
 
           \margindata[youtube]{\from[AE18A]}
 
           Para lo segundo, tomamos $x \in A \cup (B \cup C)$. Esto
           significa que $x \in A \lor x \in (B \cup C)$. Pero esto
-          significa que $x \in A \lor (x \in B \lor x \in C)$ y ello
-          es equivalente a decir,
-          $(x \in A \lor x \in B) \lor x \in C$, lo que equivale a
-          decir que $x \in (A \cup B) \lor x \in C$, lo que implica
-          que $x \in (A \cup B) \cup C$.
+          significa que $x \in A \lor (x \in B \lor x \in C)$ y ello es
+          equivalente a decir, $(x \in A \lor x \in B) \lor x \in C$, lo
+          que equivale a decir que $x \in (A \cup B) \lor x \in C$, lo
+          que implica que $x \in (A \cup B) \cup C$.
         \stopitem
         \startitem
           \ini{$x \nin A \cup B -> x \nin A \land x \nin B$}
@@ -834,11 +834,10 @@
         \startitem
           \ini{$A \setminus B = A \cap B' = B' \setminus A'$}
 
-          $A \setminus B = \{x \mid x \in A \land x \nin B\} = \{x
-          \mid x \in A \land x \in B'\} = A \cap B' = \{x \mid {x \in
-            A} \land {x \in B'}\} = \{x \mid x \nin A' \land x \in
-          B'\} = \{x \mid x \in B' \land x \nin A'\} = B' \setminus
-          A'$.
+          $A \setminus B = \{x \mid x \in A \land x \nin B\} = \{x \mid
+          x \in A \land x \in B'\} = A \cap B' = \{x \mid {x \in A}
+          \land {x \in B'}\} = \{x \mid x \nin A' \land x \in B'\} = \{x
+          \mid x \in B' \land x \nin A'\} = B' \setminus A'$.
         \stopitem
       \stopitemejem
     \stopejemplos
@@ -859,19 +858,28 @@
 
       \bTABLE[split=yes]
       \bTR[samepage=after]
-      \bTD \eTD \bTD  $(1)\quad A$ y $B$, si $A \cap B = \emptyset$ \eTD \bTD $(2)\quad A$ y $B$, si $A \subseteq B$ \eTD
+      \bTD \eTD
+      \bTD $(1)\quad A$ y $B$, si $A \cap B = \emptyset$ \eTD
+      \bTD $(2)\quad A$ y $B$, si $A \subseteq B$ \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn01][maxheight=3cm]\eTD \bTD\ \externalfigure[venn02][maxheight=3cm] \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn01][maxheight=3cm]\eTD
+      \bTD\ \externalfigure[venn02][maxheight=3cm] \eTD
       \eTR
-
+      %
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(3)\quad A$ y $B$ \eTD \bTD  \eTD
+      \bTD \eTD
+      \bTD $(3)\quad A$ y $B$ \eTD
+      \bTD  \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn03][maxheight=3cm] \eTD \bTD \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn03][maxheight=3cm] \eTD
+      \bTD \eTD
       \eTR
-
       \eTABLE
     \stopejemplos
 
@@ -888,15 +896,26 @@
 
       \bTABLE[split=yes]
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(1)\quad A, B, C$ con un universo entre ellos \eTD \bTD $(2)\quad A, B, C,$ tal que $ A \subseteq B$ y $A \cap C = \emptyset$ \eTD \eTR
+      \bTD \eTD
+      \bTD $(1)\quad A, B, C$ con un universo entre ellos \eTD
+      \bTD $(2)\quad A, B, C,$ tal que $ A \subseteq B$ y $A \cap C = \emptyset$ \eTD \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn04][maxheight=2.8cm] \eTD \bTD\ \externalfigure[venn05][maxheight=3cm] \eTD \eTR
-
-      \bTR[samepage=after]
-      \bTD \eTD \bTD $(3)\quad A, B, C$ con $A \subseteq B$ y $A \cap C /= \emptyset$ \eTD \bTD \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn04][maxheight=2.8cm] \eTD
+      \bTD\ \externalfigure[venn05][maxheight=3cm] \eTD
       \eTR
+      %
+      \bTR[samepage=after]
+      \bTD \eTD
+      \bTD $(3)\quad A, B, C$ con $A \subseteq B$ y $A \cap C /= \emptyset$ \eTD
+      \bTD \eTD
+      \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn06][maxheight=3cm] \eTD \bTD \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn06][maxheight=3cm] \eTD
+      \bTD \eTD
       \eTR
       \eTABLE
     \stopejemplos
@@ -911,13 +930,18 @@
       \setupTABLE[c][2,3][width={.48\textwidth}]
       \setupTABLE[c][each][align={middle,lohi}]
       \setupTABLE[r][odd][align=right,left={\ini}]
-
+      %
       \bTABLE[split=yes]
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(1)\quad A \cap B$ \eTD \bTD $(2)\quad A \subseteq B, A \subseteq B$ \eTD
+      \bTD \eTD
+      \bTD $(1)\quad A \cap B$ \eTD
+      \bTD $(2)\quad A \subseteq B, A \subseteq B$ \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn07][maxheight=3cm] \eTD \bTD\ \externalfigure[venn08][maxheight=3cm] \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn07][maxheight=3cm] \eTD
+      \bTD\ \externalfigure[venn08][maxheight=3cm] \eTD
       \eTR
       \eTABLE
 
@@ -932,44 +956,65 @@
 
       \bTABLE[split=yes]
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(3)\quad A \cup B$ \eTD \bTD $(4)\quad A \setminus B$ \eTD
+      \bTD \eTD
+      \bTD $(3)\quad A \cup B$ \eTD
+      \bTD $(4)\quad A \setminus B$ \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn09][maxheight=3cm] \eTD \bTD\ \externalfigure[venn10][maxheight=3cm] \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn09][maxheight=3cm] \eTD
+      \bTD\ \externalfigure[venn10][maxheight=3cm] \eTD
       \eTR
-
+      %
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(5)\quad B \setminus A$, si $A \cap B = \emptyset$ \eTD \bTD $(6)\quad A - B$, si $A \subseteq B$ \eTD
+      \bTD \eTD \bTD $(5)\quad B \setminus A$, si $A \cap B = \emptyset$ \eTD
+      \bTD $(6)\quad A - B$, si $A \subseteq B$ \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn11][maxheight=3cm] \eTD \bTD\ \externalfigure[venn12][maxheight=3cm] \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn11][maxheight=3cm] \eTD
+      \bTD\ \externalfigure[venn12][maxheight=3cm] \eTD
       \eTR
-
+      %
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(7)\quad A \triangle B$ \eTD \bTD $(8)\quad A'$ \eTD
+      \bTD \eTD
+      \bTD $(7)\quad A \triangle B$ \eTD
+      \bTD $(8)\quad A'$ \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn13][maxheight=3cm] \eTD \bTD\ \externalfigure[venn14][maxheight=3cm] \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn13][maxheight=3cm] \eTD
+      \bTD\ \externalfigure[venn14][maxheight=3cm] \eTD
       \eTR
-
+      %
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(9)\quad (A \cup B)'$ \eTD \bTD $(10)\quad B \setminus (A \cup C)$ \eTD
+      \bTD \eTD
+      \bTD $(9)\quad (A \cup B)'$ \eTD
+      \bTD $(10)\quad B \setminus (A \cup C)$ \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn15][maxheight=3cm] \eTD \bTD\ \externalfigure[venn16][maxheight=3cm] \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn15][maxheight=3cm] \eTD
+      \bTD\ \externalfigure[venn16][maxheight=3cm] \eTD
       \eTR
-
+      %
       \bTR[samepage=after]
-      \bTD \eTD \bTD $(11)\quad A \cap B \cap B$ \eTD \bTD $(12)\quad A \triangle (B \cap C)$ \eTD
+      \bTD \eTD
+      \bTD $(11)\quad A \cap B \cap B$ \eTD
+      \bTD $(12)\quad A \triangle (B \cap C)$ \eTD
       \eTR
+      %
       \bTR
-      \bTD \eTD \bTD\ \externalfigure[venn17][maxheight=3.5cm] \eTD \bTD\ \externalfigure[venn18][maxheight=3.5cm] \eTD
+      \bTD \eTD
+      \bTD\ \externalfigure[venn17][maxheight=3.5cm] \eTD
+      \bTD\ \externalfigure[venn18][maxheight=3.5cm] \eTD
       \eTR
-
       \eTABLE
     \stopejemplos
-
   \stopsection
-
 \stopchapter
 \stopcomponent
