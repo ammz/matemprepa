@@ -8,18 +8,21 @@
       \obj{términos indefinidos:} conceptos básicos que no requieren
       definición
     \stopitem
-    \startitem \obj{términos definidos:} conceptos que requieren
-      definición
+    \startitem
+      \obj{términos definidos:} conceptos que requieren definición
     \stopitem
-    \startitem \obj{axiomas o postulados:} leyes o propiedades
-      aceptadas como ciertas
+    \startitem
+      \obj{axiomas o postulados:} leyes o propiedades aceptadas como
+      ciertas
     \stopitem
-    \startitem \obj{teoremas o proposiciones:} leyes o propiedades que
-      se tienen que demostrar que son ciertas
+    \startitem
+      \obj{teoremas o proposiciones:} leyes o propiedades que se tienen
+      que demostrar que son ciertas
     \stopitem
     \startitemize
-      \startitem \obj{lemas:} teoremas que se usan como una
-        justificación en la demostración de un teorema más imporante
+      \startitem
+        \obj{lemas:} teoremas que se usan como una justificación en la
+        demostración de un teorema más imporante
       \stopitem
       \startitem
         \obj{corolarios:} teoremas que son casos especiales o
@@ -34,8 +37,8 @@
   razonamientos válidos
 
   \startdefinicion
-    Una oración que establece un hecho que, en algún momento, puede
-    ser clasificado cierto o falso, se llama \obj{una afirmación o
+    Una oración que establece un hecho que, en algún momento, puede ser
+    clasificado cierto o falso, se llama \obj{una afirmación o
       enunciado}.
   \stopdefinicion
 
@@ -54,15 +57,14 @@
         Tengo los zapatos nuevos puestos. $\rightarrow\; q$.
       \stopitem
       \startitem
-        $p$ y $q\; \rightarrow$ Está lloviendo y tendo los zapatos nuevos
-        puestos.
+        $p$ y $q\; \rightarrow$ Está lloviendo y tendo los zapatos
+        nuevos puestos.
       \stopitem
     \stopitemize
   \stopejemplos
 
   \margindata[youtube]{\from[AE1B]}
   \startsection[title={Estudio de las afirmaciones compuestas}]
-
     \startdefinicion
       Una afirmación que contiene dos o más afirmaciones se llama
       \obj{una afirmación o enunciado compuesto}.
@@ -77,30 +79,34 @@
           \quote{p o q} y denotada con el símbolo $q \vee q$.
         \stopitem
         \startitem
-          \obj{La disyunción (o disjunción) exclusiva}, leída \quote{p
-            o q, pero no ambas} o \quote{o p o q} y representada por
-          el símbolo $p \veebar q$.
+          \obj{La disyunción (o disjunción) exclusiva}, leída \quote{p o
+            q, pero no ambas} o \quote{o p o q} y representada por el
+          símbolo $p \veebar q$.
         \stopitem
       \stopitemize
     \stopdefinicion
 
     \startaxioma
       Sean $p$ y $q$ dos enunciados. Entoces
+
       \startitemizer[packed]
-        \startitem $p \wedge q$ será cierta si tanto $p$ y $q$ lo son.
+        \startitem
+          $p \wedge q$ será cierta si tanto $p$ y $q$ lo son.
         \stopitem
-        \startitem $p \vee q$ será cierta si, al menos, una de las
+        \startitem
+          $p \vee q$ será cierta si, al menos, una de las afirmaciones
+          $p$ o $q$ lo es.
+        \stopitem
+        \startitem
+          $p \veebar q$ será cierta si, únicamente, una de las dos
           afirmaciones $p$ o $q$ lo es.
-        \stopitem
-        \startitem $p \veebar q$ será cierta si, únicamente, una de
-          las dos afirmaciones $p$ o $q$ lo es.
         \stopitem
       \stopitemizer
     \stopaxioma
 
     \startdefinicion
-      Si $p$ es una afirmación, \obj{la negación de p}, representada
-      con el símbolo $\neg p$, se lee 'no p'.
+      Si $p$ es una afirmación, \obj{la negación de p}, representada con
+      el símbolo $\neg p$, se lee 'no p'.
     \stopdefinicion
 
     \startaxioma
@@ -112,75 +118,107 @@
       Solo existen dos valores posibles: C (cierto) y F (falso)
     \stopdiscusion
 
-    \startdiscusion{Tablas de verdad}
-      Una \obj{tabla de verdad} es un esquema donde se recogen los
-      valores de verdad de una afirmación.
+    \startdiscusion{Tablas de verdad} Una \obj{tabla de verdad} es un
+      esquema donde se recogen los valores de verdad de una afirmación.
     \stopdiscusion
 
     \startitemize[a,columns,joinedup]
 
-      \startitem
-        Conjunción \par
+      \startitem Conjunción \par
         \starttable[|cm|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $p \wedge q$ \NC \AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $p \wedge q$ \NC \AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL F \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL F \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL F \NC \AR
         \stoptable
       \stopitem
 
       \margindata[youtube]{\from[AE2A]}
-      \startitem
-        Disyunción \par
+      \startitem Disyunción \par
         \starttable[|cm|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $p \vee q$ \NC \AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $p \vee q$ \NC \AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL C \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL C \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL F \NC \AR
         \stoptable
       \stopitem
     \stopitemize
 
     \startitemize[continue,columns,joinedup]
-      \startitem
-        Disyunción exclusiva \par
+      \startitem Disyunción exclusiva \par
         \starttable[|cm|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $p \veebar q$ \NC \AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $p \veebar q$ \NC \AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL F \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL C \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL C \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL F \NC \AR
         \stoptable
       \stopitem
 
-      \startitem
-        Negación \par
+      \startitem Negación \par
         \starttable[|cm|c|c|]
-          \NC \VL $p$ \VL $\neg p$ \NC \AR
+          \NC
+          \VL $p$
+          \VL $\neg p$ \NC \AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL F \NC \AR
+          %
           \NC c_2 \VL F \VL C \NC \AR
         \stoptable
       \stopitem
-
     \stopitemize
 
     \startdiscusion{Conexiones de una afirmación compuesta}
       \starttable[|l|c|cm|]
-        \NC Conjunción           \NC y                      \NC \wedge  \NC \AR
-        \NC Disjunción           \NC o                      \NC \vee    \NC \AR
-        \NC Disjunción exclusiva \NC ... o ..., pero no ambas / o ... o... \NC \veebar \NC \AR
+        \NC Conjunción
+        \NC y
+        \NC \wedge \NC \AR
+        %
+        \NC Disjunción
+        \NC o
+        \NC \vee \NC \AR
+        %
+        \NC Disjunción exclusiva
+        \NC ... o ..., pero no ambas / o ... o...
+        \NC \veebar \NC \AR
       \stoptable
     \stopdiscusion
 
     \startejemplos
       Suponga que los siguientes enunciados son ciertos o falsos como se
       indica:
+
       \startitemize[packed,horizontal]
         \startitem
           $p$: Está lloviendo (C)
@@ -208,6 +246,7 @@
           Está lloviendo y me vienen a buscar en el carro.
           $(q \wedge r)$\par C $\wedge$ C $\longrightarrow$ C
         \stopitem
+
         \margindata[youtube]{\from[AE2B]}
         \startitem
           Tengo los zapatos nuevos puestos y salgo antes de las 2
@@ -218,9 +257,9 @@
           está lloviendo \par F $\vee$ C $\longrightarrow$ C
         \stopitem
         \startitem
-          $q \vee (\neg s)\; \longrightarrow\;$ Tengo los zapatos
-          nuevos puestos o no salgo antes de las 2 p.m. \par F $\vee$
-          C $\longrightarrow$ C
+          $q \vee (\neg s)\; \longrightarrow\;$ Tengo los zapatos nuevos
+          puestos o no salgo antes de las 2 p.m. \par F $\vee$ C
+          $\longrightarrow$ C
         \stopitem
         \startitem
           Tengo los zapatos nuevos puestos o aprobé el examen con
@@ -232,17 +271,20 @@
           calificación de A $(r \veebar t)$ \par C $\veebar$ C
           $\longrightarrow$ F
         \stopitem
+
         \margindata[youtube]{\from[AE3A]}
         \startitem
           $q \veebar s\;\longrightarrow\;$ Tengo los zapatos nuevos
           puestos o salgo antes de las 2 p.m. \par O tengo los zapatos
-          nuevos puestos o salgo antes de las 2 p.m. \par F $\veebar$
-          F $\longrightarrow$ F
+          nuevos puestos o salgo antes de las 2 p.m. \par F $\veebar$ F
+          $\longrightarrow$ F
         \stopitem
       \stopitemejem
     \stopejemplos
 
-    % \comentario{{\bf Signos de agrupación} \par paréntesis $(\,)$ \par paréntesis angulares o corchetes $[\,]$\par llaves $\{\,\}$ \par barras $\overline{\quad}$ }
+    % \comentario{{\bf Signos de agrupación} \par paréntesis $(\,)$ \par
+    % paréntesis angulares o corchetes $[\,]$\par llaves $\{\,\}$ \par
+    % barras $\overline{\quad}$ }
     \startdiscusion{Tablas de verdad para enunciados más elaborados}
       \startejemplos
         \startitemejem
@@ -252,16 +294,25 @@
 
             \startcenteraligned
               \starttable[|cm|c|c|c|c|c|]
-                \NC \VL $p$ \VL $q$ \VL$p \vee q$ \VL $\neg p$ \VL $(p \wedge q) \wedge (\neg p)$\NC \AR
+                \NC
+                \VL $p$
+                \VL $q$
+                \VL$p \vee q$
+                \VL $\neg p$
+                \VL $(p \wedge q) \wedge (\neg p)$\NC \AR
+                %
                 \HL
+                %
                 \NC c_1 \VL C \VL C \VL C \VL F \VL C \NC \AR
+                %
                 \NC c_2 \VL C \VL F \VL C \VL F \VL C \NC \AR
+                %
                 \NC c_3 \VL F \VL C \VL C \VL C \VL C \NC \AR
+                %
                 \NC c_4 \VL F \VL F \VL F \VL C \VL C \NC \AR
               \stoptable
             \stopcenteraligned
           \stopitem
-
         \stopitemejem
       \stopejemplos
 
@@ -279,11 +330,21 @@
 
             \startcenteraligned
               \starttable[|cm|c|c|c|c|c|]
-                \NC \VL $p$ \VL $q$ \VL $\neg q$ \VL $p \veebar (\neg q)$ \VL $(p \veebar (\neg q)) \wedge p$\NC \AR
+                \NC
+                \VL $p$
+                \VL $q$
+                \VL $\neg q$
+                \VL $p \veebar (\neg q)$
+                \VL $(p \veebar (\neg q)) \wedge p$\NC \AR
+                %
                 \HL
+                %
                 \NC c_1 \VL C \VL C \VL F \VL C \VL C \NC \AR
+                %
                 \NC c_2 \VL C \VL F \VL C \VL F \VL F \NC \AR
+                %
                 \NC c_3 \VL F \VL C \VL F \VL F \VL F \NC \AR
+                %
                 \NC c_4 \VL F \VL F \VL C \VL C \VL F \NC \AR
               \stoptable
             \stopcenteraligned
@@ -294,11 +355,22 @@
 
             \startcenteraligned
               \starttable[|cm|c|c|c|c|c|c|]
-                \NC \VL $p$ \VL $q$ \VL $\neg q$ \VL $p \vee (\neg q)$ \VL $\neg p$ \VL $(p \vee (\neg q)) \wedge (\neg p)$\NC \AR
+                \NC
+                \VL $p$
+                \VL $q$
+                \VL $\neg q$
+                \VL $p \vee (\neg q)$
+                \VL $\neg p$
+                \VL $(p \vee (\neg q)) \wedge (\neg p)$\NC \AR
+                %
                 \HL
+                %
                 \NC c_1 \VL C \VL C \VL F \VL C \VL F \VL F \NC \AR
+                %
                 \NC c_2 \VL C \VL F \VL C \VL C \VL F \VL F \NC \AR
+                %
                 \NC c_3 \VL F \VL C \VL F \VL F \VL C \VL F \NC \AR
+                %
                 \NC c_4 \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
               \stoptable
             \stopcenteraligned
@@ -309,15 +381,26 @@
 
             \startcenteraligned
               \starttable[|cm|c|c|c|c|c|c|c|]
-                \NC \VL $p$ \VL $q$ \VL $p \vee q$ \VL $\neg (p \vee q)$ \VL $q \vee p$ \VL $\neg (q \vee p)$ \VL $\neg (p \vee q) \vee \big[\neg (q \vee p)\big]$\NC \AR
+                \NC
+                \VL $p$
+                \VL $q$
+                \VL $p \vee q$
+                \VL $\neg (p \vee q)$
+                \VL $q \vee p$
+                \VL $\neg (q \vee p)$
+                \VL $\neg (p \vee q) \vee \big[\neg (q \vee p)\big]$\NC \AR
+                %
                 \HL
-                \NC c_1 \VL C \VL C \VL C \VL F \VL C  \VL F \VL F \NC \AR
-                \NC c_2 \VL C \VL F \VL C \VL F \VL C  \VL F \VL F \NC \AR
-                \NC c_3 \VL F \VL C \VL C \VL F \VL C  \VL F \VL F \NC \AR
-                \NC c_4 \VL F \VL F \VL F \VL C \VL F  \VL C \VL C \NC \AR
+                %
+                \NC c_1 \VL C \VL C \VL C \VL F \VL C \VL F \VL F \NC \AR
+                %
+                \NC c_2 \VL C \VL F \VL C \VL F \VL C \VL F \VL F \NC \AR
+                %
+                \NC c_3 \VL F \VL C \VL C \VL F \VL C \VL F \VL F \NC \AR
+                %
+                \NC c_4 \VL F \VL F \VL F \VL C \VL F \VL C \VL C \NC \AR
               \stoptable
-
-        \stopcenteraligned
+            \stopcenteraligned
           \stopitem
         \stopitemejem
       \stopejemplos
@@ -339,11 +422,23 @@
 
             \startcenteraligned
               \starttable[|cm|c|c|c|c|c|c|c|]
-                \NC \VL $p$ \VL $q$ \VL $p \wedge q$ \VL $\neg (p \wedge q)$ \VL $\neg p$ \VL $\neg q$ \VL $\neg p \vee (\neg q)$\NC \AR
+                \NC
+                \VL $p$
+                \VL $q$
+                \VL $p \wedge q$
+                \VL $\neg (p \wedge q)$
+                \VL $\neg p$
+                \VL $\neg q$
+                \VL $\neg p \vee (\neg q)$ \NC \AR
+                %
                 \HL
+                %
                 \NC c_1 \VL C \VL C \VL C \VL F \VL F \VL F \VL F \NC \AR
+                %
                 \NC c_2 \VL C \VL F \VL F \VL C \VL F \VL C \VL C \NC \AR
+                %
                 \NC c_3 \VL F \VL C \VL C \VL C \VL C \VL F \VL C \NC \AR
+                %
                 \NC c_4 \VL F \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
               \stoptable
             \stopcenteraligned
@@ -362,11 +457,23 @@
 
             \startcenteraligned
               \starttable[|cm|c|c|c|c|c|c|c|]
-                \NC \VL $p$ \VL $q$ \VL $p \vee q$ \VL $\neg (p \vee q)$ \VL $\neg p$ \VL $\neg q$ \VL $\neg p \wedge (\neg q)$ \NC \AR
+                \NC
+                \VL $p$
+                \VL $q$
+                \VL $p \vee q$
+                \VL $\neg (p \vee q)$
+                \VL $\neg p$
+                \VL $\neg q$
+                \VL $\neg p \wedge (\neg q)$ \NC \AR
+                %
                 \HL
+                %
                 \NC c_1 \VL C \VL C \VL C \VL F \VL F \VL F \VL F \NC \AR
+                %
                 \NC c_2 \VL C \VL F \VL C \VL F \VL F \VL C \VL F \NC \AR
+                %
                 \NC c_3 \VL F \VL C \VL C \VL F \VL C \VL F \VL F \NC \AR
+                %
                 \NC c_4 \VL F \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
               \stoptable
             \stopcenteraligned
@@ -379,37 +486,48 @@
     \stopdiscusion
 
     \startdefinicion
-      \margindata[youtube]{\from[AE4B]} Sean $p$ y $q$ dos
-      enunciados. El enunciado compuesto \quotation{si p, entonces q},
-      representado con el símbolo $p \longrightarrow q$, se llama
-      \obj{la condicional de p con q}.
+      \margindata[youtube]{\from[AE4B]}
+
+      Sean $p$ y $q$ dos enunciados. El enunciado compuesto
+      \quotation{si p, entonces q}, representado con el símbolo
+      $p \longrightarrow q$, se llama \obj{la condicional de p con q}.
     \stopdefinicion
 
-    {\bf conexión de la condicional:} \hskip1em si ..., entonces ... $\qquad\longrightarrow$
+    {\bf conexión de la condicional:} \hskip1em si ..., entonces
+    ... $\qquad\longrightarrow$
 
     \startaxioma
       La siguiente tabla de verdad da los valores de una condicional.
 
       \startcenteraligned
         \starttable[|cm|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $p \longrightarrow q$ \NC \AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $p \longrightarrow q$ \NC \AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL F \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL C \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL C \NC \AR
         \stoptable
       \stopcenteraligned
     \stopaxioma
 
     \startdefinicion
-      La condicional $q \longrightarrow p$ se llama \obj{el recíproco
-        o converso} de la condicional $p \longrightarrow q$.
+      La condicional $q \longrightarrow p$ se llama \obj{el recíproco o
+        converso} de la condicional $p \longrightarrow q$.
     \stopdefinicion
 
     \startcomentario
-      Otras formas de expresar el recíproco (esta observación se
-      discute en el video \from[AE5B]):
+      Otras formas de expresar el recíproco (esta observación se discute
+      en el video \from[AE5B]):
+
       \startitemize[packed,a][before=,after=]
         \startitem
           $q \longrightarrow p$
@@ -426,8 +544,8 @@
     \startejemplo
       \startitemize[packed,intro][before=,after=,]
         \startitem
-          Condicional: Si está lloviendo, entonces te voy a buscar en
-          el carro.
+          Condicional: Si está lloviendo, entonces te voy a buscar en el
+          carro.
         \stopitem
         \startitem
           Recíproco: Si te voy a buscar en el carro, entonces está
@@ -441,11 +559,20 @@
 
       \startcenteraligned
         \starttable[|cm|c|c|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $q \longrightarrow p$ \VL $p \longrightarrow q$ \NC\AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $q \longrightarrow p$
+          \VL $p \longrightarrow q$ \NC\AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL C \VL F \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL F \VL C \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL C \VL C \NC \AR
         \stoptable
       \stopcenteraligned
@@ -456,8 +583,8 @@
     \startejemplo
       \startitemize[packed][before=,after=,]
         \startitem
-          Condicional: Si está lloviendo, entonces te voy a buscar en
-          el carro.
+          Condicional: Si está lloviendo, entonces te voy a buscar en el
+          carro.
         \stopitem
         \startitem
           Recíprocos:
@@ -477,20 +604,19 @@
       \stopitemize
     \stopejemplo
 
-    \startdefinicion
-      La condicional $\neg p \longrightarrow (\neg q)$ se llama \obj{el inverso}
-      de la condicional $p \longrightarrow q$.
+    \startdefinicion La condicional $\neg p \longrightarrow (\neg q)$ se
+      llama \obj{el inverso} de la condicional $p \longrightarrow q$.
     \stopdefinicion
 
     \startejemplo
       \startitemize[packed][before=,after=,]
         \startitem
-          Condicional: Si está lloviendo, entonces te voy a buscar en
-          el carro.
+          Condicional: Si está lloviendo, entonces te voy a buscar en el
+          carro.
         \stopitem
         \startitem
-          Inverso: Si no está lloviendo, entonces no te voy a buscar
-          en el carro.
+          Inverso: Si no está lloviendo, entonces no te voy a buscar en
+          el carro.
         \stopitem
       \stopitemize
     \stopejemplo
@@ -500,11 +626,22 @@
       original?}
       \startcenteraligned
         \starttable[|cm|c|c|c|c|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $\neg p$ \VL $\neg q$ \VL $\neg p \longrightarrow (\neg q)$ \VL $p \longrightarrow q$ \NC\AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $\neg p$
+          \VL $\neg q$
+          \VL $\neg p \longrightarrow (\neg q)$
+          \VL $p \longrightarrow q$ \NC\AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL F \VL F \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL F \VL C \VL C \VL F \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL C \VL F \VL F \VL C \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
         \stoptable
       \stopcenteraligned
@@ -525,25 +662,36 @@
     \startejemplo
       \startitemize[packed][before=,after=,]
         \startitem
-          Condicional: Si está lloviendo, entonces te voy a buscar en
-          el carro.
+          Condicional: Si está lloviendo, entonces te voy a buscar en el
+          carro.
         \stopitem
         \startitem
-          Contrapositivo: Si no te vengo a buscar en el carro,
-          entonces no está lloviendo.
+          Contrapositivo: Si no te vengo a buscar en el carro, entonces
+          no está lloviendo.
         \stopitem
       \stopitemize
     \stopejemplo
 
-    \startdiscusion{¿Es el contrapositivo de una condicional
-      equivalente a ésta?}
+    \startdiscusion{¿Es el contrapositivo de una condicional equivalente
+      a ésta?}
       \startcenteraligned
         \starttable[|cm|c|c|c|c|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $\neg q$ \VL $\neg p$ \VL $\neg q \longrightarrow (\neg p)$ \VL $p \longrightarrow q$ \NC\AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $\neg q$
+          \VL $\neg p$
+          \VL $\neg q \longrightarrow (\neg p)$
+          \VL $p \longrightarrow q$ \NC\AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL F \VL F \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL C \VL F \VL F \VL F \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL F \VL C \VL C \VL C \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL C \VL C \VL C \VL C \NC \AR
         \stoptable
       \stopcenteraligned
@@ -555,15 +703,26 @@
     \margindata[youtube]{\from[AE5B]}
     \startejemplo
       \ini{Verifique que el enunciado
-        $\big[p \wedge (p \longrightarrow q)\big] \longrightarrow q$ es una tautología.}
+        $\big[p \wedge (p \longrightarrow q)\big] \longrightarrow q$ es
+        una tautología.}
 
       \startcenteraligned
         \starttable[|cm|c|c|c|c|c|]
-          \NC \VL $p$ \VL $q$ \VL $p \longrightarrow q$ \VL $p \wedge (p \longrightarrow q)$ \VL $\big[p \wedge (p \longrightarrow q)\big] \longrightarrow q$ \NC\AR
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $p \longrightarrow q$
+          \VL $p \wedge (p \longrightarrow q)$
+          \VL $\big[p \wedge (p \longrightarrow q)\big] \longrightarrow q$ \NC\AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL C \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL F \VL F \VL C \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL C \VL F \VL C \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL C \VL F \VL C \NC \AR
         \stoptable
       \stopcenteraligned
@@ -572,78 +731,89 @@
     \stopejemplo
 
     \startdefinicion
-      Sean $p$ y $q$ dos enunciados. La afirmación \quote{p si y sólo
-        si q}, que se representa con el símbolo
-      $p \longleftrightarrow q$, se llama \obj{la bicondicional} de p
-      y q y significa que
+      Sean $p$ y $q$ dos enunciados. La afirmación \quote{p si y sólo si
+        q}, que se representa con el símbolo $p \longleftrightarrow q$,
+      se llama \obj{la bicondicional} de p y q y significa que
       $(p \longrightarrow q) \wedge (q \longrightarrow p)$.
     \stopdefinicion
 
-    \startaxioma
-      \margindata[youtube]{\from[AE6A]} La siguiente tabla da los
-      valores de verdad de la bicondicional $p \longleftrightarrow q$.
+    \startaxioma \margindata[youtube]{\from[AE6A]} La siguiente tabla da
+      los valores de verdad de la bicondicional $p \longleftrightarrow
+      q$.
 
       \startcenteraligned
         \starttabulate[|cm|c|c|c|c|c|]
-          \NC \NC   \NC   \NC   \NC   \VL $(p \longrightarrow q) \wedge (q \longrightarrow p)$  \NC \AR
-          \NC \VL $p$ \VL $q$ \VL $p \longrightarrow q$ \VL $q \longrightarrow p$ \VL $p \longleftrightarrow q$ \NC\AR
+          \NC
+          \NC
+          \NC
+          \NC
+          \NC
+          \VL $(p \longrightarrow q) \wedge (q \longrightarrow p)$ \NC \AR
+          %
+          \NC
+          \VL $p$
+          \VL $q$
+          \VL $p \longrightarrow q$
+          \VL $q \longrightarrow p$
+          \VL $p \longleftrightarrow q$ \NC\AR
+          %
           \HL
+          %
           \NC c_1 \VL C \VL C \VL C \VL C \VL C \NC \AR
+          %
           \NC c_2 \VL C \VL F \VL F \VL C \VL F \NC \AR
+          %
           \NC c_3 \VL F \VL C \VL C \VL F \VL F \NC \AR
+          %
           \NC c_4 \VL F \VL F \VL C \VL C \VL C \NC \AR
         \stoptabulate
       \stopcenteraligned
     \stopaxioma
 
     \blank[3*big]
-    \startplacetable[title=Resumen de enunciados compuestos, location=here]
-      \starttabulate[|p(3.5cm)|rm|p(5.5cm)|]
+    \startplacetable[title=Resumen de enunciados compuestos,
+      location=here]
+      \starttabulate[|p(3.5cm)|lm|p(5.5cm)|]
         \HL
         \NC {\tfx CONJUNCIÓN}
         \NC p \wedge q:
-        \NC cierta si ambas lo son.
-        \NC\FR
-        \TB[halfline]
-        % \HL
+        \NC cierta si ambas lo son. \NC\FR
+        %
         \NC {\tfx DISJUNCIÓN}
         \NC p \vee q:
-        \NC cierta cuando al menos una lo es.
-        \NC\MR
-        \TB[halfline]
-        % \HL
+        \NC cierta cuando al menos una lo es.  \NC\MR
+        %
         \NC {\tfx DISJUNCIÓN EXCLUSIVA}
         \NC p \veebar q:
-        \NC cierta cuando únicamnete una lo es.
-        \NC\MR
-        \TB[halfline]
-        % \HL
+        \NC cierta cuando únicamnete una lo es.  \NC\MR
+        %
         \NC {\tfx CONDICIONAL}
         \NC p \longrightarrow q:
-        \NC cierta en todos los casos excepto si la primera es cierta
-        y la segunda es falsa.
-        \NC\MR
-        \TB[halfline]
-        % \HL
+        \NC cierta en todos los casos excepto si la primera es cierta y la segunda es falsa. \NC\MR
+        %
         \NC {\tfx BICONDICIONAL}
         \NC p \longleftrightarrow q:
-        \NC cierta cuando ambas sean ciertas o cuando ambas sean
-        falsas.
-        \NC\LR \HL
+        \NC cierta cuando ambas sean ciertas o cuando ambas sean falsas.  \NC\LR
+        \HL
       \stoptabulate
     \stopplacetable
 
     \startdiscusion{Revisión de la condicional}
       La frase \quote{si $p$ entonces $q$} tiene una implicación: será
-      suficiente que ocurra $p$ para que en consecuencia ocurra
-      $q$. Por lo tanto, en una condicional a la primera afirmación se
-      la conoce como una condición suficiente y a la segunda se le
-      dice que es una condición necesaria.
+      suficiente que ocurra $p$ para que en consecuencia ocurra $q$. Por
+      lo tanto, en una condicional a la primera afirmación se la conoce
+      como una condición suficiente y a la segunda se le dice que es una
+      condición necesaria.
 
       \startformula
         \startalign[n=3]
-          \NC p \NC \longrightarrow \NC q \NR
-          \NC \text{\small condición suficiente} \NC \NC \text{\small condición necesaria} \NR
+          \NC p
+          \NC \longrightarrow
+          \NC q \NR
+          %
+          \NC \text{\small condición suficiente}
+          \NC
+          \NC \text{\small condición necesaria} \NR
         \stopalign
       \stopformula
 
@@ -653,25 +823,22 @@
 
       \startejemplos{Otras formas de expresar la condicional}
         \startitemize[packed]
-          \startitem
-            Si está lloviendo, entonces te voy a buscar en el carro.
+          \startitem Si está lloviendo, entonces te voy a buscar en el
+            carro.
           \stopitem
-          \startitem
-            Estar lloviendo es una condición suficiente para irte a
-            buscar en el carro.
+          \startitem Estar lloviendo es una condición suficiente para
+            irte a buscar en el carro.
           \stopitem
-          \startitem
-            Irte a buscar en el carro es una condición necesaria para
-            que esté lloviendo.
+          \startitem Irte a buscar en el carro es una condición
+            necesaria para que esté lloviendo.
           \stopitem
         \stopitemize
       \stopejemplos
-
     \stopdiscusion
 
     \startdiscusion{Revisión de la bicondicional}
-      En una bicondicional ambas afirmaciones son condición suficiente
-      y necesaria.
+      En una bicondicional ambas afirmaciones son condición suficiente y
+      necesaria.
 
       \startejemplos
         \startitemize[packed]
@@ -679,8 +846,8 @@
             Mi mamá me ama si y sólo si yo soy bueno.
           \stopitem
           \startitem
-            Mi mamá me ama es una condición necesaria y suficiente
-            para yo ser bueno.
+            Mi mamá me ama es una condición necesaria y suficiente para
+            yo ser bueno.
           \stopitem
           \startitem
             Yo ser bueno es una condición necesaria y suficiente para
@@ -688,19 +855,18 @@
           \stopitem
         \stopitemize
       \stopejemplos
-
     \stopdiscusion
 
     \startdefinicion
-      \margindata[youtube]{\from[AE6B]} En la condicional $p \longrightarrow q$,
-      al enunciado $p$ se le llama \obj{la hipótesis de la
-        condicional} mientras que al $q$ se le llama \obj{la
-        conclusión de la condicional}.
+      \margindata[youtube]{\from[AE6B]}
+
+      En la condicional $p \longrightarrow q$, al enunciado $p$ se le
+      llama \obj{la hipótesis de la condicional} mientras que al $q$ se
+      le llama \obj{la conclusión de la condicional}.
     \stopdefinicion
 
-    \startejemplos
-      {\ini Identifique las hipótesis y la conclusión en las
-        siguientes condicionales.}
+    \startejemplos {\ini Identifique las hipótesis y la conclusión en
+      las siguientes condicionales.}
       \startitemize[n,intro]
         \startitem
           Si $\underbrace{\text{está lloviendo}}_{h}$, entonces
@@ -729,17 +895,15 @@
 
   \stopsection
 
-
   \startsection[title={Métodos de prueba}]
-
     \startdescripcion{Método directo}
       $p \longrightarrow q$
     \stopdescripcion
 
-    \startdescripcion{Método indirecto, de contradicción o de
-      reducción al absurdo}
-      Para demostrar que $p$ es cierta, suponemos que es cierto
-      $\neg p$ y argumentamos hasta contradecir algo que es cierto.
+    \startdescripcion{Método indirecto, de contradicción o de reducción
+      al absurdo}
+      Para demostrar que $p$ es cierta, suponemos que es cierto $\neg p$
+      y argumentamos hasta contradecir algo que es cierto.
     \stopdescripcion
 
     \startdescripcion{Prueba doble}
@@ -749,13 +913,13 @@
 
     \startdescripcion{Prueba del contrapositivo}
       $p \longrightarrow q$.  Recordamos que
-      $\neg q \longrightarrow (\neg p)$ es una proposición
-      equivalente.
+      $\neg q \longrightarrow (\neg p)$ es una proposición equivalente.
     \stopdescripcion
 
     \margindata[youtube]{\from[AE7A]}
     \startdescripcion{Prueba de existencia}
       Se puede comprobar la existencia por dos métodos:
+
       \startitemize[packed]
         \startitem
           {\bf por construcción}: formar el objeto a partir de sus
@@ -769,42 +933,35 @@
     \stopdescripcion
 
     \startdescripcion{Prueba de existencia única}
-      Suponemos que existe otro objeto distinto al que el teorema
-      supone que es único y llegamos al mismo objeto que se alega que
-      es único, luego la conclusión es que es el mismo objeto que
-      queríamos demostrar que era único.
+      Suponemos que existe otro objeto distinto al que el teorema supone
+      que es único y llegamos al mismo objeto que se alega que es único,
+      luego la conclusión es que es el mismo objeto que queríamos
+      demostrar que era único.
     \stopdescripcion
 
     \startdescripcion{Desprueba por un contraejemplo}
       Todos los teoremas comienzan como una \obj{conjetura}\footnote{
-        {\bf Conjetura:} teorema que todavía no se ha demostrado que
-        es cierto.} hasta que se demuestre que son ciertos o aparece
-      un contraejemplo que prueba que la conjetura es falsa.
+        {\bf Conjetura:} teorema que todavía no se ha demostrado que es
+        cierto.} hasta que se demuestre que son ciertos o aparece un
+      contraejemplo que prueba que la conjetura es falsa.
     \stopdescripcion
 
-    \startejemplo
-      Demuestre que: \ini{Si yo no como dulces de chocolate, entonces
-        yo siento calor.}
+    \startejemplo Demuestre que: \ini{Si yo no como dulces de chocolate,
+      entonces yo siento calor.}
 
       Datos ciertos:
       \startitemize[packed, a, intro]
-        \startitem
-          Si voy al cine, entonces yo cmo dulces de chocolate.
+        \startitem Si voy al cine, entonces yo cmo dulces de chocolate.
         \stopitem
-        \startitem
-          Me tomo un refresco o me tomo un jugo.
+        \startitem Me tomo un refresco o me tomo un jugo.
         \stopitem
-        \startitem
-          Si yo me tomo un refresco, entonces siento calor.
+        \startitem Si yo me tomo un refresco, entonces siento calor.
         \stopitem
-        \startitem
-          Yo no como dulces de chocolate.
+        \startitem Yo no como dulces de chocolate.
         \stopitem
-        \startitem
-          Si yo viajo por carro, entonces yo siento fresco.
+        \startitem Si yo viajo por carro, entonces yo siento fresco.
         \stopitem
-        \startitem
-          Si yo tomo jugo, entonces yo voy al cine.
+        \startitem Si yo tomo jugo, entonces yo voy al cine.
         \stopitem
       \stopitemize
 
@@ -819,8 +976,7 @@
     \stopejemplo
 
     \margindata[youtube]{\from[AE7B]}
-    \startejemplo
-      Demuestre que: \ini{Se daña el carro.}
+    \startejemplo Demuestre que: \ini{Se daña el carro.}
 
       Datos ciertos:
       \startitemize[packed,a,intro]
@@ -837,8 +993,7 @@
           Si suspenden las clases, entonces yo me voy para mi pueblo.
         \stopitem
         \startitem
-          Si yo me voy para mi pueblo, entonces yo no completé mi
-          tarea.
+          Si yo me voy para mi pueblo, entonces yo no completé mi tarea.
         \stopitem
         \startitem
           Si no se daña el carro, entonces yo no me voy para la playa.
@@ -848,20 +1003,19 @@
           septiembre.
         \stopitem
         \startitem
-          Si estamos en el mes de septiembre, entonces anuncian
-          tormeta.
+          Si estamos en el mes de septiembre, entonces anuncian tormeta.
         \stopitem
       \stopitemize
 
       \startdemoejem
         Utilizamos el \ini{método indirecto}.
 
-        Suponga que no se daña el carro. Entonces por (f) yo me voy
-        para la playa. Luego, por (g) estamos en el mes de
-        septiembre. En consecuecia, por (h), anuncian
-        tormenta. Entonces, por (c) suspenden las clases. Luego, por
-        (d) yo me voy para mi pueblo. En consecuencia, por (e), yo no
-        completé mi tarea. Esto es una contradicción al dato (b).
+        Suponga que no se daña el carro. Entonces por (f) yo me voy para
+        la playa. Luego, por (g) estamos en el mes de septiembre. En
+        consecuecia, por (h), anuncian tormenta. Entonces, por (c)
+        suspenden las clases. Luego, por (d) yo me voy para mi
+        pueblo. En consecuencia, por (e), yo no completé mi tarea. Esto
+        es una contradicción al dato (b).
       \stopdemoejem
     \stopejemplo
 
@@ -885,34 +1039,43 @@
           examen de matemáticas con calificación de A.
         \stopitem
         \startitem
-          Si voy a la biblioteca, entonces no estudio para el examen
-          de inglés.
+          Si voy a la biblioteca, entonces no estudio para el examen de
+          inglés.
         \stopitem
       \stopitemize
 
-      \startdemoejem
-        Utilizamos el \ini{método del contrapositivo.}
-
-        Suponga que no me pongo los zapatos nuevos. Entonces, por (a)
-        yo voy a la biblioteca. Luego, por (d) yo no estudio para
-        examen de inglés. En consecuencia, por (c), aprueba el examen
-        de matemáticas con calificación de A. Finalmente, por (b), no
-        está lloviendo.
+      \startdemoejem Utilizamos el \ini{método del contrapositivo.}
+        Suponga que no me pongo los zapatos nuevos. Entonces, por (a) yo
+        voy a la biblioteca. Luego, por (d) yo no estudio para examen de
+        inglés. En consecuencia, por (c), aprueba el examen de
+        matemáticas con calificación de A. Finalmente, por (b), no está
+        lloviendo.
       \stopdemoejem
 
-      Se ha utilizado el \obj{formato de demostración por
-        párrafo}. Sin embargo, también existe el \obj{formato por
-        columna}.
+      Se ha utilizado el \obj{formato de demostración por párrafo}. Sin
+      embargo, también existe el \obj{formato por columna}.
 
       \startcenteraligned
         \starttable[|l|l|]
-          \NC \REF[c]{Paso} \NC \REF[c]{Razón} \NC\AR
+          \NC \REF[c]{Paso}
+          \NC \REF[c]{Razón} \NC\AR
+          %
           \HL
-          \NC (1) no me pongo los zapatos nuevos          \NC (1) Suposición \NC\AR
-          \NC (2) voy a la biblioteca                     \NC (2) (a)        \NC\AR
-          \NC (3) no estudio para el examen de inglés     \NC (3) (d)        \NC\AR
-          \NC (4) apruebo el examen de matemáticas con A  \NC (4) (c)        \NC\AR
-          \NC (5) no está lloviendo                       \NC (5) (b)        \NC\AR
+          %
+          \NC (1) no me pongo los zapatos nuevos
+          \NC (1) Suposición \NC\AR
+          %
+          \NC (2) voy a la biblioteca
+          \NC (2) (a) \NC\AR
+          %
+          \NC (3) no estudio para el examen de inglés
+          \NC (3) (d) \NC\AR
+          %
+          \NC (4) apruebo el examen de matemáticas con A
+          \NC (4) (c) \NC\AR
+          %
+          \NC (5) no está lloviendo
+          \NC (5) (b) \NC\AR
         \stoptable
       \stopcenteraligned
 
@@ -945,22 +1108,22 @@
       \startdemoejem
         Utilizamos el \ini{método de la doble prueba.}
 
-        $\Longrightarrow$ Suponenmos que hace calor. Entonces, debido a (a), me
-        pongo los zapatos nuevos. Luego, de acuerdo con (b), voy al
-        cine. En consecuencia, por (c) como papas.
+        $\Longrightarrow$ Suponenmos que hace calor. Entonces, debido a
+        (a), me pongo los zapatos nuevos. Luego, de acuerdo con (b), voy
+        al cine. En consecuencia, por (c) como papas.
 
-        $\Longleftarrow$ Suponemos que como papas. Entonces, por (c) voy al
-        cine. Luego, por (b), me pongo los zapatos nuevos. Luego, por
+        $\Longleftarrow$ Suponemos que como papas. Entonces, por (c) voy
+        al cine. Luego, por (b), me pongo los zapatos nuevos. Luego, por
         (d), no almuerzo a las doce del mediodía. Luego, por (e), hace
         calor.
       \stopdemoejem
-
     \stopejemplo
 
     \startejemplo
       Demuestre que: \ini{Hace calor si y sólo si como papas.}
 
       Datos ciertos:
+
       \startitemize[packed,a,intro]
         \startitem
           Si hace calor, entonces me pongo los zapatos nuevos.
@@ -972,8 +1135,7 @@
           Voy al cine si y sólo si compro papas.
         \stopitem
         \startitem
-          Si no hace calor, entonces almuerzo a las docde del
-          mediodía.
+          Si no hace calor, entonces almuerzo a las docde del mediodía.
         \stopitem
         \startitem
           Si almuerzo a las doce de mediodía, entonces como postre.
@@ -998,8 +1160,8 @@
 
     \margindata[youtube]{\from[AE9A]}
     \startejemplo
-      Demuestre: \ini{Existe un animal cuya cabeza posee las
-        siguientes partes:}
+      Demuestre: \ini{Existe un animal cuya cabeza posee las siguientes
+        partes:}
 
       \startcenteraligned
         \externalfigure[partes.png][maxwidth=0.3\textwidth]
@@ -1010,13 +1172,13 @@
         \startcenteraligned
           \starttable[|lp(4cm)|lp(4cm)|]
             \NC \REF[c]{\ini{Por construcción}}
-            \VL \REF[c]{\ini{Por presentación}}
-            \NC\AR
+            \VL \REF[c]{\ini{Por presentación}} \NC\AR
+            %
             \HL
+            %
             \NC Vamos colocando las partes hasta obtener el animal.
-            \VL Partimos de una representación y comprobamos que
-            coinciden las partes.
-            \NC\AR
+            \VL Partimos de una representación y comprobamos que coinciden las partes. \NC\AR
+            %
             \NC
             \startcenteraligned
               \externalfigure[construccion.png][maxwidth=0.2\textwidth]
@@ -1024,34 +1186,26 @@
             \VL
             \startcenteraligned
               \externalfigure[presentacion.png][maxwidth=0.3\textwidth]
-            \stopcenteraligned
-            \NC\AR
+            \stopcenteraligned \NC\AR
           \stoptable
         \stopcenteraligned
 
       \stopdemoejem
     \stopejemplo
-
   \stopsection
-
 
   \margindata[youtube]{\from[AE9B]}
   \startsection[title={Cuantificadores}]
-
-    Los \obj{cuantificadores} son palabras o frases que indican
-    cantidad en algún enunciado o afirmación.
+    Los \obj{cuantificadores} son palabras o frases que indican cantidad
+    en algún enunciado o afirmación.
 
     \startdiscusion{Cuantificadores matemáticos}
-
       \startitemize[packed,n]
-        \startitem
-          existe: $\exists$
+        \startitem existe: $\exists$
         \stopitem
-        \startitem
-          para todo: $\forall$
+        \startitem para todo: $\forall$
         \stopitem
-        \startitem
-          existe un sólo: $\exists!$
+        \startitem existe un sólo: $\exists!$
         \stopitem
       \stopitemize
     \stopdiscusion
@@ -1059,14 +1213,15 @@
     \startdiscusion{Presentación en matemáticas de los enunciados que
       usan identificadores}
       Sean $x$ un objeto y $p$ una afirmación,
+
       \startitemize[packed,n]
         \startitem
-          Podemos decir: \ini{$\;\exists\, x $ de modo que $p$}, o
-          bien, \ini{$\exists\, x \;\cdot\ni\cdot\; p\;$} o
+          Podemos decir: \ini{$\;\exists\, x $ de modo que $p$}, o bien,
+          \ini{$\exists\, x \;\cdot\ni\cdot\; p\;$} o
           \ini{$\;\exists\, x$ t.q. $p$}.
         \stopitem
         \startitem
-          \ini{$\forall\, x, p$}
+          \ini{$\forall\, x,\; p$}
         \stopitem
         \startitem
           \ini{$\exists!\, x \;\cdot\ni\cdot\; p\;$} o
@@ -1078,18 +1233,21 @@
     \startdiscusion{Negación de los cuantificadores}
       \startitemize[packed,n]
         \startitem
-          $\exists\, x \;\cdot\ni\cdot\; p\qquad;\qquad
-          \ini{\nexists\,x \;\cdot\ni\cdot\; p}$ o preferiblemente
-          \ini{$\forall\, x, \neg p$}.
+          $\exists\, x \;\cdot\ni\cdot\; p\qquad;\qquad \ini{\nexists\,x
+          \;\cdot\ni\cdot\; p}$ o preferiblemente
+          \ini{$\forall\, x,\; \neg p$}.
         \stopitem
         \startitem
-          $\forall\, x, p\qquad;\qquad \ini{\exists\, x
+          $\forall\, x,\; p\qquad;\qquad \ini{\exists\, x
           \;\cdot\ni\cdot\; \neg p}$
         \stopitem
       \stopitemize
     \stopdiscusion
-
   \stopsection
 \stopchapter
 
 \stopcomponent
+%%% Local Variables:
+%%% mode: context
+%%% TeX-master: t
+%%% End:
